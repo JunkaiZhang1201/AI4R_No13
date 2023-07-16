@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>Package for AI for Robotics (ELEN90095)</description>
   <maintainer email="zccheon@unimelb.edu.au">Ze Kai Cheong</maintainer>
-  <license>TODO: License declaration</license>
+  <license>MIT License</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
