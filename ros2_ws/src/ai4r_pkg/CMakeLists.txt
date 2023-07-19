@@ -15,7 +15,10 @@ find_package(rclpy REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 # Include Cpp "include" directory
-include_directories(include)
+include_directories(
+  include
+  drivers/src
+)
 
 # Create Cpp executable
 add_executable(cpp_executable src/cpp_node.cpp)
