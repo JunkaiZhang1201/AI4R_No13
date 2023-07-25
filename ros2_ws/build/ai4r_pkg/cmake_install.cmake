@@ -110,6 +110,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg" TYPE PROGRAM FILES
     "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/scripts/minimal_py_node.py"
     "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/scripts/oop_py_node.py"
+    "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/scripts/oop_pub_py_node.py"
+    "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/scripts/oop_sub_py_node.py"
     )
 endif()
 

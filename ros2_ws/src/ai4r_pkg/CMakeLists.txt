@@ -40,6 +40,8 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/minimal_py_node.py
   scripts/oop_py_node.py
+  scripts/oop_pub_py_node.py
+  scripts/oop_sub_py_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
