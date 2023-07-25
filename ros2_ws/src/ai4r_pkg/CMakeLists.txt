@@ -21,12 +21,15 @@ include_directories(
 )
 
 # Create Cpp executable
-add_executable(cpp_executable src/cpp_node.cpp)
-ament_target_dependencies(cpp_executable rclcpp)
+add_executable(minimal_cpp_executable src/minimal_cpp_node.cpp)
+ament_target_dependencies(minimal_cpp_executable rclcpp)
+add_executable(oop_cpp_executable src/oop_cpp_node.cpp)
+ament_target_dependencies(oop_cpp_executable rclcpp)
 
 # Install Cpp executables
 install(TARGETS
-  cpp_executable
+  minimal_cpp_executable
+  oop_cpp_executable
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -35,7 +38,8 @@ ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
 install(PROGRAMS
-  scripts/py_node.py
+  scripts/minimal_py_node.py
+  scripts/oop_py_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -43,21 +43,41 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/cpp_executable" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/cpp_executable")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/minimal_cpp_executable" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/minimal_cpp_executable")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/cpp_executable"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/minimal_cpp_executable"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg" TYPE EXECUTABLE FILES "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/cpp_executable")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/cpp_executable" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/cpp_executable")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg" TYPE EXECUTABLE FILES "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/minimal_cpp_executable")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/minimal_cpp_executable" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/minimal_cpp_executable")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/cpp_executable"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/minimal_cpp_executable"
          OLD_RPATH "/opt/ros/humble/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/cpp_executable")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/minimal_cpp_executable")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/oop_cpp_executable" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/oop_cpp_executable")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/oop_cpp_executable"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg" TYPE EXECUTABLE FILES "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/oop_cpp_executable")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/oop_cpp_executable" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/oop_cpp_executable")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/oop_cpp_executable"
+         OLD_RPATH "/opt/ros/humble/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ai4r_pkg/oop_cpp_executable")
     endif()
   endif()
 endif()

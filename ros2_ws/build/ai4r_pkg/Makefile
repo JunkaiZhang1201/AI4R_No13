@@ -198,17 +198,30 @@ ai4r_pkg_uninstall/fast:
 .PHONY : ai4r_pkg_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named cpp_executable
+# Target rules for targets named minimal_cpp_executable
 
 # Build rule for target.
-cpp_executable: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_executable
-.PHONY : cpp_executable
+minimal_cpp_executable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 minimal_cpp_executable
+.PHONY : minimal_cpp_executable
 
 # fast build rule for target.
-cpp_executable/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_executable.dir/build.make CMakeFiles/cpp_executable.dir/build
-.PHONY : cpp_executable/fast
+minimal_cpp_executable/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/build
+.PHONY : minimal_cpp_executable/fast
+
+#=============================================================================
+# Target rules for targets named oop_cpp_executable
+
+# Build rule for target.
+oop_cpp_executable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 oop_cpp_executable
+.PHONY : oop_cpp_executable
+
+# fast build rule for target.
+oop_cpp_executable/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/build
+.PHONY : oop_cpp_executable/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_copy_ai4r_pkg
@@ -236,29 +249,53 @@ ament_cmake_python_build_ai4r_pkg_egg/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/build.make CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/build
 .PHONY : ament_cmake_python_build_ai4r_pkg_egg/fast
 
-src/cpp_node.o: src/cpp_node.cpp.o
-.PHONY : src/cpp_node.o
+src/minimal_cpp_node.o: src/minimal_cpp_node.cpp.o
+.PHONY : src/minimal_cpp_node.o
 
 # target to build an object file
-src/cpp_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_executable.dir/build.make CMakeFiles/cpp_executable.dir/src/cpp_node.cpp.o
-.PHONY : src/cpp_node.cpp.o
+src/minimal_cpp_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o
+.PHONY : src/minimal_cpp_node.cpp.o
 
-src/cpp_node.i: src/cpp_node.cpp.i
-.PHONY : src/cpp_node.i
+src/minimal_cpp_node.i: src/minimal_cpp_node.cpp.i
+.PHONY : src/minimal_cpp_node.i
 
 # target to preprocess a source file
-src/cpp_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_executable.dir/build.make CMakeFiles/cpp_executable.dir/src/cpp_node.cpp.i
-.PHONY : src/cpp_node.cpp.i
+src/minimal_cpp_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.i
+.PHONY : src/minimal_cpp_node.cpp.i
 
-src/cpp_node.s: src/cpp_node.cpp.s
-.PHONY : src/cpp_node.s
+src/minimal_cpp_node.s: src/minimal_cpp_node.cpp.s
+.PHONY : src/minimal_cpp_node.s
 
 # target to generate assembly for a file
-src/cpp_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_executable.dir/build.make CMakeFiles/cpp_executable.dir/src/cpp_node.cpp.s
-.PHONY : src/cpp_node.cpp.s
+src/minimal_cpp_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.s
+.PHONY : src/minimal_cpp_node.cpp.s
+
+src/oop_cpp_node.o: src/oop_cpp_node.cpp.o
+.PHONY : src/oop_cpp_node.o
+
+# target to build an object file
+src/oop_cpp_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/src/oop_cpp_node.cpp.o
+.PHONY : src/oop_cpp_node.cpp.o
+
+src/oop_cpp_node.i: src/oop_cpp_node.cpp.i
+.PHONY : src/oop_cpp_node.i
+
+# target to preprocess a source file
+src/oop_cpp_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/src/oop_cpp_node.cpp.i
+.PHONY : src/oop_cpp_node.cpp.i
+
+src/oop_cpp_node.s: src/oop_cpp_node.cpp.s
+.PHONY : src/oop_cpp_node.s
+
+# target to generate assembly for a file
+src/oop_cpp_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/src/oop_cpp_node.cpp.s
+.PHONY : src/oop_cpp_node.cpp.s
 
 # Help Target
 help:
@@ -277,10 +314,14 @@ help:
 	@echo "... ament_cmake_python_build_ai4r_pkg_egg"
 	@echo "... ament_cmake_python_copy_ai4r_pkg"
 	@echo "... uninstall"
-	@echo "... cpp_executable"
-	@echo "... src/cpp_node.o"
-	@echo "... src/cpp_node.i"
-	@echo "... src/cpp_node.s"
+	@echo "... minimal_cpp_executable"
+	@echo "... oop_cpp_executable"
+	@echo "... src/minimal_cpp_node.o"
+	@echo "... src/minimal_cpp_node.i"
+	@echo "... src/minimal_cpp_node.s"
+	@echo "... src/oop_cpp_node.o"
+	@echo "... src/oop_cpp_node.i"
+	@echo "... src/oop_cpp_node.s"
 .PHONY : help
 
 

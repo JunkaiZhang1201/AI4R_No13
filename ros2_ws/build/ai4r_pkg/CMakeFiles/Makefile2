@@ -63,7 +63,8 @@ CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/cpp_executable.dir/all
+all: CMakeFiles/minimal_cpp_executable.dir/all
+all: CMakeFiles/oop_cpp_executable.dir/all
 all: CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/all
 .PHONY : all
 
@@ -74,7 +75,8 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/ai4r_pkg_uninstall.dir/clean
-clean: CMakeFiles/cpp_executable.dir/clean
+clean: CMakeFiles/minimal_cpp_executable.dir/clean
+clean: CMakeFiles/oop_cpp_executable.dir/clean
 clean: CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/clean
 clean: CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/clean
 .PHONY : clean
@@ -132,30 +134,56 @@ CMakeFiles/ai4r_pkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/ai4r_pkg_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/cpp_executable.dir
+# Target rules for target CMakeFiles/minimal_cpp_executable.dir
 
 # All Build rule for target.
-CMakeFiles/cpp_executable.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_executable.dir/build.make CMakeFiles/cpp_executable.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_executable.dir/build.make CMakeFiles/cpp_executable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=1,2 "Built target cpp_executable"
-.PHONY : CMakeFiles/cpp_executable.dir/all
+CMakeFiles/minimal_cpp_executable.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=1,2 "Built target minimal_cpp_executable"
+.PHONY : CMakeFiles/minimal_cpp_executable.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cpp_executable.dir/rule: cmake_check_build_system
+CMakeFiles/minimal_cpp_executable.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cpp_executable.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/minimal_cpp_executable.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
-.PHONY : CMakeFiles/cpp_executable.dir/rule
+.PHONY : CMakeFiles/minimal_cpp_executable.dir/rule
 
 # Convenience name for target.
-cpp_executable: CMakeFiles/cpp_executable.dir/rule
-.PHONY : cpp_executable
+minimal_cpp_executable: CMakeFiles/minimal_cpp_executable.dir/rule
+.PHONY : minimal_cpp_executable
 
 # clean rule for target.
-CMakeFiles/cpp_executable.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_executable.dir/build.make CMakeFiles/cpp_executable.dir/clean
-.PHONY : CMakeFiles/cpp_executable.dir/clean
+CMakeFiles/minimal_cpp_executable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/clean
+.PHONY : CMakeFiles/minimal_cpp_executable.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/oop_cpp_executable.dir
+
+# All Build rule for target.
+CMakeFiles/oop_cpp_executable.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=3,4 "Built target oop_cpp_executable"
+.PHONY : CMakeFiles/oop_cpp_executable.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/oop_cpp_executable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/oop_cpp_executable.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+.PHONY : CMakeFiles/oop_cpp_executable.dir/rule
+
+# Convenience name for target.
+oop_cpp_executable: CMakeFiles/oop_cpp_executable.dir/rule
+.PHONY : oop_cpp_executable
+
+# clean rule for target.
+CMakeFiles/oop_cpp_executable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/clean
+.PHONY : CMakeFiles/oop_cpp_executable.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir

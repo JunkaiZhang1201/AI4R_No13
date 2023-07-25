@@ -1,0 +1,42 @@
+[35m[1mConsolidate compiler generated dependencies of target minimal_cpp_executable[0m
+[ 50%] Built target ament_cmake_python_copy_ai4r_pkg
+[ 50%] [32mBuilding CXX object CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o[0m
+running egg_info
+writing ai4r_pkg.egg-info/PKG-INFO
+writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt
+writing top-level names to ai4r_pkg.egg-info/top_level.txt
+reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[ 50%] Built target ament_cmake_python_build_ai4r_pkg_egg
+[100%] [32m[1mLinking CXX executable minimal_cpp_executable[0m
+[100%] Built target minimal_cpp_executable
+-- Install configuration: ""
+-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/minimal_cpp_executable
+-- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/minimal_cpp_executable" to ""
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/pythonpath.sh
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/pythonpath.dsv
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info
+-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg/__init__.py
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg/module_to_import.py
+Listing '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg'...
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/py_node.py
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/package_run_dependencies/ai4r_pkg
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/parent_prefix_path/ai4r_pkg
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/path.sh
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/path.dsv
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.bash
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.sh
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.zsh
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.dsv
+-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/package.dsv
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/packages/ai4r_pkg
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/cmake/ai4r_pkgConfig.cmake
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/cmake/ai4r_pkgConfig-version.cmake
+-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/package.xml
