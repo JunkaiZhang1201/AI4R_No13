@@ -1,0 +1,17 @@
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:7[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:23:5:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KTestParams[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   23 |     [01;31m[KTestParams[m[K() : Node("test_params_rclcpp") {
+      |     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:[m[K In member function ‘[01m[Kint MyNode::TestParams()[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:23:20:[m[K [01;31m[Kerror: [m[Konly constructors take member initializers
+   23 |     TestParams() : [01;31m[KNode[m[K("test_params_rclcpp") {
+      |                    [01;31m[K^~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:27:5:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   27 |     [01;35m[K}[m[K
+      |     [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/oop_cpp_executable.dir/build.make:76: CMakeFiles/oop_cpp_executable.dir/src/oop_cpp_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:168: CMakeFiles/oop_cpp_executable.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

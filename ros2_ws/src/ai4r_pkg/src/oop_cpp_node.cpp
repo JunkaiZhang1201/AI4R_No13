@@ -20,12 +20,6 @@ public:
             std::bind(&MyNode::timerCallback, this));
     } 
 
-    TestParams() : Node("test_params_rclcpp") {
-        this->declare_parameter("my_str", rclcpp::PARAMETER_STRING);
-        this->declare_parameter("my_int", rclcpp::PARAMETER_INTEGER);
-        this->declare_parameter("my_double_array", rclcpp::PARAMETER_DOUBLE_ARRAY);
-    }
-
 private:
     // Add a callback for this timer. We make this method private since it will only be called from within the node class.
     void timerCallback()
