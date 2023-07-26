@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
+find_package(std_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -25,11 +26,17 @@ add_executable(minimal_cpp_executable src/minimal_cpp_node.cpp)
 ament_target_dependencies(minimal_cpp_executable rclcpp)
 add_executable(oop_cpp_executable src/oop_cpp_node.cpp)
 ament_target_dependencies(oop_cpp_executable rclcpp)
+add_executable(talker src/oop_pub_cpp_node.cpp)
+ament_target_dependencies(talker rclcpp std_msgs)
+add_executable(listener src/oop_sub_cpp_node.cpp)
+ament_target_dependencies(listener rclcpp std_msgs)
 
 # Install Cpp executables
 install(TARGETS
   minimal_cpp_executable
   oop_cpp_executable
+  talker
+  listener
   DESTINATION lib/${PROJECT_NAME}
 )
 
