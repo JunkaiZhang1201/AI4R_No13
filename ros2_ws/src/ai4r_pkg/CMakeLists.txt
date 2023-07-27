@@ -11,6 +11,7 @@ find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(ai4r_interfaces REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -30,6 +31,8 @@ add_executable(talker src/oop_pub_cpp_node.cpp)
 ament_target_dependencies(talker rclcpp std_msgs)
 add_executable(listener src/oop_sub_cpp_node.cpp)
 ament_target_dependencies(listener rclcpp std_msgs)
+add_executable(servo_pulse_width_sub src/servo_pulse_width_sub_cpp_node.cpp)
+ament_target_dependencies(servo_pulse_width_sub rclcpp std_msgs ai4r_interfaces)
 
 # Install Cpp executables
 install(TARGETS
@@ -37,6 +40,7 @@ install(TARGETS
   oop_cpp_executable
   talker
   listener
+  servo_pulse_width_sub
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 
 # Import any python modules or libraries here
-#from ai4r_pkg.module_to_import import 
+#from ai4r_pkg.module_to_import import function
 
 def main(args=None):
     rclpy.init(args=args)

@@ -269,7 +269,10 @@ SITE:STRING=zekaicheong-ThinkPad-P14s-Gen-3
 TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/humble/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_cpp.so
+
+//The directory containing a CMake configuration file for ai4r_interfaces.
+ai4r_interfaces_DIR:PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake
 
 //Value Computed by CMake
 ai4r_pkg_BINARY_DIR:STATIC=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg

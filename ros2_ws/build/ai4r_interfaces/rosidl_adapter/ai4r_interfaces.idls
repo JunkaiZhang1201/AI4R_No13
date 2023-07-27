@@ -1,0 +1,4 @@
+/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/LeftRightFloat32.idl
+/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/LeftRightInt32.idl
+/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/ServoPulseWidth.idl
+/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/TemplateMessage.idl

@@ -1,6 +1,7 @@
 {
     "ros.distro": "humble",
     "files.associations": {
-        "string": "cpp"
+        "string": "cpp",
+        "functional": "cpp"
     }
 }

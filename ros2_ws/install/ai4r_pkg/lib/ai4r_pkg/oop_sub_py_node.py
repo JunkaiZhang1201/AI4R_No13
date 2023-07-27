@@ -5,6 +5,8 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 
+# Import any python modules or libraries here
+#from ai4r_pkg.module_to_import import function
 
 class MinimalSubscriber(Node):
 

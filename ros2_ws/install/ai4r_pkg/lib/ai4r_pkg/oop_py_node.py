@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 
 # Import any python modules or libraries here
-#from ai4r_pkg.module_to_import import 
+#from ai4r_pkg.module_to_import import function
 
 
 # Create a class which inherits from the rclpy Node class. Each ROS2 Python node that you’ll write will be a superset of “rclpy.node.Node”.

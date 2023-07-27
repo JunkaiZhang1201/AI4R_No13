@@ -1,4 +1,0 @@
-In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:7[m[K:
-[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
-   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
-      | [01;35m[K^[m[K
