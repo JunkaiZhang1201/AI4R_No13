@@ -1,0 +1,135 @@
+[0.000000] (-) TimerEvent: {}
+[0.000111] (-) JobUnselected: {'identifier': 'ai4r_interfaces'}
+[0.000131] (ai4r_pkg) JobQueued: {'identifier': 'ai4r_pkg', 'dependencies': OrderedDict([('ai4r_interfaces', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces')])}
+[0.000148] (ai4r_pkg) JobStarted: {'identifier': 'ai4r_pkg'}
+[0.006979] (ai4r_pkg) JobProgress: {'identifier': 'ai4r_pkg', 'progress': 'cmake'}
+[0.007340] (ai4r_pkg) JobProgress: {'identifier': 'ai4r_pkg', 'progress': 'build'}
+[0.007923] (ai4r_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg', '--', '-j16', '-l16'], 'cwd': '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_AU:en'), ('USER', 'zekaicheong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/zekaicheong'), ('OLDPWD', '/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2064'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'zekaicheong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'zekaicheong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/zekaicheong-ThinkPad-P14s-Gen-3:@/tmp/.ICE-unix/2039,unix/zekaicheong-ThinkPad-P14s-Gen-3:/tmp/.ICE-unix/2039'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/712cb153_4a04_4f30_afdb_267622833e63'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_AU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.HXB571'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.915'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg'), ('LC_ALL', 'en_AU.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble')]), 'shell': False}
+[0.044960] (ai4r_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target multiple_pub_sub\x1b[0m\n'}
+[0.054529] (ai4r_pkg) StdoutLine: {'line': b'[ 33%] Built target servo_pulse_width_sub\n'}
+[0.054776] (ai4r_pkg) StdoutLine: {'line': b'[ 33%] Built target listener\n'}
+[0.054867] (ai4r_pkg) StdoutLine: {'line': b'[ 50%] Built target minimal_cpp_executable\n'}
+[0.054949] (ai4r_pkg) StdoutLine: {'line': b'[ 83%] Built target oop_cpp_executable\n'}
+[0.055030] (ai4r_pkg) StdoutLine: {'line': b'[ 83%] Built target talker\n'}
+[0.057649] (ai4r_pkg) StdoutLine: {'line': b'[ 83%] Built target ament_cmake_python_copy_ai4r_pkg\n'}
+[0.059227] (ai4r_pkg) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o\x1b[0m\n'}
+[0.099420] (-) TimerEvent: {}
+[0.189813] (ai4r_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.190285] (ai4r_pkg) StdoutLine: {'line': b'writing ai4r_pkg.egg-info/PKG-INFO\n'}
+[0.190492] (ai4r_pkg) StdoutLine: {'line': b'writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt\n'}
+[0.190662] (ai4r_pkg) StdoutLine: {'line': b'writing top-level names to ai4r_pkg.egg-info/top_level.txt\n'}
+[0.192430] (ai4r_pkg) StdoutLine: {'line': b"reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'\n"}
+[0.193104] (ai4r_pkg) StdoutLine: {'line': b"writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'\n"}
+[0.199551] (-) TimerEvent: {}
+[0.211907] (ai4r_pkg) StdoutLine: {'line': b'[ 91%] Built target ament_cmake_python_build_ai4r_pkg_egg\n'}
+[0.299684] (-) TimerEvent: {}
+[0.400071] (-) TimerEvent: {}
+[0.500435] (-) TimerEvent: {}
+[0.600786] (-) TimerEvent: {}
+[0.701285] (-) TimerEvent: {}
+[0.801814] (-) TimerEvent: {}
+[0.902123] (-) TimerEvent: {}
+[1.002391] (-) TimerEvent: {}
+[1.102672] (-) TimerEvent: {}
+[1.202943] (-) TimerEvent: {}
+[1.303287] (-) TimerEvent: {}
+[1.403652] (-) TimerEvent: {}
+[1.503998] (-) TimerEvent: {}
+[1.604350] (-) TimerEvent: {}
+[1.704713] (-) TimerEvent: {}
+[1.805057] (-) TimerEvent: {}
+[1.905318] (-) TimerEvent: {}
+[2.005644] (-) TimerEvent: {}
+[2.105958] (-) TimerEvent: {}
+[2.206245] (-) TimerEvent: {}
+[2.306632] (-) TimerEvent: {}
+[2.406970] (-) TimerEvent: {}
+[2.507334] (-) TimerEvent: {}
+[2.607696] (-) TimerEvent: {}
+[2.708051] (-) TimerEvent: {}
+[2.808410] (-) TimerEvent: {}
+[2.908757] (-) TimerEvent: {}
+[3.008985] (-) TimerEvent: {}
+[3.109319] (-) TimerEvent: {}
+[3.209583] (-) TimerEvent: {}
+[3.309837] (-) TimerEvent: {}
+[3.410187] (-) TimerEvent: {}
+[3.510524] (-) TimerEvent: {}
+[3.610805] (-) TimerEvent: {}
+[3.711274] (-) TimerEvent: {}
+[3.811820] (-) TimerEvent: {}
+[3.912349] (-) TimerEvent: {}
+[4.012781] (-) TimerEvent: {}
+[4.113146] (-) TimerEvent: {}
+[4.213617] (-) TimerEvent: {}
+[4.314022] (-) TimerEvent: {}
+[4.414368] (-) TimerEvent: {}
+[4.514796] (-) TimerEvent: {}
+[4.615175] (-) TimerEvent: {}
+[4.715511] (-) TimerEvent: {}
+[4.815948] (-) TimerEvent: {}
+[4.916330] (-) TimerEvent: {}
+[5.016654] (-) TimerEvent: {}
+[5.117051] (-) TimerEvent: {}
+[5.217527] (-) TimerEvent: {}
+[5.317823] (-) TimerEvent: {}
+[5.418111] (-) TimerEvent: {}
+[5.518474] (-) TimerEvent: {}
+[5.618799] (-) TimerEvent: {}
+[5.719133] (-) TimerEvent: {}
+[5.819483] (-) TimerEvent: {}
+[5.919846] (-) TimerEvent: {}
+[6.020374] (-) TimerEvent: {}
+[6.121140] (-) TimerEvent: {}
+[6.221562] (-) TimerEvent: {}
+[6.255389] (ai4r_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable multiple_pub_sub\x1b[0m\n'}
+[6.321849] (-) TimerEvent: {}
+[6.422360] (-) TimerEvent: {}
+[6.522741] (-) TimerEvent: {}
+[6.623370] (-) TimerEvent: {}
+[6.628937] (ai4r_pkg) StdoutLine: {'line': b'[100%] Built target multiple_pub_sub\n'}
+[6.637007] (ai4r_pkg) CommandEnded: {'returncode': 0}
+[6.659407] (ai4r_pkg) JobProgress: {'identifier': 'ai4r_pkg', 'progress': 'install'}
+[6.665024] (ai4r_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg'], 'cwd': '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_AU:en'), ('USER', 'zekaicheong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/zekaicheong'), ('OLDPWD', '/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2064'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'zekaicheong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'zekaicheong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/zekaicheong-ThinkPad-P14s-Gen-3:@/tmp/.ICE-unix/2039,unix/zekaicheong-ThinkPad-P14s-Gen-3:/tmp/.ICE-unix/2039'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/712cb153_4a04_4f30_afdb_267622833e63'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_AU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.HXB571'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.915'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg'), ('LC_ALL', 'en_AU.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble')]), 'shell': False}
+[6.669833] (ai4r_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.670958] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/minimal_cpp_executable\n'}
+[6.671382] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/oop_cpp_executable\n'}
+[6.671891] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/talker\n'}
+[6.672547] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/listener\n'}
+[6.673337] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/servo_pulse_width_sub\n'}
+[6.673432] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/multiple_pub_sub\n'}
+[6.676569] (ai4r_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/multiple_pub_sub" to ""\n'}
+[6.676694] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/pythonpath.sh\n'}
+[6.676863] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/pythonpath.dsv\n'}
+[6.676932] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info\n'}
+[6.676995] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[6.677056] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[6.677115] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[6.677174] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[6.677233] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg\n'}
+[6.677301] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg/__init__.py\n'}
+[6.677360] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg/module_to_import.py\n'}
+[6.699986] (ai4r_pkg) StdoutLine: {'line': b"Listing '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg'...\n"}
+[6.703525] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/minimal_py_node.py\n'}
+[6.703931] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/oop_py_node.py\n'}
+[6.704144] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/oop_pub_py_node.py\n'}
+[6.704187] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/oop_sub_py_node.py\n'}
+[6.704219] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/package_run_dependencies/ai4r_pkg\n'}
+[6.704250] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/parent_prefix_path/ai4r_pkg\n'}
+[6.704280] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/ament_prefix_path.sh\n'}
+[6.704309] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/ament_prefix_path.dsv\n'}
+[6.704338] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/path.sh\n'}
+[6.704380] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/path.dsv\n'}
+[6.704409] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.bash\n'}
+[6.704437] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.sh\n'}
+[6.704465] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.zsh\n'}
+[6.704494] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.dsv\n'}
+[6.704523] (ai4r_pkg) StdoutLine: {'line': b'-- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/package.dsv\n'}
+[6.704553] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/packages/ai4r_pkg\n'}
+[6.704582] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/cmake/ai4r_pkgConfig.cmake\n'}
+[6.704610] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/cmake/ai4r_pkgConfig-version.cmake\n'}
+[6.704638] (ai4r_pkg) StdoutLine: {'line': b'-- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/package.xml\n'}
+[6.706928] (ai4r_pkg) CommandEnded: {'returncode': 0}
+[6.723735] (-) TimerEvent: {}
+[6.743445] (ai4r_pkg) JobEnded: {'identifier': 'ai4r_pkg', 'rc': 0}
+[6.744052] (-) EventReactorShutdown: {}

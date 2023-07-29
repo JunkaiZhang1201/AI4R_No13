@@ -263,6 +263,19 @@ servo_pulse_width_sub/fast:
 .PHONY : servo_pulse_width_sub/fast
 
 #=============================================================================
+# Target rules for targets named multiple_pub_sub
+
+# Build rule for target.
+multiple_pub_sub: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 multiple_pub_sub
+.PHONY : multiple_pub_sub
+
+# fast build rule for target.
+multiple_pub_sub/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multiple_pub_sub.dir/build.make CMakeFiles/multiple_pub_sub.dir/build
+.PHONY : multiple_pub_sub/fast
+
+#=============================================================================
 # Target rules for targets named ament_cmake_python_copy_ai4r_pkg
 
 # Build rule for target.
@@ -311,6 +324,30 @@ src/minimal_cpp_node.s: src/minimal_cpp_node.cpp.s
 src/minimal_cpp_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.s
 .PHONY : src/minimal_cpp_node.cpp.s
+
+src/multiple_pub_sub_cpp_node.o: src/multiple_pub_sub_cpp_node.cpp.o
+.PHONY : src/multiple_pub_sub_cpp_node.o
+
+# target to build an object file
+src/multiple_pub_sub_cpp_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multiple_pub_sub.dir/build.make CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o
+.PHONY : src/multiple_pub_sub_cpp_node.cpp.o
+
+src/multiple_pub_sub_cpp_node.i: src/multiple_pub_sub_cpp_node.cpp.i
+.PHONY : src/multiple_pub_sub_cpp_node.i
+
+# target to preprocess a source file
+src/multiple_pub_sub_cpp_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multiple_pub_sub.dir/build.make CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.i
+.PHONY : src/multiple_pub_sub_cpp_node.cpp.i
+
+src/multiple_pub_sub_cpp_node.s: src/multiple_pub_sub_cpp_node.cpp.s
+.PHONY : src/multiple_pub_sub_cpp_node.s
+
+# target to generate assembly for a file
+src/multiple_pub_sub_cpp_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/multiple_pub_sub.dir/build.make CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.s
+.PHONY : src/multiple_pub_sub_cpp_node.cpp.s
 
 src/oop_cpp_node.o: src/oop_cpp_node.cpp.o
 .PHONY : src/oop_cpp_node.o
@@ -427,12 +464,16 @@ help:
 	@echo "... uninstall"
 	@echo "... listener"
 	@echo "... minimal_cpp_executable"
+	@echo "... multiple_pub_sub"
 	@echo "... oop_cpp_executable"
 	@echo "... servo_pulse_width_sub"
 	@echo "... talker"
 	@echo "... src/minimal_cpp_node.o"
 	@echo "... src/minimal_cpp_node.i"
 	@echo "... src/minimal_cpp_node.s"
+	@echo "... src/multiple_pub_sub_cpp_node.o"
+	@echo "... src/multiple_pub_sub_cpp_node.i"
+	@echo "... src/multiple_pub_sub_cpp_node.s"
 	@echo "... src/oop_cpp_node.o"
 	@echo "... src/oop_cpp_node.i"
 	@echo "... src/oop_cpp_node.s"
