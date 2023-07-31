@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target looping[0m
+[35m[1mConsolidate compiler generated dependencies of target pwm_driver[0m
+[35m[1mConsolidate compiler generated dependencies of target servo_pulse_width_sub[0m
+[ 25%] Built target minimal_cpp_executable
+[ 25%] Built target oop_cpp_executable
+[ 37%] Built target talker
+[ 43%] [32mBuilding CXX object CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o[0m
+[ 56%] Built target listener
+[ 56%] Built target ament_cmake_python_copy_ai4r_pkg
+[ 62%] [32mBuilding CXX object CMakeFiles/looping.dir/src/looping_cpp_node.cpp.o[0m
+[ 75%] Built target multiple_pub_sub
+[ 87%] Built target servo_pulse_width_sub
+running egg_info
+writing ai4r_pkg.egg-info/PKG-INFO
+writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt
+writing top-level names to ai4r_pkg.egg-info/top_level.txt
+reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[ 87%] Built target ament_cmake_python_build_ai4r_pkg_egg

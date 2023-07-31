@@ -276,6 +276,19 @@ multiple_pub_sub/fast:
 .PHONY : multiple_pub_sub/fast
 
 #=============================================================================
+# Target rules for targets named looping
+
+# Build rule for target.
+looping: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 looping
+.PHONY : looping
+
+# fast build rule for target.
+looping/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/looping.dir/build.make CMakeFiles/looping.dir/build
+.PHONY : looping/fast
+
+#=============================================================================
 # Target rules for targets named ament_cmake_python_copy_ai4r_pkg
 
 # Build rule for target.
@@ -300,6 +313,30 @@ ament_cmake_python_build_ai4r_pkg_egg: cmake_check_build_system
 ament_cmake_python_build_ai4r_pkg_egg/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/build.make CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/build
 .PHONY : ament_cmake_python_build_ai4r_pkg_egg/fast
+
+src/looping_cpp_node.o: src/looping_cpp_node.cpp.o
+.PHONY : src/looping_cpp_node.o
+
+# target to build an object file
+src/looping_cpp_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/looping.dir/build.make CMakeFiles/looping.dir/src/looping_cpp_node.cpp.o
+.PHONY : src/looping_cpp_node.cpp.o
+
+src/looping_cpp_node.i: src/looping_cpp_node.cpp.i
+.PHONY : src/looping_cpp_node.i
+
+# target to preprocess a source file
+src/looping_cpp_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/looping.dir/build.make CMakeFiles/looping.dir/src/looping_cpp_node.cpp.i
+.PHONY : src/looping_cpp_node.cpp.i
+
+src/looping_cpp_node.s: src/looping_cpp_node.cpp.s
+.PHONY : src/looping_cpp_node.s
+
+# target to generate assembly for a file
+src/looping_cpp_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/looping.dir/build.make CMakeFiles/looping.dir/src/looping_cpp_node.cpp.s
+.PHONY : src/looping_cpp_node.cpp.s
 
 src/minimal_cpp_node.o: src/minimal_cpp_node.cpp.o
 .PHONY : src/minimal_cpp_node.o
@@ -463,11 +500,15 @@ help:
 	@echo "... ament_cmake_python_copy_ai4r_pkg"
 	@echo "... uninstall"
 	@echo "... listener"
+	@echo "... looping"
 	@echo "... minimal_cpp_executable"
 	@echo "... multiple_pub_sub"
 	@echo "... oop_cpp_executable"
 	@echo "... servo_pulse_width_sub"
 	@echo "... talker"
+	@echo "... src/looping_cpp_node.o"
+	@echo "... src/looping_cpp_node.i"
+	@echo "... src/looping_cpp_node.s"
 	@echo "... src/minimal_cpp_node.o"
 	@echo "... src/minimal_cpp_node.i"
 	@echo "... src/minimal_cpp_node.s"

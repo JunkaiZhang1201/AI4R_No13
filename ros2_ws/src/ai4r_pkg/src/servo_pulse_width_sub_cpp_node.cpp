@@ -1,3 +1,5 @@
+// Purpose: To test custom messages in ROS2
+
 #include <functional>
 #include <memory>
 

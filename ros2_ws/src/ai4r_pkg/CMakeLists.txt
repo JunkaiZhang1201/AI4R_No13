@@ -35,6 +35,11 @@ add_executable(servo_pulse_width_sub src/servo_pulse_width_sub_cpp_node.cpp)
 ament_target_dependencies(servo_pulse_width_sub rclcpp std_msgs ai4r_interfaces)
 add_executable(multiple_pub_sub src/multiple_pub_sub_cpp_node.cpp)
 ament_target_dependencies(multiple_pub_sub rclcpp std_msgs ai4r_interfaces)
+add_executable(looping src/looping_cpp_node.cpp)
+ament_target_dependencies(looping rclcpp std_msgs ai4r_interfaces)
+# add_executable(pwm_driver src/pwm_driver_node.cpp)
+# ament_target_dependencies(pwm_driver rclcpp std_msgs ai4r_interfaces)
+
 
 # Install Cpp executables
 install(TARGETS
@@ -44,6 +49,8 @@ install(TARGETS
   listener
   servo_pulse_width_sub
   multiple_pub_sub
+  looping
+  # pwm_driver
   DESTINATION lib/${PROJECT_NAME}
 )
 

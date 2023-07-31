@@ -1,0 +1,11 @@
+[35m[1mConsolidate compiler generated dependencies of target pwm_driver[0m
+[35m[1mConsolidate compiler generated dependencies of target looping[0m
+[ 12%] Built target oop_cpp_executable
+[ 18%] [32mBuilding CXX object CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o[0m
+[ 43%] Built target servo_pulse_width_sub
+[ 43%] Built target multiple_pub_sub
+[ 81%] Built target minimal_cpp_executable
+[ 81%] Built target talker
+[ 81%] Built target listener
+[ 81%] Built target ament_cmake_python_copy_ai4r_pkg
+[ 87%] [32mBuilding CXX object CMakeFiles/looping.dir/src/looping_cpp_node.cpp.o[0m
