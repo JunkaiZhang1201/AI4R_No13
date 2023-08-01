@@ -46,7 +46,7 @@ class PwmDriverNode : public rclcpp::Node {
 
     private:
         // Send a pulse width on the specified channel.
-        void setPWMSignal(uint8_t channel, uint16_t pulse_width_in_us) {
+        void setPWMSignal(uint16_t channel, uint16_t pulse_width_in_us) {
             // Call the function to set the desired pulse width
             bool result = m_pca9685_servo_driver.set_pwm_pulse_in_microseconds(channel, pulse_width_in_us);
 
