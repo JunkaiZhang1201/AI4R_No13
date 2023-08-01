@@ -1,0 +1,26 @@
+[0.008s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
+[0.042s] [35m[1mConsolidate compiler generated dependencies of target pwm_driver[0m
+[0.045s] [ 12%] Built target talker
+[0.047s] [ 25%] Built target minimal_cpp_executable
+[0.048s] [ 37%] Built target oop_cpp_executable
+[0.048s] [ 50%] Built target looping
+[0.048s] [ 62%] Built target multiple_pub_sub
+[0.050s] [ 75%] Built target servo_pulse_width_sub
+[0.051s] [ 87%] Built target listener
+[0.051s] [ 87%] Built target ament_cmake_python_copy_ai4r_pkg
+[0.055s] [ 93%] [32m[1mLinking CXX executable pwm_driver[0m
+[0.187s] running egg_info
+[0.187s] writing ai4r_pkg.egg-info/PKG-INFO
+[0.188s] writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt
+[0.188s] writing top-level names to ai4r_pkg.egg-info/top_level.txt
+[0.189s] reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.189s] writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.205s] [ 93%] Built target ament_cmake_python_build_ai4r_pkg_egg
+[0.257s] /usr/bin/ld: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o: in function `__static_initialization_and_destruction_0(int, int)':
+[0.258s] pwm_driver_node.cpp:(.text+0x2e7): undefined reference to `I2C_Driver::I2C_Driver(char const*)'
+[0.258s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x305): undefined reference to `PCA9685::PCA9685(I2C_Driver*, unsigned char)'
+[0.277s] collect2: error: ld returned 1 exit status
+[0.279s] gmake[2]: *** [CMakeFiles/pwm_driver.dir/build.make:167: pwm_driver] Error 1
+[0.280s] gmake[1]: *** [CMakeFiles/Makefile2:336: CMakeFiles/pwm_driver.dir/all] Error 2
+[0.280s] gmake: *** [Makefile:146: all] Error 2
+[0.282s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg' returned '2': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16

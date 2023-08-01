@@ -1,0 +1,207 @@
+[0.000000] (-) TimerEvent: {}
+[0.000617] (-) JobUnselected: {'identifier': 'ai4r_interfaces'}
+[0.000644] (ai4r_pkg) JobQueued: {'identifier': 'ai4r_pkg', 'dependencies': OrderedDict([('ai4r_interfaces', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces')])}
+[0.000659] (ai4r_pkg) JobStarted: {'identifier': 'ai4r_pkg'}
+[0.006795] (ai4r_pkg) JobProgress: {'identifier': 'ai4r_pkg', 'progress': 'cmake'}
+[0.007138] (ai4r_pkg) JobProgress: {'identifier': 'ai4r_pkg', 'progress': 'build'}
+[0.007674] (ai4r_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg', '--', '-j16', '-l16'], 'cwd': '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'en_AU:en'), ('USER', 'zekaicheong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/zekaicheong'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/zekaicheong'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1842'), ('SYSTEMD_EXEC_PID', '2064'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '357621'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'zekaicheong'), ('JOURNAL_STREAM', '8:41122'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'zekaicheong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/zekaicheong/anaconda3/bin:/home/zekaicheong/anaconda3/condabin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/zekaicheong-ThinkPad-P14s-Gen-3:@/tmp/.ICE-unix/2039,unix/zekaicheong-ThinkPad-P14s-Gen-3:/tmp/.ICE-unix/2039'), ('INVOCATION_ID', '0a7c51fbfe7a41819c373cc31f1ef4af'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_AU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.HXB571'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/zekaicheong/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:23a8c138-1c09-4749-98e1-fabf37f62d56'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg'), ('LC_ALL', 'en_AU.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/zekaicheong/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('CONDA_PREFIX', '/home/zekaicheong/anaconda3'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble')]), 'shell': False}
+[0.047645] (ai4r_pkg) StdoutLine: {'line': b'[ 25%] Built target minimal_cpp_executable\n'}
+[0.047848] (ai4r_pkg) StdoutLine: {'line': b'[ 25%] Built target servo_pulse_width_sub\n'}
+[0.049299] (ai4r_pkg) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o\x1b[0m\n'}
+[0.049545] (ai4r_pkg) StdoutLine: {'line': b'[ 43%] Built target listener\n'}
+[0.049639] (ai4r_pkg) StdoutLine: {'line': b'[ 56%] Built target oop_cpp_executable\n'}
+[0.050639] (ai4r_pkg) StdoutLine: {'line': b'[ 68%] Built target looping\n'}
+[0.052501] (ai4r_pkg) StdoutLine: {'line': b'[ 75%] Built target ament_cmake_python_copy_ai4r_pkg\n'}
+[0.052665] (ai4r_pkg) StdoutLine: {'line': b'[ 81%] Built target talker\n'}
+[0.054781] (ai4r_pkg) StdoutLine: {'line': b'[ 93%] Built target multiple_pub_sub\n'}
+[0.099072] (-) TimerEvent: {}
+[0.160496] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:16\x1b[m\x1b[K,\n'}
+[0.160675] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.160743] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmulti-line comment [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment\x07-Wcomment\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.160807] (ai4r_pkg) StderrLine: {'line': b'   10 | \x1b[01;35m\x1b[K/\x1b[m\x1b[K/   / _ \\ \\___ \\| |   | | |  _ \\| |/ __|___\\___ \\| | | / __| __/ _ \\  _   _ \\\n'}
+[0.160866] (ai4r_pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.163829] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17\x1b[m\x1b[K,\n'}
+[0.163996] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.164090] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:10:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmulti-line comment [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment\x07-Wcomment\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.164156] (ai4r_pkg) StderrLine: {'line': b'   10 | \x1b[01;35m\x1b[K/\x1b[m\x1b[K/   / _ \\ \\___ \\| |   | | |  _ \\| |/ __|___\\___ \\| | | / __| __/ _ \\  _   _ \\\n'}
+[0.164217] (ai4r_pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.164376] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:49\x1b[m\x1b[K,\n'}
+[0.164474] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17\x1b[m\x1b[K,\n'}
+[0.164544] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.164604] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685_constants.h:10:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmulti-line comment [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment\x07-Wcomment\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.164666] (ai4r_pkg) StderrLine: {'line': b'   10 | \x1b[01;35m\x1b[K/\x1b[m\x1b[K/   / _ \\ \\___ \\| |   | | |  _ \\| |/ __|___\\___ \\| | | / __| __/ _ \\  _   _ \\\n'}
+[0.164725] (ai4r_pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.164861] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.164976] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunterminated #ifndef\n'}
+[0.165132] (ai4r_pkg) StderrLine: {'line': b'    1 | #ifndef PWM_DRIVER_NODE_HPP\n'}
+[0.165201] (ai4r_pkg) StderrLine: {'line': b'      | \n'}
+[0.165266] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:73:200:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "RCLCPP_INFO_STREAM" requires 2 arguments, but only 1 given\n'}
+[0.165329] (ai4r_pkg) StderrLine: {'line': b'   73 |             RCLCPP_INFO_STREAM("[TEMPLATE I2C INTERNAL] Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) \x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[0.165391] (ai4r_pkg) StderrLine: {'line': b'      |                                                                                                                                                                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[0.165447] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[0.165518] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[0.165581] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[0.165643] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[0.165706] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[0.165766] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[0.165842] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[0.165908] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[0.166008] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[0.166075] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[0.166138] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:8\x1b[m\x1b[K,\n'}
+[0.166226] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.166290] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:722:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "RCLCPP_INFO_STREAM" defined here\n'}
+[0.166352] (ai4r_pkg) StderrLine: {'line': b'  722 | #define RCLCPP_INFO_STREAM(logger, stream_arg) \\\n'}
+[0.166409] (ai4r_pkg) StderrLine: {'line': b'      | \n'}
+[0.166466] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:112:129:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "RCLCPP_INFO_STREAM" requires 2 arguments, but only 1 given\n'}
+[0.166524] (ai4r_pkg) StderrLine: {'line': b'  112 |                 RCLCPP_INFO_STREAM("[TEMPLATE I2C INTERNAL] FAILED to close I2C device named " << m_i2c_driver.get_device_name()\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[0.166585] (ai4r_pkg) StderrLine: {'line': b'      |                                                                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[0.166643] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[0.166702] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[0.166763] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[0.166819] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[0.166876] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[0.166933] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[0.166994] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[0.167051] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[0.167112] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[0.167168] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[0.167226] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:8\x1b[m\x1b[K,\n'}
+[0.167282] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.167350] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:722:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "RCLCPP_INFO_STREAM" defined here\n'}
+[0.167407] (ai4r_pkg) StderrLine: {'line': b'  722 | #define RCLCPP_INFO_STREAM(logger, stream_arg) \\\n'}
+[0.167462] (ai4r_pkg) StderrLine: {'line': b'      | \n'}
+[0.167519] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:114:129:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "RCLCPP_INFO_STREAM" requires 2 arguments, but only 1 given\n'}
+[0.167578] (ai4r_pkg) StderrLine: {'line': b'  114 |                 RCLCPP_INFO_STREAM("[TEMPLATE I2C INTERNAL] Successfully closed device named " << m_i2c_driver.get_device_name()\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[0.167636] (ai4r_pkg) StderrLine: {'line': b'      |                                                                                                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[0.167703] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[0.167761] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[0.167820] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[0.167878] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[0.167934] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[0.167990] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[0.168047] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[0.168104] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[0.168159] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[0.168216] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[0.168275] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:8\x1b[m\x1b[K,\n'}
+[0.168332] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.168392] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:722:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "RCLCPP_INFO_STREAM" defined here\n'}
+[0.168458] (ai4r_pkg) StderrLine: {'line': b'  722 | #define RCLCPP_INFO_STREAM(logger, stream_arg) \\\n'}
+[0.168519] (ai4r_pkg) StderrLine: {'line': b'      | \n'}
+[0.168580] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:127:139:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "RCLCPP_INFO_STREAM" requires 2 arguments, but only 1 given\n'}
+[0.168644] (ai4r_pkg) StderrLine: {'line': b'  127 |                 RCLCPP_INFO_STREAM("[TEMPLATE I2C INTERNAL] FAILED to set pulse width for servo at channel " << static_cast<int>(channel) \x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[0.168705] (ai4r_pkg) StderrLine: {'line': b'      |                                                                                                                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[0.168770] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[0.168830] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[0.168890] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[0.168951] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[0.169010] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[0.169070] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[0.169137] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[0.169340] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[0.169389] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[0.169421] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[0.169450] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:8\x1b[m\x1b[K,\n'}
+[0.169479] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.169507] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:722:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "RCLCPP_INFO_STREAM" defined here\n'}
+[0.169535] (ai4r_pkg) StderrLine: {'line': b'  722 | #define RCLCPP_INFO_STREAM(logger, stream_arg) \\\n'}
+[0.169562] (ai4r_pkg) StderrLine: {'line': b'      | \n'}
+[0.185840] (ai4r_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.186444] (ai4r_pkg) StdoutLine: {'line': b'writing ai4r_pkg.egg-info/PKG-INFO\n'}
+[0.186535] (ai4r_pkg) StdoutLine: {'line': b'writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt\n'}
+[0.186572] (ai4r_pkg) StdoutLine: {'line': b'writing top-level names to ai4r_pkg.egg-info/top_level.txt\n'}
+[0.187818] (ai4r_pkg) StdoutLine: {'line': b"reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'\n"}
+[0.187953] (ai4r_pkg) StdoutLine: {'line': b"writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'\n"}
+[0.199165] (-) TimerEvent: {}
+[0.203336] (ai4r_pkg) StdoutLine: {'line': b'[ 93%] Built target ament_cmake_python_build_ai4r_pkg_egg\n'}
+[0.299378] (-) TimerEvent: {}
+[0.399828] (-) TimerEvent: {}
+[0.500231] (-) TimerEvent: {}
+[0.600693] (-) TimerEvent: {}
+[0.701169] (-) TimerEvent: {}
+[0.801601] (-) TimerEvent: {}
+[0.901974] (-) TimerEvent: {}
+[1.002345] (-) TimerEvent: {}
+[1.102709] (-) TimerEvent: {}
+[1.203049] (-) TimerEvent: {}
+[1.303385] (-) TimerEvent: {}
+[1.330859] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KPwmDriverNode::PwmDriverNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.331069] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:31:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktimer_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.331110] (ai4r_pkg) StderrLine: {'line': b'   31 |             \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K = this->create_wall_timer(100ms, std::bind(&MinimalPublisher::timer_callback, this));\n'}
+[1.331153] (ai4r_pkg) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.331185] (ai4r_pkg) StderrLine: {'line': b'      |             \x1b[32m\x1b[Ktimer_t\x1b[m\x1b[K\n'}
+[1.331214] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:31:64:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMinimalPublisher\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[1.331245] (ai4r_pkg) StderrLine: {'line': b'   31 |             timer_ = this->create_wall_timer(100ms, std::bind(&\x1b[01;31m\x1b[KMinimalPublisher\x1b[m\x1b[K::timer_callback, this));\n'}
+[1.331274] (ai4r_pkg) StderrLine: {'line': b'      |                                                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.331302] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:40:92:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid operands of types \xe2\x80\x98\x1b[01m\x1b[Kconst char [57]\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to binary \xe2\x80\x98\x1b[01m\x1b[Koperator<<\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.331333] (ai4r_pkg) StderrLine: {'line': b'   40 |                 ROS_INFO_STREAM(\x1b[32m\x1b[K"[TEMPLATE I2C INTERNAL] FAILED to open I2C device named "\x1b[m\x1b[K \x1b[01;31m\x1b[K<<\x1b[m\x1b[K \x1b[34m\x1b[Km_i2c_driver.get_device_name()\x1b[m\x1b[K);\n'}
+[1.331365] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K \x1b[01;31m\x1b[K^~\x1b[m\x1b[K \x1b[34m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.331394] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[K|\x1b[m\x1b[K                                                                                         \x1b[34m\x1b[K|\x1b[m\x1b[K\n'}
+[1.331423] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[Kconst char [57]\x1b[m\x1b[K                                                                           \x1b[34m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.336182] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:40:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KROS_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.336268] (ai4r_pkg) StderrLine: {'line': b'   40 |                 \x1b[01;31m\x1b[KROS_INFO_STREAM\x1b[m\x1b[K("[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());\n'}
+[1.336304] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.336334] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[32m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\n'}
+[1.336363] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:42:86:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid operands of types \xe2\x80\x98\x1b[01m\x1b[Kconst char [51]\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to binary \xe2\x80\x98\x1b[01m\x1b[Koperator<<\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.336394] (ai4r_pkg) StderrLine: {'line': b'   42 |                 ROS_INFO_STREAM(\x1b[32m\x1b[K"[TEMPLATE I2C INTERNAL] Successfully opened named "\x1b[m\x1b[K \x1b[01;31m\x1b[K<<\x1b[m\x1b[K \x1b[34m\x1b[Km_i2c_driver.get_device_name()\x1b[m\x1b[K << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());\n'}
+[1.336424] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K \x1b[01;31m\x1b[K^~\x1b[m\x1b[K \x1b[34m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.336558] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[K|\x1b[m\x1b[K                                                                                   \x1b[34m\x1b[K|\x1b[m\x1b[K\n'}
+[1.336585] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[Kconst char [51]\x1b[m\x1b[K                                                                     \x1b[34m\x1b[Kconst char*\x1b[m\x1b[K\n'}
+[1.341075] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:42:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KROS_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.341176] (ai4r_pkg) StderrLine: {'line': b'   42 |                 \x1b[01;31m\x1b[KROS_INFO_STREAM\x1b[m\x1b[K("[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());\n'}
+[1.341220] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.341251] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[32m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\n'}
+[1.341279] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:56:118:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid operands of types \xe2\x80\x98\x1b[01m\x1b[Kconst char [83]\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to binary \xe2\x80\x98\x1b[01m\x1b[Koperator<<\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.341310] (ai4r_pkg) StderrLine: {'line': b'   56 |                 ROS_INFO_STREAM(\x1b[32m\x1b[K"[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address "\x1b[m\x1b[K \x1b[01;31m\x1b[K<<\x1b[m\x1b[K \x1b[34m\x1b[Kstatic_cast<int>(m_pca9685_servo_driver.get_i2c_address())\x1b[m\x1b[K );\n'}
+[1.341340] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K \x1b[01;31m\x1b[K^~\x1b[m\x1b[K \x1b[34m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.341367] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[K|\x1b[m\x1b[K                                                                                       \x1b[34m\x1b[K|\x1b[m\x1b[K\n'}
+[1.341398] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[Kconst char [83]\x1b[m\x1b[K                                                                         \x1b[34m\x1b[Kint\x1b[m\x1b[K\n'}
+[1.346026] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:56:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KROS_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.346121] (ai4r_pkg) StderrLine: {'line': b'   56 |                 \x1b[01;31m\x1b[KROS_INFO_STREAM\x1b[m\x1b[K("[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );\n'}
+[1.346165] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.346195] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[32m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\n'}
+[1.346223] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:58:113:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid operands of types \xe2\x80\x98\x1b[01m\x1b[Kconst char [78]\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to binary \xe2\x80\x98\x1b[01m\x1b[Koperator<<\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.346256] (ai4r_pkg) StderrLine: {'line': b'   58 |                 ROS_INFO_STREAM(\x1b[32m\x1b[K"[PWM DRIVER NODE] SUCCESS - while initialising servo driver with I2C address "\x1b[m\x1b[K \x1b[01;31m\x1b[K<<\x1b[m\x1b[K \x1b[34m\x1b[Kstatic_cast<int>(m_pca9685_servo_driver.get_i2c_address())\x1b[m\x1b[K );\n'}
+[1.346286] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K \x1b[01;31m\x1b[K^~\x1b[m\x1b[K \x1b[34m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.346316] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[K|\x1b[m\x1b[K                                                                                  \x1b[34m\x1b[K|\x1b[m\x1b[K\n'}
+[1.346344] (ai4r_pkg) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[Kconst char [78]\x1b[m\x1b[K                                                                    \x1b[34m\x1b[Kint\x1b[m\x1b[K\n'}
+[1.350661] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:58:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KROS_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.350735] (ai4r_pkg) StderrLine: {'line': b'   58 |                 \x1b[01;31m\x1b[KROS_INFO_STREAM\x1b[m\x1b[K("[PWM DRIVER NODE] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );\n'}
+[1.350771] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.350800] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[32m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\n'}
+[1.355550] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PwmDriverNode::servoSubscriberCallback(const ServoPulseWidth&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.355620] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:73:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.355656] (ai4r_pkg) StderrLine: {'line': b'   73 |             \x1b[01;31m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K("[TEMPLATE I2C INTERNAL] Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) );\n'}
+[1.355692] (ai4r_pkg) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.360380] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.360455] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:112:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.360491] (ai4r_pkg) StderrLine: {'line': b'  112 |                 \x1b[01;31m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K("[TEMPLATE I2C INTERNAL] FAILED to close I2C device named " << m_i2c_driver.get_device_name());\n'}
+[1.360521] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.363114] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:114:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.363205] (ai4r_pkg) StderrLine: {'line': b'  114 |                 \x1b[01;31m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K("[TEMPLATE I2C INTERNAL] Successfully closed device named " << m_i2c_driver.get_device_name());\n'}
+[1.363243] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.366175] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid setPWMSignal(uint8_t, uint16_t)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.366256] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:127:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.366293] (ai4r_pkg) StderrLine: {'line': b'  127 |                 \x1b[01;31m\x1b[KRCLCPP_INFO_STREAM\x1b[m\x1b[K("[TEMPLATE I2C INTERNAL] FAILED to set pulse width for servo at channel " << static_cast<int>(channel) );\n'}
+[1.366323] (ai4r_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.403561] (-) TimerEvent: {}
+[1.503849] (-) TimerEvent: {}
+[1.604195] (-) TimerEvent: {}
+[1.704643] (-) TimerEvent: {}
+[1.805011] (-) TimerEvent: {}
+[1.905294] (-) TimerEvent: {}
+[2.005521] (-) TimerEvent: {}
+[2.105819] (-) TimerEvent: {}
+[2.206183] (-) TimerEvent: {}
+[2.306444] (-) TimerEvent: {}
+[2.406829] (-) TimerEvent: {}
+[2.507195] (-) TimerEvent: {}
+[2.607534] (-) TimerEvent: {}
+[2.688357] (ai4r_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pwm_driver.dir/build.make:76: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o] Error 1\n'}
+[2.688499] (ai4r_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:336: CMakeFiles/pwm_driver.dir/all] Error 2\n'}
+[2.688706] (ai4r_pkg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[2.690748] (ai4r_pkg) CommandEnded: {'returncode': 2}
+[2.707702] (-) TimerEvent: {}
+[2.723192] (ai4r_pkg) JobEnded: {'identifier': 'ai4r_pkg', 'rc': 2}
+[2.733429] (-) EventReactorShutdown: {}

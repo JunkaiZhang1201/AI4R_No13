@@ -1,0 +1,21 @@
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:16:10:[m[K [01;31m[Kfatal error: [m[Ki2c_driver/i2c_driver.h: No such file or directory
+   16 | #include [01;31m[K"i2c_driver/i2c_driver.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/pwm_driver.dir/build.make:76: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:336: CMakeFiles/pwm_driver.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp:8:10:[m[K [01;31m[Kfatal error: [m[Ki2c_driver/i2c_driver.h: No such file or directory
+    8 | #include [01;31m[K"i2c_driver/i2c_driver.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/minimal_cpp_executable.dir/build.make:76: CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:154: CMakeFiles/minimal_cpp_executable.dir/all] Error 2
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:7:10:[m[K [01;31m[Kfatal error: [m[Ki2c_driver/i2c_driver.h: No such file or directory
+    7 | #include [01;31m[K"i2c_driver/i2c_driver.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/oop_cpp_executable.dir/build.make:76: CMakeFiles/oop_cpp_executable.dir/src/oop_cpp_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:180: CMakeFiles/oop_cpp_executable.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

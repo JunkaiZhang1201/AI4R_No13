@@ -1,0 +1,71 @@
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp:24[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:24[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:49[m[K,
+                 from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:24[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685_constants.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:51[m[K,
+                 from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:24[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:[m[K In member function ‘[01m[Kbool PCA9685::set_i2c_address(uint8_t)[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:77:24:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+   77 |         if ([01;35m[Knew_address<0[m[K || new_address>127)
+      |             [01;35m[K~~~~~~~~~~~^~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:[m[K In member function ‘[01m[Kbool PCA9685::read_register(uint8_t, uint8_t*)[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:108:17:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kvalue_array[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvla-Wvla]8;;[m[K]
+  108 |         uint8_t [01;35m[Kvalue_array[m[K[num_value_bytes];
+      |                 [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:[m[K In member function ‘[01m[Kbool PCA9685::read_pwm_pulse_bytes(uint8_t, uint16_t*, uint16_t*)[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:322:17:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kvalue_array[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvla-Wvla]8;;[m[K]
+  322 |         uint8_t [01;35m[Kvalue_array[m[K[num_value_bytes];
+      |                 [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:337:25:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kvalue_array1[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvla-Wvla]8;;[m[K]
+  337 |                 uint8_t [01;35m[Kvalue_array1[m[K[num_value_bytes1];
+      |                         [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:343:25:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kvalue_array2[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvla-Wvla]8;;[m[K]
+  343 |                 uint8_t [01;35m[Kvalue_array2[m[K[num_value_bytes2];
+      |                         [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:349:25:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kvalue_array3[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvla-Wvla]8;;[m[K]
+  349 |                 uint8_t [01;35m[Kvalue_array3[m[K[num_value_bytes3];
+      |                         [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:355:25:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kvalue_array4[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wvla-Wvla]8;;[m[K]
+  355 |                 uint8_t [01;35m[Kvalue_array4[m[K[num_value_bytes4];
+      |                         [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:[m[K In member function ‘[01m[Kbool PCA9685::reset()[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:397:25:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_mode1_without_sleep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  397 |                 uint8_t [01;35m[Kcurrent_mode1_without_sleep[m[K = current_mode1 & (~PCA9685_MODE1_SLEEP);
+      |                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:404:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_mode1_without_sleep_with_restart[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  404 |         uint8_t [01;35m[Kcurrent_mode1_without_sleep_with_restart[m[K = (current_mode1 & (~PCA9685_MODE1_SLEEP)) | PCA9685_MODE1_RESTART;
+      |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:[m[K In member function ‘[01m[Kbool PCA9685::set_pwm_pulse(uint8_t, uint16_t, uint16_t)[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:824:30:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+  824 |         if ( (channel_number < PCA9685_CHANNEL_MIN) || (PCA9685_CHANNEL_MAX < channel_number) )
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:835:22:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+  835 |         if (on_count < PCA9685_PULSE_ON_OFF_MIN)
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:840:23:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+  840 |         if (off_count < PCA9685_PULSE_ON_OFF_MIN)
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:[m[K In member function ‘[01m[Kbool PCA9685::set_pwm_pulse_in_microseconds(uint8_t, uint16_t)[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:887:30:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+  887 |         if ( (channel_number < PCA9685_CHANNEL_MIN) || (PCA9685_CHANNEL_MAX < channel_number) )
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:[m[K In member function ‘[01m[Kbool PCA9685::set_pwm_full_on_or_full_off(uint8_t, bool)[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:906:30:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+  906 |         if ( (channel_number < PCA9685_CHANNEL_MIN) || (PCA9685_CHANNEL_MAX < channel_number) )
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:[m[K In member function ‘[01m[Kbool PCA9685::get_pwm_pulse(uint8_t, uint16_t*, uint16_t*)[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp:935:30:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+  935 |         if ( (channel_number < PCA9685_CHANNEL_MIN) || (PCA9685_CHANNEL_MAX < channel_number) )

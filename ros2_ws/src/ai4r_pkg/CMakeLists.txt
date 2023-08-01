@@ -20,6 +20,7 @@ find_package(ai4r_interfaces REQUIRED)
 include_directories(
   include
   drivers/src
+  #${ament_INCLUDE_DIRS}
 )
 
 # Create Cpp executable
@@ -37,8 +38,10 @@ add_executable(multiple_pub_sub src/multiple_pub_sub_cpp_node.cpp)
 ament_target_dependencies(multiple_pub_sub rclcpp std_msgs ai4r_interfaces)
 add_executable(looping src/looping_cpp_node.cpp)
 ament_target_dependencies(looping rclcpp std_msgs ai4r_interfaces)
-# add_executable(pwm_driver src/pwm_driver_node.cpp)
-# ament_target_dependencies(pwm_driver rclcpp std_msgs ai4r_interfaces)
+add_executable(pwm_driver src/pwm_driver_node.cpp
+                          drivers/src/i2c_driver/i2c_driver.cpp
+                          drivers/src/pca9685/pca9685.cpp)
+ament_target_dependencies(pwm_driver rclcpp std_msgs ai4r_interfaces)
 
 
 # Install Cpp executables
@@ -50,7 +53,7 @@ install(TARGETS
   servo_pulse_width_sub
   multiple_pub_sub
   looping
-  # pwm_driver
+  pwm_driver
   DESTINATION lib/${PROJECT_NAME}
 )
 

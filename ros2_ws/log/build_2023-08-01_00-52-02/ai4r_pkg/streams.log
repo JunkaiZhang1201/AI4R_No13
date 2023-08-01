@@ -1,0 +1,25 @@
+[0.008s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
+[0.040s] [35m[1mConsolidate compiler generated dependencies of target looping[0m
+[0.044s] [ 42%] Built target listener
+[0.044s] [ 42%] Built target minimal_cpp_executable
+[0.044s] [ 42%] Built target oop_cpp_executable
+[0.047s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/oop_pub_cpp_node.cpp.o[0m
+[0.049s] [ 57%] Built target ament_cmake_python_copy_ai4r_pkg
+[0.049s] [ 78%] Built target servo_pulse_width_sub
+[0.049s] [ 78%] Built target multiple_pub_sub
+[0.053s] [ 92%] Built target looping
+[0.178s] running egg_info
+[0.179s] writing ai4r_pkg.egg-info/PKG-INFO
+[0.179s] writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt
+[0.179s] writing top-level names to ai4r_pkg.egg-info/top_level.txt
+[0.180s] reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.180s] writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.195s] [ 92%] Built target ament_cmake_python_build_ai4r_pkg_egg
+[1.289s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_pub_cpp_node.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[1.289s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_pub_cpp_node.cpp:22:7:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""ms[m[K’
+[1.289s]    22 |       [01;31m[K100ms[m[K, std::bind(&MinimalPublisher::timer_callback, this));
+[1.289s]       |       [01;31m[K^~~~~[m[K
+[1.711s] gmake[2]: *** [CMakeFiles/talker.dir/build.make:76: CMakeFiles/talker.dir/src/oop_pub_cpp_node.cpp.o] Error 1
+[1.711s] gmake[1]: *** [CMakeFiles/Makefile2:204: CMakeFiles/talker.dir/all] Error 2
+[1.711s] gmake: *** [Makefile:146: all] Error 2
+[1.714s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg' returned '2': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16

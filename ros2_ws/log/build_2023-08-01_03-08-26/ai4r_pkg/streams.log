@@ -1,0 +1,60 @@
+[0.008s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target pwm_driver[0m
+[0.045s] [ 37%] Built target oop_cpp_executable
+[0.045s] [ 37%] Built target talker
+[0.045s] [ 37%] Built target minimal_cpp_executable
+[0.047s] [ 50%] Built target listener
+[0.050s] [ 81%] Built target looping
+[0.050s] [ 81%] Built target ament_cmake_python_copy_ai4r_pkg
+[0.050s] [ 87%] Built target multiple_pub_sub
+[0.050s] [ 81%] Built target servo_pulse_width_sub
+[0.055s] [100%] Built target pwm_driver
+[0.172s] running egg_info
+[0.172s] writing ai4r_pkg.egg-info/PKG-INFO
+[0.172s] writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt
+[0.172s] writing top-level names to ai4r_pkg.egg-info/top_level.txt
+[0.174s] reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.174s] writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.189s] [100%] Built target ament_cmake_python_build_ai4r_pkg_egg
+[0.196s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg' returned '0': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
+[0.220s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
+[0.224s] -- Install configuration: ""
+[0.224s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/minimal_cpp_executable
+[0.224s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/oop_cpp_executable
+[0.224s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/talker
+[0.224s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/listener
+[0.225s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/servo_pulse_width_sub
+[0.225s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/multiple_pub_sub
+[0.225s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/looping
+[0.225s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/pwm_driver
+[0.225s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/pythonpath.sh
+[0.225s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/pythonpath.dsv
+[0.225s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info
+[0.225s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/top_level.txt
+[0.225s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/PKG-INFO
+[0.226s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.226s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.226s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg
+[0.226s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg/__init__.py
+[0.226s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg/module_to_import.py
+[0.246s] Listing '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages/ai4r_pkg'...
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/minimal_py_node.py
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/oop_py_node.py
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/oop_pub_py_node.py
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/oop_sub_py_node.py
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/package_run_dependencies/ai4r_pkg
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/parent_prefix_path/ai4r_pkg
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/ament_prefix_path.sh
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/ament_prefix_path.dsv
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/path.sh
+[0.249s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/path.dsv
+[0.250s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.bash
+[0.250s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.sh
+[0.250s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.zsh
+[0.250s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/local_setup.dsv
+[0.250s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/package.dsv
+[0.250s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ament_index/resource_index/packages/ai4r_pkg
+[0.250s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/cmake/ai4r_pkgConfig.cmake
+[0.250s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/cmake/ai4r_pkgConfig-version.cmake
+[0.250s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/package.xml
+[0.251s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg' returned '0': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg

@@ -1,0 +1,104 @@
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:16[m[K,
+                 from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17[m[K,
+                 from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:49[m[K,
+                 from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17[m[K,
+                 from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685_constants.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:8[m[K,
+                 from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:85:28:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+   85 |         RCLCPP_INFO_STREAM([01;31m[Knode[m[K->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+      |                            [01;31m[K^~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:85:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   85 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:85:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   85 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:85:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   85 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:85:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   85 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:85:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   85 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:87:28:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+   87 |         RCLCPP_INFO_STREAM([01;31m[Knode[m[K->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+      |                            [01;31m[K^~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:87:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   87 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:87:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   87 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:87:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   87 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:87:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   87 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:87:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   87 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:101:28:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+  101 |         RCLCPP_INFO_STREAM([01;31m[Knode[m[K->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |                            [01;31m[K^~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:101:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  101 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:101:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  101 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:101:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  101 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:101:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  101 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:101:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  101 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:103:28:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+  103 |         RCLCPP_INFO_STREAM([01;31m[Knode[m[K->get_logger(), "[PWM DRIVER NODE] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |                            [01;31m[K^~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:103:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  103 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[PWM DRIVER NODE] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:103:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  103 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[PWM DRIVER NODE] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:103:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  103 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[PWM DRIVER NODE] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:103:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  103 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[PWM DRIVER NODE] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:103:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  103 |         [01;31m[KRCLCPP_INFO_STREAM[m[K(node->get_logger(), "[PWM DRIVER NODE] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pwm_driver.dir/build.make:76: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:336: CMakeFiles/pwm_driver.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

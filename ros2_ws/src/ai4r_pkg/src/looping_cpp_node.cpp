@@ -1,51 +1,34 @@
-// Periodically publishes using a while loop at the specified loop_rate freqeuncy
 
-//    ________LoopingNode________
-//   |               _   _   _   |
-//   |     loop_rate  |_| |_| |_ |----------
-//   |                           |          |
-//   |                           |     topic_name
-//   |                           |          |
-//   |               RCLCPP_INFO |<--------- 
-//   |___________________________|
-
-#include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/string.hpp>
-
-class LoopingNode : public rclcpp::Node {
-public:
-    LoopingNode() : Node("ros2_node") {
-        publisher_ = this->create_publisher<std_msgs::msg::String>("topic_name", 10);
-        subscriber_ = this->create_subscription<std_msgs::msg::String>(
-            "topic_name", 10, std::bind(&LoopingNode::callback, this, std::placeholders::_1));
-    }
-
-    void run() {
-        rclcpp::Rate loop_rate(10);
-        int count = 0;
-        while (rclcpp::ok()) {
-            auto msg = std_msgs::msg::String();
-            msg.data = "Hello ROS 2: " + std::to_string(count);
-            publisher_->publish(msg);
-            loop_rate.sleep();
-            count++;
-        }
-    }
-
-    void callback(const std_msgs::msg::String::SharedPtr msg) {
-        RCLCPP_INFO(this->get_logger(), "ROS 2 Received: %s", msg->data.c_str());
-    }
-
-private:
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
-    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscriber_;
-};
-
-int main(int argc, char** argv) {
+#include <sstream>
+// #include "ros/ros.h"
+#include "rclcpp/rclcpp.hpp"
+// #include "std_msgs/String.h"
+#include "std_msgs/msg/string.hpp"
+int main(int argc, char **argv)
+{
+    //  ros::init(argc, argv, "talker");
+    //  ros::NodeHandle n;
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<LoopingNode>();
-    node->run();
-    rclcpp::spin(node); // Use rclcpp::spin() to handle callbacks.
-    rclcpp::shutdown();
+    auto node = rclcpp::Node::make_shared("talker");
+    //  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
+    //  ros::Rate loop_rate(10);
+    auto chatter_pub = node->create_publisher<std_msgs::msg::String>("chatter", 1000);
+    rclcpp::Rate loop_rate(10);
+    int count = 0;
+    //  std_msgs::String msg;
+    std_msgs::msg::String msg;
+    //  while (ros::ok())
+    while (rclcpp::ok())
+    {
+        std::stringstream ss;
+        ss << "hello world " << count++;
+        msg.data = ss.str();
+    //    ROS_INFO("%s", msg.data.c_str());
+        RCLCPP_INFO(node->get_logger(), "%s\n", msg.data.c_str());
+        chatter_pub->publish(msg);
+    //    ros::spinOnce();
+        rclcpp::spin_some(node);
+        loop_rate.sleep();
+    }
     return 0;
 }

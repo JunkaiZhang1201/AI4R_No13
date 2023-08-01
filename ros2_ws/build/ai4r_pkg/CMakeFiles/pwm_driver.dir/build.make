@@ -83,14 +83,46 @@ CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp -o CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.s
 
+CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o: CMakeFiles/pwm_driver.dir/flags.make
+CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp
+CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o: CMakeFiles/pwm_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o -MF CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o.d -o CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp
+
+CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp > CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.i
+
+CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp -o CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.s
+
+CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o: CMakeFiles/pwm_driver.dir/flags.make
+CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp
+CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o: CMakeFiles/pwm_driver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o -MF CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o.d -o CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp
+
+CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp > CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.i
+
+CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp -o CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.s
+
 # Object files for target pwm_driver
 pwm_driver_OBJECTS = \
-"CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o"
+"CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o" \
+"CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o" \
+"CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o"
 
 # External object files for target pwm_driver
 pwm_driver_EXTERNAL_OBJECTS =
 
 pwm_driver: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o
+pwm_driver: CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o
+pwm_driver: CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o
 pwm_driver: CMakeFiles/pwm_driver.dir/build.make
 pwm_driver: /opt/ros/humble/lib/librclcpp.so
 pwm_driver: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
@@ -163,7 +195,7 @@ pwm_driver: /opt/ros/humble/lib/librosidl_runtime_c.so
 pwm_driver: /opt/ros/humble/lib/librcutils.so
 pwm_driver: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 pwm_driver: CMakeFiles/pwm_driver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable pwm_driver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable pwm_driver"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pwm_driver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,0 +1,111 @@
+[0.009s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
+[0.024s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.102s] -- Found rclcpp: 16.0.5 (/opt/ros/humble/share/rclcpp/cmake)
+[0.117s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.118s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.121s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.127s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.135s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.170s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.171s] -- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.241s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.324s] -- Found rclpy: 3.3.9 (/opt/ros/humble/share/rclpy/cmake)
+[0.324s] -- Found ai4r_interfaces: 0.0.0 (/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake)
+[0.370s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.409s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.409s] -- Configured cppcheck include dirs: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include;/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src
+[0.410s] -- Configured cppcheck exclude dirs and/or files: 
+[0.410s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.410s] -- Added test 'lint_cmake' to check CMake code style
+[0.411s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.412s] -- Added test 'uncrustify' to check C / C++ code style
+[0.412s] -- Configured uncrustify additional arguments: 
+[0.412s] -- Added test 'xmllint' to check XML markup files
+[0.413s] -- Configuring done
+[0.429s] -- Generating done
+[0.430s] -- Build files have been written to: /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
+[0.447s] [35m[1mConsolidate compiler generated dependencies of target talker[0m
+[0.447s] [35m[1mConsolidate compiler generated dependencies of target listener[0m
+[0.447s] [35m[1mConsolidate compiler generated dependencies of target minimal_cpp_executable[0m
+[0.447s] [35m[1mConsolidate compiler generated dependencies of target oop_cpp_executable[0m
+[0.450s] [35m[1mConsolidate compiler generated dependencies of target looping[0m
+[0.450s] [35m[1mConsolidate compiler generated dependencies of target servo_pulse_width_sub[0m
+[0.450s] [35m[1mConsolidate compiler generated dependencies of target multiple_pub_sub[0m
+[0.450s] [35m[1mConsolidate compiler generated dependencies of target pwm_driver[0m
+[0.458s] [ 25%] [32mBuilding CXX object CMakeFiles/talker.dir/src/oop_pub_cpp_node.cpp.o[0m
+[0.459s] [ 25%] [32mBuilding CXX object CMakeFiles/oop_cpp_executable.dir/src/oop_cpp_node.cpp.o[0m
+[0.459s] [ 25%] [32mBuilding CXX object CMakeFiles/listener.dir/src/oop_sub_cpp_node.cpp.o[0m
+[0.459s] [ 25%] [32mBuilding CXX object CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o[0m
+[0.465s] [ 37%] [32mBuilding CXX object CMakeFiles/servo_pulse_width_sub.dir/src/servo_pulse_width_sub_cpp_node.cpp.o[0m
+[0.465s] [ 43%] [32mBuilding CXX object CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o[0m
+[0.465s] [ 43%] [32mBuilding CXX object CMakeFiles/looping.dir/src/looping_cpp_node.cpp.o[0m
+[0.465s] [ 37%] Built target ament_cmake_python_copy_ai4r_pkg
+[0.467s] [ 50%] [32mBuilding CXX object CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o[0m
+[0.652s] In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp:8[m[K:
+[0.652s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.652s]    10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+[0.653s]       | [01;35m[K^[m[K
+[0.675s] In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:7[m[K:
+[0.675s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.675s]    10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+[0.676s]       | [01;35m[K^[m[K
+[0.693s] In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:16[m[K,
+[0.693s]                  from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[0.693s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.693s]    10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+[0.693s]       | [01;35m[K^[m[K
+[0.700s] In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17[m[K,
+[0.701s]                  from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[0.701s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.701s]    10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+[0.701s]       | [01;35m[K^[m[K
+[0.701s] In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:49[m[K,
+[0.701s]                  from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17[m[K,
+[0.701s]                  from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[0.702s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685_constants.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.702s]    10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+[0.702s]       | [01;35m[K^[m[K
+[0.780s] running egg_info
+[0.780s] writing ai4r_pkg.egg-info/PKG-INFO
+[0.780s] writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt
+[0.781s] writing top-level names to ai4r_pkg.egg-info/top_level.txt
+[0.781s] reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.781s] writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.824s] [ 50%] Built target ament_cmake_python_build_ai4r_pkg_egg
+[3.438s] [ 56%] [32m[1mLinking CXX executable minimal_cpp_executable[0m
+[3.718s] [ 56%] Built target minimal_cpp_executable
+[4.359s] [ 62%] [32m[1mLinking CXX executable oop_cpp_executable[0m
+[4.524s] [ 62%] Built target oop_cpp_executable
+[4.858s] [ 68%] [32m[1mLinking CXX executable looping[0m
+[5.149s] [ 75%] Built target looping
+[5.149s] [ 75%] [32m[1mLinking CXX executable talker[0m
+[5.345s] [ 75%] Built target talker
+[7.841s] [ 81%] [32m[1mLinking CXX executable servo_pulse_width_sub[0m
+[8.055s] [ 87%] [32m[1mLinking CXX executable listener[0m
+[8.113s] [ 87%] Built target servo_pulse_width_sub
+[8.307s] [ 87%] Built target listener
+[8.459s] [ 93%] [32m[1mLinking CXX executable pwm_driver[0m
+[8.658s] /usr/bin/ld: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o: in function `main':
+[8.658s] pwm_driver_node.cpp:(.text+0x124): undefined reference to `I2C_Driver::open_i2c_device()'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x17a): undefined reference to `I2C_Driver::get_device_name()'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x399): undefined reference to `I2C_Driver::get_device_name()'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x3cb): undefined reference to `I2C_Driver::get_file_descriptor()'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x5df): undefined reference to `PCA9685::initialise_with_frequency_in_hz(float, bool)'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x635): undefined reference to `PCA9685::get_i2c_address()'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x856): undefined reference to `PCA9685::get_i2c_address()'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0xa7a): undefined reference to `I2C_Driver::close_i2c_device()'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0xad0): undefined reference to `I2C_Driver::get_device_name()'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0xcef): undefined reference to `I2C_Driver::get_device_name()'
+[8.659s] /usr/bin/ld: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o: in function `__static_initialization_and_destruction_0(int, int)':
+[8.659s] pwm_driver_node.cpp:(.text+0x12e7): undefined reference to `I2C_Driver::I2C_Driver(char const*)'
+[8.659s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x1305): undefined reference to `PCA9685::PCA9685(I2C_Driver*, unsigned char)'
+[8.659s] /usr/bin/ld: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o: in function `PwmDriverNode::setPWMSignal(unsigned char, unsigned short)':
+[8.659s] pwm_driver_node.cpp:(.text._ZN13PwmDriverNode12setPWMSignalEht[_ZN13PwmDriverNode12setPWMSignalEht]+0x56): undefined reference to `PCA9685::set_pwm_pulse_in_microseconds(unsigned char, unsigned short)'
+[8.682s] collect2: error: ld returned 1 exit status
+[8.683s] gmake[2]: *** [CMakeFiles/pwm_driver.dir/build.make:167: pwm_driver] Error 1
+[8.683s] gmake[1]: *** [CMakeFiles/Makefile2:336: CMakeFiles/pwm_driver.dir/all] Error 2
+[8.683s] gmake[1]: *** Waiting for unfinished jobs....
+[9.347s] [100%] [32m[1mLinking CXX executable multiple_pub_sub[0m
+[9.653s] [100%] Built target multiple_pub_sub
+[9.654s] gmake: *** [Makefile:146: all] Error 2
+[9.656s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg' returned '2': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
