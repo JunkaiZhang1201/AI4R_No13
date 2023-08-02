@@ -13,7 +13,7 @@ class PwmDriverNode : public rclcpp::Node {
                 SERVO_PW, rclcpp::QoS(10), std::bind(&PwmDriverNode::servoSubscriberCallback, this, std::placeholders::_1)
             );
 
-            timer_ = this->create_wall_timer(100ms, std::bind(&PwmDriverNode::timer_callback, this));
+            timer_ = this->create_wall_timer(10ms, std::bind(&PwmDriverNode::timer_callback, this));
 
             // Open the I2C device
             // > Note that the I2C driver is already instantiated

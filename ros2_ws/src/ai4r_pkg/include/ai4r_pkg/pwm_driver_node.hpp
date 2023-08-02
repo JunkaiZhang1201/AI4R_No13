@@ -50,7 +50,7 @@ constexpr uint16_t STEERING_PULSE_WIDTH_STEP =  50;
 // You will need to change the i2c number
 // - List all i2c devices: `ls /dev/i2c*`
 // - Allow permissions for the relevant device number e.g. for `/dev/i2c-1` which is i2c pin 1 on the RPi by doing: `sudo chmod 777 /dev/i2c-1`
-const char * m_i2c_device_name = "/dev/i2c-8";
+const char * m_i2c_device_name = "/dev/i2c-1";
 I2C_Driver m_i2c_driver (m_i2c_device_name);
 
 // > PCA9685 PWM Servo Driver Object:
