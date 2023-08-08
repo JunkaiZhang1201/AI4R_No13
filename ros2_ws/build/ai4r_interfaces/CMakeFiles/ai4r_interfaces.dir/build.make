@@ -69,6 +69,7 @@ include CMakeFiles/ai4r_interfaces.dir/progress.make
 CMakeFiles/ai4r_interfaces: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/LeftRightFloat32.msg
 CMakeFiles/ai4r_interfaces: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/LeftRightInt32.msg
 CMakeFiles/ai4r_interfaces: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/ServoPulseWidth.msg
+CMakeFiles/ai4r_interfaces: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/EscAndSteering.msg
 CMakeFiles/ai4r_interfaces: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/TemplateMessage.msg
 
 ai4r_interfaces: CMakeFiles/ai4r_interfaces

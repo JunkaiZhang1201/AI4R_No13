@@ -610,6 +610,10 @@ CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: \
  /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp \
  /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp \
  /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp \
+ /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/esc_and_steering.hpp \
+ /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp \
+ /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp \
+ /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp \
  /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h \
  /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \

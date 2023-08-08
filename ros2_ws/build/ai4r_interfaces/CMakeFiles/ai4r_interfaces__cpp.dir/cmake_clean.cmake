@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ai4r_interfaces__cpp"
+  "rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp"
+  "rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp"
+  "rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp"
   "rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__builder.hpp"
   "rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__struct.hpp"
   "rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__traits.hpp"
@@ -12,6 +15,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__builder.hpp"
   "rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__struct.hpp"
   "rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__traits.hpp"
+  "rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp"
   "rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp"
   "rosidl_generator_cpp/ai4r_interfaces/msg/left_right_int32.hpp"
   "rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp"

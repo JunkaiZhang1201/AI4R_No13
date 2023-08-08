@@ -1,5 +1,5 @@
-#ifndef TRAXXAS_NODE_HPP
-#define TRAXXAS_NODE_HPP
+#ifndef PWM_DRIVER_NODE_HPP
+#define PWM_DRIVER_NODE_HPP
 
 #include <chrono>
 #include <functional>
@@ -11,6 +11,7 @@
 
 // ai4r custom message types
 #include "ai4r_interfaces/msg/servo_pulse_width.hpp"
+#include "ai4r_interfaces/msg/esc_and_steering.hpp"
 
 // Drivers
 #include "i2c_driver/i2c_driver.h"
@@ -24,8 +25,8 @@ using namespace std::chrono_literals;
 // Constants: 
 
 // Do not touch:
-constexpr uint8_t  STEERING_SERVO_CHANNEL = 0;
-constexpr uint8_t  ESC_SERVO_CHANNEL = 1;
+constexpr uint16_t  STEERING_SERVO_CHANNEL = 0;
+constexpr uint16_t  ESC_SERVO_CHANNEL = 1;
 
 // Can be changed:
 constexpr float    SERVO_FREQUENCY = 100.0f;

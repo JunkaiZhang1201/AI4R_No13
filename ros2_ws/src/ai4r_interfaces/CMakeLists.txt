@@ -17,6 +17,7 @@ set(msg_files
   "msg/LeftRightFloat32.msg"
   "msg/LeftRightInt32.msg"
   "msg/ServoPulseWidth.msg"
+  "msg/EscAndSteering.msg"
   "msg/TemplateMessage.msg"
   #DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
   # etc

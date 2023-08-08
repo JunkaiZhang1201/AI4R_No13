@@ -289,19 +289,6 @@ looping/fast:
 .PHONY : looping/fast
 
 #=============================================================================
-# Target rules for targets named pwm_driver
-
-# Build rule for target.
-pwm_driver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pwm_driver
-.PHONY : pwm_driver
-
-# fast build rule for target.
-pwm_driver/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/build
-.PHONY : pwm_driver/fast
-
-#=============================================================================
 # Target rules for targets named traxxas
 
 # Build rule for target.
@@ -345,7 +332,6 @@ drivers/src/i2c_driver/i2c_driver.o: drivers/src/i2c_driver/i2c_driver.cpp.o
 
 # target to build an object file
 drivers/src/i2c_driver/i2c_driver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/traxxas.dir/build.make CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o
 .PHONY : drivers/src/i2c_driver/i2c_driver.cpp.o
 
@@ -354,7 +340,6 @@ drivers/src/i2c_driver/i2c_driver.i: drivers/src/i2c_driver/i2c_driver.cpp.i
 
 # target to preprocess a source file
 drivers/src/i2c_driver/i2c_driver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/traxxas.dir/build.make CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.i
 .PHONY : drivers/src/i2c_driver/i2c_driver.cpp.i
 
@@ -363,7 +348,6 @@ drivers/src/i2c_driver/i2c_driver.s: drivers/src/i2c_driver/i2c_driver.cpp.s
 
 # target to generate assembly for a file
 drivers/src/i2c_driver/i2c_driver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/drivers/src/i2c_driver/i2c_driver.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/traxxas.dir/build.make CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.s
 .PHONY : drivers/src/i2c_driver/i2c_driver.cpp.s
 
@@ -372,7 +356,6 @@ drivers/src/pca9685/pca9685.o: drivers/src/pca9685/pca9685.cpp.o
 
 # target to build an object file
 drivers/src/pca9685/pca9685.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/traxxas.dir/build.make CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o
 .PHONY : drivers/src/pca9685/pca9685.cpp.o
 
@@ -381,7 +364,6 @@ drivers/src/pca9685/pca9685.i: drivers/src/pca9685/pca9685.cpp.i
 
 # target to preprocess a source file
 drivers/src/pca9685/pca9685.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/traxxas.dir/build.make CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.i
 .PHONY : drivers/src/pca9685/pca9685.cpp.i
 
@@ -390,7 +372,6 @@ drivers/src/pca9685/pca9685.s: drivers/src/pca9685/pca9685.cpp.s
 
 # target to generate assembly for a file
 drivers/src/pca9685/pca9685.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/drivers/src/pca9685/pca9685.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/traxxas.dir/build.make CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.s
 .PHONY : drivers/src/pca9685/pca9685.cpp.s
 
@@ -538,30 +519,6 @@ src/oop_sub_cpp_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/oop_sub_cpp_node.cpp.s
 .PHONY : src/oop_sub_cpp_node.cpp.s
 
-src/pwm_driver_node.o: src/pwm_driver_node.cpp.o
-.PHONY : src/pwm_driver_node.o
-
-# target to build an object file
-src/pwm_driver_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o
-.PHONY : src/pwm_driver_node.cpp.o
-
-src/pwm_driver_node.i: src/pwm_driver_node.cpp.i
-.PHONY : src/pwm_driver_node.i
-
-# target to preprocess a source file
-src/pwm_driver_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.i
-.PHONY : src/pwm_driver_node.cpp.i
-
-src/pwm_driver_node.s: src/pwm_driver_node.cpp.s
-.PHONY : src/pwm_driver_node.s
-
-# target to generate assembly for a file
-src/pwm_driver_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pwm_driver.dir/build.make CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.s
-.PHONY : src/pwm_driver_node.cpp.s
-
 src/servo_pulse_width_sub_cpp_node.o: src/servo_pulse_width_sub_cpp_node.cpp.o
 .PHONY : src/servo_pulse_width_sub_cpp_node.o
 
@@ -632,7 +589,6 @@ help:
 	@echo "... minimal_cpp_executable"
 	@echo "... multiple_pub_sub"
 	@echo "... oop_cpp_executable"
-	@echo "... pwm_driver"
 	@echo "... servo_pulse_width_sub"
 	@echo "... talker"
 	@echo "... traxxas"
@@ -660,9 +616,6 @@ help:
 	@echo "... src/oop_sub_cpp_node.o"
 	@echo "... src/oop_sub_cpp_node.i"
 	@echo "... src/oop_sub_cpp_node.s"
-	@echo "... src/pwm_driver_node.o"
-	@echo "... src/pwm_driver_node.i"
-	@echo "... src/pwm_driver_node.s"
 	@echo "... src/servo_pulse_width_sub_cpp_node.o"
 	@echo "... src/servo_pulse_width_sub_cpp_node.i"
 	@echo "... src/servo_pulse_width_sub_cpp_node.s"

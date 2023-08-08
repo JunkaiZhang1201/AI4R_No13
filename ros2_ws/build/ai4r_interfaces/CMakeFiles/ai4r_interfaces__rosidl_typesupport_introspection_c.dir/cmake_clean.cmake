@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.c.o"
+  "CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.c.o.d"
   "CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.o"
   "CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.o.d"
   "CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.o"
@@ -9,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.o.d"
   "libai4r_interfaces__rosidl_typesupport_introspection_c.pdb"
   "libai4r_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.c"
   "rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c"
   "rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__rosidl_typesupport_introspection_c.h"

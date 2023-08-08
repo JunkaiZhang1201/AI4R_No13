@@ -981,6 +981,10 @@ CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: /home/zekaicheong/asclinic-system
   /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp \
   /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp \
   /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp \
+  /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/drive_and_steering.hpp \
+  /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/drive_and_steering__struct.hpp \
+  /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/drive_and_steering__builder.hpp \
+  /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/drive_and_steering__traits.hpp \
   /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h \
   /usr/include/fcntl.h \
   /usr/include/x86_64-linux-gnu/bits/fcntl.h \
@@ -1344,6 +1348,8 @@ CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: /home/zekaicheong/asclinic-system
 
 /usr/include/c++/11/ios:
 
+/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/drive_and_steering__struct.hpp:
+
 /opt/ros/humble/include/rcutils/rcutils/types/array_list.h:
 
 /opt/ros/humble/include/rcpputils/rcpputils/filesystem_helper.hpp:
@@ -1387,6 +1393,8 @@ CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: /home/zekaicheong/asclinic-system
 /usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
+
+/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/drive_and_steering__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
@@ -1946,6 +1954,8 @@ CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: /home/zekaicheong/asclinic-system
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/buffers/intra_process_buffer.hpp:
 
+/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/drive_and_steering__traits.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics_state.hpp:
@@ -2379,6 +2389,8 @@ CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: /home/zekaicheong/asclinic-system
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/any_service_callback.hpp:
+
+/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/drive_and_steering.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_map.hpp:
 

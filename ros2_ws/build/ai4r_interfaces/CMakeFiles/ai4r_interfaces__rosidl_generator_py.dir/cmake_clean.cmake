@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c.o"
+  "CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c.o.d"
   "CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.o"
   "CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.o.d"
   "CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.o"

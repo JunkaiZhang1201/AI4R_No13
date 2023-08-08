@@ -5,7 +5,6 @@
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/servo_pulse_width_sub
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/multiple_pub_sub
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/looping
-/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/pwm_driver
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/lib/ai4r_pkg/traxxas
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/pythonpath.sh
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/share/ai4r_pkg/environment/pythonpath.dsv

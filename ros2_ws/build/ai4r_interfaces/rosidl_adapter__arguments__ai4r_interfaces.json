@@ -4,6 +4,7 @@
     "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces:msg/LeftRightFloat32.msg",
     "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces:msg/LeftRightInt32.msg",
     "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces:msg/ServoPulseWidth.msg",
+    "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces:msg/EscAndSteering.msg",
     "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces:msg/TemplateMessage.msg"
   ]
 }

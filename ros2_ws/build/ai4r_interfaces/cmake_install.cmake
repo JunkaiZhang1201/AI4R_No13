@@ -368,6 +368,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ai4r_interfaces/msg" TYPE FILE FILES "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ai4r_interfaces/msg" TYPE FILE FILES "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/TemplateMessage.idl")
 endif()
 
@@ -381,6 +385,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ai4r_interfaces/msg" TYPE FILE FILES "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/ServoPulseWidth.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ai4r_interfaces/msg" TYPE FILE FILES "/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/EscAndSteering.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

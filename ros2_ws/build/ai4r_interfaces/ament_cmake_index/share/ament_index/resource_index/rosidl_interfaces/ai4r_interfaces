@@ -1,3 +1,5 @@
+msg/EscAndSteering.idl
+msg/EscAndSteering.msg
 msg/LeftRightFloat32.idl
 msg/LeftRightFloat32.msg
 msg/LeftRightInt32.idl

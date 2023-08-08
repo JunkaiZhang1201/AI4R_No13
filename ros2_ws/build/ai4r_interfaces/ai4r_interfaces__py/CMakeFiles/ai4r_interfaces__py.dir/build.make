@@ -72,11 +72,13 @@ ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_int
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32.py
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32.py
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width.py
+ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering.py
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_template_message.py
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/__init__.py
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.c
+ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c
 ai4r_interfaces__py/CMakeFiles/ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c
 
 rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
@@ -95,6 +97,7 @@ rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fas
 rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/ai4r_interfaces/msg/LeftRightFloat32.idl
 rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/ai4r_interfaces/msg/LeftRightInt32.idl
 rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
+rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
 rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/ai4r_interfaces/msg/TemplateMessage.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/ai4r_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
@@ -114,6 +117,9 @@ rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32.py: rosidl_generator_p
 rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width.py: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width.py
 
+rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering.py: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering.py
+
 rosidl_generator_py/ai4r_interfaces/msg/_template_message.py: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ai4r_interfaces/msg/_template_message.py
 
@@ -129,6 +135,9 @@ rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c: rosidl_generator_
 rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.c: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.c
 
+rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c
+
 rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c
 
@@ -137,6 +146,8 @@ ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.r
 ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/__init__.py
+ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering.py
+ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c
 ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32.py
 ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c
 ai4r_interfaces__py: rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32.py

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "../rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/ai4r_interfaces/msg/__init__.py"
+  "../rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering.py"
+  "../rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c"
   "../rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32.py"
   "../rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c"
   "../rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32.py"

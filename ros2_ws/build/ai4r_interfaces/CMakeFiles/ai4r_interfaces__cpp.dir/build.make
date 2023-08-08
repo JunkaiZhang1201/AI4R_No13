@@ -78,6 +78,10 @@ CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp
+CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp
+CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp
+CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp
+CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/template_message.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__builder.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__struct.hpp
@@ -101,6 +105,7 @@ rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble
 rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/LeftRightFloat32.idl
 rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/LeftRightInt32.idl
 rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
+rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
 rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/TemplateMessage.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_cpp__arguments.json
@@ -138,6 +143,18 @@ rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp: r
 rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp
 
+rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp
+
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp
+
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp
+
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp
+
 rosidl_generator_cpp/ai4r_interfaces/msg/template_message.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/template_message.hpp
 
@@ -151,6 +168,9 @@ rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__traits.hpp: ro
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__traits.hpp
 
 ai4r_interfaces__cpp: CMakeFiles/ai4r_interfaces__cpp
+ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp
+ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp
+ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__builder.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__struct.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__traits.hpp
@@ -163,6 +183,7 @@ ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_puls
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__builder.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__struct.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__traits.hpp
+ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_int32.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
