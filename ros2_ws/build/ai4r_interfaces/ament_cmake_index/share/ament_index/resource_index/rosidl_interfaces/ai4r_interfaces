@@ -1,8 +1,0 @@
-msg/LeftRightFloat32.idl
-msg/LeftRightFloat32.msg
-msg/LeftRightInt32.idl
-msg/LeftRightInt32.msg
-msg/ServoPulseWidth.idl
-msg/ServoPulseWidth.msg
-msg/TemplateMessage.idl
-msg/TemplateMessage.msg
