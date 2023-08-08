@@ -42,6 +42,10 @@ add_executable(pwm_driver src/pwm_driver_node.cpp
                           drivers/src/i2c_driver/i2c_driver.cpp
                           drivers/src/pca9685/pca9685.cpp)
 ament_target_dependencies(pwm_driver rclcpp std_msgs ai4r_interfaces)
+add_executable(traxxas src/traxxas_node.cpp
+                          drivers/src/i2c_driver/i2c_driver.cpp
+                          drivers/src/pca9685/pca9685.cpp)
+ament_target_dependencies(traxxas rclcpp std_msgs ai4r_interfaces)
 
 
 # Install Cpp executables
@@ -54,6 +58,7 @@ install(TARGETS
   multiple_pub_sub
   looping
   pwm_driver
+  traxxas
   DESTINATION lib/${PROJECT_NAME}
 )
 

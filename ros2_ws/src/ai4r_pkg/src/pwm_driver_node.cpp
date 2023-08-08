@@ -64,7 +64,8 @@ class PwmDriverNode : public rclcpp::Node {
         //uint16_t percentageToPulseWidth(float value);
 
         void timer_callback() {
-   
+            // Display the message received
+            RCLCPP_INFO_STREAM(this->get_logger(), "Timer callback");
         }
 
         void servoSubscriberCallback(const ai4r_interfaces::msg::ServoPulseWidth & msg) {
