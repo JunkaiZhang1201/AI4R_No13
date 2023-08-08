@@ -28,7 +28,7 @@ catkin_ws/src/rplidar_ros/
 *.swp
 
 
-# Ignore the "build" and "devel" folder of the catkin_ws
+# Ignore the "build" and "devel" folder of the ros2_ws
 ros2_ws/build/
 ros2_ws/install/
-ros2_ws/logs/
+ros2_ws/log/
