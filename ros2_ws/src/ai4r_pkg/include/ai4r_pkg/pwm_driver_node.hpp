@@ -24,8 +24,8 @@ using namespace std::chrono_literals;
 // Constants: 
 
 // Do not touch:
-constexpr uint8_t  STEERING_SERVO_CHANNEL = 0;
-constexpr uint8_t  ESC_SERVO_CHANNEL = 1;
+constexpr uint16_t  STEERING_SERVO_CHANNEL = 0;
+constexpr uint16_t  ESC_SERVO_CHANNEL = 1;
 
 // Can be changed:
 constexpr float    SERVO_FREQUENCY = 100.0f;
