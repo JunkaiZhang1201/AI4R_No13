@@ -1,0 +1,56 @@
+[0.009s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
+[0.039s] [35m[1mConsolidate compiler generated dependencies of target pwm_driver[0m
+[0.047s] [ 25%] Built target oop_cpp_executable
+[0.047s] [ 25%] Built target talker
+[0.047s] [ 37%] Built target multiple_pub_sub
+[0.050s] [ 62%] Built target minimal_cpp_executable
+[0.050s] [ 62%] Built target servo_pulse_width_sub
+[0.050s] [ 68%] [32mBuilding CXX object CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o[0m
+[0.050s] [ 81%] Built target looping
+[0.051s] [ 93%] Built target listener
+[0.053s] [ 93%] Built target ament_cmake_python_copy_ai4r_pkg
+[0.157s] In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:16[m[K,
+[0.157s]                  from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[0.157s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.157s]    10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+[0.157s]       | [01;35m[K^[m[K
+[0.160s] In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17[m[K,
+[0.160s]                  from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[0.160s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.160s]    10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+[0.160s]       | [01;35m[K^[m[K
+[0.160s] In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:49[m[K,
+[0.160s]                  from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17[m[K,
+[0.160s]                  from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1[m[K:
+[0.160s] [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685_constants.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+[0.160s]    10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+[0.161s]       | [01;35m[K^[m[K
+[0.185s] running egg_info
+[0.185s] writing ai4r_pkg.egg-info/PKG-INFO
+[0.185s] writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt
+[0.185s] writing top-level names to ai4r_pkg.egg-info/top_level.txt
+[0.187s] reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.187s] writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'
+[0.203s] [ 93%] Built target ament_cmake_python_build_ai4r_pkg_egg
+[4.595s] [100%] [32m[1mLinking CXX executable pwm_driver[0m
+[4.790s] /usr/bin/ld: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o: in function `main':
+[4.790s] pwm_driver_node.cpp:(.text+0x124): undefined reference to `I2C_Driver::open_i2c_device()'
+[4.790s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x17a): undefined reference to `I2C_Driver::get_device_name()'
+[4.791s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x399): undefined reference to `I2C_Driver::get_device_name()'
+[4.791s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x3cb): undefined reference to `I2C_Driver::get_file_descriptor()'
+[4.791s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x5df): undefined reference to `PCA9685::initialise_with_frequency_in_hz(float, bool)'
+[4.791s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x635): undefined reference to `PCA9685::get_i2c_address()'
+[4.791s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x856): undefined reference to `PCA9685::get_i2c_address()'
+[4.791s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0xa7a): undefined reference to `I2C_Driver::close_i2c_device()'
+[4.791s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0xad0): undefined reference to `I2C_Driver::get_device_name()'
+[4.791s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0xcef): undefined reference to `I2C_Driver::get_device_name()'
+[4.792s] /usr/bin/ld: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o: in function `__static_initialization_and_destruction_0(int, int)':
+[4.792s] pwm_driver_node.cpp:(.text+0x12e7): undefined reference to `I2C_Driver::I2C_Driver(char const*)'
+[4.792s] /usr/bin/ld: pwm_driver_node.cpp:(.text+0x1305): undefined reference to `PCA9685::PCA9685(I2C_Driver*, unsigned char)'
+[4.792s] /usr/bin/ld: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o: in function `PwmDriverNode::setPWMSignal(unsigned char, unsigned short)':
+[4.792s] pwm_driver_node.cpp:(.text._ZN13PwmDriverNode12setPWMSignalEht[_ZN13PwmDriverNode12setPWMSignalEht]+0x56): undefined reference to `PCA9685::set_pwm_pulse_in_microseconds(unsigned char, unsigned short)'
+[4.815s] collect2: error: ld returned 1 exit status
+[4.817s] gmake[2]: *** [CMakeFiles/pwm_driver.dir/build.make:167: pwm_driver] Error 1
+[4.817s] gmake[1]: *** [CMakeFiles/Makefile2:336: CMakeFiles/pwm_driver.dir/all] Error 2
+[4.817s] gmake: *** [Makefile:146: all] Error 2
+[4.819s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg' returned '2': CMAKE_PREFIX_PATH=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16

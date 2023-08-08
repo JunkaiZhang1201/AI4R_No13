@@ -1,0 +1,309 @@
+[0.007s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces -DCMAKE_INSTALL_PREFIX=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces
+[0.038s] -- The C compiler identification is GNU 11.3.0
+[0.067s] -- The CXX compiler identification is GNU 11.3.0
+[0.071s] -- Detecting C compiler ABI info
+[0.107s] -- Detecting C compiler ABI info - done
+[0.111s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.111s] -- Detecting C compile features
+[0.111s] -- Detecting C compile features - done
+[0.113s] -- Detecting CXX compiler ABI info
+[0.158s] -- Detecting CXX compiler ABI info - done
+[0.162s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.162s] -- Detecting CXX compile features
+[0.162s] -- Detecting CXX compile features - done
+[0.163s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.255s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.301s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.304s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.310s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.349s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.504s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.618s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.761s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.774s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.6", minimum required is "3.6") 
+[0.775s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.790s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.6", minimum required is "3.5") 
+[0.790s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.790s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.790s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.801s] -- Found PythonExtra: .so  
+[0.820s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.828s] -- Added test 'lint_cmake' to check CMake code style
+[0.828s] -- Added test 'xmllint' to check XML markup files
+[0.829s] -- Configuring done
+[0.845s] -- Generating done
+[0.846s] -- Build files have been written to: /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces
+[0.851s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces -DCMAKE_INSTALL_PREFIX=/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces
+[0.851s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces -- -j16 -l16
+[0.873s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.878s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.882s] [  3%] Built target ament_cmake_python_copy_ai4r_interfaces
+[1.022s] running egg_info
+[1.023s] creating ai4r_interfaces.egg-info
+[1.023s] writing ai4r_interfaces.egg-info/PKG-INFO
+[1.023s] writing dependency_links to ai4r_interfaces.egg-info/dependency_links.txt
+[1.023s] writing top-level names to ai4r_interfaces.egg-info/top_level.txt
+[1.023s] writing manifest file 'ai4r_interfaces.egg-info/SOURCES.txt'
+[1.025s] reading manifest file 'ai4r_interfaces.egg-info/SOURCES.txt'
+[1.025s] writing manifest file 'ai4r_interfaces.egg-info/SOURCES.txt'
+[1.046s] [  3%] Built target ament_cmake_python_build_ai4r_interfaces_egg
+[1.133s] [  3%] Built target ai4r_interfaces__cpp
+[1.139s] [  9%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.139s] [  9%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.139s] [  9%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.143s] [ 10%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o[0m
+[1.145s] [ 16%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o[0m
+[1.145s] [ 16%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o[0m
+[1.145s] [ 16%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o[0m
+[1.189s] [ 18%] [32m[1mLinking C shared library libai4r_interfaces__rosidl_generator_c.so[0m
+[1.216s] [ 18%] Built target ai4r_interfaces__rosidl_generator_c
+[1.222s] [ 20%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.224s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.224s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.341s] [ 30%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o[0m
+[1.341s] [ 30%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o[0m
+[1.341s] [ 30%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o[0m
+[1.341s] [ 30%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o[0m
+[1.401s] [ 36%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.cpp.o[0m
+[1.402s] [ 36%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.o[0m
+[1.402s] [ 36%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.o[0m
+[1.402s] [ 38%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.o[0m
+[1.404s] [ 41%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.o[0m
+[1.404s] [ 41%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.o[0m
+[1.404s] [ 43%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.cpp.o[0m
+[1.405s] [ 45%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.o[0m
+[1.657s] [ 47%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o[0m
+[1.660s] [ 49%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o[0m
+[1.668s] [ 50%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.o[0m
+[1.712s] [ 52%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o[0m
+[1.731s] [ 58%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.o[0m
+[1.731s] [ 58%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.cpp.o[0m
+[1.731s] [ 58%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.o[0m
+[1.741s] [ 60%] [32mBuilding CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.o[0m
+[1.757s] [ 61%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.o[0m
+[1.770s] [ 63%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.o[0m
+[1.790s] [ 65%] [32m[1mLinking CXX shared library libai4r_interfaces__rosidl_typesupport_c.so[0m
+[1.806s] [ 67%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.c.o[0m
+[1.819s] [ 69%] [32m[1mLinking CXX shared library libai4r_interfaces__rosidl_typesupport_cpp.so[0m
+[1.826s] [ 70%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.o[0m
+[1.889s] [ 70%] Built target ai4r_interfaces__rosidl_typesupport_c
+[1.897s] [ 70%] Built target ai4r_interfaces__rosidl_typesupport_cpp
+[1.903s] [ 72%] [32m[1mLinking C shared library libai4r_interfaces__rosidl_typesupport_introspection_c.so[0m
+[1.944s] [ 72%] Built target ai4r_interfaces__rosidl_typesupport_introspection_c
+[1.987s] [ 74%] [32m[1mLinking CXX shared library libai4r_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[2.045s] [ 76%] [32m[1mLinking CXX shared library libai4r_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.050s] [ 76%] Built target ai4r_interfaces__rosidl_typesupport_introspection_cpp
+[2.108s] [ 76%] Built target ai4r_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.118s] [ 78%] [32m[1mLinking CXX shared library libai4r_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.158s] [ 78%] Built target ai4r_interfaces__rosidl_typesupport_fastrtps_c
+[2.168s] [ 78%] Built target ai4r_interfaces
+[2.178s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.442s] [ 80%] Built target ai4r_interfaces__py
+[2.452s] [ 81%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.o[0m
+[2.452s] [ 83%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.o[0m
+[2.452s] [ 85%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.c.o[0m
+[2.452s] [ 87%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.o[0m
+[2.516s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/ai4r_interfaces/libai4r_interfaces__rosidl_generator_py.so[0m
+[2.538s] [ 89%] Built target ai4r_interfaces__rosidl_generator_py
+[2.549s] [ 94%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[2.549s] [ 94%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.550s] [ 94%] [32mBuilding C object CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.607s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.607s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.608s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.626s] [100%] Built target ai4r_interfaces__rosidl_typesupport_introspection_c__pyext
+[2.626s] [100%] Built target ai4r_interfaces__rosidl_typesupport_c__pyext
+[2.626s] [100%] Built target ai4r_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[2.633s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces -- -j16 -l16
+[2.686s] Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces
+[2.690s] -- Install configuration: ""
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ament_index/resource_index/rosidl_interfaces/ai4r_interfaces
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__functions.c
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__struct.h
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__struct.h
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__type_support.h
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__functions.h
+[2.690s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__functions.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__functions.c
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__type_support.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__struct.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__struct.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__functions.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__functions.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__type_support.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__functions.c
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/rosidl_generator_c__visibility_control.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/left_right_float32.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/template_message.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/servo_pulse_width.h
+[2.691s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/left_right_int32.h
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/library_path.sh
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/library_path.dsv
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_c.so
+[2.692s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_c.so" to ""
+[2.692s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces
+[2.692s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg
+[2.692s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__rosidl_typesupport_fastrtps_c.h
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__rosidl_typesupport_fastrtps_c.h
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__rosidl_typesupport_fastrtps_c.h
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__rosidl_typesupport_fastrtps_c.h
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.692s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_c.so
+[2.692s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[2.693s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces
+[2.693s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg
+[2.693s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__rosidl_typesupport_introspection_c.h
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__type_support.c
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__type_support.c
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__rosidl_typesupport_introspection_c.h
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__rosidl_typesupport_introspection_c.h
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__rosidl_typesupport_introspection_c.h
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.c
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__type_support.c
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_c.so
+[2.693s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[2.693s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_c.so
+[2.694s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_c.so" to ""
+[2.694s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces
+[2.694s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg
+[2.694s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__struct.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__traits.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__struct.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__builder.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__traits.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__traits.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__builder.hpp
+[2.694s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__builder.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__struct.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/left_right_int32.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/template_message.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/servo_pulse_width.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/left_right_float32.hpp
+[2.695s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces
+[2.695s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg
+[2.695s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__rosidl_typesupport_fastrtps_cpp.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__rosidl_typesupport_fastrtps_cpp.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__rosidl_typesupport_fastrtps_cpp.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__rosidl_typesupport_fastrtps_cpp.hpp
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/dds_fastrtps
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.695s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[2.695s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.696s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces
+[2.696s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg
+[2.696s] -- Up-to-date: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__rosidl_typesupport_introspection_cpp.hpp
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_float32__rosidl_typesupport_introspection_cpp.hpp
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__rosidl_typesupport_introspection_cpp.hpp
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/template_message__type_support.cpp
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/left_right_int32__rosidl_typesupport_introspection_cpp.hpp
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/include/ai4r_interfaces/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.cpp
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.696s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_cpp.so
+[2.696s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_cpp.so" to ""
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/pythonpath.sh
+[2.696s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/pythonpath.dsv
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces-0.0.0-py3.10.egg-info
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/__init__.py
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_c.c
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_left_right_float32_s.c
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/__init__.py
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_servo_pulse_width.py
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_template_message_s.c
+[2.697s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_template_message.py
+[2.698s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_servo_pulse_width_s.c
+[2.698s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_left_right_int32_s.c
+[2.698s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_left_right_int32.py
+[2.698s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_left_right_float32.py
+[2.698s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/libai4r_interfaces__rosidl_generator_py.so
+[2.698s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.715s] Listing '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces'...
+[2.715s] Compiling '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/__init__.py'...
+[2.715s] Listing '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg'...
+[2.715s] Compiling '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/__init__.py'...
+[2.716s] Compiling '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_left_right_float32.py'...
+[2.716s] Compiling '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_left_right_int32.py'...
+[2.716s] Compiling '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_servo_pulse_width.py'...
+[2.716s] Compiling '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/msg/_template_message.py'...
+[2.718s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.718s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.718s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.718s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.718s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.718s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.718s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_py.so
+[2.718s] -- Set runtime path of "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_py.so" to ""
+[2.718s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/LeftRightFloat32.idl
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/LeftRightInt32.idl
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/ServoPulseWidth.idl
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/TemplateMessage.idl
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/LeftRightFloat32.msg
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/LeftRightInt32.msg
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/ServoPulseWidth.msg
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/TemplateMessage.msg
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ament_index/resource_index/package_run_dependencies/ai4r_interfaces
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ament_index/resource_index/parent_prefix_path/ai4r_interfaces
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/ament_prefix_path.sh
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/ament_prefix_path.dsv
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/path.sh
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/path.dsv
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/local_setup.bash
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/local_setup.sh
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/local_setup.zsh
+[2.719s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/local_setup.dsv
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/package.dsv
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ament_index/resource_index/packages/ai4r_interfaces
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_generator_cExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_generator_cExport-noconfig.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfaces__rosidl_typesupport_cExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_generator_cppExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfaces__rosidl_typesupport_cppExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_generator_pyExport.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/export_ai4r_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/rosidl_cmake-extras.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.720s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.721s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfacesConfig.cmake
+[2.721s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/cmake/ai4r_interfacesConfig-version.cmake
+[2.721s] -- Installing: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/package.xml
+[2.723s] Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces

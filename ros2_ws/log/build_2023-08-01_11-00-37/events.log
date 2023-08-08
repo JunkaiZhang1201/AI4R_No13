@@ -1,0 +1,103 @@
+[0.000000] (-) TimerEvent: {}
+[0.000089] (-) JobUnselected: {'identifier': 'ai4r_interfaces'}
+[0.000107] (ai4r_pkg) JobQueued: {'identifier': 'ai4r_pkg', 'dependencies': OrderedDict([('ai4r_interfaces', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces')])}
+[0.000121] (ai4r_pkg) JobStarted: {'identifier': 'ai4r_pkg'}
+[0.007235] (ai4r_pkg) JobProgress: {'identifier': 'ai4r_pkg', 'progress': 'cmake'}
+[0.008127] (ai4r_pkg) JobProgress: {'identifier': 'ai4r_pkg', 'progress': 'build'}
+[0.008998] (ai4r_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg', '--', '-j16', '-l16'], 'cwd': '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'en_AU:en'), ('USER', 'zekaicheong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/zekaicheong'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/zekaicheong'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1842'), ('SYSTEMD_EXEC_PID', '2064'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '357621'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'zekaicheong'), ('JOURNAL_STREAM', '8:41122'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'zekaicheong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/zekaicheong/anaconda3/bin:/home/zekaicheong/anaconda3/condabin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/zekaicheong-ThinkPad-P14s-Gen-3:@/tmp/.ICE-unix/2039,unix/zekaicheong-ThinkPad-P14s-Gen-3:/tmp/.ICE-unix/2039'), ('INVOCATION_ID', '0a7c51fbfe7a41819c373cc31f1ef4af'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_AU.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.HXB571'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/zekaicheong/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:23a8c138-1c09-4749-98e1-fabf37f62d56'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg'), ('LC_ALL', 'en_AU.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/zekaicheong/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg/local/lib/python3.10/dist-packages:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('CONDA_PREFIX', '/home/zekaicheong/anaconda3'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces:/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_pkg:/opt/ros/humble')]), 'shell': False}
+[0.037053] (ai4r_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pwm_driver\x1b[0m\n'}
+[0.041946] (ai4r_pkg) StdoutLine: {'line': b'[ 12%] Built target minimal_cpp_executable\n'}
+[0.042978] (ai4r_pkg) StdoutLine: {'line': b'[ 25%] Built target talker\n'}
+[0.043334] (ai4r_pkg) StdoutLine: {'line': b'[ 37%] Built target oop_cpp_executable\n'}
+[0.045016] (ai4r_pkg) StdoutLine: {'line': b'[ 50%] Built target listener\n'}
+[0.045164] (ai4r_pkg) StdoutLine: {'line': b'[ 62%] Built target servo_pulse_width_sub\n'}
+[0.046244] (ai4r_pkg) StdoutLine: {'line': b'[ 81%] Built target multiple_pub_sub\n'}
+[0.046365] (ai4r_pkg) StdoutLine: {'line': b'[ 87%] Built target looping\n'}
+[0.048245] (ai4r_pkg) StdoutLine: {'line': b'[ 87%] Built target ament_cmake_python_copy_ai4r_pkg\n'}
+[0.049503] (ai4r_pkg) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding CXX object CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o\x1b[0m\n'}
+[0.099470] (-) TimerEvent: {}
+[0.154694] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:16\x1b[m\x1b[K,\n'}
+[0.154867] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.154935] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmulti-line comment [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment\x07-Wcomment\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.154997] (ai4r_pkg) StderrLine: {'line': b'   10 | \x1b[01;35m\x1b[K/\x1b[m\x1b[K/   / _ \\ \\___ \\| |   | | |  _ \\| |/ __|___\\___ \\| | | / __| __/ _ \\  _   _ \\\n'}
+[0.155055] (ai4r_pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.157772] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17\x1b[m\x1b[K,\n'}
+[0.157920] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.157986] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:10:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmulti-line comment [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment\x07-Wcomment\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.158053] (ai4r_pkg) StderrLine: {'line': b'   10 | \x1b[01;35m\x1b[K/\x1b[m\x1b[K/   / _ \\ \\___ \\| |   | | |  _ \\| |/ __|___\\___ \\| | | / __| __/ _ \\  _   _ \\\n'}
+[0.158249] (ai4r_pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.158317] (ai4r_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.h:49\x1b[m\x1b[K,\n'}
+[0.158378] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/include/ai4r_pkg/pwm_driver_node.hpp:17\x1b[m\x1b[K,\n'}
+[0.158436] (ai4r_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:1\x1b[m\x1b[K:\n'}
+[0.158493] (ai4r_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685_constants.h:10:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmulti-line comment [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment\x07-Wcomment\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.158552] (ai4r_pkg) StderrLine: {'line': b'   10 | \x1b[01;35m\x1b[K/\x1b[m\x1b[K/   / _ \\ \\___ \\| |   | | |  _ \\| |/ __|___\\___ \\| | | / __| __/ _ \\  _   _ \\\n'}
+[0.158610] (ai4r_pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[0.174574] (ai4r_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.174799] (ai4r_pkg) StdoutLine: {'line': b'writing ai4r_pkg.egg-info/PKG-INFO\n'}
+[0.174954] (ai4r_pkg) StdoutLine: {'line': b'writing dependency_links to ai4r_pkg.egg-info/dependency_links.txt\n'}
+[0.175118] (ai4r_pkg) StdoutLine: {'line': b'writing top-level names to ai4r_pkg.egg-info/top_level.txt\n'}
+[0.176252] (ai4r_pkg) StdoutLine: {'line': b"reading manifest file 'ai4r_pkg.egg-info/SOURCES.txt'\n"}
+[0.176393] (ai4r_pkg) StdoutLine: {'line': b"writing manifest file 'ai4r_pkg.egg-info/SOURCES.txt'\n"}
+[0.191766] (ai4r_pkg) StdoutLine: {'line': b'[ 93%] Built target ament_cmake_python_build_ai4r_pkg_egg\n'}
+[0.199695] (-) TimerEvent: {}
+[0.300067] (-) TimerEvent: {}
+[0.400393] (-) TimerEvent: {}
+[0.500652] (-) TimerEvent: {}
+[0.600996] (-) TimerEvent: {}
+[0.701250] (-) TimerEvent: {}
+[0.801578] (-) TimerEvent: {}
+[0.901912] (-) TimerEvent: {}
+[1.002288] (-) TimerEvent: {}
+[1.102651] (-) TimerEvent: {}
+[1.203119] (-) TimerEvent: {}
+[1.303499] (-) TimerEvent: {}
+[1.404112] (-) TimerEvent: {}
+[1.504959] (-) TimerEvent: {}
+[1.605792] (-) TimerEvent: {}
+[1.706859] (-) TimerEvent: {}
+[1.807288] (-) TimerEvent: {}
+[1.907677] (-) TimerEvent: {}
+[2.007951] (-) TimerEvent: {}
+[2.108323] (-) TimerEvent: {}
+[2.208866] (-) TimerEvent: {}
+[2.309727] (-) TimerEvent: {}
+[2.410559] (-) TimerEvent: {}
+[2.511130] (-) TimerEvent: {}
+[2.611467] (-) TimerEvent: {}
+[2.711819] (-) TimerEvent: {}
+[2.812547] (-) TimerEvent: {}
+[2.913625] (-) TimerEvent: {}
+[3.013957] (-) TimerEvent: {}
+[3.114236] (-) TimerEvent: {}
+[3.214457] (-) TimerEvent: {}
+[3.314706] (-) TimerEvent: {}
+[3.415026] (-) TimerEvent: {}
+[3.515293] (-) TimerEvent: {}
+[3.615574] (-) TimerEvent: {}
+[3.715959] (-) TimerEvent: {}
+[3.816411] (-) TimerEvent: {}
+[3.916758] (-) TimerEvent: {}
+[4.017390] (-) TimerEvent: {}
+[4.118141] (-) TimerEvent: {}
+[4.218556] (-) TimerEvent: {}
+[4.319084] (-) TimerEvent: {}
+[4.419574] (-) TimerEvent: {}
+[4.519981] (-) TimerEvent: {}
+[4.620590] (-) TimerEvent: {}
+[4.720956] (-) TimerEvent: {}
+[4.821318] (-) TimerEvent: {}
+[4.921810] (-) TimerEvent: {}
+[4.929021] (ai4r_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable pwm_driver\x1b[0m\n'}
+[5.022095] (-) TimerEvent: {}
+[5.122822] (-) TimerEvent: {}
+[5.148062] (ai4r_pkg) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o: in function `main':\n"}
+[5.148226] (ai4r_pkg) StderrLine: {'line': b"pwm_driver_node.cpp:(.text+0xb5): undefined reference to `I2C_Driver::I2C_Driver(char const*)'\n"}
+[5.148292] (ai4r_pkg) StderrLine: {'line': b"/usr/bin/ld: pwm_driver_node.cpp:(.text+0xd7): undefined reference to `PCA9685::PCA9685(I2C_Driver*, unsigned char)'\n"}
+[5.176572] (ai4r_pkg) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[5.177973] (ai4r_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pwm_driver.dir/build.make:167: pwm_driver] Error 1\n'}
+[5.178248] (ai4r_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:336: CMakeFiles/pwm_driver.dir/all] Error 2\n'}
+[5.178365] (ai4r_pkg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.179931] (ai4r_pkg) CommandEnded: {'returncode': 2}
+[5.215410] (ai4r_pkg) JobEnded: {'identifier': 'ai4r_pkg', 'rc': 2}
+[5.223038] (-) TimerEvent: {}
+[5.225852] (-) EventReactorShutdown: {}

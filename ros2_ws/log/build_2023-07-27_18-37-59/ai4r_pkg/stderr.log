@@ -1,0 +1,16 @@
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp:8[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/oop_cpp_node.cpp:7[m[K:
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.h:10:1:[m[K [01;35m[Kwarning: [m[Kmulti-line comment [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcomment-Wcomment]8;;[m[K]
+   10 | [01;35m[K/[m[K/   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \
+      | [01;35m[K^[m[K
+[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/servo_pulse_width_sub_cpp_node.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Kai4r_interfaces/msg/ServoPulseWidth.hpp: No such file or directory
+    5 | #include [01;31m[K"ai4r_interfaces/msg/ServoPulseWidth.hpp"[m[K                                       // CHANGE
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/servo_pulse_width_sub.dir/build.make:76: CMakeFiles/servo_pulse_width_sub.dir/src/servo_pulse_width_sub_cpp_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:252: CMakeFiles/servo_pulse_width_sub.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

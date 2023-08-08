@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ai4r_interfaces/msg/LeftRightInt32.msg
+// generated code does not contain a copyright notice
+
+
+module ai4r_interfaces {
+  module msg {
+    struct LeftRightInt32 {
+      int32 left;
+
+      int32 right;
+    };
+  };
+};

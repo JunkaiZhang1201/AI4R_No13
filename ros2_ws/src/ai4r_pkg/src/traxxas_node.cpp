@@ -25,7 +25,7 @@ class PwmDriverNode : public rclcpp::Node {
                 RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
             } else {
                 RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
-            }    
+            }
 
             // SET THE CONFIGURATION OF THE SERVO DRIVER
 
