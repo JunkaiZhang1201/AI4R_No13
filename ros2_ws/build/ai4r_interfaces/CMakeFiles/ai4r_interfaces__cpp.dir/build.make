@@ -66,14 +66,6 @@ include CMakeFiles/ai4r_interfaces__cpp.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/ai4r_interfaces__cpp.dir/progress.make
 
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__builder.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__struct.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__traits.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_int32.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__builder.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__struct.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__traits.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp
@@ -82,112 +74,57 @@ CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/esc_an
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp
 CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/template_message.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__builder.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__struct.hpp
-CMakeFiles/ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__traits.hpp
 
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__builder.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__struct.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__traits.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/LeftRightFloat32.idl
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/LeftRightInt32.idl
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp: rosidl_adapter/ai4r_interfaces/msg/TemplateMessage.idl
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__builder.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__struct.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/action__traits.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
+rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_cpp__arguments.json
 
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__builder.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__struct.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__struct.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__traits.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/left_right_int32.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/left_right_int32.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__builder.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__struct.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__struct.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__traits.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp
 
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp
 
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp
 
-rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp
 
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp
 
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp
 
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
+rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/template_message.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/template_message.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__builder.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__struct.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__struct.hpp
-
-rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__traits.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__traits.hpp
 
 ai4r_interfaces__cpp: CMakeFiles/ai4r_interfaces__cpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__builder.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__struct.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/esc_and_steering__traits.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__builder.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__struct.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_float32__traits.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__builder.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__struct.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/left_right_int32__traits.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__struct.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__traits.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__builder.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__struct.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/detail/template_message__traits.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/esc_and_steering.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_float32.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/left_right_int32.hpp
 ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
-ai4r_interfaces__cpp: rosidl_generator_cpp/ai4r_interfaces/msg/template_message.hpp
 ai4r_interfaces__cpp: CMakeFiles/ai4r_interfaces__cpp.dir/build.make
 .PHONY : ai4r_interfaces__cpp
 

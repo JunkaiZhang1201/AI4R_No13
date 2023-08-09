@@ -116,16 +116,10 @@
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/local/lib/python3.10/dist-packages/ai4r_interfaces/ai4r_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_py.so
-/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/LeftRightFloat32.idl
-/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/LeftRightInt32.idl
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/ServoPulseWidth.idl
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/EscAndSteering.idl
-/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/TemplateMessage.idl
-/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/LeftRightFloat32.msg
-/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/LeftRightInt32.msg
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/ServoPulseWidth.msg
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/EscAndSteering.msg
-/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/msg/TemplateMessage.msg
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ament_index/resource_index/package_run_dependencies/ai4r_interfaces
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ament_index/resource_index/parent_prefix_path/ai4r_interfaces
 /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/share/ai4r_interfaces/environment/ament_prefix_path.sh

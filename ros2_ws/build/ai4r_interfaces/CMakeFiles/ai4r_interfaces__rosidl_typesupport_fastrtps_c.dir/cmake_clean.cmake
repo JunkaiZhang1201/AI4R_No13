@@ -1,26 +1,14 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.cpp.o"
   "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.cpp.o.d"
-  "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.o"
-  "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.o.d"
-  "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.o"
-  "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.o.d"
   "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.cpp.o"
   "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.cpp.o.d"
-  "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.o"
-  "CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.o.d"
   "libai4r_interfaces__rosidl_typesupport_fastrtps_c.pdb"
   "libai4r_interfaces__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.cpp"
-  "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__rosidl_typesupport_fastrtps_c.h"
-  "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp"
-  "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__rosidl_typesupport_fastrtps_c.h"
-  "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.cpp"
-  "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__rosidl_typesupport_fastrtps_c.h"
-  "rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

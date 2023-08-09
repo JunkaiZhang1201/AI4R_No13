@@ -53,6 +53,8 @@ constexpr uint16_t ESC_NEUTRAL_PULSE_WIDTH =  1500;
 
 constexpr uint16_t STEERING_PULSE_WIDTH_STEP =  50;
 
+constexpr uint16_t MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT = 500;    // Minimum number of cycles (where no message is received) needed to get timeout (automatically switch from Enabled to Disabled state)
+
 // VARIABLES FOR THE PWM DRIVER NODE:
 
 // > I2C Driver Object:

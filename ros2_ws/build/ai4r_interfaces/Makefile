@@ -429,54 +429,6 @@ rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.s
 .PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.s
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.o: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.o
-
-# target to build an object file
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.i: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.i
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.i
-
-# target to preprocess a source file
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.i
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.i
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.s: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.s
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.s
-
-# target to generate assembly for a file
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.s
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.s
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.o: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.o
-
-# target to build an object file
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.i: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.i
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.i
-
-# target to preprocess a source file
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.i
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.i
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.s: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.s
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.s
-
-# target to generate assembly for a file
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.s
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.s
-
 rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.o: rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o
 .PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.o
 
@@ -500,30 +452,6 @@ rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.s: ro
 rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.s
 .PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.s
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.o: rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.o
-
-# target to build an object file
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.i: rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.i
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.i
-
-# target to preprocess a source file
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.i
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.i
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.s: rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.s
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.s
-
-# target to generate assembly for a file
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.s
-.PHONY : rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.s
 
 rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_c.o: rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_c.c.o
 .PHONY : rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_c.o
@@ -621,54 +549,6 @@ rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c.s
 .PHONY : rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.c.s
 
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.o: rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.o
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.o
-
-# target to build an object file
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.o
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.o
-
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.i: rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.i
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.i
-
-# target to preprocess a source file
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.i
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.i
-
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.s: rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.s
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.s
-
-# target to generate assembly for a file
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.s
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.c.s
-
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.o: rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.o
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.o
-
-# target to build an object file
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.o
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.o
-
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.i: rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.i
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.i
-
-# target to preprocess a source file
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.i
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.i
-
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.s: rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.s
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.s
-
-# target to generate assembly for a file
-rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.s
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.c.s
-
 rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.o: rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.c.o
 .PHONY : rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.o
 
@@ -692,30 +572,6 @@ rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.s: rosidl_generator
 rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.c.s
 .PHONY : rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.c.s
-
-rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.o: rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.o
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.o
-
-# target to build an object file
-rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.o
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.o
-
-rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.i: rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.i
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.i
-
-# target to preprocess a source file
-rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.i
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.i
-
-rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.s: rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.s
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.s
-
-# target to generate assembly for a file
-rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.s
-.PHONY : rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.c.s
 
 rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.o: rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.o
@@ -741,54 +597,6 @@ rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.s
 
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.o: rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o
-
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.i: rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i
-
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.s: rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s
-
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.o: rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o
-
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.i: rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i
-
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.s: rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s
-
 rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.o: rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.o
 
@@ -812,30 +620,6 @@ rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.s: rosi
 rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.s
-
-rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.o: rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.o
-
-# target to build an object file
-rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.o
-
-rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.i: rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.i
-
-rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.s: rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.cpp.s
 
 rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.o
@@ -861,54 +645,6 @@ rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.s
 
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.i: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.s: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.i: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.s: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s
-
 rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.o
 
@@ -932,30 +668,6 @@ rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.s: ro
 rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.s
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.o
-
-# target to build an object file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.i: rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.i
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.s: rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.s
 
 rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.o: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.o
@@ -981,54 +693,6 @@ rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.cpp.s
 
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.o: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.o
-
-# target to build an object file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.o
-
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.i: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.i
-
-# target to preprocess a source file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.i
-
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.s: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.s
-
-# target to generate assembly for a file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.cpp.s
-
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.o: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.o
-
-# target to build an object file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.o
-
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.i: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.i
-
-# target to preprocess a source file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.i
-
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.s: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.s
-
-# target to generate assembly for a file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.cpp.s
-
 rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.o: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.o
 
@@ -1052,30 +716,6 @@ rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type
 rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.cpp.s
-
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.o: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.o
-
-# target to build an object file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.o
-
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.i: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.i
-
-# target to preprocess a source file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.i
-
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.s: rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.s
-
-# target to generate assembly for a file
-rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_steering__type_support.o: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_steering__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_steering__type_support.o
@@ -1101,54 +741,6 @@ rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_steering__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_steering__type_support.cpp.s
 
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.o: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.o
-
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.i: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.i
-
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.s: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.cpp.s
-
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.o: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.o
-
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.i: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.i
-
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.s: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.cpp.s
-
 rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.o: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.o
 
@@ -1172,30 +764,6 @@ rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pu
 rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.cpp.s
-
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.o: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.o
-
-# target to build an object file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.o
-
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.i: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.i
-
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.s: rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.cpp.s
 
 rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.o: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.o
@@ -1221,54 +789,6 @@ rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.c.s
 
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.o: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.o
-
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.i: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.i
-
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.s: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.c.s
-
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.o: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.o
-
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.i: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.i
-
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.s: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.c.s
-
 rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.o: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.o
 
@@ -1292,30 +812,6 @@ rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width_
 rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.c.s
-
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.o: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.o
-
-# target to build an object file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.o
-
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.i: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.i
-
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.s: rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.c.s
 
 rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering__type_support.o: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering__type_support.o
@@ -1341,54 +837,6 @@ rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering__type_support.cpp.s
 
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.o: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.o
-
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.i: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.i
-
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.s: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.cpp.s
-
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.o: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.o
-
-# target to build an object file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.o
-
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.i: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.i
-
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.s: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.cpp.s
-
 rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.o: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.o
 
@@ -1412,30 +860,6 @@ rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_widt
 rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.cpp.s
-
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.o: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.o
-
-# target to build an object file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.o
-
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.i: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.i
-
-# target to preprocess a source file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.i
-
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.s: rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.s
-
-# target to generate assembly for a file
-rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ai4r_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.cpp.s
 
 # Help Target
 help:
@@ -1471,18 +895,9 @@ help:
 	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.o"
 	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.i"
 	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.s"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.o"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.i"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.s"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.o"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.i"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.s"
 	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.o"
 	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.i"
 	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.s"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.o"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.i"
-	@echo "... rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.s"
 	@echo "... rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_c.o"
 	@echo "... rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_c.i"
 	@echo "... rosidl_generator_py/ai4r_interfaces/_ai4r_interfaces_s.ep.rosidl_typesupport_c.s"
@@ -1495,108 +910,45 @@ help:
 	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.o"
 	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.i"
 	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_esc_and_steering_s.s"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.o"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.i"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_left_right_float32_s.s"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.o"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.i"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_left_right_int32_s.s"
 	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.o"
 	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.i"
 	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_servo_pulse_width_s.s"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.o"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.i"
-	@echo "... rosidl_generator_py/ai4r_interfaces/msg/_template_message_s.s"
 	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.o"
 	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.i"
 	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/esc_and_steering__type_support.s"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.o"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.i"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/left_right_float32__type_support.s"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.o"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.i"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/left_right_int32__type_support.s"
 	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.o"
 	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.i"
 	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/servo_pulse_width__type_support.s"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.o"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.i"
-	@echo "... rosidl_typesupport_c/ai4r_interfaces/msg/template_message__type_support.s"
 	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.o"
 	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.i"
 	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.s"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.o"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.i"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.s"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.o"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.i"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.s"
 	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.o"
 	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.i"
 	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.s"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.o"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.i"
-	@echo "... rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support_c.s"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.o"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.i"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_float32__type_support_c.s"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.o"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.i"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/left_right_int32__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support_c.s"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.o"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.i"
-	@echo "... rosidl_typesupport_fastrtps_c/ai4r_interfaces/msg/detail/template_message__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_steering__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_steering__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/esc_and_steering__type_support.s"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.o"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.i"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_float32__type_support.s"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.o"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.i"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/left_right_int32__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/servo_pulse_width__type_support.s"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.o"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.i"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ai4r_interfaces/msg/detail/dds_fastrtps/template_message__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.s"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.o"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.i"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.s"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.o"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.i"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.s"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.o"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.i"
-	@echo "... rosidl_typesupport_introspection_c/ai4r_interfaces/msg/detail/template_message__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/esc_and_steering__type_support.s"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.o"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.i"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_float32__type_support.s"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.o"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.i"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/left_right_int32__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.s"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.o"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.i"
-	@echo "... rosidl_typesupport_introspection_cpp/ai4r_interfaces/msg/detail/template_message__type_support.s"
 .PHONY : help
 
 

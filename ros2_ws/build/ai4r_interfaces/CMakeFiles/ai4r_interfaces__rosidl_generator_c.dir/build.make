@@ -69,131 +69,55 @@ include CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/flags.make
 
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/lib/rosidl_generator_c/rosidl_generator_c
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_c/__init__.py
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/action__type_support.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.c.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__struct.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__type_support.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.c.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__struct.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: rosidl_adapter/ai4r_interfaces/msg/LeftRightFloat32.idl
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: rosidl_adapter/ai4r_interfaces/msg/LeftRightInt32.idl
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
-rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h: rosidl_adapter/ai4r_interfaces/msg/TemplateMessage.idl
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/lib/rosidl_generator_c/rosidl_generator_c
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_c/__init__.py
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/action__type_support.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.c.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__functions.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__struct.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/idl__type_support.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.c.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__functions.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__struct.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
+rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c__arguments.json
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__struct.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__struct.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.h
-
-rosidl_generator_c/ai4r_interfaces/msg/left_right_int32.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/left_right_int32.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__struct.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__struct.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.h
-
-rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.h: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.h
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__struct.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__struct.h: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__struct.h
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.h: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.h
 
-rosidl_generator_c/ai4r_interfaces/msg/esc_and_steering.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/esc_and_steering.h: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/esc_and_steering.h
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.h: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.h
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__struct.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__struct.h: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__struct.h
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.h: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.h
 
-rosidl_generator_c/ai4r_interfaces/msg/template_message.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/template_message.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__struct.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__struct.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__type_support.h: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__type_support.h
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
+rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c
-
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o -MF CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o.d -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c
-
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c > CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.i
-
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.s
-
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o -MF CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o.d -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c
-
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c > CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.i
-
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.s
 
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o: rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o -MF CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o.d -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c
 
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.i: cmake_force
@@ -207,7 +131,7 @@ CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_inter
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o: rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o -MF CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o.d -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c
 
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.i: cmake_force
@@ -218,41 +142,21 @@ CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_inter
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.s
 
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/flags.make
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o: rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o -MF CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o.d -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c
-
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c > CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.i
-
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c -o CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.s
-
 # Object files for target ai4r_interfaces__rosidl_generator_c
 ai4r_interfaces__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o" \
-"CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o" \
 "CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o" \
-"CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o" \
-"CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o"
+"CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o"
 
 # External object files for target ai4r_interfaces__rosidl_generator_c
 ai4r_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
-libai4r_interfaces__rosidl_generator_c.so: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c.o
-libai4r_interfaces__rosidl_generator_c.so: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c.o
 libai4r_interfaces__rosidl_generator_c.so: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c.o
 libai4r_interfaces__rosidl_generator_c.so: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.c.o
-libai4r_interfaces__rosidl_generator_c.so: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c.o
 libai4r_interfaces__rosidl_generator_c.so: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/build.make
 libai4r_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libai4r_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libai4r_interfaces__rosidl_generator_c.so: CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libai4r_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libai4r_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -267,27 +171,12 @@ CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.h
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__struct.h
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.c
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__functions.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__struct.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_float32__type_support.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.c
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__functions.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__struct.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__type_support.h
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.c
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.h
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__struct.h
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.c
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__struct.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__type_support.h
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/esc_and_steering.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/left_right_float32.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/left_right_int32.h
 CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/servo_pulse_width.h
-CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ai4r_interfaces/msg/template_message.h
 	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ai4r_interfaces__rosidl_generator_c.dir/depend
 

@@ -16,10 +16,10 @@ class TraxxasNode : public rclcpp::Node {
                 STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::steeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
             esc_set_point_percent_sub_ = this->create_subscription<std_msgs::msg::Float32>(
-                ESC_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::ESCSetPointPercentSubscriberCallback, this, std::placeholders::_1)
+                ESC_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::escSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
             esc_and_steering_set_point_percent_sub_ = this->create_subscription<ai4r_interfaces::msg::EscAndSteering>(
-                ESC_AND_STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::ESCAndSteeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
+                ESC_AND_STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::escAndSteeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
             estop_sub_ = this->create_subscription<std_msgs::msg::UInt16>(
                 ESTOP, rclcpp::QoS(10), std::bind(&TraxxasNode::estopSubscriberCallback, this, std::placeholders::_1)
@@ -61,6 +61,8 @@ class TraxxasNode : public rclcpp::Node {
         // Private variables
         State currentState = State::Enabled;    // State initially Enabled
         int estop = ENABLE; // Store last estop command (initially ENABLE)
+        int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
+        int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
 
         // Traxxas node synchronous FSM: Periodically called at regular time intervals to trigger state transitions 
         // Moore machine implementation: outputs only based on the current state of the machine, regardless of the input
@@ -70,11 +72,27 @@ class TraxxasNode : public rclcpp::Node {
                 case State::Enabled:
                     if (estop == DISABLE) {
                         currentState = State::Disabled;
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Disabled directly" );
+                    } 
+                    if (esc_empty_msg_count > MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) {
+                        currentState = State::Disabled;
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Disabled because ESC channel timed out: Waited " << static_cast<int>(MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) << " cycles and no message received");
                     }
+                    if (steering_empty_msg_count > MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) {
+                        currentState = State::Disabled;
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Disabled because steering channel timed out: Waited " << static_cast<int>(MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) << " cycles and no message received");
+                    }
+                    // if (object_detected)
                     break;
                 case State::Disabled:
                     if (estop == ENABLE) {
-                        currentState = State::Enabled;
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to enable" );
+                        if (esc_set_point == ESC_NEUTRAL_PULSE_WIDTH) {
+                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is set to neutral: safe to enable" );
+                            currentState = State::Enabled;
+                        } else {
+                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is NOT set to neutral: please set to neutral first before enabling" );
+                        }
                     }
                     break;
             }
@@ -89,9 +107,23 @@ class TraxxasNode : public rclcpp::Node {
                     break;
                 case State::Disabled:
                     RCLCPP_INFO_STREAM(this->get_logger(), "DISABLED" );
+                    // Stop ESC motor and return steering to centre position
                     setPWMSignal(STEERING_SERVO_CHANNEL, STEERING_NEUTRAL_PULSE_WIDTH);
                     setPWMSignal(ESC_SERVO_CHANNEL, ESC_NEUTRAL_PULSE_WIDTH);
+                    // Also set esc and steering back to neutral position
+                    esc_set_point = ESC_NEUTRAL_PULSE_WIDTH;
+                    steering_set_point = STEERING_NEUTRAL_PULSE_WIDTH;
+                    // Also reset the counters
+                    steering_empty_msg_count = 0;   // Message received so reset counter to 0
+                    esc_empty_msg_count = 0;    // Message received so reset counter to 0
                     break;
+            }
+
+            // Only if wheels are spinning, increment the timeout counters
+            if (esc_set_point != ESC_NEUTRAL_PULSE_WIDTH) {
+                // Increment counters
+                esc_empty_msg_count++;
+                steering_empty_msg_count++;
             }
         }
 
@@ -178,8 +210,12 @@ class TraxxasNode : public rclcpp::Node {
             if(channel == STEERING_SERVO_CHANNEL) {
                 last_steering_command = pulse_width_in_us;
                 steering_set_point = pulse_width_in_us;
+
+                steering_empty_msg_count = 0;   // Message received so reset counter to 0
             } else if(channel == ESC_SERVO_CHANNEL) {
                 esc_set_point = pulse_width_in_us;
+
+                esc_empty_msg_count = 0;    // Message received so reset counter to 0
             }
         }
 
@@ -196,10 +232,12 @@ class TraxxasNode : public rclcpp::Node {
            
             // Save value as the set point
             steering_set_point = new_value;
+
+            steering_empty_msg_count = 0;   // Message received so reset counter to 0
         }
 
         // For receiving percentage values to control the esc (channel 1)
-        void ESCSetPointPercentSubscriberCallback(const std_msgs::msg::Float32 & msg) {
+        void escSetPointPercentSubscriberCallback(const std_msgs::msg::Float32 & msg) {
             // Extract percent value
             float value = msg.data;
 
@@ -211,10 +249,12 @@ class TraxxasNode : public rclcpp::Node {
 
             // Save value as the set point
             esc_set_point = new_value;
+
+            esc_empty_msg_count = 0;    // Message received so reset counter to 0
         }
 
         // For receiving percentage values to control both the steering (channel 0) and esc (channel 1)
-        void ESCAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
+        void escAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
             // Convert to pulse width and save value as the set point
             steering_set_point = percentageToPulseWidth(msg.steering_percent);
             esc_set_point = percentageToPulseWidth(msg.esc_percent);
@@ -222,6 +262,9 @@ class TraxxasNode : public rclcpp::Node {
             // Display the message received
             RCLCPP_INFO_STREAM(this->get_logger(), "Message received for steering servo (channel 0). Percentage command received = " << static_cast<float>(msg.steering_percent) << ", PWM sent to motors = " << static_cast<float>(steering_set_point) );
             RCLCPP_INFO_STREAM(this->get_logger(), "Message received for esc (channel 1). Percentage command received = " << static_cast<float>(msg.esc_percent) << ", PWM sent to motors = " << static_cast<float>(esc_set_point) );
+
+            steering_empty_msg_count = 0;   // Message received so reset counter to 0
+            esc_empty_msg_count = 0;    // Message received so reset counter to 0
         }
 
         // For receiving estop commands
@@ -231,10 +274,10 @@ class TraxxasNode : public rclcpp::Node {
 
             // Display the message received
             if (command == DISABLE) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to disable" );
+                RCLCPP_INFO_STREAM(this->get_logger(), "ESTOP pressed" );
                 estop = DISABLE;
             } else if (command == ENABLE) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to enable" );
+                RCLCPP_INFO_STREAM(this->get_logger(), "ESTOP released" );
                 estop = ENABLE;
             } else {
                 RCLCPP_INFO_STREAM(this->get_logger(), "Invalid estop command" );

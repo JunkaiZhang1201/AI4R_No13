@@ -69,64 +69,24 @@ include CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/flags.make
 
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: /opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_cpp/__init__.py
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/action__type_support.cpp.em
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: rosidl_adapter/ai4r_interfaces/msg/LeftRightFloat32.idl
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: rosidl_adapter/ai4r_interfaces/msg/LeftRightInt32.idl
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp: rosidl_adapter/ai4r_interfaces/msg/TemplateMessage.idl
+rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: /opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp
+rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_cpp/__init__.py
+rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/action__type_support.cpp.em
+rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em
+rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em
+rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em
+rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
+rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ type support dispatch for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp --generator-arguments-file /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp__arguments.json --typesupports rosidl_typesupport_fastrtps_cpp rosidl_typesupport_introspection_cpp
 
-rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp
+rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp: rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp
-
-rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp
-
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/flags.make
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o -MF CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o.d -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp
-
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp > CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.i
-
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.s
-
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/flags.make
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o -MF CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o.d -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp
-
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp > CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.i
-
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.s
 
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o -MF CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o.d -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp
 
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.i: cmake_force
@@ -140,7 +100,7 @@ CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o -MF CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o.d -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp
 
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.i: cmake_force
@@ -151,43 +111,23 @@ CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.s
 
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/flags.make
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o: rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o -MF CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o.d -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp
-
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp > CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.i
-
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp -o CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.s
-
 # Object files for target ai4r_interfaces__rosidl_typesupport_cpp
 ai4r_interfaces__rosidl_typesupport_cpp_OBJECTS = \
-"CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o" \
-"CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o" \
 "CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o" \
-"CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o" \
-"CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o"
+"CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o"
 
 # External object files for target ai4r_interfaces__rosidl_typesupport_cpp
 ai4r_interfaces__rosidl_typesupport_cpp_EXTERNAL_OBJECTS =
 
-libai4r_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp.o
-libai4r_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp.o
 libai4r_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp.o
 libai4r_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp.o
-libai4r_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp.o
 libai4r_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/build.make
 libai4r_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 libai4r_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_c.so
 libai4r_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libai4r_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librcutils.so
 libai4r_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libai4r_interfaces__rosidl_typesupport_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libai4r_interfaces__rosidl_typesupport_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -199,10 +139,7 @@ CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/clean:
 .PHONY : CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/clean
 
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/ai4r_interfaces/msg/esc_and_steering__type_support.cpp
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_float32__type_support.cpp
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/ai4r_interfaces/msg/left_right_int32__type_support.cpp
 CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/ai4r_interfaces/msg/servo_pulse_width__type_support.cpp
-CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/ai4r_interfaces/msg/template_message__type_support.cpp
 	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ai4r_interfaces__rosidl_typesupport_cpp.dir/depend
 

@@ -3,11 +3,8 @@
   "output_dir": "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_fastrtps_cpp/ai4r_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
-    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/LeftRightFloat32.idl",
-    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/LeftRightInt32.idl",
     "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/ServoPulseWidth.idl",
-    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/EscAndSteering.idl",
-    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/TemplateMessage.idl"
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/EscAndSteering.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp",
@@ -18,10 +15,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
-    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/LeftRightFloat32.idl",
-    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/LeftRightInt32.idl",
     "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl",
-    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl",
-    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/TemplateMessage.idl"
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl"
   ]
 }
