@@ -21,8 +21,8 @@ class TraxxasNode : public rclcpp::Node {
             esc_and_steering_set_point_percent_sub_ = this->create_subscription<ai4r_interfaces::msg::EscAndSteering>(
                 ESC_AND_STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::ESCAndSteeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
-            enable_sub_ = this->create_subscription<std_msgs::msg::UInt16>(
-                ENABLE, rclcpp::QoS(10), std::bind(&TraxxasNode::enableSubscriberCallback, this, std::placeholders::_1)
+            estop_sub_ = this->create_subscription<std_msgs::msg::UInt16>(
+                ESTOP, rclcpp::QoS(10), std::bind(&TraxxasNode::estopSubscriberCallback, this, std::placeholders::_1)
             );
 
             // 100 Hz (same rate as servo board)
@@ -58,6 +58,43 @@ class TraxxasNode : public rclcpp::Node {
         }
 
     private:
+        // Private variables
+        State currentState = State::Enabled;    // State initially Enabled
+        int estop = ENABLE; // Store last estop command (initially ENABLE)
+
+        // Traxxas node synchronous FSM: Periodically called at regular time intervals to trigger state transitions 
+        // Moore machine implementation: outputs only based on the current state of the machine, regardless of the input
+        void timer_callback() {
+            // State transitions first
+            switch (currentState) {
+                case State::Enabled:
+                    if (estop == DISABLE) {
+                        currentState = State::Disabled;
+                    }
+                    break;
+                case State::Disabled:
+                    if (estop == ENABLE) {
+                        currentState = State::Enabled;
+                    }
+                    break;
+            }
+
+            // Then enact resulting state behaviour
+            switch (currentState) {
+                case State::Enabled:
+                    RCLCPP_INFO_STREAM(this->get_logger(), "ENABLED" );
+                    // Send messages to the motors
+                    setSteeringPulseWidth();
+                    setEscPulseWidth();
+                    break;
+                case State::Disabled:
+                    RCLCPP_INFO_STREAM(this->get_logger(), "DISABLED" );
+                    setPWMSignal(STEERING_SERVO_CHANNEL, STEERING_NEUTRAL_PULSE_WIDTH);
+                    setPWMSignal(ESC_SERVO_CHANNEL, ESC_NEUTRAL_PULSE_WIDTH);
+                    break;
+            }
+        }
+
         // Send a pulse width on the specified channel.
         void setPWMSignal(uint16_t channel, uint16_t pulse_width_in_us) {
             // Call the function to set the desired pulse width
@@ -88,7 +125,7 @@ class TraxxasNode : public rclcpp::Node {
             return pulse_width;
         }
 
-        // Send PWM to steering servo
+        // Send steering servo to PWM set point incrementally
         void setSteeringPulseWidth() {
             // Read the most recent steering set point
             int value = steering_set_point;
@@ -109,19 +146,10 @@ class TraxxasNode : public rclcpp::Node {
             last_steering_command = value;
         }
 
-        // Send PWM to ESC
+        // Send ESC to PWM set point directly
         void setEscPulseWidth() {
             // Directly send the ESC set point
             setPWMSignal(ESC_SERVO_CHANNEL, esc_set_point);
-        }
-
-        // Periodically call at regular time interval LOOP_PERIOD
-        void timer_callback() {
-            // Display the message received
-            //RCLCPP_INFO_STREAM(this->get_logger(), "Timer callback");
-            // Send messages to the motors
-            setSteeringPulseWidth();
-            setEscPulseWidth();
         }
 
         // For receiving PWM values to control the steering (channel 0) or esc (channel 1)
@@ -196,18 +224,20 @@ class TraxxasNode : public rclcpp::Node {
             RCLCPP_INFO_STREAM(this->get_logger(), "Message received for esc (channel 1). Percentage command received = " << static_cast<float>(msg.esc_percent) << ", PWM sent to motors = " << static_cast<float>(esc_set_point) );
         }
 
-        // For receiving enable (1) or disable (0) command
-        void enableSubscriberCallback(const std_msgs::msg::UInt16 & msg) {
-            // Extract enable command
+        // For receiving estop commands
+        void estopSubscriberCallback(const std_msgs::msg::UInt16 & msg) {
+            // Extract estop command
             int command = msg.data;
 
             // Display the message received
-            if (command == 0) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "Command sent to disable" );
-            } else if (command == 1) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "Command sent to enable" );
+            if (command == DISABLE) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to disable" );
+                estop = DISABLE;
+            } else if (command == ENABLE) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to enable" );
+                estop = ENABLE;
             } else {
-                RCLCPP_INFO_STREAM(this->get_logger(), "Invalid command" );
+                RCLCPP_INFO_STREAM(this->get_logger(), "Invalid estop command" );
             }
         }
 
@@ -218,7 +248,7 @@ class TraxxasNode : public rclcpp::Node {
         rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr steering_set_point_percent_sub_;
         rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr esc_set_point_percent_sub_;
         rclcpp::Subscription<ai4r_interfaces::msg::EscAndSteering>::SharedPtr esc_and_steering_set_point_percent_sub_;
-        rclcpp::Subscription<std_msgs::msg::UInt16>::SharedPtr enable_sub_;
+        rclcpp::Subscription<std_msgs::msg::UInt16>::SharedPtr estop_sub_;
 
 };
 

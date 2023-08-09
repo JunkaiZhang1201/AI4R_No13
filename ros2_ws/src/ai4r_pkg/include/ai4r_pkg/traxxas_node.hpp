@@ -27,10 +27,18 @@ using namespace std::chrono_literals;
 // Do not touch:
 constexpr uint16_t  STEERING_SERVO_CHANNEL = 0;
 constexpr uint16_t  ESC_SERVO_CHANNEL = 1;
+constexpr uint16_t  DISABLE = 0;
+constexpr uint16_t  ENABLE = 1;
+
+// Enum class declaration for states of Finite State Machine
+enum class State {
+    Disabled,
+    Enabled,
+    // Add more states as needed
+};
 
 // Can be changed:
 constexpr float    SERVO_FREQUENCY = 100.0f;
-constexpr float    SPIN_RATE_FREQUENCY = 100.0f;
 
 // These define the min, max and neutral point for each of the servo channels. Any
 // Values received outside of these will be restricted to the minimum or maximum
@@ -44,8 +52,6 @@ constexpr uint16_t STEERING_NEUTRAL_PULSE_WIDTH =  1500;
 constexpr uint16_t ESC_NEUTRAL_PULSE_WIDTH =  1500;
 
 constexpr uint16_t STEERING_PULSE_WIDTH_STEP =  50;
-
-//#define LOOP_PERIOD 10ms; // LOOP_FREQUENCY (Hz) = 1/LOOP_PERIOD;
 
 // VARIABLES FOR THE PWM DRIVER NODE:
 
