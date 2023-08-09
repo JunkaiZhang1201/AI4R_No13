@@ -252,9 +252,9 @@ CMakeFiles/ai4r_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/
   rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.h \
   rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__struct.h \
   rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__functions.h \
-  rosidl_generator_c/ai4r_interfaces/msg/detail/drive_and_steering__type_support.h \
-  rosidl_generator_c/ai4r_interfaces/msg/detail/drive_and_steering__struct.h \
-  rosidl_generator_c/ai4r_interfaces/msg/detail/drive_and_steering__functions.h \
+  rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.h \
+  rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__struct.h \
+  rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.h \
   rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__type_support.h \
   rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
@@ -331,8 +331,6 @@ rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__functions.h:
 /usr/include/assert.h:
 
 /usr/include/python3.10/structseq.h:
-
-/usr/include/linux/close_range.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
@@ -630,6 +628,8 @@ rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__struct.h:
 
 /usr/include/wchar.h:
 
+rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/python3.10/complexobject.h:
@@ -646,11 +646,7 @@ rosidl_generator_c/ai4r_interfaces/msg/detail/left_right_int32__struct.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/drive_and_steering__struct.h:
-
 /usr/include/python3.10/cpython/listobject.h:
-
-rosidl_generator_c/ai4r_interfaces/msg/detail/drive_and_steering__type_support.h:
 
 /usr/include/python3.10/dictobject.h:
 
@@ -740,6 +736,8 @@ rosidl_generator_c/ai4r_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/python3.10/osmodule.h:
 
+rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__type_support.h:
+
 /usr/include/python3.10/intrcheck.h:
 
 /usr/include/python3.10/import.h:
@@ -770,7 +768,9 @@ rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__type_support.h:
 
 rosidl_generator_c/ai4r_interfaces/msg/detail/servo_pulse_width__struct.h:
 
-rosidl_generator_c/ai4r_interfaces/msg/detail/drive_and_steering__functions.h:
+/usr/include/linux/close_range.h:
+
+rosidl_generator_c/ai4r_interfaces/msg/detail/esc_and_steering__struct.h:
 
 rosidl_generator_c/ai4r_interfaces/msg/detail/template_message__type_support.h:
 

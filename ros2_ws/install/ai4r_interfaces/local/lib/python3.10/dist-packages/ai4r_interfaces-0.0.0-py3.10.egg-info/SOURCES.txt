@@ -5,7 +5,7 @@ ai4r_interfaces.egg-info/SOURCES.txt
 ai4r_interfaces.egg-info/dependency_links.txt
 ai4r_interfaces.egg-info/top_level.txt
 ai4r_interfaces/msg/__init__.py
-ai4r_interfaces/msg/_drive_and_steering.py
+ai4r_interfaces/msg/_esc_and_steering.py
 ai4r_interfaces/msg/_left_right_float32.py
 ai4r_interfaces/msg/_left_right_int32.py
 ai4r_interfaces/msg/_servo_pulse_width.py

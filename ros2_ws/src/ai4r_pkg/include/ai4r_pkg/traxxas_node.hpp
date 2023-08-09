@@ -45,6 +45,8 @@ constexpr uint16_t ESC_NEUTRAL_PULSE_WIDTH =  1500;
 
 constexpr uint16_t STEERING_PULSE_WIDTH_STEP =  50;
 
+//#define LOOP_PERIOD 10ms; // LOOP_FREQUENCY (Hz) = 1/LOOP_PERIOD;
+
 // VARIABLES FOR THE PWM DRIVER NODE:
 
 // > I2C Driver Object:

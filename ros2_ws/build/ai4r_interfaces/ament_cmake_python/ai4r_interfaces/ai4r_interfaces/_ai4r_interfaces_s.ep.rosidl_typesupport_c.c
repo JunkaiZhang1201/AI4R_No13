@@ -441,39 +441,39 @@ _register_msg_type__msg__servo_pulse_width(PyObject * pymodule)
 // #include "rosidl_runtime_c/service_type_support_struct.h"
 // already included above
 // #include "rosidl_runtime_c/action_type_support_struct.h"
-#include "ai4r_interfaces/msg/detail/drive_and_steering__type_support.h"
-#include "ai4r_interfaces/msg/detail/drive_and_steering__struct.h"
-#include "ai4r_interfaces/msg/detail/drive_and_steering__functions.h"
+#include "ai4r_interfaces/msg/detail/esc_and_steering__type_support.h"
+#include "ai4r_interfaces/msg/detail/esc_and_steering__struct.h"
+#include "ai4r_interfaces/msg/detail/esc_and_steering__functions.h"
 
-static void * ai4r_interfaces__msg__drive_and_steering__create_ros_message(void)
+static void * ai4r_interfaces__msg__esc_and_steering__create_ros_message(void)
 {
-  return ai4r_interfaces__msg__DriveAndSteering__create();
+  return ai4r_interfaces__msg__EscAndSteering__create();
 }
 
-static void ai4r_interfaces__msg__drive_and_steering__destroy_ros_message(void * raw_ros_message)
+static void ai4r_interfaces__msg__esc_and_steering__destroy_ros_message(void * raw_ros_message)
 {
-  ai4r_interfaces__msg__DriveAndSteering * ros_message = (ai4r_interfaces__msg__DriveAndSteering *)raw_ros_message;
-  ai4r_interfaces__msg__DriveAndSteering__destroy(ros_message);
+  ai4r_interfaces__msg__EscAndSteering * ros_message = (ai4r_interfaces__msg__EscAndSteering *)raw_ros_message;
+  ai4r_interfaces__msg__EscAndSteering__destroy(ros_message);
 }
 
 ROSIDL_GENERATOR_C_IMPORT
-bool ai4r_interfaces__msg__drive_and_steering__convert_from_py(PyObject * _pymsg, void * ros_message);
+bool ai4r_interfaces__msg__esc_and_steering__convert_from_py(PyObject * _pymsg, void * ros_message);
 ROSIDL_GENERATOR_C_IMPORT
-PyObject * ai4r_interfaces__msg__drive_and_steering__convert_to_py(void * raw_ros_message);
+PyObject * ai4r_interfaces__msg__esc_and_steering__convert_to_py(void * raw_ros_message);
 
 
 ROSIDL_GENERATOR_C_IMPORT
 const rosidl_message_type_support_t *
-ROSIDL_GET_MSG_TYPE_SUPPORT(ai4r_interfaces, msg, DriveAndSteering);
+ROSIDL_GET_MSG_TYPE_SUPPORT(ai4r_interfaces, msg, EscAndSteering);
 
 int8_t
-_register_msg_type__msg__drive_and_steering(PyObject * pymodule)
+_register_msg_type__msg__esc_and_steering(PyObject * pymodule)
 {
   int8_t err;
 
   PyObject * pyobject_create_ros_message = NULL;
   pyobject_create_ros_message = PyCapsule_New(
-    (void *)&ai4r_interfaces__msg__drive_and_steering__create_ros_message,
+    (void *)&ai4r_interfaces__msg__esc_and_steering__create_ros_message,
     NULL, NULL);
   if (!pyobject_create_ros_message) {
     // previously added objects will be removed when the module is destroyed
@@ -481,7 +481,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "create_ros_message_msg__msg__drive_and_steering",
+    "create_ros_message_msg__msg__esc_and_steering",
     pyobject_create_ros_message);
   if (err) {
     // the created capsule needs to be decremented
@@ -492,7 +492,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
 
   PyObject * pyobject_destroy_ros_message = NULL;
   pyobject_destroy_ros_message = PyCapsule_New(
-    (void *)&ai4r_interfaces__msg__drive_and_steering__destroy_ros_message,
+    (void *)&ai4r_interfaces__msg__esc_and_steering__destroy_ros_message,
     NULL, NULL);
   if (!pyobject_destroy_ros_message) {
     // previously added objects will be removed when the module is destroyed
@@ -500,7 +500,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "destroy_ros_message_msg__msg__drive_and_steering",
+    "destroy_ros_message_msg__msg__esc_and_steering",
     pyobject_destroy_ros_message);
   if (err) {
     // the created capsule needs to be decremented
@@ -511,7 +511,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
 
   PyObject * pyobject_convert_from_py = NULL;
   pyobject_convert_from_py = PyCapsule_New(
-    (void *)&ai4r_interfaces__msg__drive_and_steering__convert_from_py,
+    (void *)&ai4r_interfaces__msg__esc_and_steering__convert_from_py,
     NULL, NULL);
   if (!pyobject_convert_from_py) {
     // previously added objects will be removed when the module is destroyed
@@ -519,7 +519,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "convert_from_py_msg__msg__drive_and_steering",
+    "convert_from_py_msg__msg__esc_and_steering",
     pyobject_convert_from_py);
   if (err) {
     // the created capsule needs to be decremented
@@ -530,7 +530,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
 
   PyObject * pyobject_convert_to_py = NULL;
   pyobject_convert_to_py = PyCapsule_New(
-    (void *)&ai4r_interfaces__msg__drive_and_steering__convert_to_py,
+    (void *)&ai4r_interfaces__msg__esc_and_steering__convert_to_py,
     NULL, NULL);
   if (!pyobject_convert_to_py) {
     // previously added objects will be removed when the module is destroyed
@@ -538,7 +538,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "convert_to_py_msg__msg__drive_and_steering",
+    "convert_to_py_msg__msg__esc_and_steering",
     pyobject_convert_to_py);
   if (err) {
     // the created capsule needs to be decremented
@@ -549,7 +549,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
 
   PyObject * pyobject_type_support = NULL;
   pyobject_type_support = PyCapsule_New(
-    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(ai4r_interfaces, msg, DriveAndSteering),
+    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(ai4r_interfaces, msg, EscAndSteering),
     NULL, NULL);
   if (!pyobject_type_support) {
     // previously added objects will be removed when the module is destroyed
@@ -557,7 +557,7 @@ _register_msg_type__msg__drive_and_steering(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "type_support_msg__msg__drive_and_steering",
+    "type_support_msg__msg__esc_and_steering",
     pyobject_type_support);
   if (err) {
     // the created capsule needs to be decremented
@@ -735,7 +735,7 @@ PyInit_ai4r_interfaces_s__rosidl_typesupport_c(void)
     return NULL;
   }
 
-  err = _register_msg_type__msg__drive_and_steering(pymodule);
+  err = _register_msg_type__msg__esc_and_steering(pymodule);
   if (err) {
     Py_XDECREF(pymodule);
     return NULL;

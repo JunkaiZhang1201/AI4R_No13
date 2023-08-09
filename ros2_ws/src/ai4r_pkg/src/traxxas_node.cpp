@@ -18,6 +18,12 @@ class TraxxasNode : public rclcpp::Node {
             esc_set_point_percent_sub_ = this->create_subscription<std_msgs::msg::Float32>(
                 ESC_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::ESCSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
+            esc_and_steering_set_point_percent_sub_ = this->create_subscription<ai4r_interfaces::msg::EscAndSteering>(
+                ESC_AND_STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::ESCAndSteeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
+            );
+            enable_sub_ = this->create_subscription<std_msgs::msg::UInt16>(
+                ENABLE, rclcpp::QoS(10), std::bind(&TraxxasNode::enableSubscriberCallback, this, std::placeholders::_1)
+            );
 
             // 100 Hz (same rate as servo board)
             timer_ = this->create_wall_timer(10ms, std::bind(&TraxxasNode::timer_callback, this));
@@ -63,8 +69,9 @@ class TraxxasNode : public rclcpp::Node {
             }
         }
 
+        // Convert percentage to PWM
         uint16_t percentageToPulseWidth(float value) {
-            uint16_t pulse_width = 0;
+            uint16_t pulse_width;
 
             if(value <= -100.0) {
                 pulse_width = MINIMUM_PULSE_WIDTH;
@@ -81,8 +88,9 @@ class TraxxasNode : public rclcpp::Node {
             return pulse_width;
         }
 
+        // Send PWM to steering servo
         void setSteeringPulseWidth() {
-            // Read the most recent steeing set point
+            // Read the most recent steering set point
             int value = steering_set_point;
 
             // See if this is greater than the defined steering step away from the
@@ -101,18 +109,13 @@ class TraxxasNode : public rclcpp::Node {
             last_steering_command = value;
         }
 
+        // Send PWM to ESC
         void setEscPulseWidth() {
             // Directly send the ESC set point
             setPWMSignal(ESC_SERVO_CHANNEL, esc_set_point);
         }
 
-        // Set the pwm value according to the set point for each servo
-        //void setSteeringPulseWidth();
-        //void setEscPulseWidth();
-
-        // Convert the percentage command to a pwm pulse width.
-        //uint16_t percentageToPulseWidth(float value);
-
+        // Periodically call at regular time interval LOOP_PERIOD
         void timer_callback() {
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "Timer callback");
@@ -121,22 +124,23 @@ class TraxxasNode : public rclcpp::Node {
             setEscPulseWidth();
         }
 
+        // For receiving PWM values to control the steering (channel 0) or esc (channel 1)
         void servoSubscriberCallback(const ai4r_interfaces::msg::ServoPulseWidth & msg) {
             // Extract the channel and pulse width from the message
             uint16_t channel = msg.channel;
             uint16_t pulse_width_in_us = msg.pulse_width_in_microseconds;
 
             // Display the message received
-            RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) );
+            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) );
 
             // Limit the pulse width to be either:
             // > zero
             // > in the range [1000,2000]
             if (pulse_width_in_us > 0) {
-                if (pulse_width_in_us < 1000)
-                    pulse_width_in_us = 1000;
-                if (pulse_width_in_us > 2000)
-                    pulse_width_in_us = 2000;
+                if (pulse_width_in_us < MINIMUM_PULSE_WIDTH)
+                    pulse_width_in_us = MINIMUM_PULSE_WIDTH;
+                if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH)
+                    pulse_width_in_us = MAXIMUM_PULSE_WIDTH;
             }
 
             // Set servo PWM signal to this value
@@ -151,53 +155,70 @@ class TraxxasNode : public rclcpp::Node {
             }
         }
 
+        // For receiving percentage values to control the steering (channel 0)
         void steeringSetPointPercentSubscriberCallback(const std_msgs::msg::Float32 & msg) {
             // Extract percent value
             float value = msg.data;
 
-            // Display the message received
-            RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] Message received for steering servo (channel 0). Percentage command = " << static_cast<float>(value) );
-
-            // Restrict to usable range
-            if(value < -100.0) {
-                value = -100.0;
-            } else if(value > 100.0) {
-                value = 100.0;
-            }
-
             // Convert to pulse width
-            value = percentageToPulseWidth(value);
-            
+            float new_value = percentageToPulseWidth(value);
+
+            // Display the message received
+            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for steering servo (channel 0). Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
+           
             // Save value as the set point
-            steering_set_point = value;
+            steering_set_point = new_value;
         }
 
+        // For receiving percentage values to control the esc (channel 1)
         void ESCSetPointPercentSubscriberCallback(const std_msgs::msg::Float32 & msg) {
             // Extract percent value
             float value = msg.data;
 
-            // Display the message received
-            RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] Message received for esc (channel 1). Percentage command = " << static_cast<float>(value) );
-
-            // Restrict to usable range
-            if(value < -100.0) {
-                value = -100.0;
-            } else if(value > 100.0) {
-                value = 100.0;
-            }
-
             // Convert to pulse width
-            value = percentageToPulseWidth(value);
+            float new_value = percentageToPulseWidth(value);
+
+            // Display the message received
+            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for esc (channel 1). Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
 
             // Save value as the set point
-            esc_set_point = value;
+            esc_set_point = new_value;
         }
+
+        // For receiving percentage values to control both the steering (channel 0) and esc (channel 1)
+        void ESCAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
+            // Convert to pulse width and save value as the set point
+            steering_set_point = percentageToPulseWidth(msg.steering_percent);
+            esc_set_point = percentageToPulseWidth(msg.esc_percent);
+
+            // Display the message received
+            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for steering servo (channel 0). Percentage command received = " << static_cast<float>(msg.steering_percent) << ", PWM sent to motors = " << static_cast<float>(steering_set_point) );
+            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for esc (channel 1). Percentage command received = " << static_cast<float>(msg.esc_percent) << ", PWM sent to motors = " << static_cast<float>(esc_set_point) );
+        }
+
+        // For receiving enable (1) or disable (0) command
+        void enableSubscriberCallback(const std_msgs::msg::UInt16 & msg) {
+            // Extract enable command
+            int command = msg.data;
+
+            // Display the message received
+            if (command == 0) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "Command sent to disable" );
+            } else if (command == 1) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "Command sent to enable" );
+            } else {
+                RCLCPP_INFO_STREAM(this->get_logger(), "Invalid command" );
+            }
+        }
+
 
         rclcpp::TimerBase::SharedPtr timer_;
 
         rclcpp::Subscription<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr servo_pulse_width_sub_;
         rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr steering_set_point_percent_sub_;
         rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr esc_set_point_percent_sub_;
+        rclcpp::Subscription<ai4r_interfaces::msg::EscAndSteering>::SharedPtr esc_and_steering_set_point_percent_sub_;
+        rclcpp::Subscription<std_msgs::msg::UInt16>::SharedPtr enable_sub_;
 
 };
 
