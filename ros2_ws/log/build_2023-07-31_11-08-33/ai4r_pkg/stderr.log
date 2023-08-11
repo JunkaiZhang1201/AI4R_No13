@@ -1,8 +1,0 @@
-[01m[K/home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/pwm_driver_node.cpp:10:10:[m[K [01;31m[Kfatal error: [m[Ktopic_names.hpp: No such file or directory
-   10 | #include [01;31m[K"topic_names.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/pwm_driver.dir/build.make:76: CMakeFiles/pwm_driver.dir/src/pwm_driver_node.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:308: CMakeFiles/pwm_driver.dir/all] Error 2
-gmake[1]: *** Waiting for unfinished jobs....
-gmake: *** [Makefile:146: all] Error 2

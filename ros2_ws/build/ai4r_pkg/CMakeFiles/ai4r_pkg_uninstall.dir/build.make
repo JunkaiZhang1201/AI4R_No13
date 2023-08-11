@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg
+CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
+CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg
 
 # Utility rule file for ai4r_pkg_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ai4r_pkg_uninstall.dir/compiler_depend.make
 include CMakeFiles/ai4r_pkg_uninstall.dir/progress.make
 
 CMakeFiles/ai4r_pkg_uninstall:
-	/usr/bin/cmake -P /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 ai4r_pkg_uninstall: CMakeFiles/ai4r_pkg_uninstall
 ai4r_pkg_uninstall: CMakeFiles/ai4r_pkg_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ai4r_pkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/ai4r_pkg_uninstall.dir/clean
 
 CMakeFiles/ai4r_pkg_uninstall.dir/depend:
-	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/ai4r_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/ai4r_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ai4r_pkg_uninstall.dir/depend
 

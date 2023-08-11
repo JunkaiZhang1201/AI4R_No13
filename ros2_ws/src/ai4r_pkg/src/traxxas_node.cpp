@@ -60,7 +60,7 @@ class TraxxasNode : public rclcpp::Node {
     private:
         // Private variables
         State currentState = State::Enabled;    // State initially Enabled
-        int estop = ENABLE; // Store last estop command (initially ENABLE)
+        int estop = ENABLE; // Store last estop command (initially ENABLE) possibly change to enable_disable_request
         int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
         int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
 
@@ -87,7 +87,7 @@ class TraxxasNode : public rclcpp::Node {
                 case State::Disabled:
                     if (estop == ENABLE) {
                         RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to enable" );
-                        if (esc_set_point == ESC_NEUTRAL_PULSE_WIDTH) {
+                        if (((ESC_NEUTRAL_PULSE_WIDTH-1) <= esc_set_point) && (esc_set_point <= (ESC_NEUTRAL_PULSE_WIDTH+1)))  {
                             RCLCPP_INFO_STREAM(this->get_logger(), "ESC is set to neutral: safe to enable" );
                             currentState = State::Enabled;
                         } else {

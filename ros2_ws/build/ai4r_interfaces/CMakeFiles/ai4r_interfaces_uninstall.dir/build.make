@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces
+CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces
+CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces
 
 # Utility rule file for ai4r_interfaces_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ai4r_interfaces_uninstall.dir/compiler_depend.make
 include CMakeFiles/ai4r_interfaces_uninstall.dir/progress.make
 
 CMakeFiles/ai4r_interfaces_uninstall:
-	/usr/bin/cmake -P /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 ai4r_interfaces_uninstall: CMakeFiles/ai4r_interfaces_uninstall
 ai4r_interfaces_uninstall: CMakeFiles/ai4r_interfaces_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ai4r_interfaces_uninstall.dir/clean:
 .PHONY : CMakeFiles/ai4r_interfaces_uninstall.dir/clean
 
 CMakeFiles/ai4r_interfaces_uninstall.dir/depend:
-	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles/ai4r_interfaces_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles/ai4r_interfaces_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ai4r_interfaces_uninstall.dir/depend
 
