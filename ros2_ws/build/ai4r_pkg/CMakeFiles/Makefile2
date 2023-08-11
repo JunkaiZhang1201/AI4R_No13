@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg
+CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
+CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -100,14 +100,14 @@ clean: CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/clean
 CMakeFiles/uninstall.dir/all: CMakeFiles/ai4r_pkg_uninstall.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -126,14 +126,14 @@ CMakeFiles/uninstall.dir/clean:
 CMakeFiles/ai4r_pkg_uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_pkg_uninstall.dir/build.make CMakeFiles/ai4r_pkg_uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ai4r_pkg_uninstall.dir/build.make CMakeFiles/ai4r_pkg_uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num= "Built target ai4r_pkg_uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num= "Built target ai4r_pkg_uninstall"
 .PHONY : CMakeFiles/ai4r_pkg_uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ai4r_pkg_uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ai4r_pkg_uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/ai4r_pkg_uninstall.dir/rule
 
 # Convenience name for target.
@@ -152,14 +152,14 @@ CMakeFiles/ai4r_pkg_uninstall.dir/clean:
 CMakeFiles/minimal_cpp_executable.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_cpp_executable.dir/build.make CMakeFiles/minimal_cpp_executable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=5,6 "Built target minimal_cpp_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=5,6 "Built target minimal_cpp_executable"
 .PHONY : CMakeFiles/minimal_cpp_executable.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/minimal_cpp_executable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/minimal_cpp_executable.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/minimal_cpp_executable.dir/rule
 
 # Convenience name for target.
@@ -178,14 +178,14 @@ CMakeFiles/minimal_cpp_executable.dir/clean:
 CMakeFiles/oop_cpp_executable.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/oop_cpp_executable.dir/build.make CMakeFiles/oop_cpp_executable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=9,10 "Built target oop_cpp_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=9,10 "Built target oop_cpp_executable"
 .PHONY : CMakeFiles/oop_cpp_executable.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/oop_cpp_executable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/oop_cpp_executable.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/oop_cpp_executable.dir/rule
 
 # Convenience name for target.
@@ -204,14 +204,14 @@ CMakeFiles/oop_cpp_executable.dir/clean:
 CMakeFiles/talker.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=13,14 "Built target talker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=13,14 "Built target talker"
 .PHONY : CMakeFiles/talker.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/talker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/talker.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/talker.dir/rule
 
 # Convenience name for target.
@@ -230,14 +230,14 @@ CMakeFiles/talker.dir/clean:
 CMakeFiles/listener.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=1,2 "Built target listener"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=1,2 "Built target listener"
 .PHONY : CMakeFiles/listener.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/listener.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/listener.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/listener.dir/rule
 
 # Convenience name for target.
@@ -256,14 +256,14 @@ CMakeFiles/listener.dir/clean:
 CMakeFiles/servo_pulse_width_sub.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_pulse_width_sub.dir/build.make CMakeFiles/servo_pulse_width_sub.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_pulse_width_sub.dir/build.make CMakeFiles/servo_pulse_width_sub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=11,12 "Built target servo_pulse_width_sub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=11,12 "Built target servo_pulse_width_sub"
 .PHONY : CMakeFiles/servo_pulse_width_sub.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/servo_pulse_width_sub.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/servo_pulse_width_sub.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/servo_pulse_width_sub.dir/rule
 
 # Convenience name for target.
@@ -282,14 +282,14 @@ CMakeFiles/servo_pulse_width_sub.dir/clean:
 CMakeFiles/multiple_pub_sub.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/multiple_pub_sub.dir/build.make CMakeFiles/multiple_pub_sub.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/multiple_pub_sub.dir/build.make CMakeFiles/multiple_pub_sub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=7,8 "Built target multiple_pub_sub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=7,8 "Built target multiple_pub_sub"
 .PHONY : CMakeFiles/multiple_pub_sub.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/multiple_pub_sub.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/multiple_pub_sub.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/multiple_pub_sub.dir/rule
 
 # Convenience name for target.
@@ -308,14 +308,14 @@ CMakeFiles/multiple_pub_sub.dir/clean:
 CMakeFiles/looping.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/looping.dir/build.make CMakeFiles/looping.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/looping.dir/build.make CMakeFiles/looping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=3,4 "Built target looping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=3,4 "Built target looping"
 .PHONY : CMakeFiles/looping.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/looping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/looping.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/looping.dir/rule
 
 # Convenience name for target.
@@ -334,14 +334,14 @@ CMakeFiles/looping.dir/clean:
 CMakeFiles/traxxas.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/traxxas.dir/build.make CMakeFiles/traxxas.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/traxxas.dir/build.make CMakeFiles/traxxas.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=15,16,17,18 "Built target traxxas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=15,16,17,18 "Built target traxxas"
 .PHONY : CMakeFiles/traxxas.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/traxxas.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/traxxas.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/traxxas.dir/rule
 
 # Convenience name for target.
@@ -360,14 +360,14 @@ CMakeFiles/traxxas.dir/clean:
 CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/build.make CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/build.make CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num= "Built target ament_cmake_python_copy_ai4r_pkg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num= "Built target ament_cmake_python_copy_ai4r_pkg"
 .PHONY : CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/rule
 
 # Convenience name for target.
@@ -386,14 +386,14 @@ CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/clean:
 CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/all: CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/build.make CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/build.make CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num= "Built target ament_cmake_python_build_ai4r_pkg_egg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num= "Built target ament_cmake_python_build_ai4r_pkg_egg"
 .PHONY : CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/rule
 
 # Convenience name for target.

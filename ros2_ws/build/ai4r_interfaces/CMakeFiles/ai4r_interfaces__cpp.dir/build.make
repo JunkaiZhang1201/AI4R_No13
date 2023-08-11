@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces
+CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces
+CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces
 
 # Utility rule file for ai4r_interfaces__cpp.
 
@@ -92,8 +92,8 @@ rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/
 rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl
 rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp: rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp: rosidl_generator_cpp/ai4r_interfaces/msg/servo_pulse_width.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ai4r_interfaces/msg/detail/servo_pulse_width__builder.hpp
@@ -137,6 +137,6 @@ CMakeFiles/ai4r_interfaces__cpp.dir/clean:
 .PHONY : CMakeFiles/ai4r_interfaces__cpp.dir/clean
 
 CMakeFiles/ai4r_interfaces__cpp.dir/depend:
-	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles/ai4r_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles/ai4r_interfaces__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ai4r_interfaces__cpp.dir/depend
 

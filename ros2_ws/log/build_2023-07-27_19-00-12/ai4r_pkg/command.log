@@ -1,4 +1,0 @@
-Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
-Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg -- -j16 -l16
-Invoking command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
-Invoked command in '/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg

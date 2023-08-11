@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg
+CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
+CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg
 
 # Utility rule file for ament_cmake_python_copy_ai4r_pkg.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/compiler_depend.make
 include CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_ai4r_pkg:
-	/usr/bin/cmake -E copy_directory /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/ament_cmake_python/ai4r_pkg/ai4r_pkg
+	/usr/bin/cmake -E copy_directory /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/ament_cmake_python/ai4r_pkg/ai4r_pkg
 
 ament_cmake_python_copy_ai4r_pkg: CMakeFiles/ament_cmake_python_copy_ai4r_pkg
 ament_cmake_python_copy_ai4r_pkg: CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/depend:
-	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_ai4r_pkg.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/ai4r_interfaces__py
+# Install script for directory: /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/ai4r_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

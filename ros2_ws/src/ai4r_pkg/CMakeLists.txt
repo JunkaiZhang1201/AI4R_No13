@@ -66,6 +66,7 @@ install(PROGRAMS
   scripts/oop_py_node.py
   scripts/oop_pub_py_node.py
   scripts/oop_sub_py_node.py
+  scripts/keyboard_teleop.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

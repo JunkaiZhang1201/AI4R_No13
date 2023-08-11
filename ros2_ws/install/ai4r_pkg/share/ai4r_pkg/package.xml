@@ -18,6 +18,8 @@
   <depend>std_msgs</depend>
   <depend>ai4r_interfaces</depend>
 
+  <exec_depend>pynput-pip</exec_depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>

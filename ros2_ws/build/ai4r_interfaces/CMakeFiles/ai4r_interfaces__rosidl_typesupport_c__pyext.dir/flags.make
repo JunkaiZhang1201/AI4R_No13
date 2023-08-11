@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"ai4r_interfaces\" -Dai4r_interfaces__rosidl_typesupport_c__pyext_EXPORTS
 
-C_INCLUDES = -I/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c -I/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_py -I/usr/include/python3.10 -I/opt/ros/humble/include/rmw -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rosidl_typesupport_c -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/rcutils
+C_INCLUDES = -I/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_c -I/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_py -I/usr/include/python3.10 -I/opt/ros/humble/include/rmw -isystem /opt/ros/humble/include/rosidl_runtime_c -isystem /opt/ros/humble/include/rosidl_typesupport_c -isystem /opt/ros/humble/include/rosidl_typesupport_interface -isystem /opt/ros/humble/include/rcutils
 
 C_FLAGS = -fPIC -Wall -Wextra
 
