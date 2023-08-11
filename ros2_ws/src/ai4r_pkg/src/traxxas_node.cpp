@@ -58,7 +58,7 @@ class TraxxasNode : public rclcpp::Node {
         }
 
     private:
-        // Private variables
+        // Private variables 
         State currentState = State::Enabled;    // State initially Enabled
         int estop = ENABLE; // Store last estop command (initially ENABLE)
         int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
