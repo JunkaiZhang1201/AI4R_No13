@@ -41,9 +41,9 @@ class PolicyNode(Node):
                 ("u_optical_centre", rclpy.Parameter.Type.DOUBLE),
                 ("p_gain", rclpy.Parameter.Type.DOUBLE),
             ])
-        self.timer_period = self.get_parameter_or("timer_period",Parameter("default_timer_period",Parameter.Type.DOUBLE,0.5))
-        self.u_optical_centre = self.get_parameter_or("u_optical_centre",Parameter("default_u_optical_centre",Parameter.Type.DOUBLE,640))
-        self.p_gain = self.get_parameter_or("p_gain",Parameter("default_p_gain",Parameter.Type.DOUBLE,0.1))
+        self.timer_period = self.get_parameter_or("timer_period",Parameter("default_timer_period",Parameter.Type.DOUBLE,0.5)).value
+        self.u_optical_centre = self.get_parameter_or("u_optical_centre",Parameter("default_u_optical_centre",Parameter.Type.DOUBLE,640.0)).value
+        self.p_gain = self.get_parameter_or("p_gain",Parameter("default_p_gain",Parameter.Type.DOUBLE,0.1)).value
 
 
 
@@ -65,7 +65,7 @@ class PolicyNode(Node):
         # Create a timer that is used for continually publishing the FSM state
         # > First argument is the duration between 2 callbacks (in seconds).
         # > Second argument is the callback function.
-        self.create_timer(self.timer_period, self.timer_callback)
+        self.create_timer(float(self.timer_period), self.timer_callback)
 
 
 
