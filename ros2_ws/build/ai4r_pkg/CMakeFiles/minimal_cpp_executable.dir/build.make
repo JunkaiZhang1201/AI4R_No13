@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg
+CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg
+CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
 
 # Include any dependencies generated for this target.
 include CMakeFiles/minimal_cpp_executable.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/minimal_cpp_executable.dir/progress.make
 include CMakeFiles/minimal_cpp_executable.dir/flags.make
 
 CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o: CMakeFiles/minimal_cpp_executable.dir/flags.make
-CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o: /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp
+CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp
 CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o: CMakeFiles/minimal_cpp_executable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o -MF CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o.d -o CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o -c /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o -MF CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o.d -o CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp
 
 CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp > CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp > CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.i
 
 CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp -o CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/minimal_cpp_node.cpp -o CMakeFiles/minimal_cpp_executable.dir/src/minimal_cpp_node.cpp.s
 
 # Object files for target minimal_cpp_executable
 minimal_cpp_executable_OBJECTS = \
@@ -144,10 +144,10 @@ minimal_cpp_executable: /opt/ros/humble/lib/librosidl_typesupport_c.so
 minimal_cpp_executable: /opt/ros/humble/lib/librcpputils.so
 minimal_cpp_executable: /opt/ros/humble/lib/librosidl_runtime_c.so
 minimal_cpp_executable: /opt/ros/humble/lib/librcutils.so
-minimal_cpp_executable: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+minimal_cpp_executable: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 minimal_cpp_executable: /opt/ros/humble/lib/libtracetools.so
 minimal_cpp_executable: CMakeFiles/minimal_cpp_executable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable minimal_cpp_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable minimal_cpp_executable"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minimal_cpp_executable.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,6 +159,6 @@ CMakeFiles/minimal_cpp_executable.dir/clean:
 .PHONY : CMakeFiles/minimal_cpp_executable.dir/clean
 
 CMakeFiles/minimal_cpp_executable.dir/depend:
-	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/minimal_cpp_executable.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/minimal_cpp_executable.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/minimal_cpp_executable.dir/depend
 

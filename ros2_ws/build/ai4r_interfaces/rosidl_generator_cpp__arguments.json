@@ -1,10 +1,10 @@
 {
   "package_name": "ai4r_interfaces",
-  "output_dir": "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_cpp/ai4r_interfaces",
+  "output_dir": "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_generator_cpp/ai4r_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/ServoPulseWidth.idl",
-    "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/EscAndSteering.idl"
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/ServoPulseWidth.idl",
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/EscAndSteering.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
@@ -22,7 +22,7 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl",
-    "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl"
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl",
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl"
   ]
 }

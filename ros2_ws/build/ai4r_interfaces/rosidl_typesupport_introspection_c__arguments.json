@@ -1,10 +1,10 @@
 {
   "package_name": "ai4r_interfaces",
-  "output_dir": "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_introspection_c/ai4r_interfaces",
+  "output_dir": "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_typesupport_introspection_c/ai4r_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource",
   "idl_tuples": [
-    "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/ServoPulseWidth.idl",
-    "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/EscAndSteering.idl"
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/ServoPulseWidth.idl",
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces:msg/EscAndSteering.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c",
@@ -15,7 +15,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/msg__type_support.c.em",
     "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em",
     "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em",
-    "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl",
-    "/home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl"
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/ServoPulseWidth.idl",
+    "/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/rosidl_adapter/ai4r_interfaces/msg/EscAndSteering.idl"
   ]
 }

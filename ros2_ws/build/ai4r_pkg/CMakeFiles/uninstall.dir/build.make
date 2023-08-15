@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg
+CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg
+CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

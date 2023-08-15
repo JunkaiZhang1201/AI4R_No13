@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces
+CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces
+CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces
 
 # Utility rule file for ai4r_interfaces.
 
@@ -66,8 +66,8 @@ include CMakeFiles/ai4r_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/ai4r_interfaces.dir/progress.make
 
-CMakeFiles/ai4r_interfaces: /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/ServoPulseWidth.msg
-CMakeFiles/ai4r_interfaces: /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/EscAndSteering.msg
+CMakeFiles/ai4r_interfaces: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/ServoPulseWidth.msg
+CMakeFiles/ai4r_interfaces: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces/msg/EscAndSteering.msg
 
 ai4r_interfaces: CMakeFiles/ai4r_interfaces
 ai4r_interfaces: CMakeFiles/ai4r_interfaces.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ai4r_interfaces.dir/clean:
 .PHONY : CMakeFiles/ai4r_interfaces.dir/clean
 
 CMakeFiles/ai4r_interfaces.dir/depend:
-	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces /home/ai4r/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles/ai4r_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_interfaces/CMakeFiles/ai4r_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ai4r_interfaces.dir/depend
 

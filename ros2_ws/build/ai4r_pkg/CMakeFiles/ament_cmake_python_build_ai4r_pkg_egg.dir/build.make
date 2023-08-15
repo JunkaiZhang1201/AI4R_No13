@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg
+CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg
+CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
 
 # Utility rule file for ament_cmake_python_build_ai4r_pkg_egg.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/compiler_depend.mak
 include CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg:
-	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/ament_cmake_python/ai4r_pkg && /usr/bin/python3.10 setup.py egg_info
+	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/ament_cmake_python/ai4r_pkg && /usr/bin/python3.10 setup.py egg_info
 
 ament_cmake_python_build_ai4r_pkg_egg: CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg
 ament_cmake_python_build_ai4r_pkg_egg: CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/clean
 
 CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/depend:
-	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_build_ai4r_pkg_egg.dir/depend
 

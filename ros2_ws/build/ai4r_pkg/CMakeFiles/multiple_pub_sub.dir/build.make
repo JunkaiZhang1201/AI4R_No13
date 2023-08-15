@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg
+CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg
+CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
 
 # Include any dependencies generated for this target.
 include CMakeFiles/multiple_pub_sub.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/multiple_pub_sub.dir/progress.make
 include CMakeFiles/multiple_pub_sub.dir/flags.make
 
 CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o: CMakeFiles/multiple_pub_sub.dir/flags.make
-CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o: /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/multiple_pub_sub_cpp_node.cpp
+CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/multiple_pub_sub_cpp_node.cpp
 CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o: CMakeFiles/multiple_pub_sub.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o -MF CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o.d -o CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o -c /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/multiple_pub_sub_cpp_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o -MF CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o.d -o CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/multiple_pub_sub_cpp_node.cpp
 
 CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/multiple_pub_sub_cpp_node.cpp > CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/multiple_pub_sub_cpp_node.cpp > CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.i
 
 CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/multiple_pub_sub_cpp_node.cpp -o CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/multiple_pub_sub_cpp_node.cpp -o CMakeFiles/multiple_pub_sub.dir/src/multiple_pub_sub_cpp_node.cpp.s
 
 # Object files for target multiple_pub_sub
 multiple_pub_sub_OBJECTS = \
@@ -99,12 +99,12 @@ multiple_pub_sub: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspect
 multiple_pub_sub: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 multiple_pub_sub: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 multiple_pub_sub: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-multiple_pub_sub: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_c.so
-multiple_pub_sub: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_c.so
-multiple_pub_sub: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_cpp.so
-multiple_pub_sub: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_cpp.so
-multiple_pub_sub: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_cpp.so
-multiple_pub_sub: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_py.so
+multiple_pub_sub: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_c.so
+multiple_pub_sub: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_c.so
+multiple_pub_sub: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_cpp.so
+multiple_pub_sub: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_cpp.so
+multiple_pub_sub: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_cpp.so
+multiple_pub_sub: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_py.so
 multiple_pub_sub: /opt/ros/humble/lib/liblibstatistics_collector.so
 multiple_pub_sub: /opt/ros/humble/lib/librcl.so
 multiple_pub_sub: /opt/ros/humble/lib/librmw_implementation.so
@@ -155,15 +155,15 @@ multiple_pub_sub: /opt/ros/humble/lib/librmw.so
 multiple_pub_sub: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 multiple_pub_sub: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 multiple_pub_sub: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
-multiple_pub_sub: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_c.so
-multiple_pub_sub: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_c.so
+multiple_pub_sub: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_c.so
+multiple_pub_sub: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_c.so
 multiple_pub_sub: /opt/ros/humble/lib/librosidl_typesupport_c.so
 multiple_pub_sub: /opt/ros/humble/lib/librcpputils.so
 multiple_pub_sub: /opt/ros/humble/lib/librosidl_runtime_c.so
 multiple_pub_sub: /opt/ros/humble/lib/librcutils.so
-multiple_pub_sub: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+multiple_pub_sub: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 multiple_pub_sub: CMakeFiles/multiple_pub_sub.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable multiple_pub_sub"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable multiple_pub_sub"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/multiple_pub_sub.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +175,6 @@ CMakeFiles/multiple_pub_sub.dir/clean:
 .PHONY : CMakeFiles/multiple_pub_sub.dir/clean
 
 CMakeFiles/multiple_pub_sub.dir/depend:
-	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/multiple_pub_sub.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/multiple_pub_sub.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/multiple_pub_sub.dir/depend
 

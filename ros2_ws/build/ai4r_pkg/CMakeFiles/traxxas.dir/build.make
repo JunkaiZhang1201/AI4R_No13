@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg
+CMAKE_SOURCE_DIR = /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg
+CMAKE_BINARY_DIR = /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg
 
 # Include any dependencies generated for this target.
 include CMakeFiles/traxxas.dir/depend.make
@@ -70,46 +70,46 @@ include CMakeFiles/traxxas.dir/progress.make
 include CMakeFiles/traxxas.dir/flags.make
 
 CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: CMakeFiles/traxxas.dir/flags.make
-CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/traxxas_node.cpp
+CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/traxxas_node.cpp
 CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o: CMakeFiles/traxxas.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o -MF CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o.d -o CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o -c /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/traxxas_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o -MF CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o.d -o CMakeFiles/traxxas.dir/src/traxxas_node.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/traxxas_node.cpp
 
 CMakeFiles/traxxas.dir/src/traxxas_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/traxxas.dir/src/traxxas_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/traxxas_node.cpp > CMakeFiles/traxxas.dir/src/traxxas_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/traxxas_node.cpp > CMakeFiles/traxxas.dir/src/traxxas_node.cpp.i
 
 CMakeFiles/traxxas.dir/src/traxxas_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/traxxas.dir/src/traxxas_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/src/traxxas_node.cpp -o CMakeFiles/traxxas.dir/src/traxxas_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/src/traxxas_node.cpp -o CMakeFiles/traxxas.dir/src/traxxas_node.cpp.s
 
 CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o: CMakeFiles/traxxas.dir/flags.make
-CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o: /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp
+CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp
 CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o: CMakeFiles/traxxas.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o -MF CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o.d -o CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o -c /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o -MF CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o.d -o CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp
 
 CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp > CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp > CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.i
 
 CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp -o CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/i2c_driver/i2c_driver.cpp -o CMakeFiles/traxxas.dir/drivers/src/i2c_driver/i2c_driver.cpp.s
 
 CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o: CMakeFiles/traxxas.dir/flags.make
-CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o: /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp
+CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o: /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp
 CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o: CMakeFiles/traxxas.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o -MF CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o.d -o CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o -c /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o -MF CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o.d -o CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.o -c /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp
 
 CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp > CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp > CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.i
 
 CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp -o CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg/drivers/src/pca9685/pca9685.cpp -o CMakeFiles/traxxas.dir/drivers/src/pca9685/pca9685.cpp.s
 
 # Object files for target traxxas
 traxxas_OBJECTS = \
@@ -131,12 +131,12 @@ traxxas: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 traxxas: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 traxxas: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 traxxas: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-traxxas: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_c.so
-traxxas: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_c.so
-traxxas: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_cpp.so
-traxxas: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_cpp.so
-traxxas: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_cpp.so
-traxxas: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_py.so
+traxxas: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_c.so
+traxxas: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_c.so
+traxxas: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_fastrtps_cpp.so
+traxxas: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_introspection_cpp.so
+traxxas: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_cpp.so
+traxxas: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_py.so
 traxxas: /opt/ros/humble/lib/liblibstatistics_collector.so
 traxxas: /opt/ros/humble/lib/librcl.so
 traxxas: /opt/ros/humble/lib/librmw_implementation.so
@@ -187,15 +187,15 @@ traxxas: /opt/ros/humble/lib/librmw.so
 traxxas: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 traxxas: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 traxxas: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
-traxxas: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_c.so
-traxxas: /home/ai4r/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_c.so
+traxxas: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_typesupport_c.so
+traxxas: /home/zekaicheong/asclinic-system/ros2_ws/install/ai4r_interfaces/lib/libai4r_interfaces__rosidl_generator_c.so
 traxxas: /opt/ros/humble/lib/librosidl_typesupport_c.so
 traxxas: /opt/ros/humble/lib/librcpputils.so
 traxxas: /opt/ros/humble/lib/librosidl_runtime_c.so
 traxxas: /opt/ros/humble/lib/librcutils.so
-traxxas: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+traxxas: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 traxxas: CMakeFiles/traxxas.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable traxxas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable traxxas"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/traxxas.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -207,6 +207,6 @@ CMakeFiles/traxxas.dir/clean:
 .PHONY : CMakeFiles/traxxas.dir/clean
 
 CMakeFiles/traxxas.dir/depend:
-	cd /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/src/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg /home/ai4r/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/traxxas.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/src/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg /home/zekaicheong/asclinic-system/ros2_ws/build/ai4r_pkg/CMakeFiles/traxxas.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/traxxas.dir/depend
 
