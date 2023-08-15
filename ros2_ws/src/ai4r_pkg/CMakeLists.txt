@@ -67,6 +67,12 @@ install(PROGRAMS
   scripts/oop_pub_py_node.py
   scripts/oop_sub_py_node.py
   scripts/keyboard_teleop.py
+  scripts/ImageProcessor.py
+  scripts/LineDetectorCircle.py
+  scripts/LineDetectorEllipse.py
+  scripts/test_yaml_params.py
+  scripts/Utils.py
+  scripts/policy_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

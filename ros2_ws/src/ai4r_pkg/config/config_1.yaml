@@ -1,0 +1,12 @@
+image_processor_node:
+  ros__parameters:    
+    hls_select:
+    - Saturation
+    s_range: 
+    - 100
+    - 255
+    shape: Circle
+    radius: 50
+    start_angle: 210
+    end_angle: 330
+    draw: False
