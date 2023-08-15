@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ai4r_interfaces/msg/EscAndSteering.msg
+// generated code does not contain a copyright notice
+
+
+module ai4r_interfaces {
+  module msg {
+    struct EscAndSteering {
+      float esc_percent;
+
+      float steering_percent;
+    };
+  };
+};
