@@ -1,7 +1,0 @@
-{
-  "package_name": "ai4r_interfaces",
-  "non_idl_tuples": [
-    "/home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces:msg/ServoPulseWidth.msg",
-    "/home/ai4r/asclinic-system/ros2_ws/src/ai4r_interfaces:msg/EscAndSteering.msg"
-  ]
-}
