@@ -1,0 +1,11 @@
+.line-detector-canvas
+{
+	position: relative;
+	aspect-ratio: 16/9;
+	width: 100%;
+	max-width: 960px;
+	background: #34495E;
+	margin: 10;
+	padding: 0px;
+	cursor: crosshair;
+}

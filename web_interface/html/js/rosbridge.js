@@ -3,7 +3,7 @@
 // -----------------------------------------
 const url_to_host = new URL(window.location.href);
 url_to_host.protocol = "ws";
-url_to_host.port = 8080;
+url_to_host.port = 9090;
 url_to_host.pathname = "/";
 // Hard-code a URL for development purposes
 //url_to_host.href = "ws://192.168.1.26:9090"
@@ -148,6 +148,12 @@ var motor_duty_cycle_subscriber = new ROSLIB.Topic({
 	messageType : "geometry_msgs/Vector3"
 });
 
+var traxxas_state_subscriber = new ROSLIB.Topic({
+	ros : ros,
+	name : "/traxxas_state",
+	messageType : "std_msgs/String"
+});
+
 // Subscriber callback functions
 // -----------------------------
 motor_duty_cycle_subscriber.subscribe(function(message)
@@ -157,5 +163,13 @@ motor_duty_cycle_subscriber.subscribe(function(message)
 
 	document.getElementById("leftWheelCurrentDutyCycle").innerHTML = message.x;
 	document.getElementById("rightWheelCurrentDutyCycle").innerHTML = message.y;
+});
+
+traxxas_state_subscriber.subscribe(function(message)
+{
+	console.log("Received message on " + traxxas_state_subscriber.name + ", with data = " + message.data );
+	//listener.unsubscribe();
+
+	document.getElementById("launchTraxxasStatus").innerHTML = message.data;
 });
 

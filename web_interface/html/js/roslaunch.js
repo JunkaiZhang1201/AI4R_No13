@@ -3,9 +3,19 @@ function roslaunch_outputLabelID_switchID_clearOtherLabels_clickOtherButtons(lau
 	// Convert the "launchName" to a script name for the php script
 	var scriptname_for_php = "";
 	scriptname_for_php = launchName;
+	var switch_value = 0
 
 	// Get the booleans for emulation
-	switch_value = document.getElementById(switchID).checked;
+	if (switchID)
+	{
+		if ( typeof(switchID) == "string" )
+		{
+			if (switchID.length > 0)
+			{
+				switch_value = document.getElementById(switchID).checked;
+			}
+		}
+	}
 
 	// Set the label to be sending
 	if(labelID){document.getElementById(labelID).innerHTML = "sending...";}
@@ -25,7 +35,10 @@ function roslaunch_outputLabelID_switchID_clearOtherLabels_clickOtherButtons(lau
 			{
 				if ( typeof(otherButtons) == "string" )
 				{
-					document.getElementById(otherButtons).click();
+					if (otherButtons.length > 0)
+					{
+						document.getElementById(otherButtons).click();
+					}
 				}
 				else if (otherButtons.constructor === Array)
 				{

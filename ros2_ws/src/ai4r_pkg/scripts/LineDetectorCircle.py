@@ -5,9 +5,9 @@ import cv2
 
 class LineDetectorCircle:
     def __init__(
-        self, radius = 50, start_angle=210, end_angle=330, draw = False):
-        self.start_angle = start_angle
-        self.end_angle = end_angle
+        self, radius = 50, start_angle=-60, end_angle=60, draw = False):
+        self.start_angle = start_angle + 270
+        self.end_angle = end_angle + 270
         self.draw = draw
 
         self.hash_table = self.create_circle_hash_table(radius)

@@ -24,6 +24,16 @@ class TraxxasNode : public rclcpp::Node {
             estop_sub_ = this->create_subscription<std_msgs::msg::UInt16>(
                 ESTOP, rclcpp::QoS(10), std::bind(&TraxxasNode::estopSubscriberCallback, this, std::placeholders::_1)
             );
+            line_detector_timeout_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+                LINE_DETECTOR_TIMEOUT_FLAG, rclcpp::QoS(10), std::bind(&TraxxasNode::lineDetectorTimeoutCallback, this, std::placeholders::_1)
+            );
+
+            // Publisher for the FSM state
+            state_publisher_ = this->create_publisher<std_msgs::msg::String>("traxxas_state", 10);
+
+            // Publisher for the current i2c commands
+            current_esc_pulse_width_publisher_ = this->create_publisher<ai4r_interfaces::msg::ServoPulseWidth>("traxxas_esc_current_pulse_width", 10);
+            current_steering_pulse_width_publisher_ = this->create_publisher<ai4r_interfaces::msg::ServoPulseWidth>("traxxas_steering_current_pulse_width", 10);
 
             // 100 Hz (same rate as servo board)
             timer_ = this->create_wall_timer(10ms, std::bind(&TraxxasNode::timer_callback, this));
@@ -35,9 +45,9 @@ class TraxxasNode : public rclcpp::Node {
 
             // Display the status
             if (!open_success) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
             } else {
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
             }
 
             // SET THE CONFIGURATION OF THE SERVO DRIVER
@@ -51,18 +61,22 @@ class TraxxasNode : public rclcpp::Node {
             
             // Report Servo Board Initialisation Result
             if (!result_servo_init)	{
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
             } else {
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS NODE] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
             }
         }
 
     private:
         // Private variables
         State currentState = State::Enabled;    // State initially Enabled
-        int estop = ENABLE; // Store last estop command (initially ENABLE) possibly change to enable_disable_request
+        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enable_disable_request
         int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
         int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
+        bool line_detector_timeout_flag = false;
+
+        // String for describing the reason for the most recent transition
+        std::string reason_for_previous_state_transition = "FSM initialization";
 
         // Traxxas node synchronous FSM: Periodically called at regular time intervals to trigger state transitions 
         // Moore machine implementation: outputs only based on the current state of the machine, regardless of the input
@@ -70,43 +84,57 @@ class TraxxasNode : public rclcpp::Node {
             // State transitions first
             switch (currentState) {
                 case State::Enabled:
-                    if (estop == DISABLE) {
+                    if (estop == ESTOP_DISABLE) {
                         currentState = State::Disabled;
+                        reason_for_previous_state_transition = "Disabled directly";
                         RCLCPP_INFO_STREAM(this->get_logger(), "Disabled directly" );
+                        estop = ESTOP_EMPTY;
                     } 
                     if (esc_empty_msg_count > MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) {
                         currentState = State::Disabled;
+                        reason_for_previous_state_transition = "Disabled because ESC channel timed out";
                         RCLCPP_INFO_STREAM(this->get_logger(), "Disabled because ESC channel timed out: Waited " << static_cast<int>(MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) << " cycles and no message received");
                     }
                     if (steering_empty_msg_count > MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) {
                         currentState = State::Disabled;
+                        reason_for_previous_state_transition = "Disabled because steering channel timed out";
                         RCLCPP_INFO_STREAM(this->get_logger(), "Disabled because steering channel timed out: Waited " << static_cast<int>(MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) << " cycles and no message received");
+                    }
+                    if (line_detector_timeout_flag) {
+                        currentState = State::Disabled;
+                        reason_for_previous_state_transition = "Disabled because received a line detector timeout flag";
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Disabled because received a line detector timeout flag");
+                        line_detector_timeout_flag = false;
                     }
                     // if (object_detected)
                     break;
                 case State::Disabled:
-                    if (estop == ENABLE) {
+                    if (estop == ESTOP_ENABLE) {
                         RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to enable" );
                         if (((ESC_NEUTRAL_PULSE_WIDTH-1) <= esc_set_point) && (esc_set_point <= (ESC_NEUTRAL_PULSE_WIDTH+1)))  {
-                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is set to neutral: safe to enable" );
+                            reason_for_previous_state_transition = "ESC is set to neutral, hence, safe to enable";
+                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is set to neutral, hence, safe to enable" );
                             currentState = State::Enabled;
                         } else {
-                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is NOT set to neutral: please set to neutral first before enabling" );
+                            reason_for_previous_state_transition = "ESC is NOT set to neutral; please set to neutral first before enabling";
+                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is NOT set to neutral; please set to neutral first before enabling" );
                         }
+                        estop = ESTOP_EMPTY;
                     }
+                    line_detector_timeout_flag = false;
                     break;
             }
 
             // Then enact resulting state behaviour
             switch (currentState) {
                 case State::Enabled:
-                    RCLCPP_INFO_STREAM(this->get_logger(), "ENABLED" );
+                    //RCLCPP_INFO_STREAM(this->get_logger(), "ENABLED" );
                     // Send messages to the motors
                     setSteeringPulseWidth();
                     setEscPulseWidth();
                     break;
                 case State::Disabled:
-                    RCLCPP_INFO_STREAM(this->get_logger(), "DISABLED" );
+                    //RCLCPP_INFO_STREAM(this->get_logger(), "DISABLED" );
                     // Stop ESC motor and return steering to centre position
                     setPWMSignal(STEERING_SERVO_CHANNEL, STEERING_NEUTRAL_PULSE_WIDTH);
                     setPWMSignal(ESC_SERVO_CHANNEL, ESC_NEUTRAL_PULSE_WIDTH);
@@ -125,6 +153,18 @@ class TraxxasNode : public rclcpp::Node {
                 esc_empty_msg_count++;
                 steering_empty_msg_count++;
             }
+
+            // Publish the current state
+            auto message = std_msgs::msg::String();
+            message.data = "Error";
+            switch (currentState) {
+                case State::Enabled:
+                    message.data = "Enabled (Reason: " + reason_for_previous_state_transition + ")";
+                    break;
+                case State::Disabled:
+                    message.data = "Disabled (Reason: " + reason_for_previous_state_transition + ")";
+            }
+            state_publisher_->publish(message);
         }
 
         // Send a pulse width on the specified channel.
@@ -134,7 +174,25 @@ class TraxxasNode : public rclcpp::Node {
 
             // Display if an error occurred
             if (!result) {
-                //RCLCPP_INFO_STREAM(this->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to set pulse width for servo at channel " << static_cast<int>(channel) );
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to set pulse width for servo at channel " << static_cast<int>(channel) );
+            }
+            else{
+                // Publish the value set
+                if (channel == STEERING_SERVO_CHANNEL)
+                {
+                    auto message = ai4r_interfaces::msg::ServoPulseWidth();
+                    message.channel = channel;
+                    message.pulse_width_in_microseconds = pulse_width_in_us;
+                    current_steering_pulse_width_publisher_->publish(message);
+                }
+                else if (channel == ESC_SERVO_CHANNEL)
+                {
+                    auto message = ai4r_interfaces::msg::ServoPulseWidth();
+                    message.channel = channel;
+                    message.pulse_width_in_microseconds = pulse_width_in_us;
+                    current_esc_pulse_width_publisher_->publish(message);
+                }
+
             }
         }
 
@@ -191,7 +249,7 @@ class TraxxasNode : public rclcpp::Node {
             uint16_t pulse_width_in_us = msg.pulse_width_in_microseconds;
 
             // Display the message received
-            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) );
+            //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) );
 
             // Limit the pulse width to be either:
             // > zero
@@ -228,7 +286,7 @@ class TraxxasNode : public rclcpp::Node {
             float new_value = percentageToPulseWidth(value);
 
             // Display the message received
-            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for steering servo (channel 0). Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
+            //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for steering servo. Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
            
             // Save value as the set point
             steering_set_point = new_value;
@@ -245,7 +303,7 @@ class TraxxasNode : public rclcpp::Node {
             float new_value = percentageToPulseWidth(value);
 
             // Display the message received
-            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for esc (channel 1). Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
+            //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for ESC. Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
 
             // Save value as the set point
             esc_set_point = new_value;
@@ -260,8 +318,8 @@ class TraxxasNode : public rclcpp::Node {
             esc_set_point = percentageToPulseWidth(msg.esc_percent);
 
             // Display the message received
-            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for steering servo (channel 0). Percentage command received = " << static_cast<float>(msg.steering_percent) << ", PWM sent to motors = " << static_cast<float>(steering_set_point) );
-            RCLCPP_INFO_STREAM(this->get_logger(), "Message received for esc (channel 1). Percentage command received = " << static_cast<float>(msg.esc_percent) << ", PWM sent to motors = " << static_cast<float>(esc_set_point) );
+            //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for steering servo. Percentage command received = " << static_cast<float>(msg.steering_percent) << ", PWM sent to motors = " << static_cast<float>(steering_set_point) );
+            //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for ESC. Percentage command received = " << static_cast<float>(msg.esc_percent) << ", PWM sent to motors = " << static_cast<float>(esc_set_point) );
 
             steering_empty_msg_count = 0;   // Message received so reset counter to 0
             esc_empty_msg_count = 0;    // Message received so reset counter to 0
@@ -273,14 +331,27 @@ class TraxxasNode : public rclcpp::Node {
             int command = msg.data;
 
             // Display the message received
-            if (command == DISABLE) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "ESTOP pressed" );
-                estop = DISABLE;
-            } else if (command == ENABLE) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "ESTOP released" );
-                estop = ENABLE;
+            if (command == ESTOP_DISABLE) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] \"ESTOP\" pressed" );
+                estop = ESTOP_DISABLE;
+            } else if (command == ESTOP_ENABLE) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] \"ESTOP\" released" );
+                estop = ESTOP_ENABLE;
             } else {
-                RCLCPP_INFO_STREAM(this->get_logger(), "Invalid estop command" );
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Invalid \"estop\" command" );
+            }
+        }
+
+        // For receiving estop commands
+        void lineDetectorTimeoutCallback(const std_msgs::msg::Bool & msg) {
+            // Extract flag command
+            bool timeout_flag = msg.data;
+
+            // Respond if the flag is true
+            if (timeout_flag)
+            {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Received message of line detector timeout event occurred." );
+                line_detector_timeout_flag = true;
             }
         }
 
@@ -292,6 +363,11 @@ class TraxxasNode : public rclcpp::Node {
         rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr esc_set_point_percent_sub_;
         rclcpp::Subscription<ai4r_interfaces::msg::EscAndSteering>::SharedPtr esc_and_steering_set_point_percent_sub_;
         rclcpp::Subscription<std_msgs::msg::UInt16>::SharedPtr estop_sub_;
+        rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr line_detector_timeout_sub_;
+
+        rclcpp::Publisher<std_msgs::msg::String>::SharedPtr state_publisher_;
+        rclcpp::Publisher<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr current_esc_pulse_width_publisher_;
+        rclcpp::Publisher<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr current_steering_pulse_width_publisher_;
 
 };
 
@@ -305,9 +381,9 @@ int main(int argc, char** argv) {
 	
 	// Display the status
 	if (!close_success) {
-		RCLCPP_INFO_STREAM(node->get_logger(), "[TEMPLATE I2C INTERNAL] FAILED to close I2C device named " << m_i2c_driver.get_device_name());
+		RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] FAILED to close I2C device named " << m_i2c_driver.get_device_name());
 	} else {
-		RCLCPP_INFO_STREAM(node->get_logger(), "[TEMPLATE I2C INTERNAL] Successfully closed device named " << m_i2c_driver.get_device_name());
+		RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] Successfully closed device named " << m_i2c_driver.get_device_name());
 	}
     
     rclcpp::shutdown();
