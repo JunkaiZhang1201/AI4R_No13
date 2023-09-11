@@ -11,19 +11,19 @@
 
 
 # USEFUL CONFIGURATIONS
-SHOULD_SET_RESPOND_TO_BROADCAST_PINGS="true"
-SHOULD_INSTALL_MOSH="true"
+SHOULD_SET_RESPOND_TO_BROADCAST_PINGS="false"
+SHOULD_INSTALL_MOSH="false"
 
 
 
 # I2C AND GPIO SETUP
-SHOULD_INSTALL_AND_SETUP_I2C="true"
-SHOULD_INSTALL_AND_SETUP_GPIO="true"
+SHOULD_INSTALL_AND_SETUP_I2C="false"
+SHOULD_INSTALL_AND_SETUP_GPIO="false"
 
 
 
 # ROS INSTALLATION:
-SHOULD_INSTALL_ROS="true"
+SHOULD_INSTALL_ROS="false"
 ROS_CONFIGURATION="desktop-full"
 # > Options for config:
 # "desktop-full"  (Recommended for a GUI-based operating system on a "normal" machine)
@@ -33,7 +33,7 @@ ROS_CONFIGURATION="desktop-full"
 
 
 # ASCLINIC SYSTEM SETUP:
-SHOULD_SETUP_ASCLINIC_SYSTEM_LOCALLY="true"
+SHOULD_SETUP_ASCLINIC_SYSTEM_LOCALLY="false"
 PATH_FOR_ASCLINIC_SYSTEM_LOCALLY="/home/$(whoami)/"
 # > Note for the "asclinic system locally":
 #   This is intended for the logged in user
@@ -42,22 +42,25 @@ PATH_FOR_ASCLINIC_SYSTEM_LOCALLY="/home/$(whoami)/"
 
 
 # RPLIDAR DEVICE SYMBOLIC LINK FOR USB PORT
-SHOULD_CONFIGURE_SYM_LINK_FOR_RPLIDAR_A1="true"
+SHOULD_CONFIGURE_SYM_LINK_FOR_RPLIDAR_A1="false"
 
 
 
 # CAMERA UTILITIES
-SHOULD_INSTALL_VIDEO_FOR_LINUX_UTILITIES="true"
+SHOULD_INSTALL_VIDEO_FOR_LINUX_UTILITIES="false"
 
 
 
 # OPEN CV CONTRIBUTED MODULES IN PYTHON
-SHOULD_INSTALL_OPENCV_CONTRIB_PYTHON="true"
+SHOULD_INSTALL_OPENCV_CONTRIB_PYTHON="false"
 
 
 
 # ASCLINIC SYSTEM WEB INTERFACE SETUP:
 SHOULD_SETUP_ASCLINIC_WEB_INTERFACE="false"
+ASCLINIC_BRANCH_FOR_WEB_INTERFACE="master"
+DEFAULT_AGENT_NAMESPACE="agent01"
+DEFAULT_ROS_DOMAIN_ID=1
 
 
 
@@ -172,18 +175,23 @@ else
 		then
 			ROS_VERSION_CODENAME="noetic"
 		else
-			# Inform the user
-			echo ""
-			echo ""
-			echo "[ERROR] The ROS installation cannot be completed because"
-			echo "        Ubuntu ${UBUNTU_VERSION_MAJOR}.${UBUNTU_VERSION_MINOR} is NOT supported by this"
-			echo "        installation script."
-			echo ""
-			echo ""
-			# Set the ROS installation flag to false
-			SHOULD_INSTALL_ROS="false"
-			# Set the ROS codename to nothing
-			ROS_VERSION_CODENAME="none"
+			if [[ ${UBUNTU_VERSION_MAJOR} = "22" ]]
+			then
+				ROS_VERSION_CODENAME="humble"
+			else
+				# Inform the user
+				echo ""
+				echo ""
+				echo "[ERROR] The ROS installation cannot be completed because"
+				echo "        Ubuntu ${UBUNTU_VERSION_MAJOR}.${UBUNTU_VERSION_MINOR} is NOT supported by this"
+				echo "        installation script."
+				echo ""
+				echo ""
+				# Set the ROS installation flag to false
+				SHOULD_INSTALL_ROS="false"
+				# Set the ROS codename to nothing
+				ROS_VERSION_CODENAME="none"
+			fi
 		fi
 	fi
 fi
@@ -532,7 +540,7 @@ then
 	echo ""
 	echo "NOW INSTALLING MOSH"
 
-	# Install the "i2c-tools" pacakge
+	# Install the "mosh" pacakge
 	echo ""
 	echo ">> Now installing \"mosh\" package:"
 	echo ""
@@ -571,6 +579,33 @@ then
 	echo ""
 	echo ">> Now adding you (i.e., the $(whoami) user) to the \"i2c\" group."
 	sudo usermod -a -G i2c $(whoami)
+
+	# Add a "udev" rule to give the "i2c" group access
+	# to "i2c-dev1"
+	# > First check if there is already such a rule
+	if [[ -f "/etc/udev/rules.d/50-i2c.rules" ]]
+	then
+		# > Inform the user
+		echo ""
+		echo ">> A \"udev\" rule named \"50-i2c.rules\" already exists and has the contents:"
+		echo ""
+		cat /etc/udev/rules.d/50-i2c.rules
+
+		echo ""
+		echo ">> This file will be removed"
+		sudo rm /etc/udev/rules.d/50-i2c.rules
+	fi
+	# > Inform the user
+	echo ""
+	echo ">> Now adding a \"udev\" rule named \"50-i2c.rules\" with the following content:"
+	# > Add the "udev" rule
+	echo "# udev rules for giving i2c bus access to the i2c group" | sudo tee -a /etc/udev/rules.d/50-i2c.rules
+	echo "# This allows use of certain i2c tools and libi2c functions without sudo" | sudo tee -a /etc/udev/rules.d/50-i2c.rules
+	echo "SUBSYSTEM==\"i2c\", KERNEL==\"i2c-1\", GROUP=\"i2c\", MODE=\"0660\"" | sudo tee -a /etc/udev/rules.d/50-i2c.rules
+	# > Display the "udev" rule that was added
+	echo ""
+	echo ">> As a double check, the full contents of \"50-i2c.rules\" is now:"
+	cat /etc/udev/rules.d/50-i2c.rules
 
 	# Inform the user, and check that the installation worked
 	echo ""
@@ -1016,7 +1051,17 @@ then
 	echo ""
 	sudo apt -y install ros-${ROS_VERSION_CODENAME}-rosbridge-server
 
-	# Install the apache web server and php
+	# Install the apache web server and php packages
+	echo ""
+	echo ">> Now installing the \"apache2\" and \"php\" packages:"
+	echo ""
+	sudo apt -y install apache2
+	sudo apt -y install php
+
+	# Install the ffmpeg package
+	# > It is not fully clear if this package is required.
+	# > Anecdotally, installing ffmpeg gives the www-data user
+	#   more access/permissions to a USB webcam
 	echo ""
 	echo ">> Now installing the \"apache2\" and \"php\" packages:"
 	echo ""
@@ -1043,10 +1088,11 @@ then
 	#       the web interface to access I2C,
 	#       GPIO and USB connected devices.
 	echo ""
-	echo ">> Now adding the \"www-data\" to the \"i2c\", \"gpiod\", and \"plugdev\" groups."
+	echo ">> Now adding the \"www-data\" to the \"i2c\", \"gpiod\", \"plugdev\", and \"video\" groups."
 	sudo usermod -a -G i2c www-data
 	sudo usermod -a -G gpiod www-data
 	sudo usermod -a -G plugdev www-data
+	sudo usermod -a -G video www-data
 
 	# Inform the user
 	echo ""
@@ -1090,6 +1136,10 @@ then
 	sudo rm -rf asclinic-system/
 	sudo -u www-data git clone https://gitlab.unimelb.edu.au/asclinic/asclinic-system.git
 
+	# Check out the requested branch of the repository
+	cd asclinic-system/
+	sudo -u www-data git checkout ${ASCLINIC_BRANCH_FOR_WEB_INTERFACE}
+
 	# Add this git repository as safe for non-owners to work with
 	# NOTE: This makes it easier to work with when
 	#       logged-in to the computer
@@ -1121,6 +1171,12 @@ then
 	sudo chmod -R g+w /var/www
 
 	# Copy across the website
+	echo ""
+	echo ">> Now copying across the web-interface file to the \"/var/www/html\" directory"
+	echo ""
+	# First, remove any contents already there
+	sudo rm -rf /var/www/html/*
+	# Now copy across from the repository
 	sudo -u www-data cp -R /home/asc-share/asclinic-system/web_interface/html/* /var/www/html/
 
 	# Clone the RPLidar package for ROS
@@ -1132,6 +1188,18 @@ then
 	sudo -u www-data git clone https://github.com/Slamtec/rplidar_ros.git
 	# Remove the ".git" folder to avoid having a nested git repository
 	sudo -u www-data rm -rf rplidar_ros/.git/
+
+	# Write the default Agent ID and ROS Domain ID files
+	echo ""
+	echo ">> Now writing the \"daulft_agent_id\" and \"default_ros_domain_id\" files."
+	echo ""
+	cd /home/asc-share/
+	# Add a new file with the default Agent ID
+	sudo rm -f /home/asc-share/default_agent_namespace
+	echo $DEFAULT_AGENT_NAMESPACE | sudo tee /home/asc-share/default_agent_namespace
+	sudo rm -f /home/asc-share/default_ros_domain_id
+	echo $DEFAULT_ROS_DOMAIN_ID | sudo tee /home/asc-share/default_ros_domain_id
+
 
 	# ======================================= #
 	# USEFUL COMMANDS

@@ -1,6 +1,6 @@
 function callGit_outputLabelID_shouldAppend_shouldConfirm(gitCommand, labelID, shouldAppend, shouldConfirm)
 {
-	// Convert the "gitCommand" to a heding string
+	// Convert the "gitCommand" to a heading string
 	var heading_string = "<p class=\"terminal-highligh-paragraph\">";
 	var scriptname_for_php = "";
 	var confirm_alert_text = "";
@@ -44,7 +44,13 @@ function callGit_outputLabelID_shouldAppend_shouldConfirm(gitCommand, labelID, s
 	{
 		heading_string = heading_string + "CATKIN_MAKE";
 		scriptname_for_php = scriptname_for_php + "catkin_make";
-		confirm_alert_text = confirm_alert_text + "This compiles the dfall-system code.";
+		confirm_alert_text = confirm_alert_text + "This compiles the ROS1 code.";
+	}
+	else if (gitCommand == "colcon_build")
+	{
+		heading_string = heading_string + "COLCON_BUILD";
+		scriptname_for_php = scriptname_for_php + "colcon_build";
+		confirm_alert_text = confirm_alert_text + "This compiles the ROS2 code.";
 	}
 	// Add the end paragraph tag to the heading string
 	heading_string = heading_string + "</p>";

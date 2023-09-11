@@ -34,6 +34,10 @@
 		$temp = shell_exec("./bashscripts/catkin_make_clean.sh");
 		$output = "<pre>$temp</pre>";
 	}
+	elseif ($scriptname == "colcon_build") {
+		$temp = shell_exec("./bashscripts/colcon_build.sh");
+		$output = "<pre>$temp</pre>";
+	}
 	//
 	// For the LAUNCH tab
 	elseif ($scriptname == "checkForRosMaster") {
@@ -45,6 +49,9 @@
 	//
 	elseif ($scriptname == "killRosAll") {
 		$output = shell_exec("./bashscripts/killRosAll.sh");
+	}
+	elseif ($scriptname == "killRos2All") {
+		$output = shell_exec("./bashscripts/killRos2All.sh");
 	}
 	elseif ($scriptname == "checkForRosAgent") {
 		$output = shell_exec("./bashscripts/checkForRosAgent.sh");
@@ -62,6 +69,18 @@
 	}
 	elseif ($scriptname == "rostopicList") {
 		$temp = shell_exec("./bashscripts/rostopicList.sh");
+		$output = "<pre>$temp</pre>";
+	}
+	elseif ($scriptname == "ros2nodeList") {
+		$temp = shell_exec("./bashscripts/ros2nodeList.sh");
+		$output = "<pre>$temp</pre>";
+	}
+	elseif ($scriptname == "ros2topicList") {
+		$temp = shell_exec("./bashscripts/ros2topicList.sh");
+		$output = "<pre>$temp</pre>";
+	}
+	elseif ($scriptname == "ros2serviceList") {
+		$temp = shell_exec("./bashscripts/ros2serviceList.sh");
 		$output = "<pre>$temp</pre>";
 	}
 	//

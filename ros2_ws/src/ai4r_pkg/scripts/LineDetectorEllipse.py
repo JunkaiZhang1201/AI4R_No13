@@ -5,9 +5,9 @@ import cv2
 
 class LineDetectorEllipse:
     def __init__(
-        self,a = 100, b = 50, start_angle=210, end_angle=330, draw = False):
-        self.start_angle = start_angle
-        self.end_angle = end_angle
+        self,a = 100, b = 50, start_angle=-60, end_angle=60, draw = False):
+        self.start_angle = start_angle + 270
+        self.end_angle = end_angle + 270
         self.draw = draw
         self.a = a
         self.b = b

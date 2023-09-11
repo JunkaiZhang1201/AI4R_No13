@@ -1,0 +1,63 @@
+<body>
+	<div class="body-container">
+		<main style="text-align:left;">
+
+			<br>
+			<hr class="hr-basic navy">
+			<br>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-button-cell">
+						<button
+							class="button-push navy fullwidth"
+							id ="buttonRos2NodeList"
+							onclick="callBashScript_outputLabelID_clearOtherLabels_clickOtherButtons('ros2nodeList', 'ros2nodeList', null, null)"
+							>
+							List ROS Nodes
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-info-cell" style="height:100px;vertical-align:text-top;">
+						<div id="ros2nodeList"></div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+			<hr class="hr-basic navy">
+			<br>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-button-cell">
+						<button
+							class="button-push navy fullwidth"
+							id ="buttonRos2TopicList"
+							onclick="callBashScript_outputLabelID_clearOtherLabels_clickOtherButtons('ros2topicList', 'ros2topicList', null, null)"
+							>
+							List ROS Topics
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-info-cell" style="height:100px;vertical-align:text-top;">
+						<div id="ros2topicList"></div>
+					</td>
+				</tr>
+			</table>
+
+		</main>
+	</div>
+</body>

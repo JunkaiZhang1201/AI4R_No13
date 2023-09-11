@@ -5,7 +5,7 @@
 source /opt/ros/noetic/setup.bash
 #source /home/asc-share/asclinic-system/catkin_ws/src/asclinic_pkg/launch/Config.sh
 #
-# Change directory to the dfall-system repository
+# Change directory to the git repository
 cd /home/asc-share/asclinic-system/catkin_ws
 #
 # Call catkin_make

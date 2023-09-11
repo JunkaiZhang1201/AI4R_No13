@@ -18,6 +18,8 @@ set(msg_files
   "msg/EscAndSteering.msg"
   "msg/ElementInt.msg"
   "msg/IntArray.msg"
+  "msg/PixelCoordsFloat32.msg"
+  "msg/ImagePointsArray.msg"
   #DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
   # etc
   )

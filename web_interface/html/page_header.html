@@ -9,13 +9,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
 	<!-- META DATA ABOUT ME AND MY PAGE -->
-	<title>D-FaLL Web Interface</title>
+	<title>ASClinic Web Interface</title>
 
-	<meta name="description" content="Web interface for controlling the D-FaLL-System" />
+	<meta name="description" content="Web interface for controlling the asclinic-system" />
 
 	<meta name="author" content="Paul N. Beuchat">
 
-	<meta name="keywords" content="ethz, D-ITET, IfA, dfall, D-FaLL" />
+	<meta name="keywords" content="ethz, D-ITET, IfA, UniMelb" />
 
 	<!-- Link the CSS files -->
 	<link rel="stylesheet" type="text/css" href="css/default.css?ver=0.1" />
@@ -23,6 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="css/body.css?ver=0.1" />
 	<link rel="stylesheet" type="text/css" href="css/buttons.css?ver=0.1" />
 	<link rel="stylesheet" type="text/css" href="css/switches.css?ver=0.1" />
+	<link rel="stylesheet" type="text/css" href="css/code.css?ver=0.1" />
 
 	<link rel="stylesheet" type="text/css" href="css/tabs_main.css?ver=0.1" />
 	<link rel="stylesheet" type="text/css" href="css/tabs_home.css?ver=0.1" />
@@ -40,8 +41,13 @@
 	<script src="js/sendRosMessage.js?ver=0.1"></script>
 
 	<!-- Link the JavaScript files for the ros bridge web socket -->
-	<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
-	<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
-	<script type="text/javascript" src="js/rosbridge.js?ver=0.1"></script>
+	<!--<script src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.js"></script>
+	<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.js"></script>
+-->
+	
+	<script src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+
+	<!-- Link the JavaScript file for using ros bridge on this page -->
+	<script type="text/javascript" src="js/rosbridge_for_ai4r.js?ver=0.1" defer></script>
 
 </head>

@@ -17,12 +17,18 @@ class Util:
         }
         return resolutions[resolution]
 
-    def set_capture_properties(self,capture, resolution, frame_rate, exposure = None):
+    def set_capture_properties(self,capture, resolution=None, frame_rate=None, auto_focus = None, focus = None, exposure = None):
         """Set video capture properties"""
-        width, height = self.get_resolution(resolution)
-        capture.set(cv2.CAP_PROP_FRAME_WIDTH, width)
-        capture.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
-        capture.set(cv2.CAP_PROP_FPS, frame_rate)
+        if resolution is not None:
+            width, height = self.get_resolution(resolution)
+            capture.set(cv2.CAP_PROP_FRAME_WIDTH, width)
+            capture.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+        if frame_rate is not None:
+            capture.set(cv2.CAP_PROP_FPS, frame_rate)
+        if auto_focus is not None:
+            capture.set(cv2.CAP_PROP_AUTOFOCUS, auto_focus)
+        if focus is not None:
+            capture.set(cv2.CAP_PROP_FOCUS, focus)
         if exposure is not None:
             capture.set(cv2.CAP_PROP_EXPOSURE, exposure)
 
@@ -40,10 +46,19 @@ class Util:
         """
         images: list of images to combine
         """
-        if len(images) == 1:
+        if len(images) == 0:
+            return images
+        elif len(images) == 1:
             return images[0]
+        elif len(images) == 2:
+            return cv2.bitwise_and(images[0],images[1])
+        elif len(images) == 2:
+            return cv2.bitwise_and(images[0],images[1])
+        elif len(images) == 3:
+            return cv2.bitwise_and(images[0],cv2.bitwise_and(images[1],images[2]))
         else:
-            return cv2.bitwise_and(*images)
+            #return cv2.bitwise_and(*images)
+            return images[0]
 
     # Morphological Operations
 

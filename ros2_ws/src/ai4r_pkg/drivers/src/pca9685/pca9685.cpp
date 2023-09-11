@@ -7,7 +7,7 @@
 // ----------------------------------------------------------------------------
 //     _    ____   ____ _ _       _          ____            _                 
 //    / \  / ___| / ___| (_)____ (_) ___    / ___| _   _ ___| |_ ___ ________  
-//   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \ 
+//   / _ \ \___ \| |   | | |  _ \| |/ __|___\___ \| | | / __| __/ _ \  _   _ \.
 //  / ___ \ ___) | |___| | | | | | | (_|_____|__) | |_| \__ \ ||  __/ | | | | |
 // /_/   \_\____/ \____|_|_|_| |_|_|\___|   |____/ \__, |___/\__\___|_| |_| |_|
 //                                                 |___/                       
@@ -105,7 +105,7 @@ bool PCA9685::read_register(uint8_t register_address, uint8_t * value)
 	// Initialise a uint8 array for the returned
 	// value of the requested register
 	int num_value_bytes = 1;
-	uint8_t value_array[num_value_bytes];
+	uint8_t value_array[1];
 
 	// Call the i2c_driver function
 	bool wasSuccessful = this->m_i2c_driver->write_data_then_read_data(this->m_i2c_address, num_write_bytes, write_array, num_value_bytes, value_array);
@@ -319,7 +319,7 @@ bool PCA9685::read_pwm_pulse_bytes(uint8_t register_address, uint16_t * on_bytes
 	// > Note that all pwm pulse details are
 	//   stored in 4 consecutive bytes
 	int num_value_bytes = 4;
-	uint8_t value_array[num_value_bytes];
+	uint8_t value_array[4];
 
 	// Read depending on whether auto-increment is enabled
 	bool wasSuccessful = false;
@@ -334,25 +334,25 @@ bool PCA9685::read_pwm_pulse_bytes(uint8_t register_address, uint16_t * on_bytes
 		uint8_t write_array1[] = { static_cast<uint8_t>(register_address + 0u) };
 		int num_write_bytes1 = sizeof(write_array1);
 		int num_value_bytes1 = 1;
-		uint8_t value_array1[num_value_bytes1];
+		uint8_t value_array1[1];
 		bool wasSuccessful1 = this->m_i2c_driver->write_data_then_read_data(this->m_i2c_address, num_write_bytes1, write_array1, num_value_bytes1, value_array1);
 		// > Read byte 2
 		uint8_t write_array2[] = { static_cast<uint8_t>(register_address + 1u) };
 		int num_write_bytes2 = sizeof(write_array2);
 		int num_value_bytes2 = 1;
-		uint8_t value_array2[num_value_bytes2];
+		uint8_t value_array2[1];
 		bool wasSuccessful2 = this->m_i2c_driver->write_data_then_read_data(this->m_i2c_address, num_write_bytes2, write_array2, num_value_bytes2, value_array2);
 		// > Read byte 3
 		uint8_t write_array3[] = { static_cast<uint8_t>(register_address + 2u) };
 		int num_write_bytes3 = sizeof(write_array3);
 		int num_value_bytes3 = 1;
-		uint8_t value_array3[num_value_bytes3];
+		uint8_t value_array3[1];
 		bool wasSuccessful3 = this->m_i2c_driver->write_data_then_read_data(this->m_i2c_address, num_write_bytes3, write_array3, num_value_bytes3, value_array3);
 		// > Read byte 4
 		uint8_t write_array4[] = { static_cast<uint8_t>(register_address + 3u) };
 		int num_write_bytes4 = sizeof(write_array4);
 		int num_value_bytes4 = 1;
-		uint8_t value_array4[num_value_bytes4];
+		uint8_t value_array4[1];
 		bool wasSuccessful4 = this->m_i2c_driver->write_data_then_read_data(this->m_i2c_address, num_write_bytes4, write_array4, num_value_bytes4, value_array4);
 		// > Put the bytes together
 		value_array[0] = value_array1[0];
@@ -394,14 +394,14 @@ bool PCA9685::reset()
 	if ((current_mode1 & PCA9685_MODE1_RESTART) == PCA9685_MODE1_RESTART)
 	{
 		// If it is, clear bit 4 (SLEEP).
-		uint8_t current_mode1_without_sleep = current_mode1 & (~PCA9685_MODE1_SLEEP);
+		//uint8_t current_mode1_without_sleep = current_mode1 & (~PCA9685_MODE1_SLEEP);
 		wasSuccessful2 = this->write_register(PCA9685_REGISTER_MODE1, PCA9685_MODE1_SLEEP, PCA9685_I2C_WRITE_ATTEMPTS_DEFAULT);
 		// And allow time for oscillator to stabilize (500 micro seconds).
 		usleep(500);
 	}
 
 	// STEP 3: Write logic 1 to bit 7 (RESTART) of MODE1 register.
-	uint8_t current_mode1_without_sleep_with_restart = (current_mode1 & (~PCA9685_MODE1_SLEEP)) | PCA9685_MODE1_RESTART;
+	//uint8_t current_mode1_without_sleep_with_restart = (current_mode1 & (~PCA9685_MODE1_SLEEP)) | PCA9685_MODE1_RESTART;
 	bool wasSuccessful3 = this->write_register(PCA9685_REGISTER_MODE1, PCA9685_MODE1_RESTART, PCA9685_I2C_WRITE_ATTEMPTS_DEFAULT);
 
 	// All PWM channels will restart and the RESTART bit will clear.

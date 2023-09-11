@@ -139,7 +139,7 @@
 	padding-left:    0px;
 	padding-right:   0px;
 	background: none;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .ros-button-cell
@@ -147,9 +147,19 @@
 	width: 50%;
 	padding-top:    5px;
 	padding-bottom: 5px;
-	padding-left:   0px;
-	padding-right:  0px;
-	//border: 1px solid black;
+	padding-left:   5px;
+	padding-right:  5px;
+	/*border: 1px solid black;*/
+}
+
+.ros-button-cell.left
+{
+	padding-left: 0px;
+}
+
+.ros-button-cell.right
+{
+	padding-right: 0px;
 }
 
 .ros-info-cell
@@ -157,7 +167,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	text-align: left;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 
@@ -169,7 +179,7 @@
 	padding-left:   0px;
 	padding-right:  0px;
 	text-align: left;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .switch-cell.pad-right
@@ -196,7 +206,7 @@
 	padding-left:    0px;
 	padding-right:   0px;
 	background: none;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .git-button-cell
@@ -207,7 +217,7 @@
 	padding-bottom:  5px;
 	padding-left:    5px;
 	padding-right:   5px;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .git-button-cell.left
@@ -242,7 +252,7 @@
 	margin-bottom: 3px;
 	padding:         0px;
 	background: none;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .terminal-label-cell
@@ -296,7 +306,7 @@
 .centered-table
 {
 	position: relative;
-	//table-layout: fixed;
+	/*table-layout: fixed;*/
 	border-spacing:  0px;
 	padding-top:     0px;
 	padding-bottom:  0px;
@@ -305,7 +315,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	background: none;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .centered-table-button-cell
@@ -315,13 +325,13 @@
 	padding-bottom:  5px;
 	padding-left:    5px;
 	padding-right:   5px;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .joystick-table
 {
 	position: relative;
-	//width: 100%;
+	/*width: 100%;*/
 	table-layout: fixed;
 	border-spacing:  5px;
 	padding-top:     5px;
@@ -343,7 +353,7 @@
 	padding-bottom: 5px;
 	padding-left:   5px;
 	padding-right:  5px;
-	//border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 
@@ -372,7 +382,7 @@
 
 	.ros-button-cell
 	{
-		width: 60%;
+		width: 50%;
 	}
 
 	.terminal-background
