@@ -10,8 +10,8 @@ image_processor_node:
     - 100
     - 255
     h_range:
-    - 30
-    - 140
+    - 0
+    - 255
     l_range:
     - 10
     - 255
