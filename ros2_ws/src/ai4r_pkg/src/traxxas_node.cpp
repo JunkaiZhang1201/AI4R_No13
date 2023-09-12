@@ -238,7 +238,7 @@ class TraxxasNode : public rclcpp::Node {
         }
 
         // Convert percentage to PWM
-        uint16_t percentageToPulseWidth(float value, minimum_pw=MINIMUM_PULSE_WIDTH_STEERING, maximum_pw=MAXIMUM_PULSE_WIDTH_STEERING) {
+        uint16_t percentageToPulseWidth(float value, uint16_t minimum_pw, uint16_t maximum_pw) {
             uint16_t pulse_width;
 
             if(value <= -100.0) {
@@ -247,7 +247,7 @@ class TraxxasNode : public rclcpp::Node {
                 pulse_width = maximum_pw;
             } else {
                 // Basic equation to convert between two ranges. Idea is add fraction of total range to the minimum value.
-                float float_in_range = minimum_pw + (MAXIMUM_PULSE_WIDTH - maximum_pw)*((value + 100)/200.0);
+                float float_in_range = minimum_pw + (maximum_pw - maximum_pw)*((value + 100)/200.0);
                 
                 // Convert from float to integer
                 pulse_width = static_cast<uint16_t>(lrintf32(float_in_range));
@@ -344,7 +344,7 @@ class TraxxasNode : public rclcpp::Node {
             float value = msg.data;
 
             // Convert to pulse width
-            float new_value = percentageToPulseWidth(value, minimum_pw=MINIMUM_PULSE_WIDTH_STEERING, maximum_pw=MAXIMUM_PULSE_WIDTH_STEERING);
+            float new_value = percentageToPulseWidth(value, MINIMUM_PULSE_WIDTH_STEERING, MAXIMUM_PULSE_WIDTH_STEERING);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for steering servo. Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
@@ -361,7 +361,7 @@ class TraxxasNode : public rclcpp::Node {
             float value = msg.data;
 
             // Convert to pulse width
-            float new_value = percentageToPulseWidth(value, minimum_pw=MINIMUM_PULSE_WIDTH_ESC, maximum_pw=MAXIMUM_PULSE_WIDTH_ESC);
+            float new_value = percentageToPulseWidth(value, MINIMUM_PULSE_WIDTH_ESC, MAXIMUM_PULSE_WIDTH_ESC);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for ESC. Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
@@ -375,8 +375,8 @@ class TraxxasNode : public rclcpp::Node {
         // For receiving percentage values to control both the steering (channel 0) and esc (channel 1)
         void escAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
             // Convert to pulse width and save value as the set point
-            steering_set_point = percentageToPulseWidth(msg.steering_percent, minimum_pw=MINIMUM_PULSE_WIDTH_STEERING, maximum_pw=MAXIMUM_PULSE_WIDTH_STEERING);
-            esc_set_point = percentageToPulseWidth(msg.esc_percent, minimum_pw=MINIMUM_PULSE_WIDTH_ESC, maximum_pw=MAXIMUM_PULSE_WIDTH_ESC);
+            steering_set_point = percentageToPulseWidth(msg.steering_percent, MINIMUM_PULSE_WIDTH_STEERING, MAXIMUM_PULSE_WIDTH_STEERING);
+            esc_set_point = percentageToPulseWidth(msg.esc_percent, MINIMUM_PULSE_WIDTH_ESC, MAXIMUM_PULSE_WIDTH_ESC);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for steering servo. Percentage command received = " << static_cast<float>(msg.steering_percent) << ", PWM sent to motors = " << static_cast<float>(steering_set_point) );
