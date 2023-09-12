@@ -51,8 +51,10 @@ constexpr float    SERVO_FREQUENCY = 100.0f;
 // width values in the range [MINIMUM_PULSE_WIDTH, MAXIMUM_PULSE_WIDTH]. When the node
 // starts up, the neutral values are sent to each servo channel.
 
-constexpr uint16_t MAXIMUM_PULSE_WIDTH =  1995;
-constexpr uint16_t MINIMUM_PULSE_WIDTH =  1005;
+constexpr uint16_t MAXIMUM_PULSE_WIDTH_ESC =  1990;
+constexpr uint16_t MINIMUM_PULSE_WIDTH_ESC =  1010;
+constexpr uint16_t MAXIMUM_PULSE_WIDTH_STEERING =  1950;
+constexpr uint16_t MINIMUM_PULSE_WIDTH_STEERING =  1050;
 constexpr uint16_t STEERING_NEUTRAL_PULSE_WIDTH =  1500;
 constexpr uint16_t ESC_NEUTRAL_PULSE_WIDTH =  1500;
 
