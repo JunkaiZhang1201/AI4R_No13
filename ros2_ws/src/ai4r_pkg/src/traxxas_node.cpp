@@ -238,19 +238,24 @@ class TraxxasNode : public rclcpp::Node {
         }
 
         // Convert percentage to PWM
-        uint16_t percentageToPulseWidth(float value, uint16_t minimum_pw, uint16_t maximum_pw) {
-            uint16_t pulse_width;
+        uint16_t percentageToPulseWidth(float percent_value, uint16_t minimum_pw, uint16_t maximum_pw) {
+            uint16_t pulse_width = 0;
 
-            if(value <= -100.0) {
+            if(percent_value <= -100.0) {
                 pulse_width = minimum_pw;
-            } else if(value >= 100.0) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] DEBUG 1" );
+            }
+            else if(percent_value >= 100.0) {
                 pulse_width = maximum_pw;
-            } else {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] DEBUG 2" );
+            }
+            else {
                 // Basic equation to convert between two ranges. Idea is add fraction of total range to the minimum value.
-                float float_in_range = static_cast<float>(minimum_pw) + static_cast<float>(maximum_pw - maximum_pw)*((value + 100.0)/200.0);
+                float float_in_range = static_cast<float>(minimum_pw) + (static_cast<float>(maximum_pw) - static_cast<float>(maximum_pw))*((percent_value + 100.0)/200.0);
                 
                 // Convert from float to integer
-                pulse_width = static_cast<uint16_t>(lrintf32(float_in_range));
+                pulse_width = static_cast<uint16_t>(float_in_range);
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] DEBUG 3" );
             }
 
             // Display the values for debugging purposes
