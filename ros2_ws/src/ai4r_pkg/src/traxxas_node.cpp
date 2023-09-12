@@ -243,19 +243,16 @@ class TraxxasNode : public rclcpp::Node {
 
             if(percent_value <= -100.0) {
                 pulse_width = minimum_pw;
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] DEBUG 1" );
             }
             else if(percent_value >= 100.0) {
                 pulse_width = maximum_pw;
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] DEBUG 2" );
             }
             else {
                 // Basic equation to convert between two ranges. Idea is add fraction of total range to the minimum value.
-                float float_in_range = static_cast<float>(minimum_pw) + (static_cast<float>(maximum_pw) - static_cast<float>(maximum_pw))*((percent_value + 100.0)/200.0);
+                float float_in_range = static_cast<float>(minimum_pw) + static_cast<float>(maximum_pw - minimum_pw)*((percent_value + 100.0)/200.0);
                 
                 // Convert from float to integer
                 pulse_width = static_cast<uint16_t>(float_in_range);
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] DEBUG 3" );
             }
 
             // Display the values for debugging purposes
