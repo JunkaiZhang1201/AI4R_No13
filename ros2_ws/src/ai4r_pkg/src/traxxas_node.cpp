@@ -247,7 +247,7 @@ class TraxxasNode : public rclcpp::Node {
                 pulse_width = maximum_pw;
             } else {
                 // Basic equation to convert between two ranges. Idea is add fraction of total range to the minimum value.
-                float float_in_range = minimum_pw + (maximum_pw - maximum_pw)*((value + 100)/200.0);
+                float float_in_range = static_cast<float>(minimum_pw) + static_cast<float>(maximum_pw - maximum_pw)*((value + 100.0)/200.0);
                 
                 // Convert from float to integer
                 pulse_width = static_cast<uint16_t>(lrintf32(float_in_range));
