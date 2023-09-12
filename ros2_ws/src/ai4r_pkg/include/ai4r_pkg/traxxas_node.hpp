@@ -54,8 +54,8 @@ constexpr float    SERVO_FREQUENCY = 100.0f;
 constexpr uint16_t MAXIMUM_PULSE_WIDTH_ESC =  1980;
 constexpr uint16_t MINIMUM_PULSE_WIDTH_ESC =  1020;
 
-constexpr uint16_t MAXIMUM_PULSE_WIDTH_STEERING =  1800;
-constexpr uint16_t MINIMUM_PULSE_WIDTH_STEERING =  1200;
+constexpr uint16_t MAXIMUM_PULSE_WIDTH_STEERING =  1750;
+constexpr uint16_t MINIMUM_PULSE_WIDTH_STEERING =  1250;
 
 constexpr uint16_t STEERING_NEUTRAL_PULSE_WIDTH =  1500;
 constexpr uint16_t ESC_NEUTRAL_PULSE_WIDTH =  1500;
