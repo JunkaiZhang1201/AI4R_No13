@@ -259,7 +259,7 @@ class TraxxasNode : public rclcpp::Node {
             }
 
             // Display the values for debugging purposes
-            RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] percentageToPulseWidth value = " << value << ", pw = " << pulse_width );
+            RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] percentageToPulseWidth value = " << percent_value << ", pw = " << pulse_width );
 
             return pulse_width;
         }
