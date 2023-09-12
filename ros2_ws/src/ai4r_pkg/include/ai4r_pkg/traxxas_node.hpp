@@ -27,16 +27,18 @@ using namespace std::chrono_literals;
 // Constants: 
 
 // Do not touch:
-constexpr uint16_t  STEERING_SERVO_CHANNEL = 12;
-constexpr uint16_t  ESC_SERVO_CHANNEL = 15;
+constexpr uint16_t  ESC_SERVO_CHANNEL      = 12;
+constexpr uint16_t  STEERING_SERVO_CHANNEL = 15;
 constexpr uint16_t  ESTOP_DISABLE = 0;
 constexpr uint16_t  ESTOP_ENABLE = 1;
+constexpr uint16_t  ESTOP_ENABLE_WITHOUT_GUARDS = 2;
 constexpr uint16_t  ESTOP_EMPTY = 999;
 
 // Enum class declaration for states of Finite State Machine
 enum class State {
     Disabled,
     Enabled,
+    EnabledWithoutGuards,
     // Add more states as needed
 };
 

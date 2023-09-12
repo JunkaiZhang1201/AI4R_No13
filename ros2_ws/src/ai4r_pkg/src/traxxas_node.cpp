@@ -83,11 +83,37 @@ class TraxxasNode : public rclcpp::Node {
         void timer_callback() {
             // State transitions first
             switch (currentState) {
+                case State::EnabledWithoutGuards:
+                    if (estop == ESTOP_DISABLE) {
+                        currentState = State::Disabled;
+                        reason_for_previous_state_transition = "Disabled directly";
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Disabled directly" );
+                        estop = ESTOP_EMPTY;
+                    }
+                    else if (estop == ESTOP_ENABLE) {
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to enable" );
+                        if (((ESC_NEUTRAL_PULSE_WIDTH-1) <= esc_set_point) && (esc_set_point <= (ESC_NEUTRAL_PULSE_WIDTH+1)))  {
+                            reason_for_previous_state_transition = "ESC is set to neutral, hence, safe to enable";
+                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is set to neutral, hence, safe to enable" );
+                            currentState = State::Enabled;
+                        } else {
+                            reason_for_previous_state_transition = "ESC is NOT set to neutral; please set to neutral first before enabling";
+                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is NOT set to neutral; please set to neutral first before enabling" );
+                        }
+                        estop = ESTOP_EMPTY;
+                    }
+                    break;
                 case State::Enabled:
                     if (estop == ESTOP_DISABLE) {
                         currentState = State::Disabled;
                         reason_for_previous_state_transition = "Disabled directly";
                         RCLCPP_INFO_STREAM(this->get_logger(), "Disabled directly" );
+                        estop = ESTOP_EMPTY;
+                    }
+                    else if (estop == ESTOP_ENABLE_WITHOUT_GUARDS) {
+                        currentState = State::EnabledWithoutGuards;
+                        reason_for_previous_state_transition = "Enabled directly without guards";
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Enabled directly without guards" );
                         estop = ESTOP_EMPTY;
                     } 
                     if (esc_empty_msg_count > MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) {
@@ -121,12 +147,24 @@ class TraxxasNode : public rclcpp::Node {
                         }
                         estop = ESTOP_EMPTY;
                     }
+                    else if (estop == ESTOP_ENABLE_WITHOUT_GUARDS) {
+                        currentState = State::EnabledWithoutGuards;
+                        reason_for_previous_state_transition = "Enabled directly without guards";
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Enabled directly without guards" );
+                        estop = ESTOP_EMPTY;
+                    }
                     line_detector_timeout_flag = false;
                     break;
             }
 
             // Then enact resulting state behaviour
             switch (currentState) {
+                case State::EnabledWithoutGuards:
+                    //RCLCPP_INFO_STREAM(this->get_logger(), "ENABLED witout GUARDS" );
+                    // Send messages to the motors
+                    setSteeringPulseWidth();
+                    setEscPulseWidth();
+                    break;
                 case State::Enabled:
                     //RCLCPP_INFO_STREAM(this->get_logger(), "ENABLED" );
                     // Send messages to the motors
@@ -158,6 +196,9 @@ class TraxxasNode : public rclcpp::Node {
             auto message = std_msgs::msg::String();
             message.data = "Error";
             switch (currentState) {
+                case State::EnabledWithoutGuards:
+                    message.data = "Enabled without guards (Reason: " + reason_for_previous_state_transition + ")";
+                    break;
                 case State::Enabled:
                     message.data = "Enabled (Reason: " + reason_for_previous_state_transition + ")";
                     break;
@@ -337,6 +378,9 @@ class TraxxasNode : public rclcpp::Node {
             } else if (command == ESTOP_ENABLE) {
                 RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] \"ESTOP\" released" );
                 estop = ESTOP_ENABLE;
+            } else if (command == ESTOP_ENABLE_WITHOUT_GUARDS) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] \"ESTOP\" released without guards" );
+                estop = ESTOP_ENABLE_WITHOUT_GUARDS;
             } else {
                 RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Invalid \"estop\" command" );
             }
