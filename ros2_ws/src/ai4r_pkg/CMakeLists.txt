@@ -67,7 +67,7 @@ install(PROGRAMS
   scripts/oop_pub_py_node.py
   scripts/oop_sub_py_node.py
   scripts/keyboard_teleop.py
-  scripts/ImageProcessor.py
+  scripts/line_detector_node.py
   scripts/LineDetectorCircle.py
   scripts/LineDetectorEllipse.py
   scripts/test_yaml_params.py

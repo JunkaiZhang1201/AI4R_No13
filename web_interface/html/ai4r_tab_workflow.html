@@ -326,6 +326,121 @@
 			</table>
 
 			<br>
+			<br>
+
+			The following button and field allow for rudimentary manual control of the ESC and steering commands that the Traxxas node sends to the car.
+
+			<br>
+
+			<table class="git-table">
+				<tr>
+					<td class="git-button-cell left">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonTraxxasEnableWithoutGuards"
+							onclick="sendTraxxasFSMStateRequest(2)"
+							>
+							Enable without Guards
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="git-button-cell right">
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<td colspan="3">ESC Commands</td>
+				</tr>
+				<tr>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasEscCommand1"
+							onclick="sendTraxxasEscSetpointRequest('inputTraxxasEscCommand1')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasEscCommand2"
+							onclick="sendTraxxasEscSetpointRequest('inputTraxxasEscCommand2')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasEscCommand3"
+							onclick="sendTraxxasEscSetpointRequest('inputTraxxasEscCommand3')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td><input id="inputTraxxasEscCommand1" type="number" min="-100" max="100" step="5" value="-100"></td>
+					<td><input id="inputTraxxasEscCommand2" type="number" min="-100" max="100" step="5" value="0"></td>
+					<td><input id="inputTraxxasEscCommand3" type="number" min="-100" max="100" step="5" value="100"></td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<td colspan="3">Steering Commands</td>
+				</tr>
+				<tr>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasSteeringCommand1"
+							onclick="sendTraxxasSteeringSetpointRequest('inputTraxxasSteeringCommand1')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasSteeringCommand2"
+							onclick="sendTraxxasSteeringSetpointRequest('inputTraxxasSteeringCommand2')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasSteeringCommand3"
+							onclick="sendTraxxasSteeringSetpointRequest('inputTraxxasSteeringCommand3')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td><input id="inputTraxxasSteeringCommand1" type="number" min="-100" max="100" step="5" value="-100"></td>
+					<td><input id="inputTraxxasSteeringCommand2" type="number" min="-100" max="100" step="5" value="0"></td>
+					<td><input id="inputTraxxasSteeringCommand3" type="number" min="-100" max="100" step="5" value="100"></td>
+				</tr>
+			</table>
+			
+
+			<br>
 
 			<br>
 			<hr class="hr-basic navy">
@@ -425,7 +540,7 @@
 						<button
 							class="button-push red fullwidth"
 							id="buttonKillLineDetectorNode"
-							onclick="killNodeViaProcessName_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('ImageProcessor', 'killLineDetectorNodeStatus', 'launchLineDetectorNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							onclick="killNodeViaProcessName_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('line_detector', 'killLineDetectorNodeStatus', 'launchLineDetectorNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
 							>
 							Kill Line Detector Node
 							<div class="div-for-button-highlight-on-touchscreen red"></div>

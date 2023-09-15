@@ -104,7 +104,20 @@ var request_policy_esc_setpoint = new ROSLIB.Topic(
 		messageType : "std_msgs/Float32"
 	});
 
+var request_traxxas_esc_setpoint_percent = new ROSLIB.Topic(
+	{
+		ros : ros,
+		name : base_namespace + "/" + "esc_set_point_percent",
+		messageType : "std_msgs/Float32"
+	});
 
+var request_traxxas_steering_setpoint_percent = new ROSLIB.Topic(
+	{
+		ros : ros,
+		name : base_namespace + "/" + "steering_set_point_percent",
+		messageType : "std_msgs/Float32"
+	});
+	
 
 // =================
 // PUBLISH FUNCTIONS
@@ -132,6 +145,28 @@ function sendPolicyEscSetpointRequest()
 	var float_message = new ROSLIB.Message({ data : setpoint_value });
 	request_policy_esc_setpoint.publish(float_message);
 	console.log("Requested the Policy Node to update its ESC setpoint to " + float_message.data + " %");
+}
+
+function sendTraxxasEscSetpointRequest(inputid)
+{
+	// Get the value from the input
+	var setpoint_selector = document.getElementById(inputid);
+    var setpoint_value = parseFloat(setpoint_selector.value);
+	// Build and send the message
+	var float_message = new ROSLIB.Message({ data : setpoint_value });
+	request_traxxas_esc_setpoint_percent.publish(float_message);
+	console.log("Requested the Traxxas Node to update its ESC setpoint to " + float_message.data + " %");
+}
+
+function sendTraxxasSteeringSetpointRequest(inputid)
+{
+	// Get the value from the input
+	var setpoint_selector = document.getElementById(inputid);
+    var setpoint_value = parseFloat(setpoint_selector.value);
+	// Build and send the message
+	var float_message = new ROSLIB.Message({ data : setpoint_value });
+	request_traxxas_steering_setpoint_percent.publish(float_message);
+	console.log("Requested the Traxxas Node to update its steering setpoint to " + float_message.data + " %");
 }
 
 

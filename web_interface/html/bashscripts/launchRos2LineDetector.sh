@@ -19,13 +19,13 @@ export DEFAULT_AGENT_NAMESPACE=$(cat /home/asc-share/default_agent_namespace)
 # Check whether the node already exists
 # > Note: the -q options converts the
 #   grep output to a true/false
-if ros2 node list --no-daemon | grep -q /ImageProcessor; then
+if ros2 node list --no-daemon | grep -q /line_detector; then
 	echo "Line Detector node is already running"
 else
 	# Remove the outfile if it exists
 	rm -f outfiles_for_nodes/outfile_for_line_detector.txt
 	# Launch the node
 	nohup ros2 launch ai4r_pkg line_detector_launch.py agent_ns:=$DEFAULT_AGENT_NAMESPACE > outfiles_for_nodes/outfile_for_line_detector.txt 2>&1 &
-	#nohup ros2 run ai4r_pkg ImageProcessor.py --ros-args --params-file /home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/config/config_for_line_detector.yaml > outfiles_for_nodes/outfile_for_line_detector.txt 2>&1 &
+	#nohup ros2 run ai4r_pkg line_detector_node.py --ros-args --params-file /home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/config/config_for_line_detector.yaml > outfiles_for_nodes/outfile_for_line_detector.txt 2>&1 &
 	echo "Line Detector node successfully launched"
 fi

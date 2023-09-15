@@ -31,7 +31,7 @@ def generate_launch_description():
         config_yaml_as_dict = yaml.safe_load(yaml_file)
 
     # Extract the element of the dictionary that needs to be passed to the node
-    parameters_dict_for_node = config_yaml_as_dict["image_processor_node"]["ros__parameters"]
+    parameters_dict_for_node = config_yaml_as_dict["line_detector_node"]["ros__parameters"]
 
     # Print the dictionary for debugging
     #print(parameters_dict_for_node)
@@ -40,8 +40,8 @@ def generate_launch_description():
     node=Node(
         package='ai4r_pkg',
         namespace=LaunchConfiguration('agent_ns'),
-        executable='ImageProcessor.py',
-        name='image_processor_node',
+        executable='line_detector_node.py',
+        name='line_detector_node',
         parameters = [parameters_dict_for_node]
     )
 
