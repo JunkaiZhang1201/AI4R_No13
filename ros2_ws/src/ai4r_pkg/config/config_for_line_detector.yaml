@@ -1,4 +1,4 @@
-image_processor_node:
+line_detector_node:
   ros__parameters:
     camera_resolution: 720p
     camera_frame_rate: 10

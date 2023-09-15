@@ -83,11 +83,37 @@ class TraxxasNode : public rclcpp::Node {
         void timer_callback() {
             // State transitions first
             switch (currentState) {
+                case State::EnabledWithoutGuards:
+                    if (estop == ESTOP_DISABLE) {
+                        currentState = State::Disabled;
+                        reason_for_previous_state_transition = "Disabled directly";
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Disabled directly" );
+                        estop = ESTOP_EMPTY;
+                    }
+                    else if (estop == ESTOP_ENABLE) {
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Attempting to enable" );
+                        if (((ESC_NEUTRAL_PULSE_WIDTH-1) <= esc_set_point) && (esc_set_point <= (ESC_NEUTRAL_PULSE_WIDTH+1)))  {
+                            reason_for_previous_state_transition = "ESC is set to neutral, hence, safe to enable";
+                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is set to neutral, hence, safe to enable" );
+                            currentState = State::Enabled;
+                        } else {
+                            reason_for_previous_state_transition = "ESC is NOT set to neutral; please set to neutral first before enabling";
+                            RCLCPP_INFO_STREAM(this->get_logger(), "ESC is NOT set to neutral; please set to neutral first before enabling" );
+                        }
+                        estop = ESTOP_EMPTY;
+                    }
+                    break;
                 case State::Enabled:
                     if (estop == ESTOP_DISABLE) {
                         currentState = State::Disabled;
                         reason_for_previous_state_transition = "Disabled directly";
                         RCLCPP_INFO_STREAM(this->get_logger(), "Disabled directly" );
+                        estop = ESTOP_EMPTY;
+                    }
+                    else if (estop == ESTOP_ENABLE_WITHOUT_GUARDS) {
+                        currentState = State::EnabledWithoutGuards;
+                        reason_for_previous_state_transition = "Enabled directly without guards";
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Enabled directly without guards" );
                         estop = ESTOP_EMPTY;
                     } 
                     if (esc_empty_msg_count > MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT) {
@@ -121,12 +147,24 @@ class TraxxasNode : public rclcpp::Node {
                         }
                         estop = ESTOP_EMPTY;
                     }
+                    else if (estop == ESTOP_ENABLE_WITHOUT_GUARDS) {
+                        currentState = State::EnabledWithoutGuards;
+                        reason_for_previous_state_transition = "Enabled directly without guards";
+                        RCLCPP_INFO_STREAM(this->get_logger(), "Enabled directly without guards" );
+                        estop = ESTOP_EMPTY;
+                    }
                     line_detector_timeout_flag = false;
                     break;
             }
 
             // Then enact resulting state behaviour
             switch (currentState) {
+                case State::EnabledWithoutGuards:
+                    //RCLCPP_INFO_STREAM(this->get_logger(), "ENABLED witout GUARDS" );
+                    // Send messages to the motors
+                    setSteeringPulseWidth();
+                    setEscPulseWidth();
+                    break;
                 case State::Enabled:
                     //RCLCPP_INFO_STREAM(this->get_logger(), "ENABLED" );
                     // Send messages to the motors
@@ -158,6 +196,9 @@ class TraxxasNode : public rclcpp::Node {
             auto message = std_msgs::msg::String();
             message.data = "Error";
             switch (currentState) {
+                case State::EnabledWithoutGuards:
+                    message.data = "Enabled without guards (Reason: " + reason_for_previous_state_transition + ")";
+                    break;
                 case State::Enabled:
                     message.data = "Enabled (Reason: " + reason_for_previous_state_transition + ")";
                     break;
@@ -197,19 +238,21 @@ class TraxxasNode : public rclcpp::Node {
         }
 
         // Convert percentage to PWM
-        uint16_t percentageToPulseWidth(float value) {
-            uint16_t pulse_width;
+        uint16_t percentageToPulseWidth(float percent_value, uint16_t minimum_pw, uint16_t maximum_pw) {
+            uint16_t pulse_width = 0;
 
-            if(value <= -100.0) {
-                pulse_width = MINIMUM_PULSE_WIDTH;
-            } else if(value >= 100.0) {
-                pulse_width = MAXIMUM_PULSE_WIDTH;
-            } else {
+            if(percent_value <= -100.0) {
+                pulse_width = minimum_pw;
+            }
+            else if(percent_value >= 100.0) {
+                pulse_width = maximum_pw;
+            }
+            else {
                 // Basic equation to convert between two ranges. Idea is add fraction of total range to the minimum value.
-                float float_in_range = MINIMUM_PULSE_WIDTH + (MAXIMUM_PULSE_WIDTH - MINIMUM_PULSE_WIDTH)*((value + 100)/200.0);
+                float float_in_range = static_cast<float>(minimum_pw) + static_cast<float>(maximum_pw - minimum_pw)*((percent_value + 100.0)/200.0);
                 
                 // Convert from float to integer
-                pulse_width = static_cast<uint16_t>(lrintf32(float_in_range));
+                pulse_width = static_cast<uint16_t>(float_in_range);
             }
 
             return pulse_width;
@@ -251,29 +294,49 @@ class TraxxasNode : public rclcpp::Node {
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) );
 
-            // Limit the pulse width to be either:
-            // > zero
-            // > in the range [1000,2000]
-            if (pulse_width_in_us > 0) {
-                if (pulse_width_in_us < MINIMUM_PULSE_WIDTH)
-                    pulse_width_in_us = MINIMUM_PULSE_WIDTH;
-                if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH)
-                    pulse_width_in_us = MAXIMUM_PULSE_WIDTH;
-            }
-
-            // Set servo PWM signal to this value
-            setPWMSignal(channel, pulse_width_in_us);
-
             // Save the set value
-            if(channel == STEERING_SERVO_CHANNEL) {
+            if(channel == ESC_SERVO_CHANNEL) {
+                // Limit the pulse width to be either:
+                // > zero
+                // > in the range [1000,2000]
+                if (pulse_width_in_us > 0) {
+                    if (pulse_width_in_us < MINIMUM_PULSE_WIDTH_ESC)
+                        pulse_width_in_us = MINIMUM_PULSE_WIDTH_ESC;
+                    if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH_ESC)
+                        pulse_width_in_us = MAXIMUM_PULSE_WIDTH_ESC;
+                }
+                else {
+                    pulse_width_in_us = 0;
+                }
+
+                // Set servo PWM signal to this value
+                setPWMSignal(channel, pulse_width_in_us);
+
+                esc_set_point = pulse_width_in_us;
+
+                esc_empty_msg_count = 0;    // Message received so reset counter to 0
+            }
+            else if(channel == STEERING_SERVO_CHANNEL) {
+                // Limit the pulse width to be either:
+                // > zero
+                // > in the range [1000,2000]
+                if (pulse_width_in_us > 0) {
+                    if (pulse_width_in_us < MINIMUM_PULSE_WIDTH_STEERING)
+                        pulse_width_in_us = MINIMUM_PULSE_WIDTH_STEERING;
+                    if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH_STEERING)
+                        pulse_width_in_us = MAXIMUM_PULSE_WIDTH_STEERING;
+                }
+                else {
+                    pulse_width_in_us = 0;
+                }
+
+                // Set servo PWM signal to this value
+                setPWMSignal(channel, pulse_width_in_us);
+
                 last_steering_command = pulse_width_in_us;
                 steering_set_point = pulse_width_in_us;
 
                 steering_empty_msg_count = 0;   // Message received so reset counter to 0
-            } else if(channel == ESC_SERVO_CHANNEL) {
-                esc_set_point = pulse_width_in_us;
-
-                esc_empty_msg_count = 0;    // Message received so reset counter to 0
             }
         }
 
@@ -283,7 +346,7 @@ class TraxxasNode : public rclcpp::Node {
             float value = msg.data;
 
             // Convert to pulse width
-            float new_value = percentageToPulseWidth(value);
+            float new_value = percentageToPulseWidth(value, MINIMUM_PULSE_WIDTH_STEERING, MAXIMUM_PULSE_WIDTH_STEERING);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for steering servo. Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
@@ -300,7 +363,7 @@ class TraxxasNode : public rclcpp::Node {
             float value = msg.data;
 
             // Convert to pulse width
-            float new_value = percentageToPulseWidth(value);
+            float new_value = percentageToPulseWidth(value, MINIMUM_PULSE_WIDTH_ESC, MAXIMUM_PULSE_WIDTH_ESC);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for ESC. Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
@@ -314,8 +377,8 @@ class TraxxasNode : public rclcpp::Node {
         // For receiving percentage values to control both the steering (channel 0) and esc (channel 1)
         void escAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
             // Convert to pulse width and save value as the set point
-            steering_set_point = percentageToPulseWidth(msg.steering_percent);
-            esc_set_point = percentageToPulseWidth(msg.esc_percent);
+            steering_set_point = percentageToPulseWidth(msg.steering_percent, MINIMUM_PULSE_WIDTH_STEERING, MAXIMUM_PULSE_WIDTH_STEERING);
+            esc_set_point = percentageToPulseWidth(msg.esc_percent, MINIMUM_PULSE_WIDTH_ESC, MAXIMUM_PULSE_WIDTH_ESC);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for steering servo. Percentage command received = " << static_cast<float>(msg.steering_percent) << ", PWM sent to motors = " << static_cast<float>(steering_set_point) );
@@ -337,6 +400,9 @@ class TraxxasNode : public rclcpp::Node {
             } else if (command == ESTOP_ENABLE) {
                 RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] \"ESTOP\" released" );
                 estop = ESTOP_ENABLE;
+            } else if (command == ESTOP_ENABLE_WITHOUT_GUARDS) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] \"ESTOP\" released without guards" );
+                estop = ESTOP_ENABLE_WITHOUT_GUARDS;
             } else {
                 RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Invalid \"estop\" command" );
             }

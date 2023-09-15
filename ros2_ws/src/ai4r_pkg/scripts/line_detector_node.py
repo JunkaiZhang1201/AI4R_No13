@@ -23,11 +23,11 @@ USB_PORT = 0
 
 
 # Create a class which inherits from the rclpy Node class. Each ROS2 Python node that you’ll write will be a superset of “rclpy.node.Node”.
-class ImageProcessor(Node):
+class LineDetectorNode(Node):
     # Create publishers, subscribers, and other ROS2 functionalities in the constructor
     def __init__(self):
         # Initialize the Node object, and we pass the node name to it.
-        super().__init__('image_processor_node')
+        super().__init__('line_detector_node')
 
         # Log the namespace
         self.get_logger().info("[LINE DETECTOR NODE] starting __init__ with node namespace = " + self.get_namespace())
@@ -395,7 +395,7 @@ class ImageProcessor(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = ImageProcessor() # Instantiate the custom node we’ve written
+    node = LineDetectorNode() # Instantiate the custom node we’ve written
     rclpy.spin(node)
     rclpy.shutdown()
 
