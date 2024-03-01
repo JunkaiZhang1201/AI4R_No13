@@ -27,8 +27,9 @@ using namespace std::chrono_literals;
 // Constants: 
 
 // Do not touch:
-constexpr uint16_t  ESC_SERVO_CHANNEL      = 12;
-constexpr uint16_t  STEERING_SERVO_CHANNEL = 15;
+constexpr uint16_t  SELECT_CHANNEL         = 12;
+constexpr uint16_t  ESC_SERVO_CHANNEL      = 13 //12;
+constexpr uint16_t  STEERING_SERVO_CHANNEL = 14 //15;
 constexpr uint16_t  ESTOP_DISABLE = 0;
 constexpr uint16_t  ESTOP_ENABLE = 1;
 constexpr uint16_t  ESTOP_ENABLE_WITHOUT_GUARDS = 2;
@@ -50,6 +51,8 @@ constexpr float    SERVO_FREQUENCY = 100.0f;
 // value defined below. Percent values are mapped from the range [-100,100] to pulse
 // width values in the range [MINIMUM_PULSE_WIDTH, MAXIMUM_PULSE_WIDTH]. When the node
 // starts up, the neutral values are sent to each servo channel.
+
+constexpr uint16_t SELECT_PULSE_WIDTH = 1696;
 
 constexpr uint16_t MAXIMUM_PULSE_WIDTH_ESC =  1980;
 constexpr uint16_t MINIMUM_PULSE_WIDTH_ESC =  1020;
