@@ -28,8 +28,8 @@ using namespace std::chrono_literals;
 
 // Do not touch:
 constexpr uint16_t  SELECT_CHANNEL         = 12;
-constexpr uint16_t  ESC_SERVO_CHANNEL      = 13 //12;
-constexpr uint16_t  STEERING_SERVO_CHANNEL = 14 //15;
+constexpr uint16_t  ESC_SERVO_CHANNEL      = 13;//12;
+constexpr uint16_t  STEERING_SERVO_CHANNEL = 14 ;//15;
 constexpr uint16_t  ESTOP_DISABLE = 0;
 constexpr uint16_t  ESTOP_ENABLE = 1;
 constexpr uint16_t  ESTOP_ENABLE_WITHOUT_GUARDS = 2;

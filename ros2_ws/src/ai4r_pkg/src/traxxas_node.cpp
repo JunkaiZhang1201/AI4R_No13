@@ -70,11 +70,11 @@ class TraxxasNode : public rclcpp::Node {
     private:
         // Private variables
         State currentState = State::Enabled;    // State initially Enabled
-        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enable_disable_request
+        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enab
         int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
         int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
         bool line_detector_timeout_flag = false;
-
+        
         // String for describing the reason for the most recent transition
         std::string reason_for_previous_state_transition = "FSM initialization";
 

@@ -1,3 +1,4 @@
+
 #include "ai4r_pkg/traxxas_node.hpp"
 #include "ai4r_pkg/topic_names.hpp"
 
@@ -73,7 +74,11 @@ class TraxxasNode : public rclcpp::Node {
         }
 
     private:
-
+        State currentState = State::Enabled;    // State initially Enabled
+        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enab
+        int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
+        int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
+        bool line_detector_timeout_flag = false;
         // Send a pulse width on the specified channel.
         void setPWMSignal(uint16_t channel, uint16_t pulse_width_in_us) {
             // Call the function to set the desired pulse width
@@ -104,7 +109,7 @@ class TraxxasNode : public rclcpp::Node {
         }
 
         // For receiving PWM values to control the steering (channel 0) or esc (channel 1)
-        void selectSubscriberCallback(const std_msgs::Bool & msg) {
+        void selectSubscriberCallback(const std_msgs::msg::Bool & msg) {
             // Extract the channel and pulse width from the message
             bool enable_sel = msg.data;
 
@@ -124,12 +129,6 @@ class TraxxasNode : public rclcpp::Node {
 
             // Set servo PWM signal to this value
             setPWMSignal(12, pulse_width);
-
-            // Save the set value
-            if(channel == STEERING_SERVO_CHANNEL) {
-                last_sel_command = pulse_width;
-                sel_empty_msg_count = 0;   // Message received so reset counter to 0
-            }
         }
         // For receiving PWM values to control the steering (channel 0) or esc (channel 1)
         void servoSubscriberCallback(const ai4r_interfaces::msg::ServoPulseWidth & msg) {
@@ -145,30 +144,30 @@ class TraxxasNode : public rclcpp::Node {
             // > in the range [1000,2000]
 
             if (pulse_width_in_us > 0) {
-                if (pulse_width_in_us < MINIMUM_PULSE_WIDTH)
-                    pulse_width_in_us = MINIMUM_PULSE_WIDTH;
-                if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH)
-                    pulse_width_in_us = MAXIMUM_PULSE_WIDTH;
+                if (pulse_width_in_us < MINIMUM_PULSE_WIDTH_ESC)
+                    pulse_width_in_us = MINIMUM_PULSE_WIDTH_ESC;
+                if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH_ESC)
+                    pulse_width_in_us = MAXIMUM_PULSE_WIDTH_ESC;
             }
 
             // Set servo PWM signal to this value
             setPWMSignal(channel, pulse_width_in_us);
+            if (channel ==  ESC_SERVO_CHANNEL) {
+                esc_set_point = pulse_width_in_us;
 
-            // Save the set value
-            if(channel == STEERING_SERVO_CHANNEL) {
+                esc_empty_msg_count = 0; 
+            }
+            else if (channel == STEERING_SERVO_CHANNEL) {
                 last_steering_command = pulse_width_in_us;
                 steering_set_point = pulse_width_in_us;
 
                 steering_empty_msg_count = 0;   // Message received so reset counter to 0
-            } else if(channel == ESC_SERVO_CHANNEL) {
-                esc_set_point = pulse_width_in_us;
-
-                esc_empty_msg_count = 0;    // Message received so reset counter to 0
             }
+
         }
 
         rclcpp::Subscription<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr servo_pulse_width_sub_;
-        rclcpp::Subscription<std_msgs::msg::Bool>::Shared Ptr select_pulse_width_sub_;
+        rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr select_pulse_width_sub_;
         rclcpp::Publisher<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr current_esc_pulse_width_publisher_;
         rclcpp::Publisher<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr current_steering_pulse_width_publisher_;
 
