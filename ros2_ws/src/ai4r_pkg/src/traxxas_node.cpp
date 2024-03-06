@@ -70,7 +70,7 @@ class TraxxasNode : public rclcpp::Node {
     private:
         // Private variables
         State currentState = State::Enabled;    // State initially Enabled
-        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enab
+        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enable_disable_request
         int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
         int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
         bool line_detector_timeout_flag = false;
@@ -300,10 +300,10 @@ class TraxxasNode : public rclcpp::Node {
                 // > zero
                 // > in the range [1000,2000]
                 if (pulse_width_in_us > 0) {
-                    if (pulse_width_in_us < MINIMUM_PULSE_WIDTH_ESC)
-                        pulse_width_in_us = MINIMUM_PULSE_WIDTH_ESC;
-                    if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH_ESC)
-                        pulse_width_in_us = MAXIMUM_PULSE_WIDTH_ESC;
+                    if (pulse_width_in_us < ESC_MINIMUM_PULSE_WIDTH)
+                        pulse_width_in_us = ESC_MINIMUM_PULSE_WIDTH;
+                    if (pulse_width_in_us > ESC_MAXIMUM_PULSE_WIDTH)
+                        pulse_width_in_us = ESC_MAXIMUM_PULSE_WIDTH;
                 }
                 else {
                     pulse_width_in_us = 0;
@@ -321,10 +321,10 @@ class TraxxasNode : public rclcpp::Node {
                 // > zero
                 // > in the range [1000,2000]
                 if (pulse_width_in_us > 0) {
-                    if (pulse_width_in_us < MINIMUM_PULSE_WIDTH_STEERING)
-                        pulse_width_in_us = MINIMUM_PULSE_WIDTH_STEERING;
-                    if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH_STEERING)
-                        pulse_width_in_us = MAXIMUM_PULSE_WIDTH_STEERING;
+                    if (pulse_width_in_us < STEERING_MINIMUM_PULSE_WIDTH)
+                        pulse_width_in_us = STEERING_MINIMUM_PULSE_WIDTH;
+                    if (pulse_width_in_us > STEERING_MAXIMUM_PULSE_WIDTH)
+                        pulse_width_in_us = STEERING_MAXIMUM_PULSE_WIDTH;
                 }
                 else {
                     pulse_width_in_us = 0;
@@ -346,7 +346,7 @@ class TraxxasNode : public rclcpp::Node {
             float value = msg.data;
 
             // Convert to pulse width
-            float new_value = percentageToPulseWidth(value, MINIMUM_PULSE_WIDTH_STEERING, MAXIMUM_PULSE_WIDTH_STEERING);
+            float new_value = percentageToPulseWidth(value, STEERING_MINIMUM_PULSE_WIDTH, STEERING_MAXIMUM_PULSE_WIDTH);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for steering servo. Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
@@ -363,7 +363,7 @@ class TraxxasNode : public rclcpp::Node {
             float value = msg.data;
 
             // Convert to pulse width
-            float new_value = percentageToPulseWidth(value, MINIMUM_PULSE_WIDTH_ESC, MAXIMUM_PULSE_WIDTH_ESC);
+            float new_value = percentageToPulseWidth(value, ESC_MINIMUM_PULSE_WIDTH, ESC_MAXIMUM_PULSE_WIDTH);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for ESC. Percentage command received = " << static_cast<float>(value) << ", PWM sent to motors = " << static_cast<float>(new_value) );
@@ -377,8 +377,8 @@ class TraxxasNode : public rclcpp::Node {
         // For receiving percentage values to control both the steering (channel 0) and esc (channel 1)
         void escAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
             // Convert to pulse width and save value as the set point
-            steering_set_point = percentageToPulseWidth(msg.steering_percent, MINIMUM_PULSE_WIDTH_STEERING, MAXIMUM_PULSE_WIDTH_STEERING);
-            esc_set_point = percentageToPulseWidth(msg.esc_percent, MINIMUM_PULSE_WIDTH_ESC, MAXIMUM_PULSE_WIDTH_ESC);
+            steering_set_point = percentageToPulseWidth(msg.steering_percent, STEERING_MINIMUM_PULSE_WIDTH, STEERING_MAXIMUM_PULSE_WIDTH);
+            esc_set_point = percentageToPulseWidth(msg.esc_percent, ESC_MINIMUM_PULSE_WIDTH, ESC_MAXIMUM_PULSE_WIDTH);
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for steering servo. Percentage command received = " << static_cast<float>(msg.steering_percent) << ", PWM sent to motors = " << static_cast<float>(steering_set_point) );

@@ -3,9 +3,7 @@
 #include "ai4r_pkg/topic_names.hpp"
 
 // Static Global Variables
-static uint16_t steering_set_point = STEERING_NEUTRAL_PULSE_WIDTH;
-static uint16_t last_steering_command = STEERING_NEUTRAL_PULSE_WIDTH;
-static uint16_t esc_set_point = ESC_NEUTRAL_PULSE_WIDTH;
+
 
 class TraxxasNode : public rclcpp::Node {
     public:
@@ -13,36 +11,16 @@ class TraxxasNode : public rclcpp::Node {
             servo_pulse_width_sub_ = this->create_subscription<ai4r_interfaces::msg::ServoPulseWidth>(
                 SERVO_PW, rclcpp::QoS(10), std::bind(&TraxxasNode::servoSubscriberCallback, this, std::placeholders::_1)
             );
-            select_pulse_width_sub_ = this->create_subscription<std_msgs::msg::Bool>(
-                SELECT_PW, rclcpp::QoS(10), std::bind(&TraxxasNode::selectSubscriberCallback, this, std::placeholders::_1)
+
+            mux_select_slave_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+                MUX_SELECT_SLAVE, rclcpp::QoS(10), std::bind(&TraxxasNode::muxSelectSlaveSubscriberCallback, this, std::placeholders::_1)
             );
-            // steering_set_point_percent_sub_ = this->create_subscription<std_msgs::msg::Float32>(
-            //     STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::steeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
-            // );
-            // esc_set_point_percent_sub_ = this->create_subscription<std_msgs::msg::Float32>(
-            //     ESC_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::escSetPointPercentSubscriberCallback, this, std::placeholders::_1)
-            // );
-            // esc_and_steering_set_point_percent_sub_ = this->create_subscription<ai4r_interfaces::msg::EscAndSteering>(
-            //     ESC_AND_STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::escAndSteeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
-            // );
-            // estop_sub_ = this->create_subscription<std_msgs::msg::UInt16>(
-            //     ESTOP, rclcpp::QoS(10), std::bind(&TraxxasNode::estopSubscriberCallback, this, std::placeholders::_1)
-            // );
-            // line_detector_timeout_sub_ = this->create_subscription<std_msgs::msg::Bool>(
-            //     LINE_DETECTOR_TIMEOUT_FLAG, rclcpp::QoS(10), std::bind(&TraxxasNode::lineDetectorTimeoutCallback, this, std::placeholders::_1)
-            // );
-
-            // select_set_sub = this->create_subscription<ai4r_interfaces::msg::Ser
-
-            // // Publisher for the FSM state
-            // state_publisher_ = this->create_publisher<std_msgs::msg::String>("traxxas_state", 10);
 
             // Publisher for the current i2c commands
             current_esc_pulse_width_publisher_ = this->create_publisher<ai4r_interfaces::msg::ServoPulseWidth>("traxxas_esc_current_pulse_width", 10);
             current_steering_pulse_width_publisher_ = this->create_publisher<ai4r_interfaces::msg::ServoPulseWidth>("traxxas_steering_current_pulse_width", 10);
 
-            // // 100 Hz (same rate as servo board)
-            // timer_ = this->create_wall_timer(10ms, std::bind(&TraxxasNode::timer_callback, this));
+            current_mux_select_pulse_width_publisher_ = this->create_publisher<ai4r_interfaces::msg::ServoPulseWidth>("current_mux_select_pulse_width", 10);
 
             // Open the I2C device
             // > Note that the I2C driver is already instantiated
@@ -74,11 +52,7 @@ class TraxxasNode : public rclcpp::Node {
         }
 
     private:
-        State currentState = State::Enabled;    // State initially Enabled
-        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enab
-        int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
-        int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
-        bool line_detector_timeout_flag = false;
+
         // Send a pulse width on the specified channel.
         void setPWMSignal(uint16_t channel, uint16_t pulse_width_in_us) {
             // Call the function to set the desired pulse width
@@ -104,32 +78,39 @@ class TraxxasNode : public rclcpp::Node {
                     message.pulse_width_in_microseconds = pulse_width_in_us;
                     current_esc_pulse_width_publisher_->publish(message);
                 }
-
+                else if (channel == MUX_SELECT_CHANNEL)
+                {
+                    auto message = ai4r_interfaces::msg::ServoPulseWidth();
+                    message.channel = channel;
+                    message.pulse_width_in_microseconds = pulse_width_in_us;
+                    current_mux_select_pulse_width_publisher_ ->publish(message);
+                }
+                // else {
+                //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Not a registered channel " << static_cast<int>(channel) );
+                // }
             }
         }
 
-        // For receiving PWM values to control the steering (channel 0) or esc (channel 1)
-        void selectSubscriberCallback(const std_msgs::msg::Bool & msg) {
-            // Extract the channel and pulse width from the message
-            bool enable_sel = msg.data;
+        // For receiving boolean value to activate the switch (select slave) or not
+        void muxSelectSlaveSubscriberCallback(const std_msgs::msg::Bool & msg) {
+            // Extract the boolean
+            bool select_slave = msg.data;
 
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) );
 
-            // Limit the pulse width to be either:
-            // > zero
-            // > in the range [1000,2000]
-            uint16_t pulse_width = 1000;
-            if (enable_sel == true) {
-              pulse_width = 2000;
+            uint16_t pulse_width_in_us;
+            if (select_slave == true) {
+                pulse_width_in_us = MUX_SELECT_SLAVE_PULSE_WIDTH;
             }
             else {
-                pulse_width = 1000;
+                pulse_width_in_us = MUX_SELECT_MASTER_PULSE_WIDTH;
             }
 
             // Set servo PWM signal to this value
-            setPWMSignal(12, pulse_width);
+            setPWMSignal(MUX_SELECT_CHANNEL, pulse_width_in_us);
         }
+
         // For receiving PWM values to control the steering (channel 0) or esc (channel 1)
         void servoSubscriberCallback(const ai4r_interfaces::msg::ServoPulseWidth & msg) {
             // Extract the channel and pulse width from the message
@@ -139,37 +120,15 @@ class TraxxasNode : public rclcpp::Node {
             // Display the message received
             //RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Message received for servo with channel = " << static_cast<int>(channel) << ", and pulse width [us] = " << static_cast<int>(pulse_width_in_us) );
 
-            // Limit the pulse width to be either:
-            // > zero
-            // > in the range [1000,2000]
-
-            if (pulse_width_in_us > 0) {
-                if (pulse_width_in_us < MINIMUM_PULSE_WIDTH_ESC)
-                    pulse_width_in_us = MINIMUM_PULSE_WIDTH_ESC;
-                if (pulse_width_in_us > MAXIMUM_PULSE_WIDTH_ESC)
-                    pulse_width_in_us = MAXIMUM_PULSE_WIDTH_ESC;
-            }
-
             // Set servo PWM signal to this value
             setPWMSignal(channel, pulse_width_in_us);
-            if (channel ==  ESC_SERVO_CHANNEL) {
-                esc_set_point = pulse_width_in_us;
-
-                esc_empty_msg_count = 0; 
-            }
-            else if (channel == STEERING_SERVO_CHANNEL) {
-                last_steering_command = pulse_width_in_us;
-                steering_set_point = pulse_width_in_us;
-
-                steering_empty_msg_count = 0;   // Message received so reset counter to 0
-            }
-
         }
 
         rclcpp::Subscription<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr servo_pulse_width_sub_;
-        rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr select_pulse_width_sub_;
+        rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr mux_select_slave_sub_;
         rclcpp::Publisher<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr current_esc_pulse_width_publisher_;
         rclcpp::Publisher<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr current_steering_pulse_width_publisher_;
+        rclcpp::Publisher<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr current_mux_select_pulse_width_publisher_;
 
 };
 

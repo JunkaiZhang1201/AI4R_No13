@@ -26,10 +26,10 @@ using namespace std::chrono_literals;
 
 // Constants: 
 
-// Do not touch:
-constexpr uint16_t  SELECT_CHANNEL         = 12;
-constexpr uint16_t  ESC_SERVO_CHANNEL      = 13;//12;
-constexpr uint16_t  STEERING_SERVO_CHANNEL = 14 ;//15;
+constexpr uint16_t  MUX_SELECT_CHANNEL     = 13;
+
+constexpr uint16_t  ESC_SERVO_CHANNEL      = 12;
+constexpr uint16_t  STEERING_SERVO_CHANNEL = 15;
 constexpr uint16_t  ESTOP_DISABLE = 0;
 constexpr uint16_t  ESTOP_ENABLE = 1;
 constexpr uint16_t  ESTOP_ENABLE_WITHOUT_GUARDS = 2;
@@ -44,24 +44,34 @@ enum class State {
 };
 
 // Can be changed:
-constexpr float    SERVO_FREQUENCY = 100.0f;
+constexpr float    SERVO_FREQUENCY = 100.0f;    // PCA9685 outputs 200 Hz by default
+
+// Pulse widths are in us (micro seconds).
+
+// Some of these constants may not be used, serving only as convenient documentation for input signal specifications for the mux.
+// Note there are no requirements or restrictions on the master (M1-M4) and slave (S1-S4) channel inputs, only the select (SEL) channel input.
+// PWM signal on the select channel must be 10 - 330 Hz pulse rate (PWM freq).
+constexpr uint16_t MUX_SELECT_MAXIMUM_PULSE_WIDTH = 2500;   // Input PWM signal cannot be more than this
+constexpr uint16_t MUX_SELECT_MINIMUM_PULSE_WIDTH = 500;    // Input PWM signal cannot be less than this
+constexpr uint16_t MUX_SELECT_DEFAULT_THRESHOLD_PULSE_WIDTH = 1696; // Default threshold parameter
+constexpr uint16_t MUX_SELECT_MAXIMUM_THRESHOLD_PULSE_WIDTH = 2100; // Threshold parameter cannot be more than this
+constexpr uint16_t MUX_SELECT_MINIMUM_THRESHOLD_PULSE_WIDTH = 900;  // Threshold parameter cannot be less than this
+constexpr uint16_t MUX_SELECT_THRESHOLD_PULSE_WIDTH_MULTIPLE = 16;  // Threshold parameter must be a multiple of 16 us.
+// When the Inversion parameter is disabled (by default), pulse width above the threshold selects Slave as input (i.e. 'activites' the switch)
+constexpr uint16_t MUX_SELECT_MASTER_PULSE_WIDTH = 1000; // Pulse width to select Master as the input
+constexpr uint16_t MUX_SELECT_SLAVE_PULSE_WIDTH = 2000; // Pulse width to select Slave as the input
 
 // These define the min, max and neutral point for each of the servo channels. Any
 // Values received outside of these will be restricted to the minimum or maximum
 // value defined below. Percent values are mapped from the range [-100,100] to pulse
 // width values in the range [MINIMUM_PULSE_WIDTH, MAXIMUM_PULSE_WIDTH]. When the node
 // starts up, the neutral values are sent to each servo channel.
-
-constexpr uint16_t SELECT_PULSE_WIDTH = 1696;
-
-constexpr uint16_t MAXIMUM_PULSE_WIDTH_ESC =  1980;
-constexpr uint16_t MINIMUM_PULSE_WIDTH_ESC =  1020;
-
-constexpr uint16_t MAXIMUM_PULSE_WIDTH_STEERING =  1750;
-constexpr uint16_t MINIMUM_PULSE_WIDTH_STEERING =  1250;
-
-constexpr uint16_t STEERING_NEUTRAL_PULSE_WIDTH =  1500;
+constexpr uint16_t ESC_MAXIMUM_PULSE_WIDTH =  1980;
+constexpr uint16_t ESC_MINIMUM_PULSE_WIDTH =  1020;
 constexpr uint16_t ESC_NEUTRAL_PULSE_WIDTH =  1500;
+constexpr uint16_t STEERING_MAXIMUM_PULSE_WIDTH =  1750;
+constexpr uint16_t STEERING_MINIMUM_PULSE_WIDTH =  1250;
+constexpr uint16_t STEERING_NEUTRAL_PULSE_WIDTH =  1500;
 
 constexpr uint16_t STEERING_PULSE_WIDTH_STEP =  50;
 

@@ -2,8 +2,8 @@
 #define TOPIC_NAMES_HPP
 
 
-#define SERVO_PW "servo_pulse_width"
-#define SELECT_PW "select_pulse_width"
+#define SERVO_PW "servo_pulse_width"    // Specify channel and pulse width on this topic
+#define MUX_SELECT_SLAVE "mux_select_slave"
 //#define STEERING_SET_POINT_PULSE_WIDTH "steering_set_point_pw"
 //#define ESC_SET_POINT_PULSE_WIDTH "esc_set_point_pw"
 #define STEERING_SET_POINT_PERCENT "steering_set_point_percent"
