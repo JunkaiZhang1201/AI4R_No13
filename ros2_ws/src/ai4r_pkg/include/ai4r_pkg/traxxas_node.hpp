@@ -82,12 +82,12 @@ constexpr uint16_t MIN_EMPTY_MSG_CYCLES_TO_TIMEOUT = 50;    // Minimum number of
 // > I2C Driver Object:
 // You will need to change the i2c number
 // - List all i2c devices: `ls /dev/i2c*`
-// - Allow permissions for the relevant device number e.g. for `/dev/i2c-1` which is i2c pin 1 on the RPi by doing: `sudo chmod 777 /dev/i2c-1`
+// - Allow permissions for the relevant device number e.g. for `/dev/i2c-1` which is i2c pin 1 on the RPi by doing: `sudo chmod 777 /dev/i2c-1` (for read, write, execute access for user, group and others)
 const char * m_i2c_device_name = "/dev/i2c-1";
 I2C_Driver m_i2c_driver (m_i2c_device_name);
 
 // > PCA9685 PWM Servo Driver Object:
-const uint8_t m_pca9685_address = 0x40;
+const uint8_t m_pca9685_address = PCA9685_I2C_ADDRESS_DEFAULT;  // Default I2C address is 0x40 (hex) = 64 (decimal)
 PCA9685 m_pca9685_servo_driver (&m_i2c_driver, m_pca9685_address);
 
 #endif

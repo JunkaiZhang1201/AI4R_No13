@@ -38,7 +38,7 @@ class TraxxasNode : public rclcpp::Node {
 
             // Specify the frequency of the servo driver -> default for this is 200 Hz
             float new_frequency_in_hz = SERVO_FREQUENCY;
-            bool verbose_display_for_servo_driver_init = false;
+            bool verbose_display_for_servo_driver_init = true;
             
             // Call the Servo Driver initialisation function
             bool result_servo_init = m_pca9685_servo_driver.initialise_with_frequency_in_hz(new_frequency_in_hz, verbose_display_for_servo_driver_init);
