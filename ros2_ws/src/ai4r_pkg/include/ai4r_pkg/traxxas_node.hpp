@@ -50,14 +50,14 @@ constexpr float    SERVO_FREQUENCY = 100.0f;    // PCA9685 outputs 200 Hz by def
 
 // Some of these constants may not be used, serving only as convenient documentation for input signal specifications for the mux.
 // Note there are no requirements or restrictions on the master (M1-M4) and slave (S1-S4) channel inputs, only the select (SEL) channel input.
-// PWM signal on the select channel must be 10 - 330 Hz pulse rate (PWM freq).
+// PWM signal on the select channel must be between 10 - 330 Hz pulse rate (PWM freq).
 constexpr uint16_t MUX_SELECT_MAXIMUM_PULSE_WIDTH = 2500;   // Input PWM signal cannot be more than this
 constexpr uint16_t MUX_SELECT_MINIMUM_PULSE_WIDTH = 500;    // Input PWM signal cannot be less than this
 constexpr uint16_t MUX_SELECT_DEFAULT_THRESHOLD_PULSE_WIDTH = 1696; // Default threshold parameter
 constexpr uint16_t MUX_SELECT_MAXIMUM_THRESHOLD_PULSE_WIDTH = 2100; // Threshold parameter cannot be more than this
 constexpr uint16_t MUX_SELECT_MINIMUM_THRESHOLD_PULSE_WIDTH = 900;  // Threshold parameter cannot be less than this
 constexpr uint16_t MUX_SELECT_THRESHOLD_PULSE_WIDTH_MULTIPLE = 16;  // Threshold parameter must be a multiple of 16 us.
-// When the Inversion parameter is disabled (by default), pulse width above the threshold selects Slave as input (i.e. 'activites' the switch)
+// When the Inversion parameter is disabled (by default), pulse width above the threshold selects Slave as input (i.e. 'activates' the switch)
 constexpr uint16_t MUX_SELECT_MASTER_PULSE_WIDTH = 1000; // Pulse width to select Master as the input
 constexpr uint16_t MUX_SELECT_SLAVE_PULSE_WIDTH = 2000; // Pulse width to select Slave as the input
 

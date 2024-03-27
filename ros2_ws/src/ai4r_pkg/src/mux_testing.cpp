@@ -1,6 +1,5 @@
 
 #include "ai4r_pkg/traxxas_node.hpp"
-#include "ai4r_pkg/topic_names.hpp"
 
 // Static Global Variables
 
@@ -9,11 +8,11 @@ class TraxxasNode : public rclcpp::Node {
     public:
         TraxxasNode() : Node("traxxas_node") {
             servo_pulse_width_sub_ = this->create_subscription<ai4r_interfaces::msg::ServoPulseWidth>(
-                SERVO_PW, rclcpp::QoS(10), std::bind(&TraxxasNode::servoSubscriberCallback, this, std::placeholders::_1)
+                "servo_pulse_width", rclcpp::QoS(10), std::bind(&TraxxasNode::servoSubscriberCallback, this, std::placeholders::_1)
             );
 
             mux_select_slave_sub_ = this->create_subscription<std_msgs::msg::Bool>(
-                MUX_SELECT_SLAVE, rclcpp::QoS(10), std::bind(&TraxxasNode::muxSelectSlaveSubscriberCallback, this, std::placeholders::_1)
+                "mux_select_slave", rclcpp::QoS(10), std::bind(&TraxxasNode::muxSelectSlaveSubscriberCallback, this, std::placeholders::_1)
             );
 
             // Publisher for the current i2c commands

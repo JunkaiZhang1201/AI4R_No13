@@ -1,5 +1,4 @@
 #include "ai4r_pkg/traxxas_node.hpp"
-#include "ai4r_pkg/topic_names.hpp"
 
 // Static Global Variables
 static uint16_t steering_set_point = STEERING_NEUTRAL_PULSE_WIDTH;
@@ -10,22 +9,22 @@ class TraxxasNode : public rclcpp::Node {
     public:
         TraxxasNode() : Node("traxxas_node") {
             servo_pulse_width_sub_ = this->create_subscription<ai4r_interfaces::msg::ServoPulseWidth>(
-                SERVO_PW, rclcpp::QoS(10), std::bind(&TraxxasNode::servoSubscriberCallback, this, std::placeholders::_1)
+                "servo_pulse_width", rclcpp::QoS(10), std::bind(&TraxxasNode::servoSubscriberCallback, this, std::placeholders::_1)
             );
             steering_set_point_percent_sub_ = this->create_subscription<std_msgs::msg::Float32>(
-                STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::steeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
+                "steering_set_point_percent", rclcpp::QoS(10), std::bind(&TraxxasNode::steeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
             esc_set_point_percent_sub_ = this->create_subscription<std_msgs::msg::Float32>(
-                ESC_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::escSetPointPercentSubscriberCallback, this, std::placeholders::_1)
+                "esc_set_point_percent", rclcpp::QoS(10), std::bind(&TraxxasNode::escSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
             esc_and_steering_set_point_percent_sub_ = this->create_subscription<ai4r_interfaces::msg::EscAndSteering>(
-                ESC_AND_STEERING_SET_POINT_PERCENT, rclcpp::QoS(10), std::bind(&TraxxasNode::escAndSteeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
+                "esc_and_steering_set_point_percent", rclcpp::QoS(10), std::bind(&TraxxasNode::escAndSteeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
             estop_sub_ = this->create_subscription<std_msgs::msg::UInt16>(
-                ESTOP, rclcpp::QoS(10), std::bind(&TraxxasNode::estopSubscriberCallback, this, std::placeholders::_1)
+                "estop", rclcpp::QoS(10), std::bind(&TraxxasNode::estopSubscriberCallback, this, std::placeholders::_1)
             );
             line_detector_timeout_sub_ = this->create_subscription<std_msgs::msg::Bool>(
-                LINE_DETECTOR_TIMEOUT_FLAG, rclcpp::QoS(10), std::bind(&TraxxasNode::lineDetectorTimeoutCallback, this, std::placeholders::_1)
+                "line_detector_timeout_flag", rclcpp::QoS(10), std::bind(&TraxxasNode::lineDetectorTimeoutCallback, this, std::placeholders::_1)
             );
 
             // Publisher for the FSM state
