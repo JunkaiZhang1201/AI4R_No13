@@ -42,6 +42,11 @@ add_executable(traxxas src/traxxas_node.cpp
                           drivers/src/i2c_driver/i2c_driver.cpp
                           drivers/src/pca9685/pca9685.cpp)
 ament_target_dependencies(traxxas rclcpp std_msgs ai4r_interfaces)
+add_executable(mux_testing src/mux_testing.cpp
+                          drivers/src/i2c_driver/i2c_driver.cpp
+                          drivers/src/pca9685/pca9685.cpp)
+ament_target_dependencies(mux_testing rclcpp std_msgs ai4r_interfaces)
+
 
 
 # Install Cpp executables
@@ -54,6 +59,7 @@ install(TARGETS
   multiple_pub_sub
   looping
   traxxas
+  mux_testing
   DESTINATION lib/${PROJECT_NAME}
 )
 
