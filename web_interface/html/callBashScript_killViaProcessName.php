@@ -10,7 +10,7 @@
 	else
 	{
 		// Call the bash script for killing processes
-		$output = shell_exec("./bashscripts/killViaProcessName.sh $processname");
+		$output = shell_exec("sudo ./bashscripts/killViaProcessName.sh $processname");
 	}	
 	
 	echo "$output";

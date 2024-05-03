@@ -25,27 +25,27 @@
 			exit();
 		}
 		// Call the bash script for launching this node
-		$output = shell_exec("./bashscripts/launchRosSensorSystems.sh $flag_value");
+		$output = shell_exec("sudo ./bashscripts/launchRosSensorSystems.sh $flag_value");
 	}
 	elseif ($scriptname == "rosbridge")
 	{
 		// Call the bash script for launching this node
-		$output = shell_exec("./bashscripts/launchRos2RosBridge.sh");
+		$output = shell_exec("sudo ./bashscripts/launchRos2RosBridge.sh");
 	}
 	elseif ($scriptname == "traxxas")
 	{
 		// Call the bash script for launching this node
-		$output = shell_exec("./bashscripts/launchRos2Traxxas.sh");
+		$output = shell_exec("sudo ./bashscripts/launchRos2Traxxas.sh");
 	}
 	elseif ($scriptname == "policy")
 	{
 		// Call the bash script for launching this node
-		$output = shell_exec("./bashscripts/launchRos2Policy.sh");
+		$output = shell_exec("sudo ./bashscripts/launchRos2Policy.sh");
 	}
 	elseif ($scriptname == "linedetector")
 	{
 		// Call the bash script for launching this node
-		$output = shell_exec("./bashscripts/launchRos2LineDetector.sh");
+		$output = shell_exec("sudo ./bashscripts/launchRos2LineDetector.sh");
 	}
 	else
 	{
