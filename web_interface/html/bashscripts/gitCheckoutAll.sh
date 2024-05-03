@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Change directory to the dfall-system repository
+# Change directory to the git repository
 cd /home/asc-share/asclinic-system/
 #
 # Call git

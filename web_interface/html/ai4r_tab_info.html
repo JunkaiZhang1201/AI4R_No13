@@ -1,0 +1,339 @@
+<body>
+	<div class="body-container">
+		<main style="text-align:left;">
+
+            <p>
+                <b>This page provides the key instructions for using this web interface to implement and test autonomous driving of a Traxxas 1/10 scale car</b>
+                <br>
+                <br>
+                <b>Note:</b> for any command below that contains the tag <code class="code-inline">&lt;ip_address&gt;</code>, you need to replace the tag (inclduing the <code class="code-inline">&lt;&gt;</code>) with the IP address of the onboard computer (which should be the IP address that you entered to view this page).
+
+            </p>
+
+			<br>
+			<hr class="hr-basic navy">
+			<hr class="hr-basic navy">
+			<br>
+
+            <h2>Line Detector Config File</h2>
+
+            <b>(Step 0)</b>
+            The onboard computer stores this config file at:
+            <br>
+            <code class="code-block">
+                /home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/config/config_for_line_detector.yaml
+            </code>
+            <br>
+
+            <b>(Step 1)</b>
+            Hence, you can download a copy using <code class="code-inline">scp</code>, i.e.:
+            <br>
+            <div class="code-block">
+                <code>
+                    scp ai4r@&lt;ip_address&gt;:/home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/config/config_for_line_detector.yaml .
+                </code>
+            </div>
+            <br>
+
+            <b>(Step 2)</b>
+            Then, edit the downloaded copy with your desired configurations. Note that camera resolution and frame rate should be specified in the config file.
+            <br>
+            <br>
+
+            <b>(Step 3)</b>
+            Upload your config file using <code class="code-inline">scp</code>, i.e.:
+            <br>
+            <div class="code-block">
+                <code>
+                    scp config_for_line_detector.yaml ai4r@&lt;ip_address&gt;:/home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/config/config_for_line_detector.yaml
+                </code>
+            </div>
+            <br>
+
+            <b>(Step 4)</b>
+            <b>IMPORTANT:</b> to make your configurations active, after each time that you uploaded a config file, you <b>MUST</b> go to the <b>"Compile"</b> tab and click the <b>"colcon build"</b> button.
+            <br>
+            <br>
+
+            <b>(Step 5)</b>
+            Use the following to double check that the config file onboard is as you expect.
+            <br>
+            <br>
+
+            <table class="terminal-label-table">
+				<tr>
+					<td class="terminal-label-cell">
+						<div class="terminal-label">TERMINAL OUTPUT</div>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonRefreshTerminalForConfigFile"
+							onclick="getFileContents_outputLabelID('/home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/config/config_for_line_detector.yaml','terminalOutputForConfigFile')"
+							>
+							refresh
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonClearTerminalForConfigFile"
+							onclick="clearLabelWithGivenID('terminalOutputForConfigFile')"
+							>
+							clear
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+
+			<div class="terminal-background">
+				<div class="terminal-contents" id="terminalOutputForConfigFile"></div>
+			</div>
+            <br>
+            <br>
+
+			<br>
+			<hr class="hr-basic navy">
+            <hr class="hr-basic navy">
+			<br>
+
+            <h2>Policy Node Python File</h2>
+
+            <b>(Step 0)</b>
+            The onboard computer stores this ROS2 node Python file at:
+            <br>
+            <div class="code-block">
+                <code>
+                    /home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/scripts/policy_node.py
+                </code>
+            </div>
+            <br>
+
+            <b>(Step 1)</b>
+            Hence, you can download a copy using <code class="code-inline">scp</code>, i.e.:
+            <br>
+            <div class="code-block">
+                <code>
+                    scp ai4r@&lt;ip_address&gt;:/home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/scripts/policy_node.py .
+                </code>
+            </div>
+            <br>
+
+            <b>(Step 2)</b>
+            Then, edit the downloaded copy to implement your policy.
+            <br>
+            <ul>
+                <li>In the base case, you <b>ONLY</b> need to edit the function <code class="code-inline">cv_line_dectection_callback</code></li>
+                <li>Within that function you find the comment to <code class="code-inline">INSERT POLICY CODE BELOW HERE</code></li>
+                <li>At that location there are also comments describing the <b>observations</b> available to the policy and the <b>actions</b> that the policy is expected to compute.</li>
+            </ul>
+            <br>
+
+            <b>(Step 3)</b>
+            Upload your policy file using <code class="code-inline">scp</code>, i.e.:
+            <br>
+            <div class="code-block">
+                <code>
+                    scp policy_node.yaml ai4r@&lt;ip_address&gt;:/home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/scripts/policy_node.py
+                </code>
+            </div>
+            <br>
+
+            <b>(Step 4)</b>
+            <b>IMPORTANT:</b> to make your policy active, after each time that you uploaded a policy file, you <b>MUST</b> go to the <b>"Workflow"</b> tab to:
+            <br>
+            <ul>
+                <li>First, kill any existing policy nodes using the button "Kill Policy Node".</li>
+                <li>Then, wait a few seconds to be safe &#128526</li>
+                <li>Finally, launch your updated policy node using the button "Launch Policy Node"</li>
+            </ul>
+            <br>
+
+            <b>(Step 5)</b>
+            Use the following to double check that the policy file onboard is as you expect.
+            <br>
+            <br>
+
+            <table class="terminal-label-table">
+				<tr>
+					<td class="terminal-label-cell">
+						<div class="terminal-label">TERMINAL OUTPUT</div>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonRefreshTerminalForPolicyNode"
+							onclick="getFileContents_outputLabelID('/home/asc-share/asclinic-system/ros2_ws/src/ai4r_pkg/scripts/policy_node.py','terminalOutputForPolicyNode')"
+							>
+							refresh
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonClearTerminalForPolicyNode"
+							onclick="clearLabelWithGivenID('terminalOutputForPolicyNode')"
+							>
+							clear
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+
+			<div class="terminal-background">
+				<div class="terminal-contents" id="terminalOutputForPolicyNode"></div>
+			</div>
+            <br>
+            <br>
+
+            <br>
+			<hr class="hr-basic navy">
+            <hr class="hr-basic navy">
+			<br>
+
+            <h2>Update this Web Interface</h2>
+
+            <b>(Step 1)</b>
+            Go to the "Compile" tab and click the "git pull" button.
+            <br>
+            <br>
+
+            <b>(Step 2)</b>
+            Read the terminal output displayed as a result of clicking "git pull". Check if any new files were pulled, or if there are any conflicts causing the pull to fail.
+            <br>
+            <br>
+
+            <b>(Step 3)</b>
+            Click the "Update Web Interface" button (located below the "Terminal Output").
+            <br>
+            <br>
+
+            <b>(Step 4)</b>
+            Reload this page (a quick way is to click your browser's back button and then refresh button).
+            <br>
+            <br>
+
+            <br>
+			<hr class="hr-basic navy">
+            <hr class="hr-basic navy">
+			<br>
+
+            <h2>Workflow for running the car</h2>
+
+            <b>(Step 1)</b>
+            Go to the "Workflow" tab and scroll to the bottom. The workflow starts at the bottom on the tab and progresses up the tab.
+            <br>
+            <br>
+
+            <b>(Step 2)</b>
+            Kill any existing ROS nodes by clicking the "Kill All ROS Nodes" button.
+            <br>
+            <br>
+
+            <b>(Step 3)</b>
+            Launch the <b>ROS-Bridge Web-Socket</b> node by:
+            <ul>
+                <li>Click the button "Launch ROS Bridge WebSocket Node".</li>
+                <li>Wait a few seconds for the request to go through and the node to get started &#128526</li>
+                <li>Click the "refresh" button of the respective "terminal output" a few times until you see that the ROS-Bridge node is running.</li>
+                <li>Click the "connect" button and check that the status label updates to be connected.</li>
+            </ul>
+            <br>
+
+            <b>(Step 4)</b>
+            Launch the <b>Traxxas</b> node by:
+            <ul>
+                <li>Click the button "Launch Traxxas Node".</li>
+                <li>Wait a few seconds for the request to go through and the node to get started &#128526</li>
+                <li>Click the "refresh" button of the respective "terminal output" a few times until you see that the Traxxas node is running.</li>
+            </ul>
+            <br>
+
+            <b>(Step 5)</b>
+            Launch the <b>Line Detector</b> node by:
+            <ul>
+                <li>Click the button "Launch Line Detector Node".</li>
+                <li>Wait a few seconds for the request to go through and the node to get started &#128526</li>
+                <li>Click the "refresh" button of the respective "terminal output" a few times until you see that the Line Detector node is running.</li>
+                <li><b>NOTE:</b> the Line Detector node is a bit "sensitive". This sensitivity comes predominantly from initialising the camera. The following are a few pointers for dealing with this:</li>
+                <ul>
+                    <li>After booting of the onboard computer, you need to un-plug and re-plug the camera.
+                    <ul>
+                        <li>This is required because the camera is not automatically detected when there is no screen connected to the computer.</li>
+                    </ul>
+
+                    <li>The quickest way to check that the line detector is working (or not), is to scroll up a bit to the "Visualization of the line detection points" and observe whether any data is being received (<b>note</b> that the ROS-Bridge Web-Socket <b>MUST</b> be connected for this check to be meaningful).</li>
+
+                    <li>The terminal output of the Line Detector node sometimes get stuck at the point of attempting to set the camera resolution and frame rate.</li>
+                    <ul>
+                        <li>It is not entirely clear why this occurs. Most likely it is due to the <code class="code-inline">www-data</code> user (which runs this Apache-based web interface) has its permission configured differently to a "normal" user account.</li>
+                    </ul>
+
+                    <li>If the Line Detector node gets stuck (or for any other "strange" behaviour):</li>
+                    <ul>
+                        <li>First, kill any existing Line Detector nodes using the button "Kill Line Detector Node".</li>
+                        <li>Then, wait a few seconds to be safe &#128526</li>
+                        <li>Finally, launch your the Line Detector Node again and check if it fully initialises this time.</li>
+                    </ul>
+
+                    <li>Failing all else, go back to <b>(Step 2)</b> for killing all ROS2 nodes, un-plug and re-plug the camera, and continue again from <b>(Step 3)</b>.</li>
+
+                    <li>In the worst case, shutdown and reboot the onboard computer.</li>
+                </ul>
+            </ul>
+            <br>
+
+            <b>(Step 6)</b>
+            Launch the <b>Policy</b> node by:
+            <ul>
+                <li>Click the button "Launch Policy Node".</li>
+                <li>Wait a few seconds for the request to go through and the node to get started &#128526</li>
+                <li>Click the "refresh" button of the respective "terminal output" a few times until you see that the Policy node is running.</li>
+            </ul>
+            <br>
+
+            <b>(Step 7)</b>
+            Procedure to enable the autonomous line following:
+            <ul>
+                <li>Scroll to the "Policy Node Interface" section and click the button "Send Zero Actions".</li>
+                <ul>
+                    <li>This causes the Policy node to continuously publish messages that request zero drive motor and zero steering actions from the car.</li>
+                </ul>
+
+                <li>Scroll to the "Traxxas Node Interface" section and click the "enable" button.</li>
+                <ul>
+                    Check the "current FSM state" displays "enabled".
+                </ul>
+
+                <li>Place the car at the starting location</li>
+                
+                <li> Scroll to the "visualization of the line detection points" and check that the data is representative of the real-world line.</li>
+
+                <li>Scroll to the "Policy Node Interface" section and click the button "Run Policy".</li>
+                <ul>
+                    <li>With a bit of sounds AI-4-Robotics design, the car should not autonomously follow the line!</li>
+                    <li><b>IMPORTANT</b> Hover your mouse over the "send zero actions" button, and click this button to stop any unexpected behaviour of the car.</li>
+                </ul>
+
+                <li>The following are some protections in the code that is intended to keep you and the car safe:</li>
+                <ul>
+                    <li>If the Line Detector node computes less than 4 points on the line for more than 0.5 seconds, then it informs the Traxxas node via a message, and the Traxxas node disables the car.</li>
+                    <li>If the Policy node does not receive any line detection data for more than 2.0 seconds, then it transitions to its "sending zero actions" mode.</li>
+                    <li>If the Traxxas node does not receive any new action message (from the Policy node) for more than 0.5 seconds, then it transitions to disabled mode.</li>
+                    <li>If you click the button for the Traxxas node to enable when the Policy node is sending non-neutral actions, then the Traxxas node stays in disabled mode.</li>
+                    <ul>
+                        <li>Neutral actions are defined as zero drive motor command and zero steering command.</li>
+                    </ul>
+                </ul>
+            </ul>
+            <br>
+
+            <br>
+
+        </main>
+	</div>
+</body>

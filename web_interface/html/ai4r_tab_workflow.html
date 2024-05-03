@@ -1,0 +1,775 @@
+<body>
+	<div class="body-container">
+		<main style="text-align:left;">
+
+			<br>
+
+			<b>This workflow starts from the section at the bottom of the page and works upwards.</b>
+
+			<br>
+			<hr class="hr-basic navy">
+			<hr class="hr-basic navy">
+			<br>
+
+			<h2><b>Policy Node Interface</b></h2>
+
+			<table class="git-table">
+				<tr>
+					<td class="git-button-cell left">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonPolicyEnable"
+							onclick="sendPolicyFSMStateRequest(3)"
+							>
+							Run Policy
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="git-button-cell right">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonPolicyZero"
+							onclick="sendPolicyFSMStateRequest(2)"
+							>
+							Send Zero Actions
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="git-button-cell right">
+						<button
+							class="button-push red fullwidth"
+							id="buttonPolicyOff"
+							onclick="sendPolicyFSMStateRequest(1)"
+							>
+							Turn Off Actions
+							<div class="div-for-button-highlight-on-touchscreen red"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<td>Current FSM state: </td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="policyNodeCurrentFSMState"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<td>
+						<div style="text-align: right; display: block;">Policy action esc [%] = </div>
+					</td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="policyActionEscPercent"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<div style="text-align: right; display: block;">Policy action steering [%] = </div>
+					</td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="policyActionSteeringPercent"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			Request change to ESC setpoint:
+			&nbsp;&nbsp;&nbsp;
+			<input id="inputPolicyEscSetpointRequest" type="number"
+				min="-100"
+				max="100"
+				step="5"
+				value="0"
+			>
+			&nbsp;&nbsp;&nbsp;
+			<button
+				class="button-push navy monospace short"
+				id="buttonPolicyEscSetpointRequest"
+				onclick="sendPolicyEscSetpointRequest()"
+				>
+				send
+				<div class="div-for-button-highlight-on-touchscreen navy"></div>
+			</button>
+
+			<br>
+
+
+			<br>
+			<hr class="hr-basic navy">
+			<hr class="hr-basic navy">
+			<br>
+
+			<h2><b>Line Detector Node Interface</b></h2>
+
+			<table>
+				<tr>
+					<td>Number points detected in most recent image: </td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="lineDetectorNumPoints"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>(u,v) pixel coorinates of first point in most recent image: </td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="lineDetectorFirstPoint"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Image size (i.e., resolution) is (height,width) =</td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="lineDetectorImageResolution"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+			Visualization of the line detection points:
+			<br>
+			<canvas id="lineDetectorCanvas" class="line-detector-canvas"></canvas>
+			<br>
+
+			Size of points plotted:  
+			<input id="sizeOfPointsOnCanvas" type="number"
+				min="1"
+				max="20"
+				step="1"
+				value="10"
+			>
+
+			<br>
+
+			<button
+				class="button-push navy monospace short"
+				id="buttonLineDetectorCanvas"
+				onclick="clearCanvas('lineDetectorCanvas')"
+				>
+				clear
+				<div class="div-for-button-highlight-on-touchscreen navy"></div>
+			</button>
+
+
+
+			<br>
+			
+			<br>
+			<hr class="hr-basic navy">
+			<hr class="hr-basic navy">
+			<br>
+
+			<h2><b>Traxxas Node Interface</b></h2>
+
+			<table class="git-table">
+				<tr>
+					<td class="git-button-cell left">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonTraxxasEnable"
+							onclick="sendTraxxasFSMStateRequest(1)"
+							>
+							Enable
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="git-button-cell right">
+						<button
+							class="button-push red fullwidth"
+							id="buttonTraxxasDisable"
+							onclick="sendTraxxasFSMStateRequest(0)"
+							>
+							Disable
+							<div class="div-for-button-highlight-on-touchscreen red"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<td>Current FSM state: </td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="traxxasNodeCurrentFSMState"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Current ESC:</td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="traxxasNodeCurrentESCCommand"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Current Steering: </td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="traxxasNodeCurrentSteeringCommand"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+			<br>
+
+			The following button and field allow for rudimentary manual control of the ESC and steering commands that the Traxxas node sends to the car.
+
+			<br>
+
+			<table class="git-table">
+				<tr>
+					<td class="git-button-cell left">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonTraxxasEnableWithoutGuards"
+							onclick="sendTraxxasFSMStateRequest(2)"
+							>
+							Enable without Guards
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="git-button-cell right">
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<td colspan="3">ESC Commands</td>
+				</tr>
+				<tr>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasEscCommand1"
+							onclick="sendTraxxasEscSetpointRequest('inputTraxxasEscCommand1')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasEscCommand2"
+							onclick="sendTraxxasEscSetpointRequest('inputTraxxasEscCommand2')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasEscCommand3"
+							onclick="sendTraxxasEscSetpointRequest('inputTraxxasEscCommand3')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td><input id="inputTraxxasEscCommand1" type="number" min="-100" max="100" step="5" value="-20"></td>
+					<td><input id="inputTraxxasEscCommand2" type="number" min="-100" max="100" step="5" value="0"></td>
+					<td><input id="inputTraxxasEscCommand3" type="number" min="-100" max="100" step="5" value="20"></td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table>
+				<tr>
+					<td colspan="3">Steering Commands</td>
+				</tr>
+				<tr>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasSteeringCommand1"
+							onclick="sendTraxxasSteeringSetpointRequest('inputTraxxasSteeringCommand1')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasSteeringCommand2"
+							onclick="sendTraxxasSteeringSetpointRequest('inputTraxxasSteeringCommand2')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonSendTraxxasSteeringCommand3"
+							onclick="sendTraxxasSteeringSetpointRequest('inputTraxxasSteeringCommand3')"
+							>
+							send
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td><input id="inputTraxxasSteeringCommand1" type="number" min="-100" max="100" step="5" value="-100"></td>
+					<td><input id="inputTraxxasSteeringCommand2" type="number" min="-100" max="100" step="5" value="0"></td>
+					<td><input id="inputTraxxasSteeringCommand3" type="number" min="-100" max="100" step="5" value="100"></td>
+				</tr>
+			</table>
+			
+
+			<br>
+
+			<br>
+			<hr class="hr-basic navy">
+			<hr class="hr-basic navy">
+			<br>
+
+			<h2><b>Launch and Kill ROS Nodes</b></h2>
+
+			<h3 style="text-align:center;"><b>Policy</b></h3>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-button-cell">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonLaunchPolicyNode"
+							onclick="roslaunch_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('policy', 'launchPolicyNodeStatus', '', 'killPolicyNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Launch Policy Node
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="ros-button-cell">
+						<button
+							class="button-push red fullwidth"
+							id="buttonKillPolicyNode"
+							onclick="killNodeViaProcessName_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('policy', 'killPolicyNodeStatus', 'launchPolicyNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Kill Policy Node
+							<div class="div-for-button-highlight-on-touchscreen red"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="ros-info-cell">
+						<div id="launchPolicyNodeStatus"></div>
+					</td>
+					<td class="ros-info-cell">
+						<div id="killPolicyNodeStatus"></div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table class="terminal-label-table">
+				<tr>
+					<td class="terminal-label-cell">
+						<div class="terminal-label">TERMINAL OUTPUT</div>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonRefreshTerminalForPolicy"
+							onclick="getFileContents_outputLabelID('/var/www/html/outfiles_for_nodes/outfile_for_policy.txt','terminalOutputForPolicy')"
+							>
+							refresh
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonClearTerminalForPolicy"
+							onclick="clearLabelWithGivenID('terminalOutputForPolicy')"
+							>
+							clear
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+
+			<div class="terminal-background">
+				<div class="terminal-contents" id="terminalOutputForPolicy"></div>
+			</div>
+
+			<br>
+			<hr class="hr-basic navy">
+			<br>
+
+			<h3 style="text-align:center;"><b>Line Detector</b></h3>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-button-cell">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonLaunchLineDetectorNode"
+							onclick="roslaunch_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('linedetector', 'launchLineDetectorNodeStatus', '', 'killLineDetectorNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Launch Line Detector Node
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="ros-button-cell">
+						<button
+							class="button-push red fullwidth"
+							id="buttonKillLineDetectorNode"
+							onclick="killNodeViaProcessName_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('line_detector', 'killLineDetectorNodeStatus', 'launchLineDetectorNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Kill Line Detector Node
+							<div class="div-for-button-highlight-on-touchscreen red"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="ros-info-cell">
+						<div id="launchLineDetectorNodeStatus"></div>
+					</td>
+					<td class="ros-info-cell">
+						<div id="killLineDetectorNodeStatus"></div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table class="terminal-label-table">
+				<tr>
+					<td class="terminal-label-cell">
+						<div class="terminal-label">TERMINAL OUTPUT</div>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonRefreshTerminalForLineDetector"
+							onclick="getFileContents_outputLabelID('/var/www/html/outfiles_for_nodes/outfile_for_line_detector.txt','terminalOutputForLineDetector')"
+							>
+							refresh
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonClearTerminalForLineDetector"
+							onclick="clearLabelWithGivenID('terminalOutputForLineDetector')"
+							>
+							clear
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+
+			<div class="terminal-background">
+				<div class="terminal-contents" id="terminalOutputForLineDetector"></div>
+			</div>
+
+			<br>
+			<hr class="hr-basic navy">
+			<br>
+
+			<h3 style="text-align:center;"><b>Traxxas</b></h3>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-button-cell">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonLaunchTraxxasNode"
+							onclick="roslaunch_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('traxxas', 'launchTraxxasNodeStatus', '', 'killTraxxasNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Launch Traxxas Node
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="ros-button-cell">
+						<button
+							class="button-push red fullwidth"
+							id="buttonKillTraxxasNode"
+							onclick="killNodeViaProcessName_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('traxxas', 'killTraxxasNodeStatus', 'launchTraxxasNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Kill Traxxas Node
+							<div class="div-for-button-highlight-on-touchscreen red"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="ros-info-cell">
+						<div id="launchTraxxasNodeStatus"></div>
+					</td>
+					<td class="ros-info-cell">
+						<div id="killTraxxasNodeStatus"></div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table class="terminal-label-table">
+				<tr>
+					<td class="terminal-label-cell">
+						<div class="terminal-label">TERMINAL OUTPUT</div>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonRefreshTerminalForTraxxas"
+							onclick="getFileContents_outputLabelID('/var/www/html/outfiles_for_nodes/outfile_for_traxxas.txt','terminalOutputForTraxxas')"
+							>
+							refresh
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonClearTerminalForTraxxas"
+							onclick="clearLabelWithGivenID('terminalOutputForTraxxas')"
+							>
+							clear
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+
+			<div class="terminal-background">
+				<div class="terminal-contents" id="terminalOutputForTraxxas"></div>
+			</div>
+
+			<br>
+			<hr class="hr-basic navy">
+			<br>
+
+			<h3 style="text-align:center;"><b>ROS Bridge</b></h3>
+
+			<table class="git-table">
+				<tr>
+					<td class="git-button-cell left">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonRosbridgeConnect"
+							onclick="rosbridgeConnect()"
+							>
+							connect
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="git-button-cell right">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonRosbridgeClose"
+							onclick="rosbridgeClose()"
+							>
+							close
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<td>URL of host: </td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="urlOfHostLabel"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>ROS bridge web socket status: </td>
+					<td>
+					<div
+						style="text-align: left; display: block;"
+						id="webSocketStatusLabel"
+						>
+						&nbsp
+					</div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			Check your web/javascript console for more details of what is happening.
+
+			<br>
+			<br>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-button-cell left">
+						<button
+							class="button-push navy fullwidth"
+							id="buttonLaunchRosBridgeNode"
+							onclick="roslaunch_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('rosbridge', 'launchRosBridgeNodeStatus', '', 'killRosBridgeNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Launch ROS Bridge WebSocket Node
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td class="ros-button-cell right">
+						<button
+							class="button-push red fullwidth"
+							id="buttonKillRosBridgeNode"
+							onclick="killNodeViaProcessName_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('rosbridge', 'killRosBridgeNodeStatus', 'launchRosBridgeNodeStatus', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Kill ROS Bridge WebSocket Node
+							<div class="div-for-button-highlight-on-touchscreen red"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="ros-info-cell">
+						<div id="launchRosBridgeNodeStatus"></div>
+					</td>
+					<td class="ros-info-cell">
+						<div id="killRosBridgeNodeStatus"></div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table class="terminal-label-table">
+				<tr>
+					<td class="terminal-label-cell">
+						<div class="terminal-label">TERMINAL OUTPUT</div>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonRefreshTerminalForRosBridge"
+							onclick="getFileContents_outputLabelID('/var/www/html/outfiles_for_nodes/outfile_for_ros_bridge.txt','terminalOutputForRosBridge')"
+							>
+							refresh
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+					<td>
+						<button
+							class="button-push navy monospace short"
+							id="buttonClearTerminalForRosBrdge"
+							onclick="clearLabelWithGivenID('terminalOutputForRosBridge')"
+							>
+							clear
+							<div class="div-for-button-highlight-on-touchscreen navy"></div>
+						</button>
+					</td>
+				</tr>
+			</table>
+
+			<div class="terminal-background">
+				<div class="terminal-contents" id="terminalOutputForRosBridge"></div>
+			</div>
+
+			<br>
+			<hr class="hr-basic navy">
+			<br>
+
+			<h3 style="text-align:center;"><b>"Strong" Kills of ROS nodes</b></h3>
+
+			<table class="ros-table">
+				<tr>
+					<td class="ros-button-cell">
+						<button
+							class="button-push red fullwidth"
+							id="buttonKillRosApiNodes"
+							onclick="killNodeViaProcessName_outputLabelID_switchID_clearOtherLabels_clickOtherButtons('rosapi', 'killRosApiNodesStatus', '', ['buttonRos2NodeList','buttonRos2TopicList'])"
+							>
+							Kill ROS API Nodes
+							<div class="div-for-button-highlight-on-touchscreen red"></div>
+						</button>
+					</td>
+					<td class="ros-button-cell">
+						<button
+							class="button-push red fullwidth"
+							id="buttonKillRosAllNodes"
+							onclick="callBashScript_outputLabelID_clearOtherLabels_clickOtherButtons('killRos2All', 'buttonKillRosAllNodesStatus', ['launchPolicyNodeStatus', 'killPolicyNodeStatus', 'launchLineDetectorNodeStatus', 'killLineDetectorNodeStatus', 'launchTraxxasNodeStatus', 'killTraxxasNodeStatus', 'launchRosBridgeNodeStatus', 'killRosBridgeNodeStatus', 'killRosApiNodesStatus'], ['ros2nodeList','ros2topicList'])"
+							>
+							Kill All ROS Nodes
+							<div class="div-for-button-highlight-on-touchscreen red"></div>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="ros-info-cell">
+						<div id="killRosApiNodesStatus"></div>
+					</td>
+					<td class="ros-info-cell">
+						<div id="buttonKillRosAllNodesStatus"></div>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+			<hr class="hr-basic navy">
+			<hr class="hr-basic navy">
+			<br>
+			<br>
+
+		</main>
+	</div>
+</body>

@@ -24,8 +24,28 @@
 			echo "flag value = $flag_value, is not a boolean value.";
 			exit();
 		}
-		// Call the bash script for launching the master
-		$output = shell_exec("./bashscripts/launchRosSensorSystems.sh $flag_value");
+		// Call the bash script for launching this node
+		$output = shell_exec("sudo ./bashscripts/launchRosSensorSystems.sh $flag_value");
+	}
+	elseif ($scriptname == "rosbridge")
+	{
+		// Call the bash script for launching this node
+		$output = shell_exec("sudo ./bashscripts/launchRos2RosBridge.sh");
+	}
+	elseif ($scriptname == "traxxas")
+	{
+		// Call the bash script for launching this node
+		$output = shell_exec("sudo ./bashscripts/launchRos2Traxxas.sh");
+	}
+	elseif ($scriptname == "policy")
+	{
+		// Call the bash script for launching this node
+		$output = shell_exec("sudo ./bashscripts/launchRos2Policy.sh");
+	}
+	elseif ($scriptname == "linedetector")
+	{
+		// Call the bash script for launching this node
+		$output = shell_exec("sudo ./bashscripts/launchRos2LineDetector.sh");
 	}
 	else
 	{

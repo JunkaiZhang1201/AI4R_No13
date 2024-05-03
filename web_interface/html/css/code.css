@@ -1,0 +1,28 @@
+.code-block
+{
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.2;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: scroll;
+    padding: 0.2em 1.0em;
+    display: block;
+    word-wrap: nowrap;
+}
+
+.code-inline
+{
+    background: #f4f4f4;
+    color: #333;
+    page-break-inside: avoid;
+    font-family: monospace;
+    word-wrap: break-word;
+}

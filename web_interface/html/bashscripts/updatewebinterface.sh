@@ -32,7 +32,7 @@ rmdir -v js
 echo "Removed the \"js\" folder"
 echo ""
 #
-# Make the javacript folder again
+# Make the js folder again
 mkdir -v js
 echo "Remade the \"js\" folder"
 # Copy the javscripts files
@@ -70,7 +70,7 @@ rmdir -v css
 echo "Removed the \"css\" folder"
 echo ""
 #
-# Make the img folder again
+# Make the css folder again
 mkdir -v css
 echo "Remade the \"css\" folder"
 # Copy the img files
@@ -87,7 +87,7 @@ rmdir -v bashscripts
 echo "Removed the \"bashscripts\" folder"
 echo ""
 #
-# Make the img folder again
+# Make the bashscripts folder again
 mkdir -v bashscripts
 echo "Remade the \"bashscripts\" folder"
 # Copy the bashscript files
@@ -111,6 +111,24 @@ echo ""
 #
 #
 #
+# Remove the "outfiles_for_nodes" folder, if it exists
+rm -v outfiles_for_nodes/*
+echo "Removed all contents of the \"outfiles_for_nodes\" folder"
+rmdir -v outfiles_for_nodes
+echo "Removed the \"outfiles_for_nodes\" folder"
+echo ""
+#
+# Make the "outfiles_for_nodes" folder again
+mkdir -v outfiles_for_nodes
+echo "Remade the \"outfiles_for_nodes\" folder"
+echo ""
+# Copy the outfiles "readme"
+cp -v $asclinichome"/outfiles_for_nodes/"*.txt $wwwhome"/outfiles_for_nodes/"
+echo "Copied across the \"outfiles_for_nodes\" folder contents"
+echo ""
+#
+#
+#
 # REMOVE the contents of the wwwhome folder
 rm -v *.php
 rm -v *.html
@@ -125,6 +143,19 @@ echo ""
 # Copy the php files
 cp -v $asclinichome"/"*.php $wwwhome"/"
 echo "Copied across the \"*.php\" files"
+echo ""
+#
+#
+#
+# APPLY the agent namespace to the rosbridge JavaScript file
+echo "Now substituting the default agent namespace into the ros bridge JavaScript"
+# Copy across the bash script
+cp -v $asclinichome"/js/"*.sh $wwwhome"/js/"
+# Run the bash script
+SCRIPT_PATH="/var/www/html/js/substitute_namespace_into_rosbridge_javascript.sh"
+OUTPUT=$("$SCRIPT_PATH")
+echo $OUTPUT
+echo "Substitution script complete, see previous line for status."
 echo ""
 #
 #
