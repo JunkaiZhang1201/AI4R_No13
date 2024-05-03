@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web_server:
+    image: ai4r:latest
+    devices:
+      - "/dev/i2c-1:/dev/i2c-1"
+      - "/dev/video0:/dev/video0"
+    ports:
+      - "8080:80"
+      - "9090:9090"
+    restart: unless-stopped
+    container_name: web_server
+    # volumes:
+    #   - ./path/on/host:/path/in/container
