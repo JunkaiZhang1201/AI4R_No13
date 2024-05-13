@@ -79,6 +79,8 @@ install(PROGRAMS
   scripts/test_yaml_params.py
   scripts/Utils.py
   scripts/policy_node.py
+  scripts/image_publishing_line_detector_node.py
+  scripts/image_publishing_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

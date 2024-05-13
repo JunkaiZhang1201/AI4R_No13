@@ -32,3 +32,6 @@ catkin_ws/src/rplidar_ros/
 ros2_ws/build/
 ros2_ws/install/
 ros2_ws/log/
+
+# Compiled bytecode python files
+*.pyc
