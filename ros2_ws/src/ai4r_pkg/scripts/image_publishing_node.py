@@ -25,6 +25,14 @@ class ImagePublishingNode(Node):
         # Create a CvBridge object for converting between OpenCV images and ROS Image messages
         self.cv_bridge = CvBridge()
 
+        # Read the a camera frame as a double check of the properties
+        # > Read the frame
+        return_flag , current_frame = self.cap.read()
+        # > Get the dimensions of the frame
+        dimensions = current_frame.shape
+        # > Display the dimensions
+        self.get_logger().info("[LINE DETECTOR NODE] Triple check of resolution, a frame captured just now has dimensions = " + str(dimensions))
+
         # For publishing the image 
         self.img_pub = self.create_publisher(
             Image,"image",qos_profile_system_default
@@ -44,8 +52,10 @@ class ImagePublishingNode(Node):
                 # # Publish image straight from camera
                 # self.img_pub.publish(self.cv_bridge.cv2_to_imgmsg(self.frame, "bgr8"))
 
+                frame_small = cv2.resize(frame, None, fx=0.2, fy=0.2, interpolation=cv2.INTER_AREA)
+
                 # Publish the modified image to the topic /image
-                frame_mono = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+                frame_mono = cv2.cvtColor(frame_small, cv2.COLOR_BGR2GRAY)
                 self.img_pub.publish(self.cv_bridge.cv2_to_imgmsg(frame_mono, "mono8"))
             else:
                 self.get_logger().error("[LINE_DETECTOR_NODE] No frame received from camera.")
