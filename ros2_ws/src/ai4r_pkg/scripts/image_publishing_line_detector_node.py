@@ -6,7 +6,7 @@ import numpy as np
 
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import qos_profile_system_default
+from rclpy.qos import qos_profile_system_default, qos_profile_sensor_data
 from LineDetectorCircle import LineDetectorCircle
 from LineDetectorEllipse import LineDetectorEllipse
 from Utils import Util
@@ -202,7 +202,8 @@ class LineDetectorNode(Node):
         )
         # > For publishing the image 
         self.img_pub = self.create_publisher(
-            Image,"image",qos_profile_system_default
+            # Image,"image",qos_profile_system_default
+            Image,"image",qos_profile_sensor_data
         )
 
         # Log the configuration

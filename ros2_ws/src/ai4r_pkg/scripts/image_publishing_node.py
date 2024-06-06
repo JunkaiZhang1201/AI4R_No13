@@ -4,7 +4,7 @@ import cv2
 
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import qos_profile_system_default
+from rclpy.qos import qos_profile_system_default, qos_profile_sensor_data
 
 
 from sensor_msgs.msg import Image
@@ -35,7 +35,8 @@ class ImagePublishingNode(Node):
 
         # For publishing the image 
         self.img_pub = self.create_publisher(
-            Image,"image",qos_profile_system_default
+            # Image,"image",qos_profile_system_default
+            Image,"image",qos_profile_sensor_data
         )
 
         # Timer callback to publish the image
