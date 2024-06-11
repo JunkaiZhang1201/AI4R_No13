@@ -46,6 +46,8 @@ add_executable(mux_testing src/mux_testing.cpp
                           drivers/src/i2c_driver/i2c_driver.cpp
                           drivers/src/pca9685/pca9685.cpp)
 ament_target_dependencies(mux_testing rclcpp std_msgs ai4r_interfaces)
+add_executable(gpiod_rc_switch_testing src/gpiod_rc_switch_testing.cpp)
+ament_target_dependencies(gpiod_rc_switch_testing rclcpp)
 
 
 
@@ -60,6 +62,7 @@ install(TARGETS
   looping
   traxxas
   mux_testing
+  gpiod_rc_switch_testing
   DESTINATION lib/${PROJECT_NAME}
 )
 
