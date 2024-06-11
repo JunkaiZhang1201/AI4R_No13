@@ -15,14 +15,16 @@ int main(int argc, char **argv)
     // Open GPIO chip
     chip = gpiod_chip_open_by_name(gpio_chip_name);
 
-    // Open GPIO lines
-    line = gpiod_chip_get_line(chip, line_number);
+    // // Open GPIO lines
+    // line = gpiod_chip_get_line(chip, line_number);
 
-    // Open switch line for input
-    gpiod_line_request_input(line, "example1");
+    // // Open switch line for input
+    // gpiod_line_request_input(line, "example1");
 
-    // Read input gpio status
-    val = gpiod_line_get_value(line);
+    // // Read input gpio status
+    // val = gpiod_line_get_value(line);
+
+    val = gpiod_ctxless_get_value(gpio_chip_name, line_number, false, "foobar");
     printf("GPIO line value: %d\n", val);
 
     // Release lines and chip
