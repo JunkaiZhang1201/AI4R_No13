@@ -1,12 +1,11 @@
 #include <gpiod.h>
 #include <stdio.h>
-#include <unistd.h>
 
 int main(int argc, char **argv)
 {
     const char * gpio_chip_name = "/dev/gpiochip0";
     struct gpiod_chip *chip;
-    struct gpiod_line *line;
+    // struct gpiod_line *line;
     int val;
 
     // GPIO line number to monitor
@@ -28,7 +27,7 @@ int main(int argc, char **argv)
     printf("GPIO line value: %d\n", val);
 
     // Release lines and chip
-    gpiod_line_release(line);
-    gpiod_chip_close(chip);
+    // gpiod_line_release(line);
+    // gpiod_chip_close(chip);
     return 0;
 }
