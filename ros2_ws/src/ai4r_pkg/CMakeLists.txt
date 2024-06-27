@@ -48,7 +48,7 @@ add_executable(mux_testing src/mux_testing.cpp
 ament_target_dependencies(mux_testing rclcpp std_msgs ai4r_interfaces)
 add_executable(gpiod_rc_switch_testing src/gpiod_rc_switch_testing.cpp)
 ament_target_dependencies(gpiod_rc_switch_testing rclcpp)
-
+target_link_libraries(gpiod_rc_switch_testing gpiod)
 
 
 # Install Cpp executables
