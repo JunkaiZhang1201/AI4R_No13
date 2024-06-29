@@ -1,7 +1,15 @@
 // First we import the rclcpp library. From rclcpp we’ll be able to retrieve many of the ROS2 core functionalities: nodes, topics, services, etc.
 #include "rclcpp/rclcpp.hpp"
 
-#include <gpiod.hpp>
+#include <gpiod.h>
+
+
+// Specify the chip name of the GPIO interface
+const char * gpio_chip_name = "/dev/gpiochip0";
+// Initialise a GPIO chip
+struct gpiod_chip *chip;
+// GPIO line number to monitor
+int line_number = 22;
 
 
 // Create a class which inherits from rclcpp::Node which contains almost all ROS2 basic functionalities. 
@@ -23,8 +31,14 @@ private:
     // Add a callback for this timer. We make this method private since it will only be called from within the node class.
     void timerCallback()
     {
-        // Print something on the screen. Use the inherited method get_logger() to get the node’s logger and all the settings that go with it
-        RCLCPP_INFO(this->get_logger(), "Hello from ROS2");
+        // Get the current value of the line
+        // > Note: the third argument to "gpiod_ctxless_get_value"
+        //   is an "active_low" boolean input argument.
+        //   If true, this indicate to the function that active state
+        //   of this line is low.
+        int val;
+        val = gpiod_ctxless_get_value(gpio_chip_name, line_number, false, "foobar");
+        RCLCPP_INFO(this->get_logger(), "GPIO line value: '%d'\n", val);
     }
 
     rclcpp::TimerBase::SharedPtr timer_;    // Declare a ROS2 Timer object as a private attribute of the class
@@ -32,39 +46,18 @@ private:
 
 int main(int argc, char **argv)
 {
-    const char * gpio_chip_name = "/dev/gpiochip0";
-    struct gpiod_chip *chip;
-
-    int val;
-
-    // GPIO line number to monitor
-    int line_number = 22;
 
     // Open GPIO chip
     chip = gpiod_chip_open(gpio_chip_name);
 
-    // // Open GPIO lines
-    // line = gpiod_chip_get_line(chip, line_number);
-
-    // // Open switch line for input
-    // gpiod_line_request_input(line, "example1");
-
-    // // Read input gpio status
-    // val = gpiod_line_get_value(line);
-
-    val = gpiod_ctxless_get_value(gpio_chip_name, line_number, false, "foobar");
-    // RCLCPP_INFO(this->get_logger(), "GPIO line value: '%d'\n", val);
-    printf("GPIO line value: '%d'\n", val);
-
-
     rclcpp::init(argc, argv);
     auto node = std::make_shared<MyNode>(); // Create an object of the custom class we wrote
     rclcpp::spin(node);
-    rclcpp::shutdown();
 
-    // Release lines and chip
-    // gpiod_line_release(line);
-    // gpiod_chip_close(chip);
+    // Release chip
+    gpiod_chip_close(chip);
+
+    rclcpp::shutdown();
 
     return 0;
 }
