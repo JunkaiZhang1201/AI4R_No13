@@ -7,7 +7,7 @@ import cv2
 
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import qos_profile_system_default, qos_profile_sensor_data
+from rclpy.qos import qos_profile_system_default, qos_profile_sensor_data, QoSProfile, QoSHistoryPolicy, QoSReliabilityPolicy
 
 
 from sensor_msgs.msg import Image
@@ -18,6 +18,12 @@ class OAKDPublishingNode(Node):
 
     def __init__(self):
         super().__init__('oakd_publishing_node')
+
+        custom_qos_profile = QoSProfile(
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            history=QoSHistoryPolicy.KEEP_LAST,
+            depth=1
+        )
 
         self.get_logger().info("[STREAM OAKD NODE] Now setting up the camera.")
 
@@ -61,7 +67,9 @@ class OAKDPublishingNode(Node):
         # For publishing the image 
         self.img_pub = self.create_publisher(
             # Image,"image",qos_profile_system_default
-            Image,"image",qos_profile_sensor_data
+            Image,
+            "image",
+            qos_profile = custom_qos_profile
         )
 
         # Timer callback to publish the image
