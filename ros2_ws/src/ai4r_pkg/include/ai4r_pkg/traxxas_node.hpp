@@ -53,7 +53,7 @@ constexpr float    SERVO_FREQUENCY = 100.0f;    // PCA9685 outputs 200 Hz by def
 // PWM signal on the select channel must be between 10 - 330 Hz pulse rate (PWM freq).
 constexpr uint16_t MUX_SELECT_MAXIMUM_PULSE_WIDTH = 2500;   // Input PWM signal cannot be more than this
 constexpr uint16_t MUX_SELECT_MINIMUM_PULSE_WIDTH = 500;    // Input PWM signal cannot be less than this
-constexpr uint16_t MUX_SELECT_DEFAULT_THRESHOLD_PULSE_WIDTH = 1696; // Default threshold parameter
+constexpr uint16_t MUX_SELECT_DEFAULT_THRESHOLD_PULSE_WIDTH = 1696; // Default threshold parameter 
 constexpr uint16_t MUX_SELECT_MAXIMUM_THRESHOLD_PULSE_WIDTH = 2100; // Threshold parameter cannot be more than this
 constexpr uint16_t MUX_SELECT_MINIMUM_THRESHOLD_PULSE_WIDTH = 900;  // Threshold parameter cannot be less than this
 constexpr uint16_t MUX_SELECT_THRESHOLD_PULSE_WIDTH_MULTIPLE = 16;  // Threshold parameter must be a multiple of 16 us.
@@ -66,9 +66,9 @@ constexpr uint16_t MUX_SELECT_SLAVE_PULSE_WIDTH = 2000; // Pulse width to select
 // value defined below. Percent values are mapped from the range [-100,100] to pulse
 // width values in the range [MINIMUM_PULSE_WIDTH, MAXIMUM_PULSE_WIDTH]. When the node
 // starts up, the neutral values are sent to each servo channel.
-constexpr uint16_t ESC_MAXIMUM_PULSE_WIDTH =  1980;
-constexpr uint16_t ESC_MINIMUM_PULSE_WIDTH =  1020;
-constexpr uint16_t ESC_NEUTRAL_PULSE_WIDTH =  1500;
+constexpr uint16_t ESC_MAXIMUM_PULSE_WIDTH =  1975;
+constexpr uint16_t ESC_MINIMUM_PULSE_WIDTH =  1015;
+constexpr uint16_t ESC_NEUTRAL_PULSE_WIDTH =  1490;
 constexpr uint16_t STEERING_MAXIMUM_PULSE_WIDTH =  1750;
 constexpr uint16_t STEERING_MINIMUM_PULSE_WIDTH =  1250;
 constexpr uint16_t STEERING_NEUTRAL_PULSE_WIDTH =  1500;
