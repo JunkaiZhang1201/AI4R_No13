@@ -39,10 +39,10 @@ add_executable(multiple_pub_sub src/multiple_pub_sub_cpp_node.cpp)
 ament_target_dependencies(multiple_pub_sub rclcpp std_msgs ai4r_interfaces)
 add_executable(looping src/looping_cpp_node.cpp)
 ament_target_dependencies(looping rclcpp std_msgs ai4r_interfaces)
-add_executable(traxxas src/traxxas_node.cpp
+add_executable(traxxas_old src/traxxas_old_node.cpp
                           drivers/src/i2c_driver/i2c_driver.cpp
                           drivers/src/pca9685/pca9685.cpp)
-ament_target_dependencies(traxxas rclcpp std_msgs ai4r_interfaces)
+ament_target_dependencies(traxxas_old rclcpp std_msgs ai4r_interfaces)
 add_executable(mux_testing src/mux_testing.cpp
                           drivers/src/i2c_driver/i2c_driver.cpp
                           drivers/src/pca9685/pca9685.cpp)
@@ -54,6 +54,10 @@ add_executable(esc_calibration_service_testing src/esc_calibration_service_testi
                           drivers/src/i2c_driver/i2c_driver.cpp
                           drivers/src/pca9685/pca9685.cpp)
 ament_target_dependencies(esc_calibration_service_testing rclcpp std_msgs std_srvs ai4r_interfaces)
+add_executable(traxxas src/traxxas_node.cpp
+                          drivers/src/i2c_driver/i2c_driver.cpp
+                          drivers/src/pca9685/pca9685.cpp)
+ament_target_dependencies(traxxas rclcpp std_msgs ai4r_interfaces)
 
 
 # Install Cpp executables
@@ -65,7 +69,7 @@ install(TARGETS
   servo_pulse_width_sub
   multiple_pub_sub
   looping
-  traxxas
+  traxxas_old
   mux_testing
   gpiod_rc_switch_testing
   esc_calibration_service_testing
