@@ -37,39 +37,39 @@ class TraxxasNode : public rclcpp::Node {
             // 100 Hz (same rate as servo board)
             timer_ = this->create_wall_timer(10ms, std::bind(&TraxxasNode::timer_callback, this));
 
-            // Open the I2C device
-            // > Note that the I2C driver is already instantiated
-            //   as a member variable of this node
-            bool open_success = m_i2c_driver.open_i2c_device();
+            // // Open the I2C device
+            // // > Note that the I2C driver is already instantiated
+            // //   as a member variable of this node
+            // bool open_success = m_i2c_driver.open_i2c_device();
 
-            // Display the status
-            if (!open_success) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
-            } else {
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
-            }
+            // // Display the status
+            // if (!open_success) {
+            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+            // } else {
+            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+            // }
 
-            // SET THE CONFIGURATION OF THE SERVO DRIVER
+            // // SET THE CONFIGURATION OF THE SERVO DRIVER
 
-            // Specify the frequency of the servo driver -> default for this is 200 Hz
-            float new_frequency_in_hz = SERVO_FREQUENCY;
-            bool verbose_display_for_servo_driver_init = false;
+            // // Specify the frequency of the servo driver -> default for this is 200 Hz
+            // float new_frequency_in_hz = SERVO_FREQUENCY;
+            // bool verbose_display_for_servo_driver_init = false;
             
-            // Call the Servo Driver initialisation function
-            bool result_servo_init = m_pca9685_servo_driver.initialise_with_frequency_in_hz(new_frequency_in_hz, verbose_display_for_servo_driver_init);
+            // // Call the Servo Driver initialisation function
+            // bool result_servo_init = m_pca9685_servo_driver.initialise_with_frequency_in_hz(new_frequency_in_hz, verbose_display_for_servo_driver_init);
             
-            // Report Servo Board Initialisation Result
-            if (!result_servo_init)	{
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
-            } else {
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
-            }
+            // // Report Servo Board Initialisation Result
+            // if (!result_servo_init)	{
+            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+            // } else {
+            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+            // }
         }
 
     private:
         // Private variables
         State currentState = State::Enabled;    // State initially Enabled
-        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enable_disable_request
+        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change the name to enable_disable_request
         int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
         int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
         bool line_detector_timeout_flag = false;
@@ -209,14 +209,14 @@ class TraxxasNode : public rclcpp::Node {
 
         // Send a pulse width on the specified channel.
         void setPWMSignal(uint16_t channel, uint16_t pulse_width_in_us) {
-            // Call the function to set the desired pulse width
-            bool result = m_pca9685_servo_driver.set_pwm_pulse_in_microseconds(channel, pulse_width_in_us);
+            // // Call the function to set the desired pulse width
+            // bool result = m_pca9685_servo_driver.set_pwm_pulse_in_microseconds(channel, pulse_width_in_us);
 
-            // Display if an error occurred
-            if (!result) {
-                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to set pulse width for servo at channel " << static_cast<int>(channel) );
-            }
-            else{
+            // // Display if an error occurred
+            // if (!result) {
+            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to set pulse width for servo at channel " << static_cast<int>(channel) );
+            // }
+            // else{
                 // Publish the value set
                 if (channel == STEERING_SERVO_CHANNEL)
                 {
@@ -233,7 +233,7 @@ class TraxxasNode : public rclcpp::Node {
                     current_esc_pulse_width_publisher_->publish(message);
                 }
 
-            }
+            // }
         }
 
         // Convert percentage to PWM
@@ -284,7 +284,7 @@ class TraxxasNode : public rclcpp::Node {
             setPWMSignal(ESC_SERVO_CHANNEL, esc_set_point);
         }
 
-        // For receiving PWM values to control the steering (channel 0) or esc (channel 1)
+        // For receiving PWM values to control the steering (channel 0) or esc (channel 1) by directly sending the set point (i.e. NOT using the synchronous FSM)
         void servoSubscriberCallback(const ai4r_interfaces::msg::ServoPulseWidth & msg) {
             // Extract the channel and pulse width from the message
             uint16_t channel = msg.channel;
@@ -339,7 +339,7 @@ class TraxxasNode : public rclcpp::Node {
             }
         }
 
-        // For receiving percentage values to control the steering (channel 0)
+        // For receiving percentage values to control the steering (channel 0) using the synchronous FSM
         void steeringSetPointPercentSubscriberCallback(const std_msgs::msg::Float32 & msg) {
             // Extract percent value
             float value = msg.data;
@@ -356,7 +356,7 @@ class TraxxasNode : public rclcpp::Node {
             steering_empty_msg_count = 0;   // Message received so reset counter to 0
         }
 
-        // For receiving percentage values to control the esc (channel 1)
+        // For receiving percentage values to control the esc (channel 1) using the synchronous FSM
         void escSetPointPercentSubscriberCallback(const std_msgs::msg::Float32 & msg) {
             // Extract percent value
             float value = msg.data;
@@ -373,7 +373,7 @@ class TraxxasNode : public rclcpp::Node {
             esc_empty_msg_count = 0;    // Message received so reset counter to 0
         }
 
-        // For receiving percentage values to control both the steering (channel 0) and esc (channel 1)
+        // For receiving percentage values to control both the steering (channel 0) and esc (channel 1) using the synchronous FSM
         void escAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
             // Convert to pulse width and save value as the set point
             steering_set_point = percentageToPulseWidth(msg.steering_percent, STEERING_MINIMUM_PULSE_WIDTH, STEERING_MAXIMUM_PULSE_WIDTH);
@@ -407,7 +407,7 @@ class TraxxasNode : public rclcpp::Node {
             }
         }
 
-        // For receiving estop commands
+        // For receiving cv-error flag commands
         void lineDetectorTimeoutCallback(const std_msgs::msg::Bool & msg) {
             // Extract flag command
             bool timeout_flag = msg.data;
@@ -441,15 +441,15 @@ int main(int argc, char** argv) {
     auto node = std::make_shared<TraxxasNode>();
     rclcpp::spin(node); // Use rclcpp::spin() to handle callbacks.
 
-	// Close the I2C device
-	bool close_success = m_i2c_driver.close_i2c_device();
+	// // Close the I2C device
+	// bool close_success = m_i2c_driver.close_i2c_device();
 	
-	// Display the status
-	if (!close_success) {
-		RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] FAILED to close I2C device named " << m_i2c_driver.get_device_name());
-	} else {
-		RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] Successfully closed device named " << m_i2c_driver.get_device_name());
-	}
+	// // Display the status
+	// if (!close_success) {
+	// 	RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] FAILED to close I2C device named " << m_i2c_driver.get_device_name());
+	// } else {
+	// 	RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] Successfully closed device named " << m_i2c_driver.get_device_name());
+	// }
     
     rclcpp::shutdown();
     return 0;

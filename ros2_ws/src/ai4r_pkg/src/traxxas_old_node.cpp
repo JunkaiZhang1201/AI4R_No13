@@ -69,7 +69,7 @@ class TraxxasNode : public rclcpp::Node {
     private:
         // Private variables
         State currentState = State::Enabled;    // State initially Enabled
-        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change to enable_disable_request
+        int estop = ESTOP_ENABLE; // Store last estop command (initially ENABLE) possibly change the name to enable_disable_request
         int esc_empty_msg_count = 0;    // Counter to store number of empty message cycles for esc
         int steering_empty_msg_count = 0;   // Counter to store number of empty message cycles for steering
         bool line_detector_timeout_flag = false;
@@ -284,7 +284,7 @@ class TraxxasNode : public rclcpp::Node {
             setPWMSignal(ESC_SERVO_CHANNEL, esc_set_point);
         }
 
-        // For receiving PWM values to control the steering (channel 0) or esc (channel 1)
+        // For receiving PWM values to control the steering (channel 0) or esc (channel 1) by directly sending the set point (i.e. NOT using the synchronous FSM)
         void servoSubscriberCallback(const ai4r_interfaces::msg::ServoPulseWidth & msg) {
             // Extract the channel and pulse width from the message
             uint16_t channel = msg.channel;
@@ -339,7 +339,7 @@ class TraxxasNode : public rclcpp::Node {
             }
         }
 
-        // For receiving percentage values to control the steering (channel 0)
+        // For receiving percentage values to control the steering (channel 0) using the synchronous FSM
         void steeringSetPointPercentSubscriberCallback(const std_msgs::msg::Float32 & msg) {
             // Extract percent value
             float value = msg.data;
@@ -356,7 +356,7 @@ class TraxxasNode : public rclcpp::Node {
             steering_empty_msg_count = 0;   // Message received so reset counter to 0
         }
 
-        // For receiving percentage values to control the esc (channel 1)
+        // For receiving percentage values to control the esc (channel 1) using the synchronous FSM
         void escSetPointPercentSubscriberCallback(const std_msgs::msg::Float32 & msg) {
             // Extract percent value
             float value = msg.data;
@@ -373,7 +373,7 @@ class TraxxasNode : public rclcpp::Node {
             esc_empty_msg_count = 0;    // Message received so reset counter to 0
         }
 
-        // For receiving percentage values to control both the steering (channel 0) and esc (channel 1)
+        // For receiving percentage values to control both the steering (channel 0) and esc (channel 1) using the synchronous FSM
         void escAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
             // Convert to pulse width and save value as the set point
             steering_set_point = percentageToPulseWidth(msg.steering_percent, STEERING_MINIMUM_PULSE_WIDTH, STEERING_MAXIMUM_PULSE_WIDTH);
@@ -407,7 +407,7 @@ class TraxxasNode : public rclcpp::Node {
             }
         }
 
-        // For receiving estop commands
+        // For receiving line detector timeout flag commands
         void lineDetectorTimeoutCallback(const std_msgs::msg::Bool & msg) {
             // Extract flag command
             bool timeout_flag = msg.data;
