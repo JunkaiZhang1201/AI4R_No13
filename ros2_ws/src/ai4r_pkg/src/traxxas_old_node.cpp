@@ -1,4 +1,4 @@
-#include "ai4r_pkg/traxxas_node.hpp"
+#include "ai4r_pkg/traxxas_old_node.hpp"
 
 // Static Global Variables
 static uint16_t steering_set_point = STEERING_NEUTRAL_PULSE_WIDTH;
@@ -17,7 +17,7 @@ class TraxxasNode : public rclcpp::Node {
             esc_set_point_percent_sub_ = this->create_subscription<std_msgs::msg::Float32>(
                 "esc_set_point_percent", rclcpp::QoS(10), std::bind(&TraxxasNode::escSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
-            esc_and_steering_set_point_percent_sub_ = this->create_subscription<ai4r_interfaces::msg::EscAndSteering>(
+            esc_and_steering_set_point_percent_sub_ = this->create_subscription<ai4r_interfaces::msg::EscAndSteeringPercent>(
                 "esc_and_steering_set_point_percent", rclcpp::QoS(10), std::bind(&TraxxasNode::escAndSteeringSetPointPercentSubscriberCallback, this, std::placeholders::_1)
             );
             estop_sub_ = this->create_subscription<std_msgs::msg::UInt16>(
@@ -374,7 +374,7 @@ class TraxxasNode : public rclcpp::Node {
         }
 
         // For receiving percentage values to control both the steering (channel 0) and esc (channel 1) using the synchronous FSM
-        void escAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteering & msg) {
+        void escAndSteeringSetPointPercentSubscriberCallback(const ai4r_interfaces::msg::EscAndSteeringPercent & msg) {
             // Convert to pulse width and save value as the set point
             steering_set_point = percentageToPulseWidth(msg.steering_percent, STEERING_MINIMUM_PULSE_WIDTH, STEERING_MAXIMUM_PULSE_WIDTH);
             esc_set_point = percentageToPulseWidth(msg.esc_percent, ESC_MINIMUM_PULSE_WIDTH, ESC_MAXIMUM_PULSE_WIDTH);
@@ -426,7 +426,7 @@ class TraxxasNode : public rclcpp::Node {
         rclcpp::Subscription<ai4r_interfaces::msg::ServoPulseWidth>::SharedPtr servo_pulse_width_sub_;
         rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr steering_set_point_percent_sub_;
         rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr esc_set_point_percent_sub_;
-        rclcpp::Subscription<ai4r_interfaces::msg::EscAndSteering>::SharedPtr esc_and_steering_set_point_percent_sub_;
+        rclcpp::Subscription<ai4r_interfaces::msg::EscAndSteeringPercent>::SharedPtr esc_and_steering_set_point_percent_sub_;
         rclcpp::Subscription<std_msgs::msg::UInt16>::SharedPtr estop_sub_;
         rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr line_detector_timeout_sub_;
 

@@ -1,7 +1,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_srvs/srv/trigger.hpp"
 
-#include "ai4r_pkg/traxxas_node.hpp"
+#include "ai4r_pkg/traxxas_old_node.hpp"
 
 
 // Create a class which inherits from rclcpp::Node which contains almost all ROS2 basic functionalities. 
