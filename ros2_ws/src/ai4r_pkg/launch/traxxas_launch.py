@@ -12,11 +12,11 @@ def generate_launch_description():
     # Initialise the Launch Description variable
     ld = LaunchDescription()
 
-    # Declare input arguments that this launch file accepts
-    agent_ns_launch_arg = DeclareLaunchArgument(
-        'agent_ns',
-        default_value='agent01'
-    )
+    # # Declare input arguments that this launch file accepts
+    # agent_ns_launch_arg = DeclareLaunchArgument(
+    #     'agent_ns',
+    #     default_value='agent01'
+    # )
 
     config = os.path.join(
         get_package_share_directory('ai4r_pkg'),
@@ -35,12 +35,12 @@ def generate_launch_description():
     # Node launch details
     node=Node(
         package='ai4r_pkg',
-        namespace=LaunchConfiguration('agent_ns'),
+        # namespace=LaunchConfiguration('agent_ns'),
         executable='traxxas',
         name='traxxas_node',
         parameters=[parameters_dict_for_node]
     )
 
-    ld.add_action(agent_ns_launch_arg)
+    # ld.add_action(agent_ns_launch_arg)
     ld.add_action(node)
     return ld
