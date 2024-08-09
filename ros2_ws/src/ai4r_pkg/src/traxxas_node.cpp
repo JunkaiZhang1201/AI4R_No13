@@ -56,33 +56,33 @@ class TraxxasNode : public rclcpp::Node {
             // Timer callback for the synchronous FSM
             timer_ = this->create_wall_timer(std::chrono::milliseconds(TRAXXAS_FSM_CYCLE_PERIOD_IN_MILLISECS), std::bind(&TraxxasNode::timerCallback, this));
 
-            // // Open the I2C device
-            // // > Note that the I2C driver is already instantiated
-            // //   as a member variable of this node
-            // bool open_success = m_i2c_driver.open_i2c_device();
+            // Open the I2C device
+            // > Note that the I2C driver is already instantiated
+            //   as a member variable of this node
+            bool open_success = m_i2c_driver.open_i2c_device();
 
-            // // Display the status
-            // if (!open_success) {
-            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
-            // } else {
-            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
-            // }
+            // Display the status
+            if (!open_success) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to open I2C device named " << m_i2c_driver.get_device_name());
+            } else {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] Successfully opened named " << m_i2c_driver.get_device_name() << ", with file descriptor = " << m_i2c_driver.get_file_descriptor());
+            }
 
-            // // SET THE CONFIGURATION OF THE SERVO DRIVER
+            // SET THE CONFIGURATION OF THE SERVO DRIVER
 
-            // // Specify the frequency of the servo driver -> default for this is 200 Hz
-            // float new_frequency_in_hz = SERVO_FREQUENCY;
-            // bool verbose_display_for_servo_driver_init = false;
+            // Specify the frequency of the servo driver -> default for this is 200 Hz
+            float new_frequency_in_hz = SERVO_FREQUENCY;
+            bool verbose_display_for_servo_driver_init = false;
             
-            // // Call the Servo Driver initialisation function
-            // bool result_servo_init = m_pca9685_servo_driver.initialise_with_frequency_in_hz(new_frequency_in_hz, verbose_display_for_servo_driver_init);
+            // Call the Servo Driver initialisation function
+            bool result_servo_init = m_pca9685_servo_driver.initialise_with_frequency_in_hz(new_frequency_in_hz, verbose_display_for_servo_driver_init);
             
-            // // Report Servo Board Initialisation Result
-            // if (!result_servo_init)	{
-            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
-            // } else {
-            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
-            // }
+            // Report Servo Board Initialisation Result
+            if (!result_servo_init)	{
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+            } else {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] SUCCESS - while initialising servo driver with I2C address " << static_cast<int>(m_pca9685_servo_driver.get_i2c_address()) );
+            }
         }
 
     private:
@@ -343,19 +343,19 @@ class TraxxasNode : public rclcpp::Node {
 
         // Send a pulse width on the specified channel.
         void setPWMSignal(uint16_t channel, uint16_t pulse_width_in_us) {
-            // // Add the steering trim if sending to the steering servo
-            // if (channel == STEERING_SERVO_CHANNEL) {
-            //     pulse_width_in_us += steering_trim;
-            // }
+            // Add the steering trim if sending to the steering servo
+            if (channel == STEERING_SERVO_CHANNEL) {
+                pulse_width_in_us += steering_trim;
+            }
 
-            // // Call the function to set the desired pulse width
-            // bool result = m_pca9685_servo_driver.set_pwm_pulse_in_microseconds(channel, pulse_width_in_us);
+            // Call the function to set the desired pulse width
+            bool result = m_pca9685_servo_driver.set_pwm_pulse_in_microseconds(channel, pulse_width_in_us);
 
-            // // Display if an error occurred otherwise publish the value set
-            // if (!result) {
-            //     RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to set pulse width for servo at channel " << static_cast<int>(channel) );
-            // }
-            // else{
+            // Display if an error occurred otherwise publish the value set
+            if (!result) {
+                RCLCPP_INFO_STREAM(this->get_logger(), "[TRAXXAS] FAILED to set pulse width for servo at channel " << static_cast<int>(channel) );
+            }
+            else{
                 auto message = std_msgs::msg::UInt16();
                 message.data = pulse_width_in_us;
                 // Publish the value set
@@ -367,7 +367,7 @@ class TraxxasNode : public rclcpp::Node {
                 {
                     current_esc_pulse_width_publisher_->publish(message);
                 }
-            // }
+            }
         }
 
         // Convert percentage to PWM
@@ -590,15 +590,15 @@ int main(int argc, char** argv) {
     auto node = std::make_shared<TraxxasNode>();
     rclcpp::spin(node); // Use rclcpp::spin() to handle callbacks.
 
-	// // Close the I2C device
-	// bool close_success = m_i2c_driver.close_i2c_device();
+	// Close the I2C device
+	bool close_success = m_i2c_driver.close_i2c_device();
 	
-	// // Display the status
-	// if (!close_success) {
-	// 	RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] FAILED to close I2C device named " << m_i2c_driver.get_device_name());
-	// } else {
-	// 	RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] Successfully closed device named " << m_i2c_driver.get_device_name());
-	// }
+	// Display the status
+	if (!close_success) {
+		RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] FAILED to close I2C device named " << m_i2c_driver.get_device_name());
+	} else {
+		RCLCPP_INFO_STREAM(node->get_logger(), "[TRAXXAS] Successfully closed device named " << m_i2c_driver.get_device_name());
+	}
     
     rclcpp::shutdown();
     return 0;
