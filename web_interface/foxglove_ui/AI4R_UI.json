@@ -52,7 +52,7 @@
       "buttonTooltip": "",
       "advancedView": false,
       "value": "{\n  \"data\": 0\n}",
-      "topicName": "/request",
+      "topicName": "/agent01/request",
       "datatype": "std_msgs/msg/UInt8",
       "foxglovePanelTitle": "Request Disable",
       "buttonColor": "#ff0000"
@@ -61,8 +61,8 @@
       "buttonText": "Request Enable",
       "buttonTooltip": "",
       "advancedView": false,
-      "value": "{\n  \"data\": 1\n}",
-      "topicName": "/request",
+      "value": "{\n  \"data\": 0\n}",
+      "topicName": "/agent01/request",
       "datatype": "std_msgs/msg/UInt8",
       "foxglovePanelTitle": "Request Enable"
     },
@@ -70,22 +70,22 @@
       "buttonText": "Prepare for ESC Calibration",
       "buttonTooltip": "",
       "advancedView": false,
-      "value": "{\n  \"data\": 2\n}",
+      "value": "{\n  \"data\": 0\n}",
       "foxglovePanelTitle": "Prepare for ESC Calibration",
-      "topicName": "/request",
+      "topicName": "/agent01/request",
       "datatype": "std_msgs/msg/UInt8"
     },
     "Publish!3gephoo": {
       "buttonText": "Perform ESC Calibration",
       "buttonTooltip": "Put the ESC into calibration mode & the remote trigger into autonomous mode first!",
       "advancedView": false,
-      "value": "{\n  \"data\": 3\n}",
-      "topicName": "/request",
+      "value": "{\n  \"data\": 0\n}",
+      "topicName": "/agent01/request",
       "datatype": "std_msgs/msg/UInt8",
       "foxglovePanelTitle": "Perform ESC Calibration"
     },
     "Indicator!qavzah": {
-      "path": "/rc_signal_validity.data",
+      "path": "/rc_signal_validity",
       "style": "background",
       "fallbackColor": "#001fff",
       "fallbackLabel": "UNKNOWN",
@@ -105,7 +105,7 @@
       ]
     },
     "Indicator!2bt4eqw": {
-      "path": "/autonomous_mode.data",
+      "path": "/operating_mode",
       "style": "background",
       "fallbackColor": "#001fff",
       "fallbackLabel": "UNKNOWN",
@@ -128,13 +128,13 @@
       "paths": [
         {
           "timestampMethod": "receiveTime",
-          "value": "/traxxas_esc_current_pulse_width.data",
+          "value": "/agent01/traxxas_esc_current_pulse_width.data",
           "enabled": true,
           "label": "ESC PWM"
         },
         {
           "timestampMethod": "receiveTime",
-          "value": "/traxxas_steering_current_pulse_width.data",
+          "value": "/agent01/traxxas_steering_current_pulse_width.data",
           "enabled": true,
           "label": "STEERING PWM"
         }
@@ -156,7 +156,7 @@
     "StateTransitions!3l303ea": {
       "paths": [
         {
-          "value": "/traxxas_state.data",
+          "value": "/agent01/traxxas_state.data",
           "timestampMethod": "receiveTime"
         }
       ],
@@ -165,7 +165,7 @@
       "xAxisRange": 50
     },
     "Table!3d172td": {
-      "topicPath": "/traxxas_state"
+      "topicPath": "/agent01/traxxas_state"
     }
   },
   "globalVariables": {
