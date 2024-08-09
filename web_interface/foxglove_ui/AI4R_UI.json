@@ -1,5 +1,125 @@
 {
   "configById": {
+    "Publish!2xyypzo": {
+      "buttonText": "Request Disable",
+      "buttonTooltip": "",
+      "advancedView": false,
+      "value": "{\n  \"data\": 0\n}",
+      "topicName": "/request",
+      "datatype": "std_msgs/msg/UInt8",
+      "foxglovePanelTitle": "Request Disable",
+      "buttonColor": "#ff0000"
+    },
+    "Publish!1eh4xvo": {
+      "buttonText": "Request Enable",
+      "buttonTooltip": "",
+      "advancedView": false,
+      "value": "{\n  \"data\": 1\n}",
+      "topicName": "/request",
+      "datatype": "std_msgs/msg/UInt8",
+      "foxglovePanelTitle": "Request Enable"
+    },
+    "Publish!1eci2ic": {
+      "buttonText": "Prepare for ESC Calibration",
+      "buttonTooltip": "",
+      "advancedView": false,
+      "value": "{\n  \"data\": 2\n}",
+      "foxglovePanelTitle": "Prepare for ESC Calibration",
+      "topicName": "/request",
+      "datatype": "std_msgs/msg/UInt8"
+    },
+    "Publish!3gephoo": {
+      "buttonText": "Perform ESC Calibration",
+      "buttonTooltip": "Put the ESC into calibration mode & the remote trigger into autonomous mode first!",
+      "advancedView": false,
+      "value": "{\n  \"data\": 3\n}",
+      "topicName": "/request",
+      "datatype": "std_msgs/msg/UInt8",
+      "foxglovePanelTitle": "Perform ESC Calibration"
+    },
+    "Indicator!qavzah": {
+      "path": "/rc_signal_validity.data",
+      "style": "background",
+      "fallbackColor": "#001fff",
+      "fallbackLabel": "UNKNOWN",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "0",
+          "color": "#ff0000",
+          "label": "INVALID"
+        },
+        {
+          "operator": "=",
+          "rawValue": "1",
+          "color": "#00ff57",
+          "label": "VALID"
+        }
+      ]
+    },
+    "Indicator!2bt4eqw": {
+      "path": "/operating_mode.data",
+      "style": "background",
+      "fallbackColor": "#001fff",
+      "fallbackLabel": "UNKNOWN",
+      "rules": [
+        {
+          "operator": "=",
+          "rawValue": "0",
+          "color": "#ce00ff",
+          "label": "Manual"
+        },
+        {
+          "operator": "=",
+          "rawValue": "1",
+          "color": "#f8ff00",
+          "label": "Autonomous"
+        }
+      ]
+    },
+    "Plot!bqyzge": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/traxxas_esc_current_pulse_width.data",
+          "enabled": true,
+          "label": "ESC PWM"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/traxxas_steering_current_pulse_width.data",
+          "enabled": true,
+          "label": "STEERING PWM"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "top",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 85,
+      "xAxisPath": {
+        "value": "/cmd_vel.angular.x"
+      },
+      "foxglovePanelTitle": "PWM values for ESC and STEERING",
+      "followingViewWidth": 50
+    },
+    "StateTransitions!3l303ea": {
+      "paths": [
+        {
+          "value": "/traxxas_state.data",
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "isSynced": true,
+      "showPoints": false,
+      "xAxisRange": 50
+    },
+    "Table!3d172td": {
+      "topicPath": "/traxxas_state"
+    },
     "Parameters!29wn3a0": {
       "title": "Parameters"
     },
@@ -46,126 +166,6 @@
       "imageMode": {
         "imageTopic": "/image"
       }
-    },
-    "Publish!2xyypzo": {
-      "buttonText": "Request Disable",
-      "buttonTooltip": "",
-      "advancedView": false,
-      "value": "{\n  \"data\": 0\n}",
-      "topicName": "/agent01/request",
-      "datatype": "std_msgs/msg/UInt8",
-      "foxglovePanelTitle": "Request Disable",
-      "buttonColor": "#ff0000"
-    },
-    "Publish!1eh4xvo": {
-      "buttonText": "Request Enable",
-      "buttonTooltip": "",
-      "advancedView": false,
-      "value": "{\n  \"data\": 0\n}",
-      "topicName": "/agent01/request",
-      "datatype": "std_msgs/msg/UInt8",
-      "foxglovePanelTitle": "Request Enable"
-    },
-    "Publish!1eci2ic": {
-      "buttonText": "Prepare for ESC Calibration",
-      "buttonTooltip": "",
-      "advancedView": false,
-      "value": "{\n  \"data\": 0\n}",
-      "foxglovePanelTitle": "Prepare for ESC Calibration",
-      "topicName": "/agent01/request",
-      "datatype": "std_msgs/msg/UInt8"
-    },
-    "Publish!3gephoo": {
-      "buttonText": "Perform ESC Calibration",
-      "buttonTooltip": "Put the ESC into calibration mode & the remote trigger into autonomous mode first!",
-      "advancedView": false,
-      "value": "{\n  \"data\": 0\n}",
-      "topicName": "/agent01/request",
-      "datatype": "std_msgs/msg/UInt8",
-      "foxglovePanelTitle": "Perform ESC Calibration"
-    },
-    "Indicator!qavzah": {
-      "path": "/rc_signal_validity",
-      "style": "background",
-      "fallbackColor": "#001fff",
-      "fallbackLabel": "UNKNOWN",
-      "rules": [
-        {
-          "operator": "=",
-          "rawValue": "0",
-          "color": "#ff0000",
-          "label": "INVALID"
-        },
-        {
-          "operator": "=",
-          "rawValue": "1",
-          "color": "#00ff57",
-          "label": "VALID"
-        }
-      ]
-    },
-    "Indicator!2bt4eqw": {
-      "path": "/operating_mode",
-      "style": "background",
-      "fallbackColor": "#001fff",
-      "fallbackLabel": "UNKNOWN",
-      "rules": [
-        {
-          "operator": "=",
-          "rawValue": "1",
-          "color": "#f8ff00",
-          "label": "Autonomous"
-        },
-        {
-          "operator": "=",
-          "rawValue": "0",
-          "color": "#ce00ff",
-          "label": "Manual"
-        }
-      ]
-    },
-    "Plot!bqyzge": {
-      "paths": [
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/agent01/traxxas_esc_current_pulse_width.data",
-          "enabled": true,
-          "label": "ESC PWM"
-        },
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/agent01/traxxas_steering_current_pulse_width.data",
-          "enabled": true,
-          "label": "STEERING PWM"
-        }
-      ],
-      "showXAxisLabels": true,
-      "showYAxisLabels": true,
-      "showLegend": true,
-      "legendDisplay": "top",
-      "showPlotValuesInLegend": true,
-      "isSynced": true,
-      "xAxisVal": "timestamp",
-      "sidebarDimension": 85,
-      "xAxisPath": {
-        "value": "/cmd_vel.angular.x"
-      },
-      "foxglovePanelTitle": "PWM values for ESC and STEERING",
-      "followingViewWidth": 50
-    },
-    "StateTransitions!3l303ea": {
-      "paths": [
-        {
-          "value": "/agent01/traxxas_state.data",
-          "timestampMethod": "receiveTime"
-        }
-      ],
-      "isSynced": true,
-      "showPoints": false,
-      "xAxisRange": 50
-    },
-    "Table!3d172td": {
-      "topicPath": "/agent01/traxxas_state"
     }
   },
   "globalVariables": {
@@ -190,14 +190,16 @@
               "second": "Publish!3gephoo",
               "direction": "column"
             },
-            "direction": "column"
+            "direction": "column",
+            "splitPercentage": 49.48755490483162
           },
           "second": "Indicator!qavzah",
-          "direction": "column"
+          "direction": "column",
+          "splitPercentage": 55.082417582417584
         },
         "second": "Indicator!2bt4eqw",
         "direction": "column",
-        "splitPercentage": 60.49601417183348
+        "splitPercentage": 64.48184233835252
       },
       "second": {
         "first": "Plot!bqyzge",
@@ -209,7 +211,7 @@
         "direction": "column"
       },
       "direction": "row",
-      "splitPercentage": 31.62650602409638
+      "splitPercentage": 45.74074074074075
     },
     "second": {
       "first": "Parameters!29wn3a0",
