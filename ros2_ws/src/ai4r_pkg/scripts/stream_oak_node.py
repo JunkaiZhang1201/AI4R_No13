@@ -33,7 +33,7 @@ class OAKDPublishingNode(Node):
         # Define a source - color camera
         self.cam_rgb = self.pipeline.create(dai.node.ColorCamera)
         self.cam_rgb.setBoardSocket(dai.CameraBoardSocket.RGB)
-        self.cam_rgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
+        self.cam_rgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_800_P)
         self.cam_rgb.setInterleaved(False)
         self.cam_rgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR)
 
