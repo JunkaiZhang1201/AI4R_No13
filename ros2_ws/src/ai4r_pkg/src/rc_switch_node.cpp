@@ -1,6 +1,7 @@
 // First we import the rclcpp library. From rclcpp we’ll be able to retrieve many of the ROS2 core functionalities: nodes, topics, services, etc.
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/int8.hpp"
+#include "std_msgs/msg/u_int8.hpp"
 
 #include <gpiod.h>
 
@@ -27,7 +28,7 @@ public:
         good_signal_publisher_ = this->create_publisher<std_msgs::msg::Int8>("rc_signal_validity", 10);
         out_signal_publisher_ = this->create_publisher<std_msgs::msg::Int8>("operating_mode", 10);
         // Publisher to send disable or enable request
-        disable_or_enable_request_publisher_ = this->create_publisher<std_msgs::msg::Int8>("traxxas_request", 10);
+        disable_or_enable_request_publisher_ = this->create_publisher<std_msgs::msg::UInt8>("request", 10);
 
         // Initialize the timer with another inherited method: create_wall_timer(). We need to give 2 arguments: the duration between 2 callbacks, and the function to call. Here to pass the class method we have to use std::bind(). The callback will start being triggered when the node starts spinning.
         timer_ = this->create_wall_timer(
@@ -84,12 +85,12 @@ private:
         if (prev_out_val != out_val) {
             if (out_val == 0) {
                 // Publish the disable message if MANUAL mode is selected
-                auto disable_message = std_msgs::msg::Int8();
+                auto disable_message = std_msgs::msg::UInt8();
                 disable_message.data = 0;
                 disable_or_enable_request_publisher_->publish(disable_message);
             } else if (out_val == 1) {
                 // Publish the enable message if AUTONOMOUS mode is selected
-                auto enable_message = std_msgs::msg::Int8();
+                auto enable_message = std_msgs::msg::UInt8();
                 enable_message.data = 1;
                 disable_or_enable_request_publisher_->publish(enable_message);
             }
@@ -102,7 +103,7 @@ private:
     rclcpp::TimerBase::SharedPtr timer_;    // Declare a ROS2 Timer object as a private attribute of the class
     rclcpp::Publisher<std_msgs::msg::Int8>::SharedPtr good_signal_publisher_;
     rclcpp::Publisher<std_msgs::msg::Int8>::SharedPtr out_signal_publisher_;
-    rclcpp::Publisher<std_msgs::msg::Int8>::SharedPtr disable_or_enable_request_publisher_;
+    rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr disable_or_enable_request_publisher_;
 };
 
 int main(int argc, char **argv)

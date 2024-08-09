@@ -30,7 +30,7 @@ class TraxxasNode : public rclcpp::Node {
             );
             // Subscription to the request command
             request_sub_ = this->create_subscription<std_msgs::msg::UInt8>(
-                "traxxas_request", rclcpp::QoS(10), std::bind(&TraxxasNode::requestSubscriberCallback, this, std::placeholders::_1)
+                "request", rclcpp::QoS(10), std::bind(&TraxxasNode::requestSubscriberCallback, this, std::placeholders::_1)
             );
             // Subscription to the CV status
             cv_status_sub_ = this->create_subscription<std_msgs::msg::UInt8>(
