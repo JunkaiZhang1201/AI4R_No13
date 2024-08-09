@@ -27,7 +27,7 @@ public:
         good_signal_publisher_ = this->create_publisher<std_msgs::msg::Int8>("rc_signal_validity", 10);
         out_signal_publisher_ = this->create_publisher<std_msgs::msg::Int8>("operating_mode", 10);
         // Publisher to send disable or enable request
-        disable_or_enable_request_publisher_ = this->create_publisher<std_msgs::msg::Int8>("request", 10);
+        disable_or_enable_request_publisher_ = this->create_publisher<std_msgs::msg::Int8>("traxxas_request", 10);
 
         // Initialize the timer with another inherited method: create_wall_timer(). We need to give 2 arguments: the duration between 2 callbacks, and the function to call. Here to pass the class method we have to use std::bind(). The callback will start being triggered when the node starts spinning.
         timer_ = this->create_wall_timer(
