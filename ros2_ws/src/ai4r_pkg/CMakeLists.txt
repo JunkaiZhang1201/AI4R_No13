@@ -98,6 +98,7 @@ install(PROGRAMS
   scripts/policy_node.py
   scripts/image_publishing_line_detector_node.py
   scripts/image_publishing_node.py
+  scripts/stream_oak_node_old.py
   scripts/stream_oak_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
