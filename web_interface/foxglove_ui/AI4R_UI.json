@@ -166,6 +166,15 @@
       "imageMode": {
         "imageTopic": "/image"
       }
+    },
+    "Publish!1mdvpuh": {
+      "buttonText": "Toggle",
+      "buttonTooltip": "",
+      "advancedView": false,
+      "value": "{}",
+      "topicName": "/cam_stream_toggle",
+      "datatype": "std_msgs/msg/Empty",
+      "foxglovePanelTitle": "Toggle camera stream"
     }
   },
   "globalVariables": {
@@ -215,7 +224,12 @@
     },
     "second": {
       "first": "Parameters!29wn3a0",
-      "second": "Image!2vvf18b",
+      "second": {
+        "first": "Image!2vvf18b",
+        "second": "Publish!1mdvpuh",
+        "direction": "row",
+        "splitPercentage": 74.79166666666666
+      },
       "direction": "column"
     },
     "direction": "row"

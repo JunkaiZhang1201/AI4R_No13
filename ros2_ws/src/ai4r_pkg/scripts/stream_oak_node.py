@@ -12,6 +12,7 @@ from rclpy.qos import qos_profile_system_default, qos_profile_sensor_data, QoSPr
 
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
+from std_msgs.msg import Empty
 
 CAPTURE_FPS = 40
 CAPTURE_FPS_DIVIDE_BY_STREAM_FPS = 2
@@ -74,6 +75,17 @@ class OAKDPublishingNode(Node):
             qos_profile = custom_qos_profile
         )
 
+        # For storing the toggle state of the camera streaming
+        self.cam_stream_on = True
+
+        # For subscribing to the camera streaming toggle topic
+        self.cam_stream_toggle_sub = self.create_subscription(
+            Empty,
+            "cam_stream_toggle",
+            self.cam_stream_toggle_callback,
+            10
+        )
+
         # Timer callback to publish the image
         # timer_period = (1.0/self.cap.get(cv2.CAP_PROP_FPS))
         stream_fps = float(CAPTURE_FPS / CAPTURE_FPS_DIVIDE_BY_STREAM_FPS)
@@ -83,25 +95,35 @@ class OAKDPublishingNode(Node):
 
     # Callback function for publishing the image
     def camera_callback(self):
-        try:
-            inRgb = self.qRgb.get()  # Blocking call, will wait until a new data has arrived
-            frame = inRgb.getCvFrame()
+        if self.cam_stream_on:
+            try:
+                inRgb = self.qRgb.get()  # Blocking call, will wait until a new data has arrived
+                frame = inRgb.getCvFrame()
+                
+                # # Publish image straight from camera to the topic /image
+                # self.img_pub.publish(self.cv_bridge.cv2_to_imgmsg(self.frame, "bgr8"))
+
+                # frame_small = cv2.resize(frame, None, fx=0.2, fy=0.2, interpolation=cv2.INTER_AREA) # Resize the frame
+                frame_small = frame # Don't resize the frame
+
+                # Publish the modified image to the topic /image
+                frame_mono = cv2.cvtColor(frame_small, cv2.COLOR_BGR2GRAY)
+                self.img_pub.publish(self.cv_bridge.cv2_to_imgmsg(frame_mono, "mono8"))
+
+                # self.get_logger().error("[STREAM_OAKD_NODE] No frame received from camera.")
             
-            # # Publish image straight from camera to the topic /image
-            # self.img_pub.publish(self.cv_bridge.cv2_to_imgmsg(self.frame, "bgr8"))
-
-            # frame_small = cv2.resize(frame, None, fx=0.2, fy=0.2, interpolation=cv2.INTER_AREA) # Resize the frame
-            frame_small = frame # Don't resize the frame
-
-            # Publish the modified image to the topic /image
-            frame_mono = cv2.cvtColor(frame_small, cv2.COLOR_BGR2GRAY)
-            self.img_pub.publish(self.cv_bridge.cv2_to_imgmsg(frame_mono, "mono8"))
-
-            # self.get_logger().error("[STREAM_OAKD_NODE] No frame received from camera.")
-        
-        except CvBridgeError as e:
-            self.get_logger().error("[STREAM_OAKD_NODE] CvBridgeError: {0}".format(e))
+            except CvBridgeError as e:
+                self.get_logger().error("[STREAM_OAKD_NODE] CvBridgeError: {0}".format(e))
  
+
+    # Callback function for toggling the camera streaming
+    def cam_stream_toggle_callback(self, msg):
+        if self.cam_stream_on:
+            self.cam_stream_on = False
+            self.get_logger().info("[STREAM OAKD NODE] Camera streaming turned off.")
+        else:
+            self.cam_stream_on = True
+            self.get_logger().info("[STREAM OAKD NODE] Camera streaming turned on.")
 
 
 def main(args=None):
