@@ -89,10 +89,10 @@ private:
                 disable_message.data = 0;
                 disable_or_enable_request_publisher_->publish(disable_message);
             } else if (out_val == 1) {
-                // Publish the enable message if AUTONOMOUS mode is selected
-                auto enable_message = std_msgs::msg::UInt8();
-                enable_message.data = 1;
-                disable_or_enable_request_publisher_->publish(enable_message);
+                // // Publish the enable message if AUTONOMOUS mode is selected
+                // auto enable_message = std_msgs::msg::UInt8();
+                // enable_message.data = 1;
+                // disable_or_enable_request_publisher_->publish(enable_message);
             }
         }
         // Update the previous value of the 'OUT' signal

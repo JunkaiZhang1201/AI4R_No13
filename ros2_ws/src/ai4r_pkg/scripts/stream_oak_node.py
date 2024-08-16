@@ -15,7 +15,7 @@ from cv_bridge import CvBridge, CvBridgeError
 from std_msgs.msg import Empty
 
 CAPTURE_FPS = 40
-CAPTURE_FPS_DIVIDE_BY_STREAM_FPS = 2
+CAPTURE_FPS_DIVIDE_BY_STREAM_FPS = 4
 
 class OAKDPublishingNode(Node):
 
@@ -36,7 +36,7 @@ class OAKDPublishingNode(Node):
         # Define a source - color camera
         self.camRgb = self.pipeline.create(dai.node.ColorCamera)
         self.camRgb.setPreviewSize(640,640)  # Modified preview size to 640x640 for the Yolov8n model
-        self.camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
+        self.camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_800_P)
         self.camRgb.setImageOrientation(dai.CameraImageOrientation.VERTICAL_FLIP)    # Flip the image vertically
         self.camRgb.setPreviewKeepAspectRatio(False)
         self.camRgb.setInterleaved(False)
