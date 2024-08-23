@@ -21,6 +21,7 @@ set(msg_files
   "msg/PixelCoordsFloat32.msg"
   "msg/ImagePointsArray.msg"
   "msg/EscAndSteeringPulseWidth.msg"
+  "msg/ConePointsArray.msg"
   #DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
   # etc
   )

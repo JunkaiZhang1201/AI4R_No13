@@ -3,9 +3,10 @@
 import rclpy
 from rclpy.node import Node
 
-from ai4r_interfaces.msg import EscAndSteering
+from ai4r_interfaces.msg import EscAndSteeringPercent
 #from ai4r_interfaces.msg import IntArray
 from ai4r_interfaces.msg import ImagePointsArray
+from ai4r_interfaces.msg import ConePointsArray
 from std_msgs.msg import String, UInt16, Float32
 from rclpy.parameter import Parameter
 
@@ -58,12 +59,14 @@ class PolicyNode(Node):
         # > For publishing the FSM state
         self.fsm_state_publisher_ = self.create_publisher(String, 'policy_fsm_state', 10)
         # > For publishing the policy actions
-        self.policy_action_publisher_ = self.create_publisher(EscAndSteering, 'esc_and_steering_set_point_percent', 10)
+        self.policy_action_publisher_ = self.create_publisher(EscAndSteeringPercent, 'esc_and_steering_set_point_percent', 10)
 
         # Create ROS2 subscribers
         # > For subscribing to the CV line detection data
         #self.cv_subscription = self.create_subscription(IntArray, 'Image_Point', self.cv_line_dectection_callback, 10)
         self.cv_subscription = self.create_subscription(ImagePointsArray, 'image_points', self.cv_line_dectection_callback, 10)
+        # > For subscribing to the CV cone detection data
+        self.cv_subscription = self.create_subscription(ConePointsArray, 'cone_points', self.cv_cone_dectection_callback, 10)
         # > For subscribing to requests to transition the state
         self.fsm_transition_request_subscription = self.create_subscription(UInt16, 'policy_fsm_transition_request', self.fsm_transition_request_callback, 10)
         # > For subscribing to requests for esc setpoint
@@ -79,6 +82,86 @@ class PolicyNode(Node):
         self.create_timer(float(self.timer_period), self.timer_callback)
 
 
+
+    # CALLBACK FUNCTION: for the CV line detection subscription 
+    def cv_cone_dectection_callback(self, msg):
+        # Log the data received for debugging purposes:
+        #self.get_logger().info("[POLICY NODE] Cone detection points: \"%s\"" % msg.n)
+
+        # Set the counter to zero
+        self.counts_of_timer_without_cv_data_ = 0
+
+        # Return if in the "not publishing actions" state
+        if (self.fsm_state == FSM_STATE_NOT_PUBLISHING_ACTIONS):
+            return
+
+        # Default the actions to zero
+        esc_action = 0.0
+        steering_action = 0.0
+
+        # Run the policy, if in the "publishing policy" state
+        if (self.fsm_state == FSM_STATE_PUBLISHING_POLICY_ACTION):
+
+            # Extract the number of cones
+            num_cones = msg.c
+
+            # Exact the coordinates and colour of each cone
+            # > NOTE: these are Python lists of length "num_cones"
+            x_coords = msg.x
+            y_coords = msg.y
+            cone_colour = msg.c
+            
+            # =======================================
+            # START OF: INSERT POLICY CODE BELOW HERE
+            # =======================================
+
+            # OBSERVATIONS:
+            # > The "list_of_points" variable is:
+            #   - A list with length equal to the number of points detected.
+            #   - Each element of the list has properties ".u" and ".v", which
+            #     give the pixel coordinates of the respective point.
+            #   - IMPORTANT: the (u,v) coordinates are relative to the top left
+            #     corner of the image, i.e., they are NOT relative to the optical
+            #     center of camera.
+
+            # ACTIONS:
+            # > The "esc_action" is:
+            #   - The action for driving the main motor (esc := electronic speed contrller).
+            #   - In units of signed percent, with valid range [-100,100]
+            # > The "steering_action" is:
+            #   - The action for changing the position of the steering servo.
+            #   - In units of signed percent, with valid range [-100,100]
+
+            # ACRONYMS:
+            # "esc" := Electronic Speed Controller
+            #   - This device on the Traxxas car does NOT control the speed.
+            #   - The "esc" device set the voltage to the motor within the
+            #     range [-(max voltage),+(max voltage)]
+            
+            # PERFORM POLICY COMPUTATIONS
+            # > Set the ESC to a fixed value
+            esc_action = self.baseline_esc_action
+
+            # > Compute the steering action
+            steering_action = 0.0
+            if (num_cones > 0):
+                # Put your steering policy here
+                steering_action = 0.0
+            
+            # =====================================
+            # END OF: INSERT POLICY CODE ABOVE HERE
+            # =====================================
+
+        # Prepare the message to send
+        msg = EscAndSteeringPercent()
+        msg.esc_percent = esc_action
+        msg.steering_percent = steering_action
+
+        # Publish the message
+        self.policy_action_publisher_.publish(msg)
+
+        # Log the string published for debugging purposes:
+        #self.get_logger().info("[POLICY NODE] Published esc action = " + str(esc_action) + ", steering action = " + str(steering_action))
 
     # CALLBACK FUNCTION: for the CV line detection subscription 
     def cv_line_dectection_callback(self, msg):
@@ -148,7 +231,7 @@ class PolicyNode(Node):
 
 
         # Prepare the message to send
-        msg = EscAndSteering()
+        msg = EscAndSteeringPercent()
         msg.esc_percent = esc_action
         msg.steering_percent = steering_action
 
@@ -222,7 +305,7 @@ class PolicyNode(Node):
         # Publish actions if "too" long since last CV data
         if (time_since_last_cv_data > TIME_WITHOUT_CV_THRESHOLD_IN_SECONDS) and ((self.fsm_state == FSM_STATE_PUBLISHING_POLICY_ACTION) or (self.fsm_state == FSM_STATE_PUBLISHING_ZERO_ACTIONS)):
             # Prepare the message to send
-            msg = EscAndSteering()
+            msg = EscAndSteeringPercent()
             msg.esc_percent = 0.0
             msg.steering_percent = 0.0
             # Publish the message

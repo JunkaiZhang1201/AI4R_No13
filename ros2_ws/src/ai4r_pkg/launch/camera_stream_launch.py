@@ -22,8 +22,8 @@ def generate_launch_description():
     node=Node(
         package='ai4r_pkg',
         # namespace=LaunchConfiguration('agent_ns'),
-        executable='policy_node.py',
-        name='policy_node',
+        executable='stream_oak_node.py',
+        name='stream_oak_node',
     )
 
     # ld.add_action(agent_ns_launch_arg)

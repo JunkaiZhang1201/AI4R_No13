@@ -20,7 +20,7 @@ CAPTURE_FPS_DIVIDE_BY_STREAM_FPS = 4
 class OAKDPublishingNode(Node):
 
     def __init__(self):
-        super().__init__('oakd_publishing_node')
+        super().__init__('stream_oak_node')
 
         custom_qos_profile = QoSProfile(
             reliability=QoSReliabilityPolicy.BEST_EFFORT,
