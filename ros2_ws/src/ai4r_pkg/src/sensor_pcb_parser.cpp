@@ -39,28 +39,35 @@ class SensorPcbParserNode: public rclcpp::Node
             */
 
             char *token;
+            auto msg = ai4r_interfaces::msg::Imu();
             while(1) {
                 while(fgets(read_buf, sizeof(read_buf),serial_port)!= NULL) {
                     if(read_buf[0] != '\n' && read_buf[1] != '\0'){
                         token = strtok(read_buf," ");
-                        char imu[] = {'I','M','U','\0'};
-                        char tof[] = {'T','O','F','\0'};
-                        if (!strcmp(token,imu)) {
-                            auto msg = ai4r_interfaces::msg::Imu();
-                            msg.usec_since_last_msg = atoll(strtok(NULL," ")); 
-                            msg.roll = atof(strtok(NULL," ")); 
-                            msg.pitch = atof(strtok(NULL," "));
-                            msg.yaw =  atof(strtok(NULL," "));
-                            msg.accelx = atof(strtok(NULL," "));
-                            msg.accely = atof(strtok(NULL," "));
-                            msg.accelz =  atof(strtok(NULL," "));
-                            msg.magx = atof(strtok(NULL," "));
-                            msg.magy = atof(strtok(NULL," "));
-                            msg.magz =  atof(strtok(NULL," "));
-                            msg.mag_accuracy = atoi(strtok(NULL," "));
+                        if (!strcmp(token,"IMU\0")) {
+                            token = strtok(NULL," ");
+                            if(!strcmp(token,"G\0")) {                            auto msg = ai4r_interfaces::msg::Imu();
+                                msg.usec_since_last_gyro_msg = atoll(strtok(NULL," ")); 
+                                msg.roll = atof(strtok(NULL," ")); 
+                                msg.pitch = atof(strtok(NULL," "));
+                                msg.yaw =  atof(strtok(NULL," "));
+                                
+                            } else if (!strcmp(token,"A\0")) {
+                                msg.usec_since_last_accel_msg = atoll(strtok(NULL," ")); 
+                                msg.accelx = atof(strtok(NULL," "));
+                                msg.accely = atof(strtok(NULL," "));
+                                msg.accelz =  atof(strtok(NULL," "));
+                            
+                            } else if (!strcmp(token,"M\0")) {
+                                msg.usec_since_last_mag_msg = atoll(strtok(NULL," ")); 
+                                msg.magx = atof(strtok(NULL," "));
+                                msg.magy = atof(strtok(NULL," "));
+                                msg.magz =  atof(strtok(NULL," "));
+                                msg.mag_accuracy = atoi(strtok(NULL," "));
+                            }
                             imu_topic_pub_->publish(msg);
 
-                        } else if (!strcmp(token,tof)) {
+                        } else if (!strcmp(token,"TOF\0")) {
                             int tof_num = atoi(strtok(NULL, " "));
                             auto msg = ai4r_interfaces::msg::TofSensor();
                             msg.usec_since_last_msg = atoll(strtok(NULL," "));
