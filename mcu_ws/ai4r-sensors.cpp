@@ -1,19 +1,14 @@
-// This code is based on ST's VL53L5CX ULD examples
-// which is under BSD 3-clause "New" or "Revised" License(shown at the last part of this file)
-
-/***********************************/
-/*   VL53L5CX ULD basic example    */
-/***********************************/
 /*
-* This example is the most basic. It initializes the VL53L5CX ULD, and starts
-* a ranging to capture 10 frames.
-*
-* By default, ULD is configured to have the following settings :
-* - Resolution 4x4
-* - Ranging period 1Hz
-*
-* In this example, we also suppose that the number of target per zone is
-* set to 1 , and all output are enabled (see file platform.h).
+
+Messages are ASCII Encoded from the pico board as follows:
+
+IMU u_sec_since_last_poll yaw pitch roll accelx accely accelz magx magy magz
+TOF tof_num u_sec_since_last_poll distance_mm_1 ... distance_mm_16
+
+The approximate polling rates are currently:
+- 50Hz for the IMU
+- 6.2Hz Per TOF Sensor
+
 */
 
 #include <stdlib.h>
@@ -73,7 +68,6 @@ int main(void) {
             continue; //no tof found at this mux position
         }
 
-        /* (Mandatory) Init VL53L5CX sensor */
         status = vl53l5cx_init(&Dev);
         status = vl53l5cx_set_resolution(&Dev, 16U);
         status = vl53l5cx_set_ranging_frequency_hz(&Dev, 30);

@@ -21,11 +21,11 @@ class SensorPcbParserNode: public rclcpp::Node
             tof6_topic_pub_ = this->create_publisher<ai4r_interfaces::msg::TofSensor>("TOF6", rclcpp::QoS(10));
             tof7_topic_pub_ = this->create_publisher<ai4r_interfaces::msg::TofSensor>("TOF7", rclcpp::QoS(10));
             tof8_topic_pub_ = this->create_publisher<ai4r_interfaces::msg::TofSensor>("TOF8", rclcpp::QoS(10));
-            
+
 
             FILE* serial_port = fopen("/dev/ttyACM0", "r");
 
-            // Allocate memory for read buffer, set size according to your needs
+            // Allocate memory for read buffer
             char read_buf [256];
 
             memset(&read_buf, '\0', sizeof(read_buf));
@@ -72,31 +72,24 @@ class SensorPcbParserNode: public rclcpp::Node
                                 case 0:
                                     tof1_topic_pub_->publish(msg);
                                     break;
-
                                 case 1:
                                     tof2_topic_pub_->publish(msg);
                                     break;
-
                                 case 2:
                                     tof3_topic_pub_->publish(msg);
                                     break;
-
                                 case 3:
                                     tof4_topic_pub_->publish(msg);
                                     break;
-
                                 case 4:
                                     tof5_topic_pub_->publish(msg);
                                     break;
-
                                 case 5:
                                     tof6_topic_pub_->publish(msg);
                                     break;
-
                                 case 6:
                                     tof7_topic_pub_->publish(msg);
                                     break;
-
                                 case 7:
                                     tof8_topic_pub_->publish(msg);
                                     break;
@@ -112,12 +105,6 @@ class SensorPcbParserNode: public rclcpp::Node
         }
 
     private:
-        void publish(int count) {
-            auto message = ai4r_interfaces::msg::Imu();
-            message.yaw = count;
-            imu_topic_pub_->publish(message);
-
-        }
         rclcpp::Publisher<ai4r_interfaces::msg::Imu>::SharedPtr imu_topic_pub_;
         rclcpp::Publisher<ai4r_interfaces::msg::TofSensor>::SharedPtr tof1_topic_pub_;
         rclcpp::Publisher<ai4r_interfaces::msg::TofSensor>::SharedPtr tof2_topic_pub_;
