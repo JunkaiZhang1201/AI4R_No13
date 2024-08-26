@@ -1,4 +1,4 @@
-uint64 poll_frequency_hz
+uint64 usec_since_last_msg
 float64 roll 
 float64 pitch 
 float64 yaw 

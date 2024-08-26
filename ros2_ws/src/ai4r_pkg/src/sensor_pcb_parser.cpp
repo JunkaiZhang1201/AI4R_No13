@@ -47,7 +47,7 @@ class SensorPcbParserNode: public rclcpp::Node
                         char tof[] = {'T','O','F','\0'};
                         if (!strcmp(token,imu)) {
                             auto msg = ai4r_interfaces::msg::Imu();
-                            msg.poll_frequency_hz = 1000000/atoll(strtok(NULL," ")); 
+                            msg.usec_since_last_msg = atoll(strtok(NULL," ")); 
                             msg.roll = atof(strtok(NULL," ")); 
                             msg.pitch = atof(strtok(NULL," "));
                             msg.yaw =  atof(strtok(NULL," "));
@@ -63,7 +63,7 @@ class SensorPcbParserNode: public rclcpp::Node
                         } else if (!strcmp(token,tof)) {
                             int tof_num = atoi(strtok(NULL, " "));
                             auto msg = ai4r_interfaces::msg::TofSensor();
-                            msg.poll_frequency_hz = 1000000/atoll(strtok(NULL," "));
+                            msg.usec_since_last_msg = atoll(strtok(NULL," "));
                             for (int i = 0; i < 16; i++) {
                                 msg.distance_mm[i] = atoi(strtok(NULL," "));
                             }
