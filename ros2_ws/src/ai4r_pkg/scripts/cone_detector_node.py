@@ -20,7 +20,7 @@ from transforms import CameraToWorld
 
 
 DETECT_FPS = 10
-CAMERA_HEIGHT = 290    # mm
+CAMERA_HEIGHT = 280    # mm
 CAMERA_ALPHA = 20      # degrees
 X_THRESHOLD = 3000     # mm ; only consider cones within 3m distance of the car
 Z_THRESHOLD = 100      # mm ; ignore detections with height > 10 cm ; likely misdetections/noise
@@ -31,7 +31,7 @@ class SpatialConeDetectorNode(Node):
     def __init__(self):
         super().__init__('cone_detector_node')
 
-        self.nnBlobPath = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_det_3510_yb_6shave.blob'
+        self.nnBlobPath = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_det_3510_yb_6shave.blob'  # TODO: Update Blob path
         self.pipeline = self.setup_spatial_detection_pipeline()
         self.camera_height = CAMERA_HEIGHT
         self.camera_alpha = CAMERA_ALPHA
@@ -66,8 +66,9 @@ class SpatialConeDetectorNode(Node):
         camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
         camRgb.setImageOrientation(dai.CameraImageOrientation.VERTICAL_FLIP)    # Flip the image vertically due to reverse camera mount
         camRgb.setInterleaved(False)
-        camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR)
-        #camRgb.setFps(40)  # Set Camera FPS
+        camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR)  # TODO: Test color channel
+        camRgb.setPreviewKeepAspectRatio(False)     # Stretch Images
+        camRgb.setFps(10)  # Set Camera FPS to 10 to match NN
     
     @staticmethod
     def setup_stereo(monoLeft, monoRight, stereo):
@@ -102,8 +103,9 @@ class SpatialConeDetectorNode(Node):
         spatialDetectionNetwork.setIouThreshold(0.5)
 
         # Additional Settings
-        #spatialDetectionNetwork.setNumInferenceThreads(2)
-        #spatialDetectionNetwork.input.setBlocking(False)
+        spatialDetectionNetwork.setNumInferenceThreads(2)
+        spatialDetectionNetwork.input.setBlocking(False)
+        spatialDetectionNetwork.input.setQueueSize(1)   # Makes sure the frames are real-time
 
     def setup_spatial_detection_pipeline(self):
         pipeline = dai.Pipeline()
