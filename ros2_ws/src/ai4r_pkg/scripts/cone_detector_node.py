@@ -24,7 +24,7 @@ CAMERA_HEIGHT = 290    # mm
 CAMERA_ALPHA = 20      # degrees
 X_THRESHOLD = 3000     # mm ; only consider cones within 3m distance of the car
 Z_THRESHOLD = 100      # mm ; ignore detections with height > 10 cm ; likely misdetections/noise
-
+ENABLE_IRDOT = True     # Enables IR Dot Projection if True
 
 class SpatialConeDetectorNode(Node):
     # def __init__(self, configs):
@@ -39,11 +39,16 @@ class SpatialConeDetectorNode(Node):
         self.labelMap = ["Yellow", "Blue"]   # label map for detected objects
         self.x_threshold = X_THRESHOLD
         self.z_threshold = Z_THRESHOLD
+        self.dot_projector = ENABLE_IRDOT
 
         # # Connect to device and start the pipeline
         # with dai.Device(self.pipeline) as self.device:
         self.device = dai.Device(self.pipeline)
         # Output queues will be used to get the rgb frames and nn data from the outputs defined above
+
+        # Enable IR Dot Projection
+        if self.dot_projector: self.device.setIrLaserDotProjectorIntensity(1.0)
+
         self.detectionNNQueue = self.device.getOutputQueue(name="detections", maxSize=4, blocking=False)
 
         # For publishing the detected cones
