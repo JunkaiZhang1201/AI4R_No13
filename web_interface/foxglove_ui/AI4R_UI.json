@@ -36,6 +36,38 @@
       "datatype": "std_msgs/msg/Float32",
       "foxglovePanelTitle": "Request ESC setpoint"
     },
+    "Plot!bqyzge": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/traxxas_esc_current_pulse_width.data",
+          "enabled": true,
+          "label": "ESC PWM"
+        },
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/traxxas_steering_current_pulse_width.data",
+          "enabled": true,
+          "label": "STEERING PWM"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "top",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 85,
+      "xAxisPath": {
+        "value": "/cmd_vel.angular.x"
+      },
+      "foxglovePanelTitle": "PWM values for ESC and STEERING",
+      "followingViewWidth": 50
+    },
+    "Table!3pmk7k1": {
+      "topicPath": "/detected_cones"
+    },
     "Publish!2xyypzo": {
       "buttonText": "Request Disable",
       "buttonTooltip": "",
@@ -113,35 +145,6 @@
         }
       ]
     },
-    "Plot!bqyzge": {
-      "paths": [
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/traxxas_esc_current_pulse_width.data",
-          "enabled": true,
-          "label": "ESC PWM"
-        },
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/traxxas_steering_current_pulse_width.data",
-          "enabled": true,
-          "label": "STEERING PWM"
-        }
-      ],
-      "showXAxisLabels": true,
-      "showYAxisLabels": true,
-      "showLegend": true,
-      "legendDisplay": "top",
-      "showPlotValuesInLegend": true,
-      "isSynced": true,
-      "xAxisVal": "timestamp",
-      "sidebarDimension": 85,
-      "xAxisPath": {
-        "value": "/cmd_vel.angular.x"
-      },
-      "foxglovePanelTitle": "PWM values for ESC and STEERING",
-      "followingViewWidth": 50
-    },
     "StateTransitions!3l303ea": {
       "paths": [
         {
@@ -155,36 +158,6 @@
     },
     "Table!3d172td": {
       "topicPath": "/traxxas_state"
-    },
-    "Parameters!29wn3a0": {
-      "title": "Parameters"
-    },
-    "Plot!3ks0p7l": {
-      "paths": [
-        {
-          "timestampMethod": "receiveTime",
-          "value": "/detected_cones.y[:]",
-          "enabled": true,
-          "color": "#4e98e2",
-          "showLine": false,
-          "label": "Detected cones"
-        }
-      ],
-      "showXAxisLabels": true,
-      "showYAxisLabels": true,
-      "showLegend": true,
-      "legendDisplay": "floating",
-      "showPlotValuesInLegend": false,
-      "isSynced": true,
-      "xAxisVal": "currentCustom",
-      "sidebarDimension": 240,
-      "xAxisPath": {
-        "value": "/detected_cones.x[:]"
-      },
-      "foxglovePanelTitle": "Cone locations"
-    },
-    "Table!3pmk7k1": {
-      "topicPath": "/detected_cones"
     },
     "Image!2vvf18b": {
       "cameraState": {
@@ -238,6 +211,38 @@
       "topicName": "/cam_stream_toggle",
       "datatype": "std_msgs/msg/Empty",
       "foxglovePanelTitle": "Toggle camera stream"
+    },
+    "Plot!3ks0p7l": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/detected_cones.y[:]",
+          "enabled": true,
+          "color": "#e32525",
+          "showLine": false,
+          "label": "Detected cones",
+          "lineSize": 7.000000000000003
+        }
+      ],
+      "minYValue": -1000,
+      "maxYValue": 1000,
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "currentCustom",
+      "sidebarDimension": 240,
+      "xAxisPath": {
+        "value": "/detected_cones.x[:]"
+      },
+      "foxglovePanelTitle": "Cone locations",
+      "minXValue": 0,
+      "maxXValue": 4000
+    },
+    "Parameters!29wn3a0": {
+      "title": "Parameters"
     }
   },
   "globalVariables": {
@@ -253,75 +258,82 @@
       "first": {
         "first": "Publish!2ko08g6",
         "second": "Publish!2yrtcns",
-        "direction": "column"
+        "direction": "column",
+        "splitPercentage": 49.186991869918714
       },
       "second": {
-        "first": "Publish!46yei91",
-        "second": "Publish!3b9m594",
-        "direction": "column"
+        "first": {
+          "first": "Publish!46yei91",
+          "second": "Publish!3b9m594",
+          "direction": "column",
+          "splitPercentage": 40.476190476190496
+        },
+        "second": {
+          "first": "Plot!bqyzge",
+          "second": "Table!3pmk7k1",
+          "direction": "column",
+          "splitPercentage": 53.15642553320432
+        },
+        "direction": "column",
+        "splitPercentage": 29.64705882352941
       },
-      "direction": "column"
+      "direction": "column",
+      "splitPercentage": 21.78919397697077
     },
     "second": {
       "first": {
         "first": {
           "first": {
             "first": {
-              "first": {
-                "first": "Publish!2xyypzo",
-                "second": "Publish!1eh4xvo",
-                "direction": "column"
-              },
-              "second": {
-                "first": "Publish!1eci2ic",
-                "second": "Publish!3gephoo",
-                "direction": "column"
-              },
-              "direction": "column",
-              "splitPercentage": 49.48755490483162
+              "first": "Publish!2xyypzo",
+              "second": "Publish!1eh4xvo",
+              "direction": "column"
             },
-            "second": "Indicator!qavzah",
+            "second": {
+              "first": "Publish!1eci2ic",
+              "second": "Publish!3gephoo",
+              "direction": "column"
+            },
             "direction": "column",
-            "splitPercentage": 55.082417582417584
+            "splitPercentage": 49.48755490483162
           },
-          "second": "Indicator!2bt4eqw",
+          "second": "Indicator!qavzah",
           "direction": "column",
-          "splitPercentage": 64.48184233835252
+          "splitPercentage": 77.06766917293233
         },
         "second": {
-          "first": "Plot!bqyzge",
+          "first": "Indicator!2bt4eqw",
           "second": {
             "first": "StateTransitions!3l303ea",
             "second": "Table!3d172td",
-            "direction": "column"
+            "direction": "column",
+            "splitPercentage": 43.40770791075051
           },
-          "direction": "column"
+          "direction": "column",
+          "splitPercentage": 24.732824427480903
         },
-        "direction": "row",
-        "splitPercentage": 45.74074074074075
+        "direction": "column",
+        "splitPercentage": 47.12134632418069
       },
       "second": {
         "first": {
-          "first": "Parameters!29wn3a0",
-          "second": {
-            "first": "Plot!3ks0p7l",
-            "second": "Table!3pmk7k1",
+          "first": {
+            "first": "Image!2vvf18b",
+            "second": "Publish!1mdvpuh",
             "direction": "column",
-            "splitPercentage": 52.43578387953941
+            "splitPercentage": 79.00797165633304
           },
-          "direction": "row",
-          "splitPercentage": 38.87204366282596
+          "second": "Plot!3ks0p7l",
+          "direction": "column",
+          "splitPercentage": 55.97874224977857
         },
-        "second": {
-          "first": "Image!2vvf18b",
-          "second": "Publish!1mdvpuh",
-          "direction": "row",
-          "splitPercentage": 74.79166666666666
-        },
-        "direction": "column"
+        "second": "Parameters!29wn3a0",
+        "direction": "row",
+        "splitPercentage": 53.17779565567176
       },
-      "direction": "row"
+      "direction": "row",
+      "splitPercentage": 19.285714285714285
     },
-    "splitPercentage": 14.114583333333334
+    "splitPercentage": 24.53125
   }
 }
