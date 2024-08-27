@@ -100,6 +100,7 @@ install(PROGRAMS
   scripts/image_publishing_node.py
   scripts/stream_oak_node_old.py
   scripts/stream_oak_node.py
+  scripts/cone_detector_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

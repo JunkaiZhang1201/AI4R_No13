@@ -18,20 +18,20 @@ def generate_launch_description():
     #     default_value='agent01'
     # )
     
-    # Construct the path to the YAML config file
-    config = os.path.join(
-        get_package_share_directory('ai4r_pkg'),
-        'config',
-        'config_for_line_detector.yaml'
-    )
+    # # Construct the path to the YAML config file
+    # config = os.path.join(
+    #     get_package_share_directory('ai4r_pkg'),
+    #     'config',
+    #     'config_for_line_detector.yaml'
+    # )
 
-    # Convert the YAML config file to a Python dictionary
-    with open(config) as yaml_file:
-        # use safe_load instead load
-        config_yaml_as_dict = yaml.safe_load(yaml_file)
+    # # Convert the YAML config file to a Python dictionary
+    # with open(config) as yaml_file:
+    #     # use safe_load instead load
+    #     config_yaml_as_dict = yaml.safe_load(yaml_file)
 
-    # Extract the element of the dictionary that needs to be passed to the node
-    parameters_dict_for_node = config_yaml_as_dict["line_detector_node"]["ros__parameters"]
+    # # Extract the element of the dictionary that needs to be passed to the node
+    # parameters_dict_for_node = config_yaml_as_dict["line_detector_node"]["ros__parameters"]
 
     # Print the dictionary for debugging
     #print(parameters_dict_for_node)
@@ -40,9 +40,9 @@ def generate_launch_description():
     node=Node(
         package='ai4r_pkg',
         # namespace=LaunchConfiguration('agent_ns'),
-        executable='line_detector_node.py',
-        name='line_detector_node',
-        parameters = [parameters_dict_for_node]
+        executable='cone_detector_node.py',
+        name='cone_detector_node',
+        # parameters = [parameters_dict_for_node]
     )
 
     # ld.add_action(agent_ns_launch_arg)
