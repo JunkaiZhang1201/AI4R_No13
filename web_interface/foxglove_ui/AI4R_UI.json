@@ -1,5 +1,41 @@
 {
   "configById": {
+    "Publish!2ko08g6": {
+      "buttonText": "Policy NOT publishing actions",
+      "buttonTooltip": "",
+      "advancedView": false,
+      "value": "{\n  \"data\": 1\n}",
+      "topicName": "/policy_fsm_transition_request",
+      "datatype": "std_msgs/msg/UInt16",
+      "foxglovePanelTitle": "Policy NOT publishing actions"
+    },
+    "Publish!2yrtcns": {
+      "buttonText": "Policy publishing ZERO actions",
+      "buttonTooltip": "",
+      "advancedView": false,
+      "value": "{\n  \"data\": 2\n}",
+      "topicName": "/policy_fsm_transition_request",
+      "datatype": "std_msgs/msg/UInt16",
+      "foxglovePanelTitle": "Policy publishing ZERO actions"
+    },
+    "Publish!46yei91": {
+      "buttonText": "Policy publishing actions",
+      "buttonTooltip": "",
+      "advancedView": false,
+      "value": "{\n  \"data\": 3\n}",
+      "topicName": "/policy_fsm_transition_request",
+      "datatype": "std_msgs/msg/UInt16",
+      "foxglovePanelTitle": "Policy publishing actions"
+    },
+    "Publish!3b9m594": {
+      "buttonText": "Request ESC setpoint",
+      "buttonTooltip": "Enter a float in the \"data\" field in the range -100.0 to 100.0",
+      "advancedView": true,
+      "value": "{\n  \"data\": 0\n}",
+      "topicName": "/policy_esc_setpoint_request",
+      "datatype": "std_msgs/msg/Float32",
+      "foxglovePanelTitle": "Request ESC setpoint"
+    },
     "Publish!2xyypzo": {
       "buttonText": "Request Disable",
       "buttonTooltip": "",
@@ -123,6 +159,33 @@
     "Parameters!29wn3a0": {
       "title": "Parameters"
     },
+    "Plot!3ks0p7l": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/detected_cones.y[:]",
+          "enabled": true,
+          "color": "#4e98e2",
+          "showLine": false,
+          "label": "Detected cones"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "currentCustom",
+      "sidebarDimension": 240,
+      "xAxisPath": {
+        "value": "/detected_cones.x[:]"
+      },
+      "foxglovePanelTitle": "Cone locations"
+    },
+    "Table!3pmk7k1": {
+      "topicPath": "/detected_cones"
+    },
     "Image!2vvf18b": {
       "cameraState": {
         "distance": 20,
@@ -185,53 +248,80 @@
     "speed": 1
   },
   "layout": {
+    "direction": "row",
     "first": {
+      "first": {
+        "first": "Publish!2ko08g6",
+        "second": "Publish!2yrtcns",
+        "direction": "column"
+      },
+      "second": {
+        "first": "Publish!46yei91",
+        "second": "Publish!3b9m594",
+        "direction": "column"
+      },
+      "direction": "column"
+    },
+    "second": {
       "first": {
         "first": {
           "first": {
             "first": {
-              "first": "Publish!2xyypzo",
-              "second": "Publish!1eh4xvo",
-              "direction": "column"
+              "first": {
+                "first": "Publish!2xyypzo",
+                "second": "Publish!1eh4xvo",
+                "direction": "column"
+              },
+              "second": {
+                "first": "Publish!1eci2ic",
+                "second": "Publish!3gephoo",
+                "direction": "column"
+              },
+              "direction": "column",
+              "splitPercentage": 49.48755490483162
             },
-            "second": {
-              "first": "Publish!1eci2ic",
-              "second": "Publish!3gephoo",
-              "direction": "column"
-            },
+            "second": "Indicator!qavzah",
             "direction": "column",
-            "splitPercentage": 49.48755490483162
+            "splitPercentage": 55.082417582417584
           },
-          "second": "Indicator!qavzah",
+          "second": "Indicator!2bt4eqw",
           "direction": "column",
-          "splitPercentage": 55.082417582417584
+          "splitPercentage": 64.48184233835252
         },
-        "second": "Indicator!2bt4eqw",
-        "direction": "column",
-        "splitPercentage": 64.48184233835252
+        "second": {
+          "first": "Plot!bqyzge",
+          "second": {
+            "first": "StateTransitions!3l303ea",
+            "second": "Table!3d172td",
+            "direction": "column"
+          },
+          "direction": "column"
+        },
+        "direction": "row",
+        "splitPercentage": 45.74074074074075
       },
       "second": {
-        "first": "Plot!bqyzge",
+        "first": {
+          "first": "Parameters!29wn3a0",
+          "second": {
+            "first": "Plot!3ks0p7l",
+            "second": "Table!3pmk7k1",
+            "direction": "column",
+            "splitPercentage": 52.43578387953941
+          },
+          "direction": "row",
+          "splitPercentage": 38.87204366282596
+        },
         "second": {
-          "first": "StateTransitions!3l303ea",
-          "second": "Table!3d172td",
-          "direction": "column"
+          "first": "Image!2vvf18b",
+          "second": "Publish!1mdvpuh",
+          "direction": "row",
+          "splitPercentage": 74.79166666666666
         },
         "direction": "column"
       },
-      "direction": "row",
-      "splitPercentage": 45.74074074074075
+      "direction": "row"
     },
-    "second": {
-      "first": "Parameters!29wn3a0",
-      "second": {
-        "first": "Image!2vvf18b",
-        "second": "Publish!1mdvpuh",
-        "direction": "row",
-        "splitPercentage": 74.79166666666666
-      },
-      "direction": "column"
-    },
-    "direction": "row"
+    "splitPercentage": 14.114583333333334
   }
 }
