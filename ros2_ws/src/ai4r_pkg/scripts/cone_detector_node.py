@@ -26,9 +26,9 @@ X_THRESHOLD = 3000     # mm ; only consider cones within 3m distance of the car
 Z_THRESHOLD = 100      # mm ; ignore detections with height > 10 cm ; likely misdetections/noise
 ENABLE_IRDOT = False     # Enables IR Dot Projection if True
 
-NUM_INFERENCE_THREADS = 2
-INFERENCE_IS_BLOCKING = False
-DETECTOR_QUEUE_SIZE = 1
+#NUM_INFERENCE_THREADS = 2
+#INFERENCE_IS_BLOCKING = False
+#DETECTOR_QUEUE_SIZE = 1
 
 STRETCH = True
 
@@ -49,7 +49,6 @@ class SpatialConeDetectorNode(Node):
         super().__init__('cone_detector_node')
 
         self.nnBlobPath = NN_BLOB_PATH
-        self.pipeline = self.setup_spatial_detection_pipeline() 
         self.camera_height = CAMERA_HEIGHT
         self.camera_alpha = CAMERA_ALPHA
         self.cam2world = CameraToWorld(self.camera_height, self.camera_alpha)
@@ -58,6 +57,7 @@ class SpatialConeDetectorNode(Node):
         self.z_threshold = Z_THRESHOLD
         self.dot_projector = ENABLE_IRDOT
         self.label_map = LABELMAP
+        self.pipeline = self.setup_spatial_detection_pipeline() 
 
         # # Connect to device and start the pipeline
         # with dai.Device(self.pipeline) as self.device:
@@ -122,9 +122,9 @@ class SpatialConeDetectorNode(Node):
         spatialDetectionNetwork.setIouThreshold(0.5)
 
         # Additional Settings
-        spatialDetectionNetwork.setNumInferenceThreads(NUM_INFERENCE_THREADS)
-        spatialDetectionNetwork.input.setBlocking(INFERENCE_IS_BLOCKING)
-        spatialDetectionNetwork.input.setQueueSize(DETECTOR_QUEUE_SIZE)   # Makes sure the frames are real-time
+        #spatialDetectionNetwork.setNumInferenceThreads(NUM_INFERENCE_THREADS)
+        #spatialDetectionNetwork.input.setBlocking(INFERENCE_IS_BLOCKING)
+        #spatialDetectionNetwork.input.setQueueSize(DETECTOR_QUEUE_SIZE)   # Makes sure the frames are real-time
 
     def setup_spatial_detection_pipeline(self):
         pipeline = dai.Pipeline()
