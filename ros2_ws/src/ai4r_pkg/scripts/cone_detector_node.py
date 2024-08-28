@@ -30,12 +30,18 @@ NUM_INFERENCE_THREADS = 2
 INFERENCE_IS_BLOCKING = False
 DETECTOR_QUEUE_SIZE = 1
 
-NN_BLOB_PATH = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_cones_3510_yb_st_100_5s.blob'
-PREVIEW_KEEP_ASPECT_RATIO = False
+STRETCH = True
 
-#NN_BLOB_PATH = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_det_3510_yb_6shave.blob'
-#PREVIEW_KEEP_ASPECT_RATIO = True
+if STRETCH:
+    NN_BLOB_PATH = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_cones_3510_yb_st_100_5s.blob'
+    PREVIEW_KEEP_ASPECT_RATIO = False
+else:
+    NN_BLOB_PATH = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_det_3510_yb_5s.blob'
+    PREVIEW_KEEP_ASPECT_RATIO = True
 
+STREAM = False
+SYNCNN = True
+LABELMAP = ["Yellow", "Blue"]
 
 class SpatialConeDetectorNode(Node):
     # def __init__(self, configs):
@@ -51,6 +57,7 @@ class SpatialConeDetectorNode(Node):
         self.x_threshold = X_THRESHOLD
         self.z_threshold = Z_THRESHOLD
         self.dot_projector = ENABLE_IRDOT
+        self.label_map = LABELMAP
 
         # # Connect to device and start the pipeline
         # with dai.Device(self.pipeline) as self.device:
@@ -60,7 +67,8 @@ class SpatialConeDetectorNode(Node):
         # Enable IR Dot Projection
         if self.dot_projector: self.device.setIrLaserDotProjectorIntensity(1.0)
 
-        self.detectionNNQueue = self.device.getOutputQueue(name="detections", maxSize=4, blocking=False)
+        self.detectionNNQueue = self.device.getOutputQueue(name="detections", maxSize=1, blocking=False)
+        if STREAM: self.previewQueue = self.device.getOutputQueue(name="rgb", maxSize=1, blocking=False)
 
         # For publishing the detected cones
         self.cone_publisher = self.create_publisher(ConePointsArray, 'detected_cones', qos_profile_system_default)
@@ -149,12 +157,28 @@ class SpatialConeDetectorNode(Node):
 
         stereo.depth.link(spatialDetectionNetwork.inputDepth)
 
+        # Setup Node for RGB Stream
+        if STREAM:
+            xoutRgb = pipeline.create(dai.node.XLinkOut)
+            xoutRgb.setStreamName("rgb")
+            if SYNCNN:
+                spatialDetectionNetwork.passthrough.link(xoutRgb.input)
+            else:
+                camRgb.preview.link(xoutRgb.input)
+
         return pipeline
     
     # Callback function for detecting cones
     def cone_detection_callback(self):
 
         inDet = self.detectionNNQueue.get()
+        if STREAM:
+            inPreview = self.previewQueue.get()
+            frame = inPreview.getCvFrame()
+            # If the frame is available, draw bounding boxes on it and show the frame
+            height = frame.shape[0]
+            width  = frame.shape[1]
+
         detections = inDet.detections
 
         # detection_coordinates = []
@@ -176,6 +200,19 @@ class SpatialConeDetectorNode(Node):
             # Transform coordinates to body frame
             x_w, y_w, z_w = self.cam2world.transform_to_body_frame(x_c, y_c, z_c)
 
+            if STREAM:
+                # Denormalize bounding box
+                x1 = int(detection.xmin * width)
+                x2 = int(detection.xmax * width)
+                y1 = int(detection.ymin * height)
+                y2 = int(detection.ymax * height)
+                cv2.putText(frame, str(self.label_map[label]), (x1 + 10, y1 + 20), cv2.FONT_HERSHEY_TRIPLEX, 0.5, 255)
+                cv2.putText(frame, "{:.2f}".format(detection.confidence*100), (x1 + 10, y1 + 35), cv2.FONT_HERSHEY_TRIPLEX, 0.5, 255)
+                cv2.putText(frame, f"X: {x_w/10:.2f} cm", (x1 + 10, y1 + 50), cv2.FONT_HERSHEY_TRIPLEX, 0.5, 255)
+                cv2.putText(frame, f"Y: {y_w/10:.2f} cm", (x1 + 10, y1 + 65), cv2.FONT_HERSHEY_TRIPLEX, 0.5, 255)
+                cv2.putText(frame, f"Z: {z_w/10:.2f} cm", (x1 + 10, y1 + 80), cv2.FONT_HERSHEY_TRIPLEX, 0.5, 255)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), color, cv2.FONT_HERSHEY_SIMPLEX)
+
             if x_w < self.x_threshold and z_w < self.z_threshold:
                 detection_x_coordinates.append(x_w)
                 detection_y_coordinates.append(y_w)
@@ -195,8 +232,6 @@ class SpatialConeDetectorNode(Node):
         msg.c = detection_colors
         msg.n = number_of_cones
         self.cone_publisher.publish(msg)
-
-
 
 def main(args=None):
     rclpy.init(args=args)
