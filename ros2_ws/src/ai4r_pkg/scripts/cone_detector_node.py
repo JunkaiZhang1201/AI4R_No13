@@ -212,6 +212,8 @@ class SpatialConeDetectorNode(Node):
                 cv2.putText(frame, f"Y: {y_w/10:.2f} cm", (x1 + 10, y1 + 65), cv2.FONT_HERSHEY_TRIPLEX, 0.5, 255)
                 cv2.putText(frame, f"Z: {z_w/10:.2f} cm", (x1 + 10, y1 + 80), cv2.FONT_HERSHEY_TRIPLEX, 0.5, 255)
                 cv2.rectangle(frame, (x1, y1), (x2, y2), color, cv2.FONT_HERSHEY_SIMPLEX)
+                # TODO: Publish Frame to ROS
+
 
             if x_w < self.x_threshold and z_w < self.z_threshold:
                 detection_x_coordinates.append(x_w)
