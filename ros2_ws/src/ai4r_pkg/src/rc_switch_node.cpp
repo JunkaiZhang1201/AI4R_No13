@@ -13,7 +13,7 @@ struct gpiod_chip *chip;
 // GPIO line number to monitor 'GOOD' RC signal (valid or invalid signal)
 int good_line_number = 27;
 // GPIO line number to monitor 'OUT' RC signal (switch active or inactive)
-int out_line_number = 22;
+int out_line_number = 17;
 
 
 // Create a class which inherits from rclcpp::Node which contains almost all ROS2 basic functionalities. 
