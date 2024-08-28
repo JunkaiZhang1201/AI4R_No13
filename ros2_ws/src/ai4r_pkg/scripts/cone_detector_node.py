@@ -31,8 +31,7 @@ class SpatialConeDetectorNode(Node):
     def __init__(self):
         super().__init__('cone_detector_node')
 
-        self.nnBlobPath = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_det_3510_yb_6shave.blob'  # TODO: Update Blob path
-        self.pipeline = self.setup_spatial_detection_pipeline()
+        self.nnBlobPath = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_cones_3510_yb_st_100_5s.blob'  
         self.camera_height = CAMERA_HEIGHT
         self.camera_alpha = CAMERA_ALPHA
         self.cam2world = CameraToWorld(self.camera_height, self.camera_alpha)
