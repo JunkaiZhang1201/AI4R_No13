@@ -18,7 +18,7 @@ from ai4r_interfaces.msg import ConePointsArray
 
 from transforms import CameraToWorld
 
-
+CAMERA_FPS = 10
 DETECT_FPS = 10
 CAMERA_HEIGHT = 280    # mm
 CAMERA_ALPHA = 20      # degrees
@@ -65,9 +65,9 @@ class SpatialConeDetectorNode(Node):
         camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
         camRgb.setImageOrientation(dai.CameraImageOrientation.VERTICAL_FLIP)    # Flip the image vertically due to reverse camera mount
         camRgb.setInterleaved(False)
-        camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR)  # TODO: Test color channel
+        camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR) 
         camRgb.setPreviewKeepAspectRatio(False)     # Stretch Images
-        camRgb.setFps(10)  # Set Camera FPS to 10 to match NN
+        camRgb.setFps(CAMERA_FPS)  # Set Camera FPS to 10 to match NN
     
     @staticmethod
     def setup_stereo(monoLeft, monoRight, stereo):
