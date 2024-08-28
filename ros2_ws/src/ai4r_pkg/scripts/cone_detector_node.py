@@ -24,14 +24,25 @@ CAMERA_HEIGHT = 280    # mm
 CAMERA_ALPHA = 20      # degrees
 X_THRESHOLD = 3000     # mm ; only consider cones within 3m distance of the car
 Z_THRESHOLD = 100      # mm ; ignore detections with height > 10 cm ; likely misdetections/noise
-ENABLE_IRDOT = True     # Enables IR Dot Projection if True
+ENABLE_IRDOT = False     # Enables IR Dot Projection if True
+
+NUM_INFERENCE_THREADS = 2
+INFERENCE_IS_BLOCKING = False
+DETECTOR_QUEUE_SIZE = 1
+
+NN_BLOB_PATH = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_cones_3510_yb_st_100_5s.blob'
+PREVIEW_KEEP_ASPECT_RATIO = False
+
+#NN_BLOB_PATH = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_det_3510_yb_6shave.blob'
+#PREVIEW_KEEP_ASPECT_RATIO = True
+
 
 class SpatialConeDetectorNode(Node):
     # def __init__(self, configs):
     def __init__(self):
         super().__init__('cone_detector_node')
 
-        self.nnBlobPath = '/home/ai4r/ai4r-system/ros2_ws/src/ai4r_pkg/scripts/models/yolov8n_cones_3510_yb_st_100_5s.blob' 
+        self.nnBlobPath = NN_BLOB_PATH
         self.pipeline = self.setup_spatial_detection_pipeline() 
         self.camera_height = CAMERA_HEIGHT
         self.camera_alpha = CAMERA_ALPHA
@@ -67,7 +78,7 @@ class SpatialConeDetectorNode(Node):
         camRgb.setImageOrientation(dai.CameraImageOrientation.VERTICAL_FLIP)    # Flip the image vertically due to reverse camera mount
         camRgb.setInterleaved(False)
         camRgb.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR) 
-        camRgb.setPreviewKeepAspectRatio(False)     # Stretch Images
+        camRgb.setPreviewKeepAspectRatio(PREVIEW_KEEP_ASPECT_RATIO)     # Stretch Images
         camRgb.setFps(CAMERA_FPS)  # Set Camera FPS to 10 to match NN
     
     @staticmethod
@@ -103,9 +114,9 @@ class SpatialConeDetectorNode(Node):
         spatialDetectionNetwork.setIouThreshold(0.5)
 
         # Additional Settings
-        spatialDetectionNetwork.setNumInferenceThreads(2)
-        spatialDetectionNetwork.input.setBlocking(False)
-        spatialDetectionNetwork.input.setQueueSize(1)   # Makes sure the frames are real-time
+        spatialDetectionNetwork.setNumInferenceThreads(NUM_INFERENCE_THREADS)
+        spatialDetectionNetwork.input.setBlocking(INFERENCE_IS_BLOCKING)
+        spatialDetectionNetwork.input.setQueueSize(DETECTOR_QUEUE_SIZE)   # Makes sure the frames are real-time
 
     def setup_spatial_detection_pipeline(self):
         pipeline = dai.Pipeline()
